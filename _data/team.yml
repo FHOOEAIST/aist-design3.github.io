@@ -1,8 +1,7 @@
 members:
-  - name: Selina Adlberger BSc
-    role: Data Science and Engineering Master
+  - name: Selina Adlberger MSc
     email: selina.adlberger@fh-hagenberg.at
-    image: /assets/images/team/selina_adlberger_bsc.jpg
+    image: /assets/images/team/selina_adlberger_msc.jpg
   - name: Sophie Bauernfeind MSc
     email: sophie.bauernfeind@fh-hagenberg.at
     image: /assets/images/team/sophie_bauernfeind_msc.jpg
