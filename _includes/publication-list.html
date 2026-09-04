@@ -7,7 +7,7 @@ DOI, external link, abstract — collapse, and an entry without any of them
 renders as a plain card without a toggle.
 
 Each entry exposes its `categories:` list as a space-separated `data-categories`
-attribute for the filter in _includes/publication-filter.html, and repeats them
+attribute (plus data-year) for the filter in _includes/listing-filter.html, and repeats them
 as badges that double as a shortcut into that category.
 {% endcomment %}
 
@@ -37,6 +37,7 @@ as badges that double as a shortcut into that category.
     <div
         class="listing-item publication-entry{% if has_details %} collapsible{% endif %}"
         data-categories="{{ pub.categories | join: ' ' }}"
+        data-year="{{ pub_year }}"
     >
         <h3 class="listing-title" id="{{ anchor }}">
             {% if has_details %}

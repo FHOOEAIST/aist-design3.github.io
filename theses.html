@@ -10,6 +10,7 @@ page_id: theses-index
 {% include page-header.html eyebrow="Lehre & Forschung" title="Diplomarbeiten" lead=theses_lead %}
 
 <div class="container">
+  {% include listing-filter.html lang=page.lang kind="theses" %}
   <div class="listing-items">
     {% assign de_theses = site.theses | where: "lang", "de" | sort: "date" | reverse %}
     {% assign year = "" %}
@@ -19,7 +20,7 @@ page_id: theses-index
       <h2 class="mt-3 year-heading">{{ thesis_year }}</h2>
       {% assign year = thesis_year %}
       {% endif %}
-      <div class="listing-item thesis-entry collapsible">
+      <div class="listing-item thesis-entry collapsible" data-year="{{ thesis_year }}">
         {% assign anchor = thesis.permalink | slugify %}
         <h3 class="listing-title" id="{{ anchor }}">
           <button type="button" class="listing-toggle" aria-controls="{{ anchor }}-content">

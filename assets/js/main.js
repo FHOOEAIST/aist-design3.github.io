@@ -282,12 +282,197 @@
     apply(initial);
   }
 
+  /* ------------------------------------------------------------ listbox */
+  // Custom ARIA listbox (trigger button + option list) used by the listing
+  // filters. onChange receives the selected option's data-value.
+  function initListbox(control, onChange) {
+    var trigger = control.querySelector(".cat-filter-trigger");
+    var menu = control.querySelector(".cat-filter-menu");
+    var valueEl = control.querySelector(".cat-filter-value");
+    var options = Array.prototype.slice.call(menu.querySelectorAll('[role="option"]'));
+    var activeIndex = 0;
+    var current = options[0];
+
+    function openMenu() {
+      control.classList.add("is-open");
+      trigger.setAttribute("aria-expanded", "true");
+      setActive(options.indexOf(current));
+      menu.focus();
+    }
+
+    function closeMenu(refocus) {
+      control.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+      menu.removeAttribute("aria-activedescendant");
+      options.forEach(function (o) { o.classList.remove("is-active"); });
+      if (refocus) trigger.focus();
+    }
+
+    function setActive(index) {
+      if (index < 0) index = 0;
+      if (index > options.length - 1) index = options.length - 1;
+      activeIndex = index;
+      options.forEach(function (o, i) { o.classList.toggle("is-active", i === index); });
+      menu.setAttribute("aria-activedescendant", options[index].id);
+      options[index].scrollIntoView({ block: "nearest" });
+    }
+
+    // aria-selected is the single source of truth: the CSS styles the selected
+    // row off the attribute, so visual and a11y state cannot drift.
+    function select(option, notify) {
+      current = option;
+      options.forEach(function (o) {
+        o.setAttribute("aria-selected", o === option ? "true" : "false");
+      });
+      valueEl.textContent = option.querySelector(".cat-filter-name").textContent;
+      if (notify) onChange(option.getAttribute("data-value"));
+    }
+
+    trigger.addEventListener("click", function () {
+      control.classList.contains("is-open") ? closeMenu(false) : openMenu();
+    });
+
+    trigger.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        openMenu();
+      }
+    });
+
+    menu.addEventListener("keydown", function (e) {
+      switch (e.key) {
+        case "ArrowDown": e.preventDefault(); setActive(activeIndex + 1); break;
+        case "ArrowUp": e.preventDefault(); setActive(activeIndex - 1); break;
+        case "Home": e.preventDefault(); setActive(0); break;
+        case "End": e.preventDefault(); setActive(options.length - 1); break;
+        case "Enter":
+        case " ":
+          e.preventDefault();
+          select(options[activeIndex], true);
+          closeMenu(true);
+          break;
+        case "Escape": e.preventDefault(); closeMenu(true); break;
+        case "Tab": closeMenu(false); break;
+      }
+    });
+
+    options.forEach(function (option) {
+      option.addEventListener("click", function () {
+        select(option, true);
+        closeMenu(true);
+      });
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!control.contains(e.target)) closeMenu(false);
+    });
+
+    return {
+      value: function () { return current.getAttribute("data-value"); },
+      // Select by value; unknown values fall back to the first option ("all").
+      set: function (value, notify) {
+        var option = options.filter(function (o) {
+          return o.getAttribute("data-value") === value;
+        })[0] || options[0];
+        select(option, notify);
+      }
+    };
+  }
+
+  /* ----------------------------------------------------- listing filter */
+  // Publications and theses: one listbox per facet (category, year). An entry
+  // is shown when it matches every facet; year headings without visible
+  // entries are hidden. State is mirrored into the hash (#cat=ml&year=2024).
+  function initListingFilter() {
+    var root = document.querySelector("[data-listing-filter]");
+    if (!root) return;
+
+    var resultsEl = root.querySelector(".cat-filter-results");
+    var items = Array.prototype.slice.call(document.querySelectorAll(".listing-item[data-year]"));
+    var yearHeadings = Array.prototype.slice.call(document.querySelectorAll(".year-heading"));
+    var boxes = {};
+
+    items.forEach(function (item) {
+      var raw = item.getAttribute("data-categories") || "";
+      item.catList = raw.split(" ").filter(Boolean);
+      item.year = item.getAttribute("data-year");
+    });
+
+    function apply() {
+      var cat = boxes.cat ? boxes.cat.value() : "all";
+      var year = boxes.year ? boxes.year.value() : "all";
+      var shown = 0;
+
+      items.forEach(function (item) {
+        var ok = (cat === "all" || item.catList.indexOf(cat) !== -1) &&
+                 (year === "all" || item.year === year);
+        item.style.display = ok ? "" : "none";
+        if (ok) shown++;
+      });
+
+      yearHeadings.forEach(function (heading) {
+        var next = heading.nextElementSibling;
+        var any = false;
+        while (next && !next.classList.contains("year-heading")) {
+          if (next.classList.contains("listing-item") && next.style.display !== "none") any = true;
+          next = next.nextElementSibling;
+        }
+        heading.style.display = any ? "" : "none";
+      });
+
+      var tpl = root.getAttribute("data-results-template") || "";
+      if (resultsEl) {
+        resultsEl.textContent = tpl.replace("{n}", shown).replace("{total}", items.length);
+      }
+    }
+
+    function syncHash() {
+      var parts = [];
+      Object.keys(boxes).forEach(function (key) {
+        var v = boxes[key].value();
+        if (v !== "all") parts.push(key + "=" + v);
+      });
+      // replaceState so filtering does not pile up history entries
+      history.replaceState(null, "",
+        parts.length ? "#" + parts.join("&") : location.pathname + location.search);
+    }
+
+    Array.prototype.slice.call(root.querySelectorAll("[data-filter-key]")).forEach(function (control) {
+      var key = control.getAttribute("data-filter-key");
+      boxes[key] = initListbox(control, function () {
+        apply();
+        syncHash();
+      });
+    });
+
+    // A category badge on an entry doubles as a shortcut into that category.
+    if (boxes.cat) {
+      document.addEventListener("click", function (e) {
+        var badge = e.target.closest ? e.target.closest(".publication-category[data-category]") : null;
+        if (!badge) return;
+        e.preventDefault();
+        boxes.cat.set(badge.getAttribute("data-category"), false);
+        apply();
+        syncHash();
+        root.scrollIntoView({ block: "nearest" });
+      });
+    }
+
+    // Restore facets from the hash, e.g. #cat=ml&year=2024.
+    Object.keys(boxes).forEach(function (key) {
+      var m = new RegExp("(?:^#|&)" + key + "=([a-z0-9]+)").exec(location.hash);
+      boxes[key].set(m ? m[1] : "all", false);
+    });
+    apply();
+  }
+
   /* --------------------------------------------------------------- boot */
   function boot() {
     initHeader();
     initCollapsibles();
     initGalleries();
     initProjectFilter();
+    initListingFilter();
   }
 
   if (document.readyState === "loading") {

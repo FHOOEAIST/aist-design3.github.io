@@ -259,3 +259,14 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* long funder/partner names must wrap inside their grid cell instead of overflowing the card */
+.project-fact {
+  min-width: 0;
+}
+
+.project-fact dd,
+.project-fact dt {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}

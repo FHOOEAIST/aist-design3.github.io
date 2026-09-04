@@ -1180,8 +1180,16 @@ html:not(.js) .listing-toggle-icon {
   box-shadow: var(--ring);
 }
 
-.cat-filter.is-open .cat-filter-trigger {
+.cat-filter-control.is-open .cat-filter-trigger {
   border-color: var(--color-primary);
+}
+
+.cat-filter-control--compact .cat-filter-trigger {
+  min-width: 10rem;
+}
+
+.cat-filter-label + .cat-filter-control + .cat-filter-label {
+  margin-left: 0.75rem;
 }
 
 .cat-filter-value {
@@ -1196,7 +1204,7 @@ html:not(.js) .listing-toggle-icon {
   color: var(--color-primary);
 }
 
-.cat-filter.is-open .cat-filter-chevron {
+.cat-filter-control.is-open .cat-filter-chevron {
   transform: rotate(180deg);
 }
 
@@ -1220,7 +1228,7 @@ html:not(.js) .listing-toggle-icon {
   transform: translateY(-0.4rem);
 }
 
-.cat-filter.is-open .cat-filter-menu {
+.cat-filter-control.is-open .cat-filter-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -2195,9 +2203,14 @@ html:not(.js) .listing-toggle-icon {
     gap: 0.5rem;
   }
 
-  .cat-filter-trigger {
+  .cat-filter-trigger,
+  .cat-filter-control--compact .cat-filter-trigger {
     min-width: 0;
     width: 100%;
+  }
+
+  .cat-filter-label + .cat-filter-control + .cat-filter-label {
+    margin: 0.5rem 0 0;
   }
 
   .cat-filter-results {

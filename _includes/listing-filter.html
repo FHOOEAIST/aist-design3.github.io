@@ -1,0 +1,110 @@
+{% comment %}
+Filter bar for the year-grouped listings (publications, theses). Expects:
+  include.lang — "de" or "en"
+  include.kind — "publications" (category + year) or "theses" (year only)
+
+Each control is an ARIA listbox (the native <select> cannot style its open
+menu). Options and counts are generated here, so the taxonomy in
+_data/publication_categories.yml stays the single source of truth. The
+behaviour lives in assets/js/main.js (initListingFilter): entries are
+`.listing-item[data-year]`, optionally with `data-categories`, and the chosen
+values are mirrored into the hash as `#cat=...&year=...`.
+{% endcomment %}
+
+{% if include.kind == "theses" %}
+    {% assign all_items = site.theses | where: "lang", include.lang %}
+{% else %}
+    {% assign all_items = site.publications | where: "lang", include.lang %}
+{% endif %}
+{% assign all_items = all_items | sort: "date" | reverse %}
+{% assign n_all = all_items | size %}
+{% assign by_year = all_items | group_by_exp: "item", "item.date | date: '%Y'" %}
+{% assign cats = site.data.publication_categories %}
+
+{% if include.lang == "de" %}
+    {% assign t_cat = "Kategorie" %}
+    {% assign t_year = "Jahr" %}
+    {% assign t_all = "Alle" %}
+    {% assign t_all_years = "Alle Jahre" %}
+    {% if include.kind == "theses" %}
+        {% assign t_results = "{n} von {total} Diplomarbeiten" %}
+    {% else %}
+        {% assign t_results = "{n} von {total} Publikationen" %}
+    {% endif %}
+{% else %}
+    {% assign t_cat = "Category" %}
+    {% assign t_year = "Year" %}
+    {% assign t_all = "All" %}
+    {% assign t_all_years = "All years" %}
+    {% if include.kind == "theses" %}
+        {% assign t_results = "{n} of {total} theses" %}
+    {% else %}
+        {% assign t_results = "{n} of {total} publications" %}
+    {% endif %}
+{% endif %}
+
+<div class="cat-filter" data-listing-filter data-results-template="{{ t_results }}">
+    {% if include.kind != "theses" %}
+    <span class="cat-filter-label" id="filterLabel-cat">{{ t_cat }}</span>
+    <div class="cat-filter-control" data-filter-key="cat">
+        <button
+            type="button"
+            class="cat-filter-trigger"
+            id="filterTrigger-cat"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-labelledby="filterLabel-cat filterTrigger-cat"
+        >
+            <span class="cat-filter-value">{{ t_all }}</span>
+            <i class="fa-solid fa-chevron-down cat-filter-chevron" aria-hidden="true"></i>
+        </button>
+        <ul class="cat-filter-menu" role="listbox" tabindex="-1" aria-labelledby="filterLabel-cat">
+            <li id="opt-cat-all" role="option" data-value="all" aria-selected="true">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span class="cat-filter-name">{{ t_all }}</span>
+                <span class="cat-filter-count">{{ n_all }}</span>
+            </li>
+            {% for cat in cats %}
+            {% assign matching = all_items | where_exp: "p", "p.categories contains cat.id" %}
+            {% if include.lang == "de" %}{% assign cat_label = cat.label_de %}{% else %}{% assign cat_label = cat.label_en %}{% endif %}
+            <li id="opt-cat-{{ cat.id }}" role="option" data-value="{{ cat.id }}" aria-selected="false">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span class="cat-filter-name">{{ cat_label | escape }}</span>
+                <span class="cat-filter-count">{{ matching | size }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <span class="cat-filter-label" id="filterLabel-year">{{ t_year }}</span>
+    <div class="cat-filter-control cat-filter-control--compact" data-filter-key="year">
+        <button
+            type="button"
+            class="cat-filter-trigger"
+            id="filterTrigger-year"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-labelledby="filterLabel-year filterTrigger-year"
+        >
+            <span class="cat-filter-value">{{ t_all_years }}</span>
+            <i class="fa-solid fa-chevron-down cat-filter-chevron" aria-hidden="true"></i>
+        </button>
+        <ul class="cat-filter-menu" role="listbox" tabindex="-1" aria-labelledby="filterLabel-year">
+            <li id="opt-year-all" role="option" data-value="all" aria-selected="true">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span class="cat-filter-name">{{ t_all_years }}</span>
+                <span class="cat-filter-count">{{ n_all }}</span>
+            </li>
+            {% for group in by_year %}
+            <li id="opt-year-{{ group.name }}" role="option" data-value="{{ group.name }}" aria-selected="false">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span class="cat-filter-name">{{ group.name }}</span>
+                <span class="cat-filter-count">{{ group.size }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <p class="cat-filter-results" aria-live="polite"></p>
+</div>
