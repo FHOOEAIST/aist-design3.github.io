@@ -62,26 +62,27 @@ are rendered, the whole pool goes into data-mosaic for the cycling in main.js.
         <span class="tile tile-solid tile-blue" style="--i: 2" aria-hidden="true"></span>
         {% endif %}
         <span class="tile tile-solid tile-blue" style="--i: 3" aria-hidden="true"></span>
+        <span class="tile tile-solid tile-sky" style="--i: 4" aria-hidden="true"></span>
         {% assign mparts = mosaic_pool[1] | split: "|" %}
         {% if mparts[0] %}
-        <a class="tile tile-photo" style="--i: 4" data-index="1" href="{{ mparts[1] }}" aria-label="{{ mparts[3] | escape }}" title="{{ mparts[3] | escape }}">
-          <img class="is-front" src="{{ mparts[0] }}" alt=""{% if mparts[2] != "" %} style="object-position: {{ mparts[2] }}"{% endif %} loading="eager">
-          <img alt="" aria-hidden="true">
-        </a>
-        {% else %}
-        <span class="tile tile-solid tile-blue" style="--i: 4" aria-hidden="true"></span>
-        {% endif %}
-        {% assign mparts = mosaic_pool[2] | split: "|" %}
-        {% if mparts[0] %}
-        <a class="tile tile-photo" style="--i: 5" data-index="2" href="{{ mparts[1] }}" aria-label="{{ mparts[3] | escape }}" title="{{ mparts[3] | escape }}">
+        <a class="tile tile-photo" style="--i: 5" data-index="1" href="{{ mparts[1] }}" aria-label="{{ mparts[3] | escape }}" title="{{ mparts[3] | escape }}">
           <img class="is-front" src="{{ mparts[0] }}" alt=""{% if mparts[2] != "" %} style="object-position: {{ mparts[2] }}"{% endif %} loading="eager">
           <img alt="" aria-hidden="true">
         </a>
         {% else %}
         <span class="tile tile-solid tile-blue" style="--i: 5" aria-hidden="true"></span>
         {% endif %}
-        <span class="tile tile-solid tile-mid" style="--i: 6" aria-hidden="true"></span>
-        <span class="tile tile-solid tile-sky" style="--i: 7" aria-hidden="true"></span>
+        {% assign mparts = mosaic_pool[2] | split: "|" %}
+        {% if mparts[0] %}
+        <a class="tile tile-photo" style="--i: 6" data-index="2" href="{{ mparts[1] }}" aria-label="{{ mparts[3] | escape }}" title="{{ mparts[3] | escape }}">
+          <img class="is-front" src="{{ mparts[0] }}" alt=""{% if mparts[2] != "" %} style="object-position: {{ mparts[2] }}"{% endif %} loading="eager">
+          <img alt="" aria-hidden="true">
+        </a>
+        {% else %}
+        <span class="tile tile-solid tile-blue" style="--i: 6" aria-hidden="true"></span>
+        {% endif %}
+        <span class="tile tile-solid tile-mid" style="--i: 7" aria-hidden="true"></span>
+        <span class="tile tile-solid tile-light" style="--i: 8" aria-hidden="true"></span>
       </div>
     </div>
   </div>
