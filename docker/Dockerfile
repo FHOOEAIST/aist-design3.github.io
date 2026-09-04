@@ -29,7 +29,8 @@ RUN gem install bundler -v "$(tail -n 1 Gemfile.lock | tr -d '[:space:]')" \
 RUN npm install -g pagefind@1
 
 COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
+# Strip CRLF in case the script was checked out with Windows line endings.
+RUN sed -i 's/\r$//' /usr/local/bin/entrypoint.sh && chmod +x /usr/local/bin/entrypoint.sh
 
 EXPOSE 4000 35729
 
