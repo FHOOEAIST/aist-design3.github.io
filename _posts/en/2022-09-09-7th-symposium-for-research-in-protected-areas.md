@@ -7,9 +7,9 @@ title_image: /assets/images/news/7Symposium_für_Forschung_in_geschützten_Gebie
 
 ---
 
-Christoph was able to visit the [7th Symposium for Research in Protected Areas](https://www.nationalparksaustria.at/de/symposium.html) organized by the National Parks Austria in the premises of the University of Vienna at the campus of the Old General Hospital\. He was allowed to present the project [Bambi](https://aist.fh-hagenberg.at/index.php/en/projects/bambi) within the poster session\. Additionally, our project partner Roland Kaiser presented the project results from last year’s [AlpinIO](https://aist.fh-hagenberg.at/index.php/en/projects/alpinio) project within the session Session 8\.1 Life Above the Treeline\.
+Christoph was able to visit the [7th Symposium for Research in Protected Areas](https://www.nationalparksaustria.at/de/symposium.html) organized by the National Parks Austria in the premises of the University of Vienna at the campus of the Old General Hospital. He was allowed to present the project [Bambi](https://aist.fh-hagenberg.at/index.php/en/projects/bambi) within the poster session. Additionally, our project partner Roland Kaiser presented the project results from last year’s [AlpinIO](https://aist.fh-hagenberg.at/index.php/en/projects/alpinio) project within the session Session 8.1 Life Above the Treeline.
 
-Thank you very much for the content exchange and the many interesting presentations\.
+Thank you very much for the content exchange and the many interesting presentations.
 
 ## Gallery
 

@@ -7,7 +7,7 @@ title_image: /assets/images/news/8_Kepler_Science_Day_(2024)_title.jpg
 
 ---
 
-Im Rahmen des diesjährigen Kepler Science Days, an der Medizinischen Fakultät der Johannes Kepler Universität Linz, hatten unsere Kollegen Simone Sandler, Andreas Pointner und Christoph Praschl die Möglichkeit, aktuelle Ergebnisse aus drei unserer eHealth\-Forschungsprojekte zu präsentieren\. Simone stellte unsere [Zusammenarbeit mit Treetop Medical](https://aist.fh-hagenberg.at/index.php/de/projekte/treetop-medical) vor, Andreas präsentierte das [Projekt PAIR](https://aist.fh-hagenberg.at/index.php/de/projekte/pair) und Christoph unsere [Forschungskooperation mit der WAKO GMBH](https://aist.fh-hagenberg.at/index.php/de/projekte/move)\. Es war eine tolle Möglichkeit unsere Arbeit im Bereich eHealth einem breiten Publikum zu präsentieren\.
+Im Rahmen des diesjährigen Kepler Science Days, an der Medizinischen Fakultät der Johannes Kepler Universität Linz, hatten unsere Kollegen Simone Sandler, Andreas Pointner und Christoph Praschl die Möglichkeit, aktuelle Ergebnisse aus drei unserer eHealth-Forschungsprojekte zu präsentieren. Simone stellte unsere [Zusammenarbeit mit Treetop Medical](https://aist.fh-hagenberg.at/index.php/de/projekte/treetop-medical) vor, Andreas präsentierte das [Projekt PAIR](https://aist.fh-hagenberg.at/index.php/de/projekte/pair) und Christoph unsere [Forschungskooperation mit der WAKO GMBH](https://aist.fh-hagenberg.at/index.php/de/projekte/move). Es war eine tolle Möglichkeit unsere Arbeit im Bereich eHealth einem breiten Publikum zu präsentieren.
 
 ## Gallery
 

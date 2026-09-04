@@ -16,4 +16,4 @@ category: unknown
 
 ## Project Safetydrain
 
-This research project focuses upon the development of an interactive control element for smart shower systems\. Through an integrated screen the user is able to regulate via speech, gestures or touch different shower adjustments \(flow,temperature\)\. Whilst there are hindering circumstances \(water, foam\) the control element is to be fully functional and easy to use\.
+This research project focuses upon the development of an interactive control element for smart shower systems. Through an integrated screen the user is able to regulate via speech, gestures or touch different shower adjustments (flow,temperature). Whilst there are hindering circumstances (water, foam) the control element is to be fully functional and easy to use.

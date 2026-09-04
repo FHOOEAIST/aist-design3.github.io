@@ -16,4 +16,4 @@ category: ml
 
 ## Loop
 
-Das Forschungsprojekt LOOP, in Zusammenarbeit mit der CALPANA business consulting GmbH, untersucht die Analyse von Risiken aus unstrukturierten Datenquellen wie Nachrichten und sozialen Medien\. Das Nachfolgeprojekt von RCPM hat das Ziel, einen Feedback\-LOOP in die KI\-Methoden zu integrieren, um Risikoanalysten zu ermöglichen, die KI\-Methoden zu beeinflussen und die Identifizierung von Risiken sowie die Berechnung von Wahrscheinlichkeiten zu verbessern\.
+Das Forschungsprojekt LOOP, in Zusammenarbeit mit der CALPANA business consulting GmbH, untersucht die Analyse von Risiken aus unstrukturierten Datenquellen wie Nachrichten und sozialen Medien. Das Nachfolgeprojekt von RCPM hat das Ziel, einen Feedback-LOOP in die KI-Methoden zu integrieren, um Risikoanalysten zu ermöglichen, die KI-Methoden zu beeinflussen und die Identifizierung von Risiken sowie die Berechnung von Wahrscheinlichkeiten zu verbessern.

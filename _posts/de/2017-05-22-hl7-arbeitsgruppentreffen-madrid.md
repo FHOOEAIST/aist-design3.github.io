@@ -7,11 +7,11 @@ title_image: /assets/images/news/HL7_Arbeitsgruppentreffen_Madrid_title.jpg
 
 ---
 
-Zum ersten mal seit dem Beginn des KIMBO Projekts fand ein HL7 Working Group Meeting in Europa statt\. Daher konnten wir diesmal mehr Mitglieder des [KIMBO](https://aist.fh-hagenberg.at/index.php/en/projects) teams nach Madrid senden\. Reinhard Egelkraut und Karl Holzer von [Compu Group Medical Austria](http://www.cgm.com/us/index.en.jsp) sowie [Andreas Schuler and Oliver Krauss](http://ehealth.fh-hagenberg.at/index.php/team/) nahmen an dem von HL7 Spanien gehostetem WGM und Connectathon teil\. Wie immer dürfen wir usn bei [HL7 Austria](http://www.hl7.at/) für das Sponsoring der Teilnahme bedanken\.
+Zum ersten mal seit dem Beginn des KIMBO Projekts fand ein HL7 Working Group Meeting in Europa statt. Daher konnten wir diesmal mehr Mitglieder des [KIMBO](https://aist.fh-hagenberg.at/index.php/en/projects) teams nach Madrid senden. Reinhard Egelkraut und Karl Holzer von [Compu Group Medical Austria](http://www.cgm.com/us/index.en.jsp) sowie [Andreas Schuler and Oliver Krauss](http://ehealth.fh-hagenberg.at/index.php/team/) nahmen an dem von HL7 Spanien gehostetem WGM und Connectathon teil. Wie immer dürfen wir usn bei [HL7 Austria](http://www.hl7.at/) für das Sponsoring der Teilnahme bedanken.
 
-Erstmalig war auch der neue [Workflow track](http://wiki.hl7.org/index.php?title=201705_Workflow) in welchem die entsprechenden [FHIR Konzepte](http://www.hl7.org/fhir/workflow.html) getestet wurden\. Vier organisationen nahmen an dem Track teil\. Alle konnten die definierten Szenarien erfolgreich testen\. Dies zeigt die einfache Verwendbarkeit des Standards und der bestehenden Dokumentation des Request/Event patterns\.
+Erstmalig war auch der neue [Workflow track](http://wiki.hl7.org/index.php?title=201705_Workflow) in welchem die entsprechenden [FHIR Konzepte](http://www.hl7.org/fhir/workflow.html) getestet wurden. Vier organisationen nahmen an dem Track teil. Alle konnten die definierten Szenarien erfolgreich testen. Dies zeigt die einfache Verwendbarkeit des Standards und der bestehenden Dokumentation des Request/Event patterns.
 
-We freuen uns schon auf das nächste Workgroup Meeting in San Diego\.
+We freuen uns schon auf das nächste Workgroup Meeting in San Diego.
 
 ## Gallery
 

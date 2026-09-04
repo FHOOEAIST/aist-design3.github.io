@@ -7,11 +7,11 @@ title_image: /assets/images/news/ARS_Electronica_Festival_title.jpg
 
 ---
 
-Anna Maria Brunnhofer \(AMB GmbH\) lud die am Projekt TrueSize beteiligten Mitarbeiter der Forschungsgruppe zum ARS Electronica Festival in der Linzer PostCity ein\.
+Anna Maria Brunnhofer (AMB GmbH) lud die am Projekt TrueSize beteiligten Mitarbeiter der Forschungsgruppe zum ARS Electronica Festival in der Linzer PostCity ein.
 
-Der Tag führte die Beteiligten durch verschiedenste Exponate aus den Bereichen Kunst und Technik – von Robotern die autonom zeichnen bis hin zu Exponaten zum Thema Anonymisierung und künstliche Intelligenz\.
+Der Tag führte die Beteiligten durch verschiedenste Exponate aus den Bereichen Kunst und Technik – von Robotern die autonom zeichnen bis hin zu Exponaten zum Thema Anonymisierung und künstliche Intelligenz.
 
-Danke vielmals Anna für die Einladung\.
+Danke vielmals Anna für die Einladung.
 
 ## Gallery
 

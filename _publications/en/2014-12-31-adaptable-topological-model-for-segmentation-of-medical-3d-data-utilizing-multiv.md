@@ -5,11 +5,8 @@ permalink: /publications/adaptable-topological-model-for-segmentation-of-medical
 date: 2014-12-31
 title: Adaptable Topological Model for Segmentation of Medical 3D Data Utilizing
   Multivariate Heuristic Feature Classification
-reference: >-
-  Tagungsband des 8\. Forschungsforum der österreichischen Fachhochschulen,
-  Kufstein, Österreich, 2014, pp\. 296\-300
-
-  G\. Zwettler, W\. Backfrieder
+reference: Zwettler G., Backfrieder W. Tagungsband des 8. Forschungsforum der österreichischen
+  Fachhochschulen, Kufstein, Österreich, 2014, pp. 296-300.
 category: cv
 ---
 

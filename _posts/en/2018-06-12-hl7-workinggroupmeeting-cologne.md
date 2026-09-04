@@ -7,9 +7,9 @@ title_image: /assets/images/news/HL7_Arbeitsgruppentreffen_Köln_title.jpg
 
 ---
 
-In may 2018 HL7 Germany hosted a WGM in Cologne\. Emmauel Helm, Andreas Schuler und Oliver Krauss participated at the WGM and FHIR Connectathon\. As always much thanks to HL7 Austria and Erasmus\+ for sponsering our participation\. Also a big thank you to HL7 Germany for the hosting, excellent orgnaization and awesome networking event\.
+In may 2018 HL7 Germany hosted a WGM in Cologne. Emmauel Helm, Andreas Schuler und Oliver Krauss participated at the WGM and FHIR Connectathon. As always much thanks to HL7 Austria and Erasmus+ for sponsering our participation. Also a big thank you to HL7 Germany for the hosting, excellent orgnaization and awesome networking event.
 
-The teammembers participtaed at the connectathon tracks for GDPR \(General Data Protection Regulation and its relevance for medical research\), [FHIRCast](https://github.com/fhircast)\. [FHIRCast](http://fhircast.org/) is a relatively new project that deals with the live synchronisation between software components in medical systems\.
+The teammembers participtaed at the connectathon tracks for GDPR (General Data Protection Regulation and its relevance for medical research), [FHIRCast](https://github.com/fhircast). [FHIRCast](http://fhircast.org/) is a relatively new project that deals with the live synchronisation between software components in medical systems.
 
 ## Gallery
 

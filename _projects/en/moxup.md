@@ -16,5 +16,5 @@ category: unknown
 
 ## Project MoxUP
 
-Within the scope of the MoxUp Project, house construction plans delivered by architects, get edited for use in Virtual Reality providing an immersive insight for customers even before the first brick is set in place\. The challenge thereby lays within differently structured 2D/3D data types used across the domains of industrial construction and Virtual Reality\.
-The projects main goal is to automate the validation of such 3D models for the use in VR and if necessary indicate errors and automatically optimize respectively\.
+Within the scope of the MoxUp Project, house construction plans delivered by architects, get edited for use in Virtual Reality providing an immersive insight for customers even before the first brick is set in place. The challenge thereby lays within differently structured 2D/3D data types used across the domains of industrial construction and Virtual Reality.
+The projects main goal is to automate the validation of such 3D models for the use in VR and if necessary indicate errors and automatically optimize respectively.

@@ -7,9 +7,9 @@ title_image: /assets/images/news/AIST_Weihnachtsfeier_2022_title.jpg
 
 ---
 
-Also this year the annual AIST Christmas party took place in Hagenberg\. This time we used the opportunity of the recently opened Park Hotel and its restaurant for a contemplative get\-together with existing, former and future employees\. After the dinner, all employees could prove their knowledge at the AIST Quiz Night, which was initiated and organized by Emmanuel Helm\.
+Also this year the annual AIST Christmas party took place in Hagenberg. This time we used the opportunity of the recently opened Park Hotel and its restaurant for a contemplative get-together with existing, former and future employees. After the dinner, all employees could prove their knowledge at the AIST Quiz Night, which was initiated and organized by Emmanuel Helm.
 
-We would like to take this opportunity to thank all project partners and colleagues for the past year and wish them a happy holiday season and a happy new year 2023\.
+We would like to take this opportunity to thank all project partners and colleagues for the past year and wish them a happy holiday season and a happy new year 2023.
 
 ## Gallery
 

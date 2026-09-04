@@ -16,4 +16,4 @@ category: unknown
 
 ## Vipa
 
-The VIPA research project aims to develop an AI\-powered system for fully automated generation of business process models from simple textual visions\. By combining Retrieval\-Augmented Generation \(RAG\), Large Language Models \(LLMs\), and semantic rule frameworks, VIPA transforms process ideas into validated BPMN models – without requiring BPMN expertise\. VIPA radically lowers the barriers to process automation, enabling organizations to digitize workflows quickly, intuitively, and with high quality\.
+The VIPA research project aims to develop an AI-powered system for fully automated generation of business process models from simple textual visions. By combining Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), and semantic rule frameworks, VIPA transforms process ideas into validated BPMN models – without requiring BPMN expertise. VIPA radically lowers the barriers to process automation, enabling organizations to digitize workflows quickly, intuitively, and with high quality.

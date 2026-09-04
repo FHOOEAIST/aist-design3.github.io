@@ -16,4 +16,4 @@ category: ml
 
 ## Eaci
 
-Im Projekt EACI geht es um die Generierung von Innovationsideen aus aktuellen Trends aus der Industrie und Wissenschaft\. AIST unterstützt in der Kooperation mit mogree insbesondere in der Analyse von Quelldaten auf ethische Inhalte \(e\.g\. filtern von Sexismus, Rassismus, etc\.\)\. Dabei sollen nicht nur explizite Inhalte erkannt werden sondern auch ein impliziter Bias erkannt werden können\.
+Im Projekt EACI geht es um die Generierung von Innovationsideen aus aktuellen Trends aus der Industrie und Wissenschaft. AIST unterstützt in der Kooperation mit mogree insbesondere in der Analyse von Quelldaten auf ethische Inhalte (e.g. filtern von Sexismus, Rassismus, etc.). Dabei sollen nicht nur explizite Inhalte erkannt werden sondern auch ein impliziter Bias erkannt werden können.

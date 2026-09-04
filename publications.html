@@ -10,17 +10,100 @@ page_id: publications-index
     <h1>Publikationen</h1>
 </div>
 
-<div class="category-filter" id="categoryFilter">
-    <span class="category-filter-label">Kategorie:</span>
-    <button class="category-btn active" data-category="all">Alle</button>
-    <button class="category-btn" data-category="ehealth">eHealth</button>
-    <button class="category-btn" data-category="ml">
-        Machine Learning & Data Science
-    </button>
-    <button class="category-btn" data-category="cv">
-        Computer Vision & Augmented Reality
-    </button>
-    <button class="category-btn" data-category="se">Software Engineering</button>
+{% assign all_pubs = site.publications | where: "lang", "de" %} {% assign
+n_all = all_pubs | size %} {% assign n_ehealth = all_pubs | where: "category",
+"ehealth" | size %} {% assign n_ml = all_pubs | where: "category", "ml" | size
+%} {% assign n_cv = all_pubs | where: "category", "cv" | size %} {% assign
+n_se = all_pubs | where: "category", "se" | size %}
+
+<div
+    class="cat-filter"
+    id="categoryFilter"
+    data-results-template="{n} von {total} Publikationen"
+>
+    <span class="cat-filter-label" id="catFilterLabel">Kategorie</span>
+
+    <div class="cat-filter-control">
+        <button
+            type="button"
+            class="cat-filter-trigger"
+            id="catFilterTrigger"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-labelledby="catFilterLabel catFilterTrigger"
+        >
+            <span class="cat-filter-value" id="catFilterValue">Alle</span>
+            <i
+                class="fa-solid fa-chevron-down cat-filter-chevron"
+                aria-hidden="true"
+            ></i>
+        </button>
+
+        <ul
+            class="cat-filter-menu"
+            id="catFilterMenu"
+            role="listbox"
+            tabindex="-1"
+            aria-labelledby="catFilterLabel"
+        >
+            <li
+                id="cat-opt-all"
+                role="option"
+                data-category="all"
+                aria-selected="true"
+            >
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span class="cat-filter-name">Alle</span>
+                <span class="cat-filter-count">{{ n_all }}</span>
+            </li>
+            <li
+                id="cat-opt-ehealth"
+                role="option"
+                data-category="ehealth"
+                aria-selected="false"
+            >
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span class="cat-filter-name">eHealth</span>
+                <span class="cat-filter-count">{{ n_ehealth }}</span>
+            </li>
+            <li
+                id="cat-opt-ml"
+                role="option"
+                data-category="ml"
+                aria-selected="false"
+            >
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span class="cat-filter-name"
+                    >Machine Learning &amp; Data Science</span
+                >
+                <span class="cat-filter-count">{{ n_ml }}</span>
+            </li>
+            <li
+                id="cat-opt-cv"
+                role="option"
+                data-category="cv"
+                aria-selected="false"
+            >
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span class="cat-filter-name"
+                    >Computer Vision &amp; Augmented Reality</span
+                >
+                <span class="cat-filter-count">{{ n_cv }}</span>
+            </li>
+            <li
+                id="cat-opt-se"
+                role="option"
+                data-category="se"
+                aria-selected="false"
+            >
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span class="cat-filter-name">Software Engineering</span>
+                <span class="cat-filter-count">{{ n_se }}</span>
+            </li>
+        </ul>
+    </div>
+
+    <p class="cat-filter-results" id="catFilterResults" aria-live="polite"></p>
 </div>
 
 <div class="listing-items">
@@ -67,54 +150,184 @@ page_id: publications-index
 
 <script>
     (function () {
-        var filterContainer = document.getElementById("categoryFilter");
-        if (!filterContainer) return;
+        var root = document.getElementById("categoryFilter");
+        if (!root) return;
 
-        var buttons = filterContainer.querySelectorAll(".category-btn");
+        var trigger = document.getElementById("catFilterTrigger");
+        var menu = document.getElementById("catFilterMenu");
+        var valueEl = document.getElementById("catFilterValue");
+        var resultsEl = document.getElementById("catFilterResults");
+        var options = Array.prototype.slice.call(
+            menu.querySelectorAll('[role="option"]'),
+        );
+
         var items = document.querySelectorAll(
             ".publication-entry[data-category]",
         );
         var yearHeadings = document.querySelectorAll(".year-heading");
+        var total = items.length;
+        var activeIndex = 0;
 
-        buttons.forEach(function (btn) {
-            btn.addEventListener("click", function () {
-                buttons.forEach(function (b) {
-                    b.classList.remove("active");
-                });
-                btn.classList.add("active");
+        // Show/hide entries, then hide any year heading left with nothing under it.
+        function applyFilter(category) {
+            var shown = 0;
 
-                var selectedCategory = btn.getAttribute("data-category");
+            items.forEach(function (item) {
+                var itemCategory = item.getAttribute("data-category");
+                if (category === "all" || itemCategory === category) {
+                    item.style.display = "";
+                    shown++;
+                } else {
+                    item.style.display = "none";
+                }
+            });
 
-                items.forEach(function (item) {
-                    var itemCategory = item.getAttribute("data-category");
+            yearHeadings.forEach(function (heading) {
+                var nextEl = heading.nextElementSibling;
+                var hasVisibleItems = false;
+                while (nextEl && !nextEl.classList.contains("year-heading")) {
                     if (
-                        selectedCategory === "all" ||
-                        itemCategory === selectedCategory
+                        nextEl.classList.contains("publication-entry") &&
+                        nextEl.style.display !== "none"
                     ) {
-                        item.style.display = "";
-                    } else {
-                        item.style.display = "none";
+                        hasVisibleItems = true;
                     }
-                });
+                    nextEl = nextEl.nextElementSibling;
+                }
+                heading.style.display = hasVisibleItems ? "" : "none";
+            });
 
-                yearHeadings.forEach(function (heading) {
-                    var nextEl = heading.nextElementSibling;
-                    var hasVisibleItems = false;
-                    while (
-                        nextEl &&
-                        !nextEl.classList.contains("year-heading")
-                    ) {
-                        if (
-                            nextEl.classList.contains("publication-entry") &&
-                            nextEl.style.display !== "none"
-                        ) {
-                            hasVisibleItems = true;
-                        }
-                        nextEl = nextEl.nextElementSibling;
-                    }
-                    heading.style.display = hasVisibleItems ? "" : "none";
-                });
+            var tpl = root.getAttribute("data-results-template") || "";
+            resultsEl.textContent = tpl
+                .replace("{n}", shown)
+                .replace("{total}", total);
+        }
+
+        function openMenu() {
+            root.classList.add("is-open");
+            trigger.setAttribute("aria-expanded", "true");
+            setActive(
+                options.findIndex(function (o) {
+                    return o.getAttribute("aria-selected") === "true";
+                }),
+            );
+            menu.focus();
+        }
+
+        function closeMenu(refocus) {
+            root.classList.remove("is-open");
+            trigger.setAttribute("aria-expanded", "false");
+            menu.removeAttribute("aria-activedescendant");
+            options.forEach(function (o) {
+                o.classList.remove("is-active");
+            });
+            if (refocus) trigger.focus();
+        }
+
+        function setActive(index) {
+            if (index < 0) index = 0;
+            if (index > options.length - 1) index = options.length - 1;
+            activeIndex = index;
+            options.forEach(function (o, i) {
+                o.classList.toggle("is-active", i === index);
+            });
+            menu.setAttribute("aria-activedescendant", options[index].id);
+            options[index].scrollIntoView({ block: "nearest" });
+        }
+
+        function select(option, updateHash) {
+            // aria-selected is the single source of truth: the CSS styles the
+            // selected row off the attribute, so visual and a11y state can't drift.
+            options.forEach(function (o) {
+                o.setAttribute(
+                    "aria-selected",
+                    o === option ? "true" : "false",
+                );
+            });
+
+            var category = option.getAttribute("data-category");
+            valueEl.textContent = option.querySelector(
+                ".cat-filter-name",
+            ).textContent;
+            applyFilter(category);
+
+            if (updateHash) {
+                // replaceState so filtering doesn't pile up history entries
+                history.replaceState(
+                    null,
+                    "",
+                    category === "all"
+                        ? location.pathname + location.search
+                        : "#cat=" + category,
+                );
+            }
+        }
+
+        trigger.addEventListener("click", function () {
+            root.classList.contains("is-open") ? closeMenu(false) : openMenu();
+        });
+
+        trigger.addEventListener("keydown", function (e) {
+            if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+                e.preventDefault();
+                openMenu();
+            }
+        });
+
+        menu.addEventListener("keydown", function (e) {
+            switch (e.key) {
+                case "ArrowDown":
+                    e.preventDefault();
+                    setActive(activeIndex + 1);
+                    break;
+                case "ArrowUp":
+                    e.preventDefault();
+                    setActive(activeIndex - 1);
+                    break;
+                case "Home":
+                    e.preventDefault();
+                    setActive(0);
+                    break;
+                case "End":
+                    e.preventDefault();
+                    setActive(options.length - 1);
+                    break;
+                case "Enter":
+                case " ":
+                    e.preventDefault();
+                    select(options[activeIndex], true);
+                    closeMenu(true);
+                    break;
+                case "Escape":
+                    e.preventDefault();
+                    closeMenu(true);
+                    break;
+                case "Tab":
+                    closeMenu(false);
+                    break;
+            }
+        });
+
+        options.forEach(function (option) {
+            option.addEventListener("click", function () {
+                select(option, true);
+                closeMenu(true);
             });
         });
+
+        document.addEventListener("click", function (e) {
+            if (!root.contains(e.target)) closeMenu(false);
+        });
+
+        // Restore a category from #cat=..., falling back to "all".
+        var match = /(?:^|#|&)cat=([a-z]+)/.exec(location.hash);
+        var initial = options[0];
+        if (match) {
+            initial =
+                options.filter(function (o) {
+                    return o.getAttribute("data-category") === match[1];
+                })[0] || options[0];
+        }
+        select(initial, false);
     })();
 </script>

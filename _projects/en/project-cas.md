@@ -16,4 +16,4 @@ category: unknown
 
 ## REPO – Radiology E-health PlatfOrm
 
-Goal of this project is the development of a radiology system over all facilites using the austrian e\-health\-infrastructure\. The radiology workflow, which was identified in a previous project \(WIRE\), should be extended by collaborative elements\. Starting from the diagnosis via dictation up to the feedback\-mechanism at the end of the radiology workflow, e\-health\-applications for improving the process and quality are planned\. With this, the collaboration of radiologist, as well as other relevant healthcare facilites, should be improved\.
+Goal of this project is the development of a radiology system over all facilites using the austrian e-health-infrastructure. The radiology workflow, which was identified in a previous project (WIRE), should be extended by collaborative elements. Starting from the diagnosis via dictation up to the feedback-mechanism at the end of the radiology workflow, e-health-applications for improving the process and quality are planned. With this, the collaboration of radiologist, as well as other relevant healthcare facilites, should be improved.

@@ -16,4 +16,4 @@ category: ml
 
 ## Loop
 
-The LOOP research project, in collaboration with CALPANA business consulting GmbH, examines the analysis of risks from unstructured data sources such as news and social media\. The successor project of RCPM aims to integrate a feedback loop into the AI methods, allowing risk analysts to influence the AI methods and improve the identification and calculation of risks\.
+The LOOP research project, in collaboration with CALPANA business consulting GmbH, examines the analysis of risks from unstructured data sources such as news and social media. The successor project of RCPM aims to integrate a feedback loop into the AI methods, allowing risk analysts to influence the AI methods and improve the identification and calculation of risks.

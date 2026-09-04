@@ -5,11 +5,8 @@ permalink: /publications/ihexplorer-visualisierung-analyse-und-optimierung-der-s
 date: 2009-12-31
 title: "IHExplorer: Visualisierung, Analyse und Optimierung der
   Systemintegration im Gesundheitswesen"
-reference: >-
-  eHealth2009, Wien, Österreich, 2009, pp\. 115\-121
-
-  J\. Altmann, B\. FRANZ, D\. Mörtenschlag, F\. Pfeifer, M\. Strasser, B\.
-  Aichinger, R\. Koller
+reference: Altmann J., Franz B., Mörtenschlag D., Pfeifer F., Strasser M., Aichinger
+  B., Koller R. eHealth2009, Wien, Österreich, 2009, pp. 115-121.
 category: ehealth
 ---
 

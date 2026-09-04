@@ -5,10 +5,8 @@ permalink: /publications/multi-object-tracking-of-wildlife-in-forests-using-nadi
 date: 2025-01-01  # TODO: verify exact date
 title: Multi-Object Tracking of Wildlife in Forests Using Nadir Thermal Aerial
   Videos
-reference: Praschl C\., Coucke V\., Maschek A\., Schedl D\.“Multi\-Object
-  Tracking of Wildlife in Forests Using Nadir Thermal Aerial Videos“, 5th Int\.
-  Workshop on Camera traps, AI, and Ecology 2025\.
-category: computer_vision
+reference: Praschl C., Coucke V., Maschek A., Schedl D. “Multi-Object Tracking of
+  Wildlife in Forests Using Nadir Thermal Aerial Videos“, 5th Int. Workshop on Camera
+  traps, AI, and Ecology 2025.
+category: cv
 ---
-
-_TODO: add abstract — no public abstract found via web search, please fill in manually._

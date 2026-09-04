@@ -16,4 +16,4 @@ category: unknown
 
 ## Survey Coherence Check
 
-The aim of the project cooperation with Redem is to investigate how the coherence of all answers of a survey participant in a quantitative survey can be automatically checked\. By analyzing all question\-answer combinations in the overall context, it is to be checked whether an interview is coherent or credible and evaluated with a score between 0 and 100\.
+The aim of the project cooperation with Redem is to investigate how the coherence of all answers of a survey participant in a quantitative survey can be automatically checked. By analyzing all question-answer combinations in the overall context, it is to be checked whether an interview is coherent or credible and evaluated with a score between 0 and 100.

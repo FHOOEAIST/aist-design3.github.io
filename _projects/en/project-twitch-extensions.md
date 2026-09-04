@@ -16,4 +16,4 @@ category: unknown
 
 ## Project Twitch Extensions
 
-More than 2\.2 million gamers stream their computer games via Twitch\.TV on a daily basis \(source: Twitch\.TV\)\. So called “Twitch Extensions” allow the integration of external tools and services in the Twitch\.TV platform\. The goal of this project ist to develop a new innovative Twitch Extension to create new ways of interaction for streamers and their viewers\.
+More than 2.2 million gamers stream their computer games via Twitch.TV on a daily basis (source: Twitch.TV). So called “Twitch Extensions” allow the integration of external tools and services in the Twitch.TV platform. The goal of this project ist to develop a new innovative Twitch Extension to create new ways of interaction for streamers and their viewers.

@@ -16,4 +16,4 @@ category: ml
 
 ## Saturn
 
-The goal of the project “AI\-supported SaaS solution for the improvement of marketing, sales and service processes \(SATURN\)” is the data processing for online marketing, taking into account the new requirements arising from the General Data Protection Regulation \(GDPR\)\. In particular, the research fields of Data Science and Recommendation Systems will be addressed\. This includes the preprocessing and preparation of anonymized behavioral data, and the creation of classifier and recommender algorithms to enable an accurate prediction of relevant products\.
+The goal of the project “AI-supported SaaS solution for the improvement of marketing, sales and service processes (SATURN)” is the data processing for online marketing, taking into account the new requirements arising from the General Data Protection Regulation (GDPR). In particular, the research fields of Data Science and Recommendation Systems will be addressed. This includes the preprocessing and preparation of anonymized behavioral data, and the creation of classifier and recommender algorithms to enable an accurate prediction of relevant products.

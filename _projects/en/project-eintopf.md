@@ -16,4 +16,4 @@ category: unknown
 
 ## Project Eintopf
 
-Together with the company Tiani Spirit, we are working on the conception and prototype implementation of an optimized extension of the existing Tiani Spirit SOA environment\. It creates the possibility to abstract and write the topology of a network and to analyze it directly on the defined bandwidths and applications\. Complex connections in health networks can simulate and are recognized at the earliest\.
+Together with the company Tiani Spirit, we are working on the conception and prototype implementation of an optimized extension of the existing Tiani Spirit SOA environment. It creates the possibility to abstract and write the topology of a network and to analyze it directly on the defined bandwidths and applications. Complex connections in health networks can simulate and are recognized at the earliest.

@@ -6,9 +6,9 @@ title: EFMI STC Hannover
 
 ---
 
-In April our colleaguen [Anna Lackerbauer](https://aist.fh-hagenberg.at/index.php/de/team) participated in the [Special Topic Conference](https://stc2019.plri.de) organized by the [European Federation for Medical Informatics Association \(EFMI\)](https://www.efmi.org/) in Hannover\. There were 12 sessions about data, analysis and interoperability in healthcase\. Anna presented the paper [Automated Verification of Structured Questionnaires Using HL7®FHIR®](http://ebooks.iospress.nl/volumearticle/51342) as part of the session _Towards interoperable health information systems\._ The slides of the presentation can be downloaded [here](https://aist.fh-hagenberg.at/wp-content/uploads/2019/05/efmi_fhir_questionnaires.pdf)\.
+In April our colleaguen [Anna Lackerbauer](https://aist.fh-hagenberg.at/index.php/de/team) participated in the [Special Topic Conference](https://stc2019.plri.de) organized by the [European Federation for Medical Informatics Association (EFMI)](https://www.efmi.org/) in Hannover. There were 12 sessions about data, analysis and interoperability in healthcase. Anna presented the paper [Automated Verification of Structured Questionnaires Using HL7®FHIR®](http://ebooks.iospress.nl/volumearticle/51342) as part of the session _Towards interoperable health information systems._ The slides of the presentation can be downloaded [here](https://aist.fh-hagenberg.at/wp-content/uploads/2019/05/efmi_fhir_questionnaires.pdf).
 
-The conference took place in the historic building Leibnizhaus\.
+The conference took place in the historic building Leibnizhaus.
 
 ## Gallery
 

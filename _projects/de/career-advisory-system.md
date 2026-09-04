@@ -16,4 +16,4 @@ category: ml
 
 ## Career Advisory System
 
-Innerhalb der Forschungskooperation Carrer Advisory System soll ein neuartiges Empfehlungssystems für Jobsuchende aber im speziellen auch für Recruiter erforscht und prototypisch umgesetzt werden\.  Dabei steht die Extraktion von Jobannoncen, sowie der Entwurf von Ähnlichkeitsmaßen und Gewichten für Benutzer\-spezifische Empfehlungen, ebenso wie die Ähnlichkeitsanalyse zu anderen Usern \(in der Branche\) im Fokus\.
+Innerhalb der Forschungskooperation Carrer Advisory System soll ein neuartiges Empfehlungssystems für Jobsuchende aber im speziellen auch für Recruiter erforscht und prototypisch umgesetzt werden.  Dabei steht die Extraktion von Jobannoncen, sowie der Entwurf von Ähnlichkeitsmaßen und Gewichten für Benutzer-spezifische Empfehlungen, ebenso wie die Ähnlichkeitsanalyse zu anderen Usern (in der Branche) im Fokus.

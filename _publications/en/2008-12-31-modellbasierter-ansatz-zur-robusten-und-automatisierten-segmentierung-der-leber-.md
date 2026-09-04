@@ -5,12 +5,9 @@ permalink: /publications/modellbasierter-ansatz-zur-robusten-und-automatisierten
 date: 2008-12-31
 title: Modellbasierter Ansatz zur robusten und automatisierten Segmentierung der
   Leber aus hochauflösenden CT Daten
-reference: >-
-  Proceedings of FFH2008 Fachhochschul Forschungs Forum, Wels, Österreich, 2008,
-  pp\. 253\-259
-
-  G\. Zwettler, W\. Backfrieder, F\. Pfeifer, R\. Swoboda, H\. Kratochwill, F\.
-  Fellner
+reference: Zwettler G., Backfrieder W., Pfeifer F., Swoboda R., Kratochwill H., Fellner
+  F. Proceedings of FFH2008 Fachhochschul Forschungs Forum, Wels, Österreich, 2008,
+  pp. 253-259.
 category: cv
 ---
 

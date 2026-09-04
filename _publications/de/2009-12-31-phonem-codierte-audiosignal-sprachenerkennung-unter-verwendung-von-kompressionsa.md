@@ -5,10 +5,8 @@ permalink: /publications/phonem-codierte-audiosignal-sprachenerkennung-unter-ver
 date: 2009-12-31
 title: Phonem-codierte Audiosignal Sprachenerkennung unter Verwendung von
   Kompressionsalgorithmen
-reference: >-
-  Tagungsband des 3\. Forschungsforums der österreichischen Fachhochschulen,
-  Fachhochschule Kärnten, Villach, Österreich, 2009, pp\. 2
-
-  G\. Zwettler, W\. Backfrieder
+category: ml
+reference: Zwettler G., Backfrieder W. Tagungsband des 3. Forschungsforums der österreichischen
+  Fachhochschulen, Fachhochschule Kärnten, Villach, Österreich, 2009, pp. 2.
 ---
 

@@ -7,9 +7,9 @@ title_image: /assets/images/news/7Symposium_für_Forschung_in_geschützten_Gebie
 
 ---
 
-Christoph konnte im Rahmen der Projekte [Bambi](https://aist.fh-hagenberg.at/index.php/de/projekte/bambi) und [AlpinIO](https://aist.fh-hagenberg.at/index.php/de/projekte/alpinio) das [7\. Symposium für Forschung in geschützten Gebieten](https://www.nationalparksaustria.at/de/symposium.html) organisiert von den Nationalparks Österreich in den Räumlichkeiten der Universität Wien am Campus des Alten AKHs besuchen\. Dabei durfte er das Projektvorhaben Bambi innerhalb der Postersession präsentieren\. Zusätzlich, präsentierte unser Projektpartner Roland Kaiser die Projektergebnisse aus dem letztjährigen AlpinIO Projekt im Rahmen der Session Session 8\.1 Life Above the Treeline\.
+Christoph konnte im Rahmen der Projekte [Bambi](https://aist.fh-hagenberg.at/index.php/de/projekte/bambi) und [AlpinIO](https://aist.fh-hagenberg.at/index.php/de/projekte/alpinio) das [7. Symposium für Forschung in geschützten Gebieten](https://www.nationalparksaustria.at/de/symposium.html) organisiert von den Nationalparks Österreich in den Räumlichkeiten der Universität Wien am Campus des Alten AKHs besuchen. Dabei durfte er das Projektvorhaben Bambi innerhalb der Postersession präsentieren. Zusätzlich, präsentierte unser Projektpartner Roland Kaiser die Projektergebnisse aus dem letztjährigen AlpinIO Projekt im Rahmen der Session Session 8.1 Life Above the Treeline.
 
-Vielen Dank für den inhaltlichen Austausch und die vielen interessanten Präsentationen innerhalb der heutigen Session\.
+Vielen Dank für den inhaltlichen Austausch und die vielen interessanten Präsentationen innerhalb der heutigen Session.
 
 ## Gallery
 

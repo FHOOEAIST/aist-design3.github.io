@@ -16,4 +16,4 @@ category: ehealth
 
 ## KIM - KI in Mixed Reality
 
-Im Forschungsprojekt KIM \(KI in Mixed Reality\) werden Interaktionsmöglichkeiten im Umfeld einer Mixed Reality Trainingssimulation evaluiert\. Hierzu sollen virtuelle Charaktere mithilfe von künstlicher Intelligenz in der Lage sein, sich eigenständig im Raum zu bewegen und sich von Gefahrenquellen \(z\.B\. Feuer\) zu entfernen oder auch auf Anweisungen wie „Folgen Sie mir“ zu reagieren\. Dabei stehen zwei Schwerpunkte im Fokus: Die Interaktion der KI mit der realen Welt und die Interaktion mit echten Personen\.
+Im Forschungsprojekt KIM (KI in Mixed Reality) werden Interaktionsmöglichkeiten im Umfeld einer Mixed Reality Trainingssimulation evaluiert. Hierzu sollen virtuelle Charaktere mithilfe von künstlicher Intelligenz in der Lage sein, sich eigenständig im Raum zu bewegen und sich von Gefahrenquellen (z.B. Feuer) zu entfernen oder auch auf Anweisungen wie „Folgen Sie mir“ zu reagieren. Dabei stehen zwei Schwerpunkte im Fokus: Die Interaktion der KI mit der realen Welt und die Interaktion mit echten Personen.

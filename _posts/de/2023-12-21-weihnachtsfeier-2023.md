@@ -7,11 +7,11 @@ title_image: /assets/images/news/AIST_Weihnachtsfeier_2023_title.png
 
 ---
 
-Auch in diesem Jahr versammelten wir uns wieder zu unserer jährlichen Weihnachtsfeier, die im Schloss Restaurant im schönen Hagenberg stattfand\. Es war eine besinnliche Gelegenheit für gegenwärtige, ehemalige, zukünftige Mitarbeiter\*innen und Kolleg\*innen aus befreundeten Forschungsgruppen, um gemeinsam zu feiern und sich auszutauschen\. Nach einem köstlichen Abendessen konnten alle Mitarbeiterinnen erneut bei der AIST Quiz Night ihr Wissen unter Beweis stellen\.
+Auch in diesem Jahr versammelten wir uns wieder zu unserer jährlichen Weihnachtsfeier, die im Schloss Restaurant im schönen Hagenberg stattfand. Es war eine besinnliche Gelegenheit für gegenwärtige, ehemalige, zukünftige Mitarbeiter\*innen und Kolleg\*innen aus befreundeten Forschungsgruppen, um gemeinsam zu feiern und sich auszutauschen. Nach einem köstlichen Abendessen konnten alle Mitarbeiterinnen erneut bei der AIST Quiz Night ihr Wissen unter Beweis stellen.
 
-An dieser Stelle möchten wir uns herzlich bei all unseren Projektpartnerinnen und Kolleginnen für ihre Unterstützung und Zusammenarbeit im vergangenen Jahr bedanken\. Wir wünschen euch besinnliche Feiertage und einen erfolgreichen Start ins Jahr 2024\.
+An dieser Stelle möchten wir uns herzlich bei all unseren Projektpartnerinnen und Kolleginnen für ihre Unterstützung und Zusammenarbeit im vergangenen Jahr bedanken. Wir wünschen euch besinnliche Feiertage und einen erfolgreichen Start ins Jahr 2024.
 
-Herzliche Grüße und Frohe Weihnachten\!
+Herzliche Grüße und Frohe Weihnachten!
 
 ## Gallery
 

@@ -15,4 +15,4 @@ category: unknown
 
 ## Vereinsgesundheit
 
-In dieser Projektkooperation sollen mit Data Science und Data Engineering die Gesundheit von Vereinen ermittelt werden\.
+In dieser Projektkooperation sollen mit Data Science und Data Engineering die Gesundheit von Vereinen ermittelt werden.

@@ -7,13 +7,13 @@ title_image: /assets/images/news/Fortschritte_im_eHealth-Bereich_Ein_Bericht_von
 
 ---
 
-Wir freuen uns, mitteilen zu können, dass Oliver, Elisabeth und Andreas kürzlich die Goce Delchev Universität Shtip besucht haben, um mögliche Kooperationen im Bereich eHealth und Gesundheitsdatensicherheit zu besprechen\. Der Besuch bot eine hervorragende Gelegenheit, innovative Lösungen zu erkunden und neue Partnerschaften in diesen wichtigen Bereichen zu etablieren\.
+Wir freuen uns, mitteilen zu können, dass Oliver, Elisabeth und Andreas kürzlich die Goce Delchev Universität Shtip besucht haben, um mögliche Kooperationen im Bereich eHealth und Gesundheitsdatensicherheit zu besprechen. Der Besuch bot eine hervorragende Gelegenheit, innovative Lösungen zu erkunden und neue Partnerschaften in diesen wichtigen Bereichen zu etablieren.
 
-In den produktiven Gesprächen ging es um die Integration fortschrittlicher eHealth\-Systeme und die Verbesserung der Sicherheit von Gesundheitsdaten\. Die gemeinsame Vision, die Patientenversorgung durch Technologie zu verbessern, machte die Diskussionen sowohl vielversprechend als auch inspirierend\.
+In den produktiven Gesprächen ging es um die Integration fortschrittlicher eHealth-Systeme und die Verbesserung der Sicherheit von Gesundheitsdaten. Die gemeinsame Vision, die Patientenversorgung durch Technologie zu verbessern, machte die Diskussionen sowohl vielversprechend als auch inspirierend.
 
-Neben den Arbeitsmeetings blieb auch etwas Zeit für Sightseeing, sodass unsere Kollegen die Schönheit von Shtip genießen und die lokale Kultur erleben konnten\.
+Neben den Arbeitsmeetings blieb auch etwas Zeit für Sightseeing, sodass unsere Kollegen die Schönheit von Shtip genießen und die lokale Kultur erleben konnten.
 
-Wir sind gespannt auf die zukünftigen Möglichkeiten und freuen uns darauf, weitere Neuigkeiten zu teilen, sobald diese Gespräche in konkrete Projekte übergehen\. Bleiben Sie dran für mehr Informationen über unsere gemeinsamen Anstrengungen\!
+Wir sind gespannt auf die zukünftigen Möglichkeiten und freuen uns darauf, weitere Neuigkeiten zu teilen, sobald diese Gespräche in konkrete Projekte übergehen. Bleiben Sie dran für mehr Informationen über unsere gemeinsamen Anstrengungen!
 
 ## Gallery
 

@@ -5,11 +5,9 @@ permalink: /publications/ihe-compliant-exchange-of-patient-data-to-enable-home-m
 date: 2009-12-31
 title: IHE-Compliant Exchange of Patient Data to Enable Home & Mobile Nursing
   Care of Elderly People within an e-Care Affinity Domain
-reference: >-
-  Proceedings of the 6th International Conference on Information Technology :
-  New Generations, Las Vegas, Vereinigte Staaten von Amerika, 2009
-
-  B\. Franz, M\. Lehner, H\. Mayr, M\. Mayr
+reference: 'Franz B., Lehner M., Mayr H., Mayr M. Proceedings of the 6th International
+  Conference on Information Technology : New Generations, Las Vegas, Vereinigte Staaten
+  von Amerika, 2009.'
 category: ehealth
 ---
 

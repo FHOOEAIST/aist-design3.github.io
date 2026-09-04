@@ -16,4 +16,4 @@ category: unknown
 
 ## PASS – Plan Analysis using Self-learning Solutions
 
-The project PASS encompasses methods and technologies to develop a system that enables automated transformations from hand\- or machine\-drawn 2D construction plans into a 3D model with a special focus on simulations and analyses on that model\. Research topics include classification and modeltransformation to generate data that enables simulations and calculations for the Building Information Modeling \(BIM\) sector\.
+The project PASS encompasses methods and technologies to develop a system that enables automated transformations from hand- or machine-drawn 2D construction plans into a 3D model with a special focus on simulations and analyses on that model. Research topics include classification and modeltransformation to generate data that enables simulations and calculations for the Building Information Modeling (BIM) sector.

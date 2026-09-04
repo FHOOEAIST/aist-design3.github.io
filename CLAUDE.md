@@ -10,6 +10,14 @@ Jekyll source for the AIST (Advanced Information Systems and Technology) researc
 
 ## Commands
 
+**⚠️ The Ruby/Jekyll toolchain lives in WSL, not on Windows.** There is no `ruby`, `bundle`, or `jekyll` on the Windows side — every command below has to be run through WSL, where the repo is mounted at `/mnt/c/public/git/_github/aist.github.io`:
+
+```powershell
+wsl -- bash -lc "cd /mnt/c/public/git/_github/aist.github.io && bundle exec jekyll serve"
+```
+
+For anything with awkward quoting, write a script into the scratchpad and run `wsl -- bash /mnt/c/.../script.sh` instead of fighting two layers of shell escaping.
+
 ```bash
 git lfs install          # once, before cloning — all images are tracked via Git LFS
 gem install bundler

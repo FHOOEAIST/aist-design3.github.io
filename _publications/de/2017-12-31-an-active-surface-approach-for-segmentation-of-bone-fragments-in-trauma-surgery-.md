@@ -5,11 +5,9 @@ permalink: /publications/an-active-surface-approach-for-segmentation-of-bone-fra
 date: 2017-12-31
 title: An active surface approach for segmentation of bone fragments in trauma
   surgery planning
-reference: >-
-  Proceedings of the International Workshop on Innovative Simulation for Health
-  Care \(IWISH\), Barcelona, Spanien, 2017, pp\. 26\-31
-
-  W\. Backfrieder, B\. Kerschbaumer, G\. Zwettler
+reference: Backfrieder W., Kerschbaumer B., Zwettler G. Proceedings of the International
+  Workshop on Innovative Simulation for Health Care (IWISH), Barcelona, Spanien, 2017,
+  pp. 26-31.
 category: cv
 ---
 

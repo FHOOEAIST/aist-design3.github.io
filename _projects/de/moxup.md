@@ -16,5 +16,5 @@ category: unknown
 
 ## Projekt MoxUP
 
-Im Rahmen des MoxUp Projekts werden Hausbaupläne die direkt vom Architekten geliefert werden, so bearbeitet, dass das geplante Haus noch vor dem ersten Spatenstich mithilfe von Virtual Reality vom Kunden begutachtet werden kann\.
-Die Herausforderung besteht darin die unterschiedlich aufgebauten 2D/3D Daten Formate aus der Domäne der industriellen Konstruktion in die Virtual Reality zu übernehmen\. Ziel dieses Projekts ist es 3D Modelle automatisiert auf die Verwendbarkeit für VR zu prüfen und gegebenenfalls Fehler anzuzeigen bzw\. automatisiert zu optimieren\.
+Im Rahmen des MoxUp Projekts werden Hausbaupläne die direkt vom Architekten geliefert werden, so bearbeitet, dass das geplante Haus noch vor dem ersten Spatenstich mithilfe von Virtual Reality vom Kunden begutachtet werden kann.
+Die Herausforderung besteht darin die unterschiedlich aufgebauten 2D/3D Daten Formate aus der Domäne der industriellen Konstruktion in die Virtual Reality zu übernehmen. Ziel dieses Projekts ist es 3D Modelle automatisiert auf die Verwendbarkeit für VR zu prüfen und gegebenenfalls Fehler anzuzeigen bzw. automatisiert zu optimieren.

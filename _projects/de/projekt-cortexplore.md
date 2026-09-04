@@ -16,4 +16,4 @@ category: ehealth
 
 ## Projekt cortEXPlore
 
-Das oberösterreichische Startup cortEXPlore entwickelt ein neuartiges neurochirurgisches Navigationssystem, das durch den Einsatz von redundanten und dadurch ausfallssicheren Kameras eine sehr genaue Registrierung von PatientIn, chirurgischen Instrumenten sowie präoperativ akquirierten multimodalen Tomografiedaten erlaubt und die Visualisierung mittels Mixed\-Reality HMDs erlaubt\. Die RG AIST unterstützt bei der Optimierung der Algorithmen, um diese in Bezug auf echtzeittaugliches Laufzeitverhalten sowie Berechnungsgenauigkeit weiter zu verbessern\.
+Das oberösterreichische Startup cortEXPlore entwickelt ein neuartiges neurochirurgisches Navigationssystem, das durch den Einsatz von redundanten und dadurch ausfallssicheren Kameras eine sehr genaue Registrierung von PatientIn, chirurgischen Instrumenten sowie präoperativ akquirierten multimodalen Tomografiedaten erlaubt und die Visualisierung mittels Mixed-Reality HMDs erlaubt. Die RG AIST unterstützt bei der Optimierung der Algorithmen, um diese in Bezug auf echtzeittaugliches Laufzeitverhalten sowie Berechnungsgenauigkeit weiter zu verbessern.

@@ -16,4 +16,4 @@ category: ml
 
 ## SmartBuoy 2.0
 
-SmartBuoy 2\.0 is focused on processing sensor data on the sea and ocean\. Using data science methods that require low\-energy algorithms, sensor data from buoys will be analyzed to determine if one or more boats have been moored at them\.
+SmartBuoy 2.0 is focused on processing sensor data on the sea and ocean. Using data science methods that require low-energy algorithms, sensor data from buoys will be analyzed to determine if one or more boats have been moored at them.

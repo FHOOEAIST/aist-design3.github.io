@@ -16,4 +16,4 @@ category: ehealth
 
 ## Project CortEXPlore
 
-The Upper Austrian start\-up cortEXPlore is developing a new neurosurgical navigation system\. Because of multiple, failsafe cameras the system is able to register exactly the patient, the surgery instruments as well as preoperatively acquired multimodal tomography data and to create a visualization for Mixed\-Reality head mounted displays\. The AIST research group is supporting the project by optimizing algorithms to improve those in terms of real\-time performance behavior and calculation accuracy\.
+The Upper Austrian start-up cortEXPlore is developing a new neurosurgical navigation system. Because of multiple, failsafe cameras the system is able to register exactly the patient, the surgery instruments as well as preoperatively acquired multimodal tomography data and to create a visualization for Mixed-Reality head mounted displays. The AIST research group is supporting the project by optimizing algorithms to improve those in terms of real-time performance behavior and calculation accuracy.

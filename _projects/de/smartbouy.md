@@ -16,4 +16,4 @@ category: ml
 
 ## SmartBuoy 2.0
 
-In SmartBuoy 2\.0 geht es um die Verarbeitung von Sensordaten auf See und im Meer\. Mittels Data Science Methoden, die niedrigenergiegelastige Algorithmen erfordern, sollen Sensordaten von Bojen untersucht werden, um festzustellen, ob an diesen ein oder mehrere Boote angelegt haben\.
+In SmartBuoy 2.0 geht es um die Verarbeitung von Sensordaten auf See und im Meer. Mittels Data Science Methoden, die niedrigenergiegelastige Algorithmen erfordern, sollen Sensordaten von Bojen untersucht werden, um festzustellen, ob an diesen ein oder mehrere Boote angelegt haben.

@@ -16,4 +16,4 @@ category: unknown
 
 ## Projekt Twitch Extensions
 
-Aktuell streamen alleine auf der Plattform Twitch\.TV etwa 2,2 Millionen Spieler regelmäßig ihre Computerspiele \(Quelle: Twitch\.TV\)\. Über sogenannte “Twitch Extensions” können externe Services und Tools in die Plattform Twitch\.TV integriert werden\. Ziel dieses Projekts ist die Entwicklung einer innovativen Twitch Extension, um neue Möglichkeiten der Interaktion für Streamer und Zuseher zu schaffen\.
+Aktuell streamen alleine auf der Plattform Twitch.TV etwa 2,2 Millionen Spieler regelmäßig ihre Computerspiele (Quelle: Twitch.TV). Über sogenannte “Twitch Extensions” können externe Services und Tools in die Plattform Twitch.TV integriert werden. Ziel dieses Projekts ist die Entwicklung einer innovativen Twitch Extension, um neue Möglichkeiten der Interaktion für Streamer und Zuseher zu schaffen.

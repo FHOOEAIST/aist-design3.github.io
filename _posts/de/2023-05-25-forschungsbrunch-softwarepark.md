@@ -7,9 +7,9 @@ title_image: /assets/images/news/Forschungsbrunch_@_Softwarepark_title.jpg
 
 ---
 
-Als „Forschungsbrunch“ wurde im Softwarepark Hagenberg eine Eventreihe gestartet, welche Wirtschafts\- und Forschungspartner näher bringen soll\. Im Rahmen dieses Events gab es mehrere Vorträge im Kontext von F&E\-Projekten seitens FH Oberösterreich, RISC, SCCH und JKU\. Gerald Zwettler und Christoph Praschl durften dabei Kooperationsmöglichkeiten mit der AIST Forschungsgruppe am Beispiel des Forschungsprojekts [MOVE](https://aist.fh-hagenberg.at/index.php/de/projekte/move) vorstellen\.
+Als „Forschungsbrunch“ wurde im Softwarepark Hagenberg eine Eventreihe gestartet, welche Wirtschafts- und Forschungspartner näher bringen soll. Im Rahmen dieses Events gab es mehrere Vorträge im Kontext von F&E-Projekten seitens FH Oberösterreich, RISC, SCCH und JKU. Gerald Zwettler und Christoph Praschl durften dabei Kooperationsmöglichkeiten mit der AIST Forschungsgruppe am Beispiel des Forschungsprojekts [MOVE](https://aist.fh-hagenberg.at/index.php/de/projekte/move) vorstellen.
 
-An dieser Stelle möchten wir uns für die interessanten Vorträge und die Gespräche während des ersten „Forschungsbrunches“ bedanken\.
+An dieser Stelle möchten wir uns für die interessanten Vorträge und die Gespräche während des ersten „Forschungsbrunches“ bedanken.
 
    
 

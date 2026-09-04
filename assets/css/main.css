@@ -394,39 +394,196 @@ article img {
 	margin-top: 0.75rem;
 }
 
-.category-filter {
+/* ---------- Category filter (publications) ---------------------------------
+   Custom listbox: a trigger button plus a styled option panel. The native
+   <select> cannot style its open menu, hence the ARIA listbox pattern. */
+
+.cat-filter {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	gap: 0.5rem;
+	gap: 0.75rem;
 	margin-bottom: 1.5rem;
-	padding: 0.75rem 0;
+	padding: 0.85rem 0;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.category-filter-label {
+.cat-filter-label {
 	font-size: 0.9rem;
 	font-weight: var(--font-weight-bold);
 	color: var(--color-heading);
 }
 
-.category-btn {
+.cat-filter-control {
+	position: relative;
+}
+
+.cat-filter-trigger {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.25rem;
+	min-width: 19rem;
+	max-width: 100%;
+	padding: 0.55rem 0.95rem;
+	background: var(--color-white);
+	color: var(--color-heading);
+	border: 1px solid var(--pf-border);
+	border-radius: var(--border-radius);
+	font-family: var(--font-body);
+	font-size: 0.9rem;
+	line-height: 1.3;
+	text-align: left;
+	cursor: pointer;
+}
+
+.cat-filter-trigger:hover {
+	border-color: var(--color-primary-light);
+	box-shadow: var(--pf-shadow-sm);
+}
+
+/* keep a clearly visible focus indicator -- never remove it outright */
+.cat-filter-trigger:focus-visible {
+	outline: none;
+	border-color: var(--color-primary);
+	box-shadow: 0 0 0 3px rgba(110, 193, 228, 0.45);
+}
+
+.cat-filter.is-open .cat-filter-trigger {
+	border-color: var(--color-primary);
+	box-shadow: var(--pf-shadow-sm);
+}
+
+.cat-filter-value {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.cat-filter-chevron {
+	flex: none;
+	font-size: 0.7em;
+	color: var(--color-primary);
+}
+
+.cat-filter.is-open .cat-filter-chevron {
+	transform: rotate(180deg);
+}
+
+.cat-filter-menu {
+	position: absolute;
+	top: calc(100% + 0.4rem);
+	left: 0;
+	z-index: 150; /* above the listing, below the header nav (200) */
+	min-width: 100%;
+	margin: 0;
+	padding: 0.35rem;
+	list-style: none;
+	background: var(--color-white);
+	border: 1px solid var(--pf-border);
+	border-radius: var(--border-radius);
+	box-shadow: var(--pf-shadow-lg);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-0.4rem);
+}
+
+.cat-filter.is-open .cat-filter-menu {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.cat-filter-menu:focus {
+	outline: none;
+}
+
+.cat-filter-menu [role="option"] {
+	display: grid;
+	grid-template-columns: 1.1rem 1fr auto;
+	align-items: center;
+	gap: 0.6rem;
+	padding: 0.5rem 0.6rem;
+	border-radius: var(--border-radius);
+	font-size: 0.875rem;
+	color: var(--color-text);
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.cat-filter-menu [role="option"] .fa-check {
+	visibility: hidden; /* reserve the space so labels never shift */
+	font-size: 0.75em;
+	color: var(--color-primary);
+}
+
+.cat-filter-menu [role="option"][aria-selected="true"] .fa-check {
+	visibility: visible;
+}
+
+.cat-filter-menu [role="option"]:hover,
+.cat-filter-menu [role="option"].is-active {
+	background: var(--pf-hover);
+	color: var(--color-heading);
+}
+
+.cat-filter-menu [role="option"][aria-selected="true"] {
+	color: var(--color-primary);
+	font-weight: var(--font-weight-bold);
+}
+
+.cat-filter-count {
+	padding: 0.1rem 0.5rem;
+	background: var(--color-bg-light);
+	border-radius: 999px;
+	font-size: 0.75rem;
+	font-weight: var(--font-weight-body);
+	font-variant-numeric: tabular-nums;
+	color: var(--color-text-light);
+}
+
+.cat-filter-menu [role="option"]:hover .cat-filter-count,
+.cat-filter-menu [role="option"].is-active .cat-filter-count,
+.cat-filter-menu [role="option"][aria-selected="true"] .cat-filter-count {
 	background: var(--color-primary);
 	color: var(--color-white);
-	padding: 0.35rem 0.9rem;
+}
+
+.cat-filter-results {
+	margin: 0;
 	font-size: 0.85rem;
-	font-family: var(--font-body);
-	cursor: pointer;
-	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+	color: var(--color-text-light);
 }
 
-.category-btn:hover {
-	background: var(--color-primary-light);
+@media (prefers-reduced-motion: no-preference) {
+	.cat-filter-trigger {
+		transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.cat-filter-chevron {
+		transition: transform 0.2s ease;
+	}
+
+	.cat-filter-menu {
+		transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+	}
+
+	.cat-filter-menu [role="option"] {
+		transition: background-color 0.12s ease, color 0.12s ease;
+	}
 }
 
-.category-btn.active {
-	background: var(--color-primary-light);
-	color: var(--color-white);
+@media (max-width: 600px) {
+	.cat-filter {
+		align-items: stretch;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.cat-filter-trigger {
+		min-width: 0;
+		width: 100%;
+	}
 }
 
 .thesis-entry {

@@ -5,12 +5,9 @@ permalink: /publications/towards-automated-segmentation-and-classification-of-li
 date: 2007-12-31
 title: Towards automated segmentation and classification of liver lesions for
   diagnosis and surgery planning
-reference: >-
-  International Journal of Computer Assisted Radiology and Surgery, Berlin,
-  Deutschland, 2007, pp\. 460\-461
-
-  W\. Backfrieder, G\. Zwettler, R\. Swoboda, F\. Pfeifer, H\. Kratochwill, F\.
-  Fellner
+reference: Backfrieder W., Zwettler G., Swoboda R., Pfeifer F., Kratochwill H., Fellner
+  F. International Journal of Computer Assisted Radiology and Surgery, Berlin, Deutschland,
+  2007, pp. 460-461.
 category: cv
 ---
 

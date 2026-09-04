@@ -15,4 +15,4 @@ category: unknown
 
 ## Vereinsgesundheit
 
-In this project cooperation, data science and data engineering will be used to determine the health of clubs\.
+In this project cooperation, data science and data engineering will be used to determine the health of clubs.

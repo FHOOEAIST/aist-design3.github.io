@@ -5,11 +5,9 @@ permalink: /publications/segmentation-by-multispectral-analysis-of-mr-image-data
 date: 2013-12-31
 title: Segmentation by multispectral analysis of MR image data for 3D modelling
   in surgical planning
-reference: >-
-  Proceedings of The International Workshop on Innovative Simulation for
-  Healthcare IWISH 2013 , Athens, Greece, Griechenland, 2013, pp\. 28\-33
-
-  W\. Backfrieder, B\. Kerschbaumer, G\. Zwettler
+reference: Backfrieder W., Kerschbaumer B., Zwettler G. Proceedings of The International
+  Workshop on Innovative Simulation for Healthcare IWISH 2013 , Athens, Greece, Griechenland,
+  2013, pp. 28-33.
 category: cv
 ---
 
