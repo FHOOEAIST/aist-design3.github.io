@@ -22,9 +22,9 @@
   label_en: Research Project Manager
 
 - id: researcher
-  label_de_m: Wissenschaftlicher Mitarbeiter
-  label_de_f: Wissenschaftliche Mitarbeiterin
-  label_de: Wissenschaftliche*r Mitarbeiter*in
+  label_de_m: Forscher
+  label_de_f: Forscherin
+  label_de: Forscher*in
   label_en: Research Associate
 
 - id: student

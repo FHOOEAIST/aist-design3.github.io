@@ -77,13 +77,10 @@
   margin-top: 0.15rem;
 }
 
-/* inline + clone so a label that wraps ("Wissenschaftliche*r Mitarbeiter*in")
-   renders as two rounded segments instead of one tall block */
 .team-category {
-  display: inline;
-  padding: 0.1rem 0.55rem;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  display: inline-block;
+  padding: 0.05rem 0.55rem;
+  white-space: nowrap;
   border-radius: var(--radius-pill);
   background: var(--color-bg-muted);
   color: var(--color-text);
