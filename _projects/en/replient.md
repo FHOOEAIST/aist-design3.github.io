@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.03.2024
     laufzeitEnd: 31.08.2024
     partner: Doppel N Marketing GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG –
+    foerdergeber: Austrian Research Promotion Agency FFG –
       Innovationsscheck (Fokus Sentimentanalyse)easy2research (Fokus Prompt
       Engineering)
 category: ml

@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.07.2021
     laufzeitEnd: 31.08.2022
     partner: ""
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Klima- und
+    foerdergeber: Austrian Research Promotion Agency FFG – Klima- und
       Energiefonds Smart Cities
 category: ml
 ---

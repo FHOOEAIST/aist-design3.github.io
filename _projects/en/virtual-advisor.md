@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.05.2023
     laufzeitEnd: 30.04.2024
     partner: bluesource – mobile solutions gmbh
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: cv
 ---
 

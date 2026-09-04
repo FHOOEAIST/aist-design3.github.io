@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.12.2016
     laufzeitEnd: 31.05.2017
     partner: ITPRO – Consulting & Software GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Innovationsscheck
+    foerdergeber: Austrian Research Promotion Agency FFG – Innovationsscheck
 category: unknown
 ---
 

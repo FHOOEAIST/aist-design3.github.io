@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.10.2020
     laufzeitEnd: 30.11.2021
     partner: mobile agreements GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: cv
 ---
 

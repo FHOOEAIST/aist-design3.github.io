@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.04.2019
     laufzeitEnd: 31.07.2019
     partner: cortEXPlore
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: ehealth
 ---
 

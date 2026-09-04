@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.01.2025
     laufzeitEnd: 30.04.2025
     partner: Dr. Eduard Holzer
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Innovationsscheck
+    foerdergeber: Austrian Research Promotion Agency FFG – Innovationsscheck
 category: cv
 ---
 

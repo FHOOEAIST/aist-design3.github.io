@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.08.2021
     laufzeitEnd: 28.02.2022
     partner: Amido Handelsgesellschaft
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft
+    foerdergeber: Austrian Research Promotion Agency FFG
       Innovationsscheck+Geo-Referenzierung von fotografierten Szenarien in
       Flugaufnahmen basierend auf GPS Koordinaten und
       Topographiedateneasy2ResearchErstellung von digitalen Karten basierend auf

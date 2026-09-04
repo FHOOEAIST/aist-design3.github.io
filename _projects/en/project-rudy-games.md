@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.11.2017
     laufzeitEnd: 29.02.2020
     partner: rudy games GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: cv
 ---
 

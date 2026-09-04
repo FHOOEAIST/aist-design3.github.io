@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.04.2018
     laufzeitEnd: 31.03.2020
     partner: VIEW Promotion GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: cv
 ---
 

@@ -12,7 +12,7 @@ projects:
     partner: FH OÖ Media Interaction LabBüro für Wildökologie und Forstwirtschaft
       e.UUmweltdata GmbHViewCopter e.U.Landes-Jagdverbände Niederösterreich,
       Oberösterreich und Tirol
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – AI4Green
+    foerdergeber: Austrian Research Promotion Agency FFG – AI4Green
 category: cv
 ---
 

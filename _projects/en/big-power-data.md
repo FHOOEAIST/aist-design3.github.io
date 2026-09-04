@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.01.2022
     laufzeitEnd: 30.07.2023
     partner: HAKOM
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG –
+    foerdergeber: Austrian Research Promotion Agency FFG –
       Energieforschung (7. Ausschreibung)
 category: ml
 ---

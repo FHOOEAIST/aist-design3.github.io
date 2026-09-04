@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.12.2017
     laufzeitEnd: 31.05.2018
     partner: Tiani Spirit GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: ehealth
 ---
 

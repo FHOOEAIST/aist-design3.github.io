@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.01.2027
     laufzeitEnd: 31.05.2029
     dissertant: Sebastian Pritz
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Dissertationsprogramm der Fachhochschule OÖ
+    foerdergeber: Austrian Research Promotion Agency FFG – Dissertationsprogramm der Fachhochschule OÖ
 category: ml
 ---
 

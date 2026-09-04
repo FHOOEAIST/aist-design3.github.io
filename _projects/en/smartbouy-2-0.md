@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.08.2022
     laufzeitEnd: 31.07.2024
     partner: Hermes Bootsbaus Gmbh
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: ml
 ---
 

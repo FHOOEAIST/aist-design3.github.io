@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.06.2018
     laufzeitEnd: 30.09.2018
     partner: VR Dimension e.U.; PIELab
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Innovationsscheck
+    foerdergeber: Austrian Research Promotion Agency FFG – Innovationsscheck
 category: cv
 ---
 

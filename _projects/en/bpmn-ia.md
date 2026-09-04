@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.04.2023
     laufzeitEnd: 31.12.2023
     partner: UIA
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: ml
 ---
 

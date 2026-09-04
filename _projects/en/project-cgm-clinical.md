@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.12.2015
     laufzeitEnd: 30.11.2017
     partner: CGM Clinical
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: cv
 ---
 

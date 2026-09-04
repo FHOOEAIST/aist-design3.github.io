@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.05.2025
     laufzeitEnd: 31.07.2025
     partner: Redem GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Innovationsscheck
+    foerdergeber: Austrian Research Promotion Agency FFG – Innovationsscheck
 category: cv
 ---
 

@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.04.2024
     laufzeitEnd: 31.03.2025
     partner: CAS GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Kleinprojekt
+    foerdergeber: Austrian Research Promotion Agency FFG – Kleinprojekt
 category: ehealth
 ---
 

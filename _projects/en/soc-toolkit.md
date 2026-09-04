@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.07.2020
     laufzeitEnd: 30.06.2022
     partner: Nextpart Security Intelligence GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: ml
 ---
 

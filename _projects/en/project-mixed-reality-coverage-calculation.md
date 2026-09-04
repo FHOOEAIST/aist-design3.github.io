@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.05.2021
     laufzeitEnd: 30.09.2021
     partner: Realsim
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Kleinprojekte
+    foerdergeber: Austrian Research Promotion Agency FFG – Kleinprojekte
 category: cv
 ---
 

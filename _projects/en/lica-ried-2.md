@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.04.2022
     laufzeitEnd: 30.04.2024
     partner: LICA Life Care GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Digital Health
+    foerdergeber: Austrian Research Promotion Agency FFG – Digital Health
 category: ehealth
 ---
 

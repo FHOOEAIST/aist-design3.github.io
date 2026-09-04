@@ -14,7 +14,7 @@ projects:
       (BMSGPK), Österreichisches Institut für angewandte Telekommunikation
       (ÖIAT), LIqua Linzer Institut für qualitative Analysen, X-Net Services
       GmbH, Xylem Science and Technology Management GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Kiras
+    foerdergeber: Austrian Research Promotion Agency FFG – Kiras
 category: ml
 ---
 

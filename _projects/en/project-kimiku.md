@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.03.2019
     laufzeitEnd: 31.08.2021
     partner: hello again GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: cv
 ---
 

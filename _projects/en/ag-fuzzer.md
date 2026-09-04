@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.01.2023
     laufzeitEnd: 01.06.2025
     dissertant: Andreas Pointner
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG –
+    foerdergeber: Austrian Research Promotion Agency FFG –
       Dissertationsprogramm der Fachhochschule OÖ
 category: cv
 ---

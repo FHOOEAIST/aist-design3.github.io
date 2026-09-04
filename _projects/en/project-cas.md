@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.06.2017
     laufzeitEnd: 31.03.2021
     partner: CAS – Computer Anwendungs Systeme GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: ehealth
 ---
 

@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.11.2021
     laufzeitEnd: 30.11.2025
     partner: Wako3D, Kepler Universitätsklinikum, Sendance
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: ml
 ---
 

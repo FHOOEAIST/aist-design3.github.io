@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.12.2017
     laufzeitEnd: 30.11.2019
     partner: Aicher IT-Consulting GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: cv
 ---
 

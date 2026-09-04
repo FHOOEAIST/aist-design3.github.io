@@ -12,7 +12,7 @@ projects:
     partner: Ennacon environment nature consulting KG & Nationalpark Hohe Tauern
     foerdergeber: "Land Oberösterreich – easy2innovateProjektschwerpunkt:
       Klassifikation und Segmentierung von Pflanzenarten für
-      BiodiversitätsanalysenÖsterreichische Forschungsförderungsgesellschaft FFG
+      BiodiversitätsanalysenAustrian Research Promotion Agency FFG
       – Innovationsscheck+Projektschwerpunkt: Methoden zur Analyse von Pflanzen
       hinsichtlich Bewuchsdichte, Größe/Form der Pflanzen/Blätter und auch
       Verdrängung (Biodiversität) durch andere Spezien"

@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.09.2025
     laufzeitEnd: 31.08.2027
     partner: CAS, CGM, Black Tusk, HSE 365, Sclable
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Virtuelle
+    foerdergeber: Austrian Research Promotion Agency FFG – Virtuelle
       Welten und digitale Lösungen für die Gesundheit
 category: cv
 ---

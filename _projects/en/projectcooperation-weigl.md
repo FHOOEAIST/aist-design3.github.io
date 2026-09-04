@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.07.2020
     laufzeitEnd: 31.12.2020
     partner: Weigl Control GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Innovationsscheck
+    foerdergeber: Austrian Research Promotion Agency FFG – Innovationsscheck
 category: ml
 ---
 

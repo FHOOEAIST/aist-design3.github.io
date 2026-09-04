@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.03.2022
     laufzeitEnd: 31.07.2022
     partner: Realsim
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft Innovationsscheck+
+    foerdergeber: Austrian Research Promotion Agency FFG Innovationsscheck+
 category: ehealth
 ---
 

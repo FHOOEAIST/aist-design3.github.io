@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 05.03.2018
     laufzeitEnd: 30.06.2018
     partner: Christian Bauernfeind IT-Beratung & Realisierung
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Innovationsscheck
+    foerdergeber: Austrian Research Promotion Agency FFG – Innovationsscheck
 category: cv
 ---
 

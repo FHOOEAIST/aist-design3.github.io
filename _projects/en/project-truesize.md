@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.05.2019
     laufzeitEnd: 31.07.2021
     partner: TrueSize
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: cv
 ---
 

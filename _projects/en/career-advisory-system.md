@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.11.2022
     laufzeitEnd: 31.10.2023
     partner: Karriere.at
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: ml
 ---
 

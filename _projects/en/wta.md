@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.11.2025
     laufzeitEnd: 30.11.2027
     partner: Moonshot25
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: cv
 ---
 

@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.01.2023
     laufzeitEnd: 30.06.2024
     partner: CALPANA business consulting GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogramm
 category: ml
 ---
 

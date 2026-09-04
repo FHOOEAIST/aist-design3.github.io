@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.10.2025
     laufzeitEnd: 30.09.2026
     partner: Intelligent Automation GmbH
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Kleinprojekt
+    foerdergeber: Austrian Research Promotion Agency FFG – Kleinprojekt
 category: ml
 ---
 

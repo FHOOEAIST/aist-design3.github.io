@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.12.2020
     laufzeitEnd: 31.05.2022
     partner: LMNOP
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogram
+    foerdergeber: Austrian Research Promotion Agency FFG – Basisprogram
 category: ml
 ---
 

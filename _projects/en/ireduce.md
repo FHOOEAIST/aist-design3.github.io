@@ -11,7 +11,7 @@ projects:
     laufzeitEnd: 31.12.2026
     partner: team Technology Management GmbH, cloudflight GmbH, Johannes Kepler
       Universität Linz, Kunstuniversität Linz
-    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – KIRAS
+    foerdergeber: Austrian Research Promotion Agency FFG – KIRAS
 category: ml
 ---
 
