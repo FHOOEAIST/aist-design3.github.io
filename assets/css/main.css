@@ -494,14 +494,13 @@ main {
   text-decoration: none;
 }
 
-/* The logo PNG carries generous transparent padding around a centered mark, so
-   a fixed 2:1 box with object-fit crops it to the visible wordmark. */
+/* The SVG has some built-in padding, so it is drawn a little taller than the
+   header bar and pulled back with negative margins to sit visually centered. */
 .brand-logo {
   display: block;
-  width: 96px;
-  height: 48px;
-  object-fit: cover;
-  object-position: center;
+  height: 68px;
+  width: auto;
+  margin: -8px 0;
 }
 
 .brand-text {
@@ -1847,11 +1846,10 @@ html:not(.js) .listing-toggle-icon {
 }
 
 .footer-brand-logo {
-  width: 120px;
-  height: 60px;
-  object-fit: cover;
-  object-position: center;
-  margin-bottom: 1rem;
+  display: block;
+  width: 200px;
+  height: auto;
+  margin: -0.75rem 0 0.5rem -0.5rem;
 }
 
 .footer-brand-title {
