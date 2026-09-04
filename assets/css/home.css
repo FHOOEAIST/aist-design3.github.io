@@ -14,17 +14,18 @@
     linear-gradient(160deg, var(--navy-800) 0%, var(--navy-900) 55%, var(--navy-950) 100%);
 }
 
-/* Wave motif borrowed from the logo: a CSS-tiled SVG. One tile is exactly one
-   full period (two cubic curves, 240px) with matching tangents at both ends,
-   so the vertical repeat is seamless; the horizontal repeat is a straight
-   copy of the two strokes. Keep the tile height equal to the path length when
-   editing the curve. */
+/* Wave motif borrowed from the logo: a CSS-tiled SVG. The tile is one full
+   period (240px) of a wave made of two cubic curves whose end tangents match,
+   so the vertical repeat is continuous. The path is drawn one period past
+   both tile edges and clipped by the viewBox: a stroke that merely *ends* at
+   the edge gets a butt cap perpendicular to its (diagonal) tangent, which
+   leaves a sub-pixel wedge at every seam. */
 .home-hero::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='240' viewBox='0 0 120 240'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.06' stroke-width='14'%3E%3Cpath d='M20 0c20 40 20 80 0 120s-20 80 0 120'/%3E%3Cpath d='M80 0c20 40 20 80 0 120s-20 80 0 120'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='240' viewBox='0 0 120 240'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.06' stroke-width='14'%3E%3Cpath d='M20 -240c20 40 20 80 0 120s-20 80 0 120 20 80 0 120-20 80 0 120 20 80 0 120-20 80 0 120'/%3E%3Cpath d='M80 -240c20 40 20 80 0 120s-20 80 0 120 20 80 0 120-20 80 0 120 20 80 0 120-20 80 0 120'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 120px 240px;
   mask-image: linear-gradient(90deg, transparent 35%, #000 100%);
