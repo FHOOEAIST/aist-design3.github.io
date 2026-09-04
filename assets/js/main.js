@@ -501,6 +501,8 @@
     hero.insertBefore(canvas, hero.firstChild);
     hero.classList.add("has-waves");
 
+    var REF_WIDTH = 1400; // hero width the sizes below are designed for
+    var MIN_SIZE = 0.35; // narrow heroes scale STROKE and GAP down, but not below this
     var GAP = 36; // gap between neighbouring strokes
     var LIFE = 40; // seconds from entering at the right edge until gone
     var TRAVEL = 0.7; // share of the hero width a wave crosses before it is gone
@@ -514,15 +516,21 @@
 
     var W = 0;
     var H = 0;
+    var stroke = STROKE; // stroke width and gap for the current hero width
+    var gap = GAP;
     var count = 0; // waves in flight
 
     function resize() {
       var dpr = Math.min(window.devicePixelRatio || 1, 2);
       W = hero.clientWidth;
       H = hero.clientHeight;
+      // keep the look proportional on narrow (mobile) heroes
+      var k = Math.min(1, Math.max(MIN_SIZE, W / REF_WIDTH));
+      stroke = STROKE * k;
+      gap = GAP * k;
       // average stroke width over a wave's life plus the gap is the distance
       // one wave occupies; fill TRAVEL of the width with them
-      count = Math.max(2, Math.round((TRAVEL * W) / ((STROKE * (1 + MIN_SCALE)) / 2 + GAP)));
+      count = Math.max(2, Math.round((TRAVEL * W) / ((stroke * (1 + MIN_SCALE)) / 2 + gap)));
       canvas.width = Math.round(W * dpr);
       canvas.height = Math.round(H * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -552,10 +560,10 @@
         if (alpha <= 0.002) continue;
         // distance travelled so far: the widths and gaps of every stage
         // already passed (integral of stroke width + gap over p)
-        var dist = count * ((STROKE + GAP) * p - (STROKE * (1 - MIN_SCALE) * p * p) / 2);
-        var cx = W + STROKE / 2 + AMP - dist;
+        var dist = count * ((stroke + gap) * p - (stroke * (1 - MIN_SCALE) * p * p) / 2);
+        var cx = W + stroke / 2 + AMP - dist;
         ctx.globalAlpha = alpha;
-        ctx.lineWidth = STROKE * scale;
+        ctx.lineWidth = stroke * scale;
         strokeWave(cx, phase);
       }
       ctx.globalAlpha = 1;
