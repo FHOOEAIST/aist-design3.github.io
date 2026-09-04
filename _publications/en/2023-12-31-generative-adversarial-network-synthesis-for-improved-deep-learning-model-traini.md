@@ -9,7 +9,7 @@ reference: Praschl C., Kaiser R., Zwettler G. (2023). Generative Adversarial Net
   Synthesis for Improved Deep Learning Model Training of Alpine Plants with Fuzzy
   Structures. In Proceedings of the 18th International Joint Conference on Computer
   Vision, Imaging and Computer Graphics Theory and Applications – VISAPP.
-category: cv
+categories: [cv, ml, geo]
 doi: https://doi.org/10.5220/0011607100003417
 ---
 

@@ -8,6 +8,6 @@ title: Modellbasierter Ansatz zur robusten und automatisierten Segmentierung der
 reference: Zwettler G., Backfrieder W., Pfeifer F., Swoboda R., Kratochwill H., Fellner
   F. Proceedings of FFH2008 Fachhochschul Forschungs Forum, Wels, Österreich, 2008,
   pp. 253-259.
-category: cv
+categories: [ehealth, cv]
 ---
 

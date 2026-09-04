@@ -9,7 +9,7 @@ reference: Praschl C., Zwettler G. Three-Step Approach for Localization, Instanc
   Segmentation and Multi-Facet Classification of Individual Logs in Wooden Piles.
   Proceedings of the 11th International Conference on Pattern Recognition Applications
   and Methods. 2022.
-category: cv
+categories: [cv, ml]
 doi: https://doi.org/10.5220/0010892100003122
 ---
 

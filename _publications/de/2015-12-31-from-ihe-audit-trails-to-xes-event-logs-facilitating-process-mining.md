@@ -6,7 +6,7 @@ date: 2015-12-31
 title: From IHE Audit Trails to XES Event Logs Facilitating Process Mining
 reference: Paster F., Helm E. MIE, Digital Healthcare Empowering Europeans, Madrid,
   Spanien, 2015, pp. 40-44.
-category: ehealth
+categories: [ehealth, pm]
 doi: https://doi.org/10.3233/978-1-61499-512-8-40
 ---
 

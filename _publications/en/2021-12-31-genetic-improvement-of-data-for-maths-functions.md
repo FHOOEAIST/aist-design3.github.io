@@ -6,7 +6,7 @@ date: 2021-12-31
 title: Genetic Improvement of Data for Maths Functions*
 reference: Langdon W., Krauss O. (2021). Genetic Improvement of Data for Maths Functions*.
   In Proceedings of the Genetic and Evolutionary Computation Conference Companion.
-category: ml
+categories: [ml, se]
 ---
 
 Genetic Improvement (GI) can be used to give better quality software and to create new functionality.

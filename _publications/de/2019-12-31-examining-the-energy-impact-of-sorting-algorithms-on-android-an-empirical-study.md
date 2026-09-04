@@ -5,7 +5,7 @@ permalink: /publications/examining-the-energy-impact-of-sorting-algorithms-on-an
 date: 2019-12-31
 title: "Examining the energy impact of sorting algorithms on android: an
   empirical study"
-category: se
+categories: [se]
 reference: 'Schuler A., Kotsis G. Proceedings of the 16th EAI International Conference
   on Mobile and Ubiquitous Systems: Computing, Networking and Services, 2020.'
 external_url: https://dl.acm.org/doi/abs/10.1145/3360774.3360808

@@ -8,6 +8,6 @@ title: Rotated Principal Components for Fuzzy Segmentation Szintigraphic Time
 reference: Backfrieder W., Zwettler G. Proceedings of the 2015 I-WISH, The International
   Workshop on Innovative Simulation for Healthcare , Bergeggi, Italien, 2015, pp.
   6.
-category: cv
+categories: [ehealth, cv, ml]
 ---
 

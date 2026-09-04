@@ -7,6 +7,6 @@ title: Fast Skeletonization for Medial Axis Extraction on Tubular Large 3D Data
 reference: 'Zwettler G., Backfrieder W., Pfeifer F., Swoboda R. Challenges in Biosciences:
   Image Analysis and Pattern Recognition Aspects, St. Magdalena, Linz, Austria, Österreich,
   2008, pp. 91-102.'
-category: cv
+categories: [ehealth, cv]
 ---
 

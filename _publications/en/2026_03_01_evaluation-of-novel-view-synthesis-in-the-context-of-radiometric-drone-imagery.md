@@ -7,7 +7,7 @@ title: Evaluation of Novel View Synthesis in the Context of Radiometric Drone
   Imagery
 reference: Praschl C., Schoibesberger S., Schedl D. “Evaluation of Novel View Synthesis
   in the Context of Radiometric Drone Imagery“, GRIVAPP 2026.
-category: cv
+categories: [cv, geo]
 doi: https://doi.org/10.5220/0014460900004728
 ---
 

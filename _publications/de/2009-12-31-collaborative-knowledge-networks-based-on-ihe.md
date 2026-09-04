@@ -7,6 +7,6 @@ title: Collaborative Knowledge Networks Based on IHE
 reference: Altmann J., Pfeifer F., Strasser M., Franz B., Mayr H. Proceedings of 21st
   European Modeling and Simulation Symposium EMSS 2009, Tenerife, Spanien, 2009, pp.
   3.
-category: ehealth
+categories: [ehealth]
 ---
 

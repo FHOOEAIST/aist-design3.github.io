@@ -8,6 +8,6 @@ title: Segmentation by multispectral analysis of MR image data for 3D modelling
 reference: Backfrieder W., Kerschbaumer B., Zwettler G. Proceedings of The International
   Workshop on Innovative Simulation for Healthcare IWISH 2013 , Athens, Greece, Griechenland,
   2013, pp. 28-33.
-category: cv
+categories: [ehealth, cv]
 ---
 

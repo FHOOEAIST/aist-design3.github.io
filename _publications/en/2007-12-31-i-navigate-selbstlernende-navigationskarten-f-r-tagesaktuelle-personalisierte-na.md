@@ -8,5 +8,6 @@ title: "I-Navigate: Selbstlernende Navigationskarten für tagesaktuelle,
 reference: Mayr H., Vesely M. Tagungsband des ersten Forschungsforum der österreichischen
   Fachhochschulen, Fachhochschule Salzburg, Campus Urstein, Österreich, 2007, pp.
   244-250.
+categories: [ml, geo]
 ---
 

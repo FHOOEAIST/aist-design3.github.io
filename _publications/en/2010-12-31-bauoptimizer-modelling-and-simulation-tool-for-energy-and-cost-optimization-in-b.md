@@ -8,6 +8,6 @@ title: "BAUOPTIMIZER: MODELLING AND SIMULATION TOOL FOR ENERGY AND COST
 reference: Zwettler G., Hinterholzer S., Hagmann E., Woschitz R., Track P., Waschaurek
   F. 22nd European Modeling and Simulation Symposium EMSS 2010, Fes, Marokko, 2010,
   pp. 49-58.
-category: cv
+categories: [ml]
 ---
 

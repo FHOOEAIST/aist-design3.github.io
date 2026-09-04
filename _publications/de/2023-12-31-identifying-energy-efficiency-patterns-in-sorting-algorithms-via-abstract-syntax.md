@@ -8,7 +8,7 @@ title: Identifying Energy Efficiency Patterns in Sorting Algorithms via Abstract
 reference: Krauss O., Schuler A. „Identifying Energy Efficiency Patterns in Sorting
   Algorithms via Abstract Syntax Tree Mining“ in Proceedings of the 22nd International
   Conference on Modelling and Applied Simulation (MAS 2023), 2023.
-category: ml
+categories: [ml, se]
 doi: https://doi.org/10.46354/i3m.2023.mas.003
 ---
 

@@ -8,7 +8,8 @@ title: Application of search-based software engineering methodologies for test
   development
 reference: Schuler A. Proceedings of the 2017 11th Joint Meeting on Foundations of
   Software Engineering.
-category: mldoi: https://doi.org/10.1145/3106237.3119876
+categories: [ml, se]
+doi: https://doi.org/10.1145/3106237.3119876
 external_url: https://dl.acm.org/citation.cfm?id=3119876
 ---
 

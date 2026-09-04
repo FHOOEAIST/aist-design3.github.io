@@ -7,7 +7,7 @@ title: User Profile-Based Recommendation Engine Mitigating the Cold-Start Proble
 reference: Mayrhuber E., Krauss O. „User Profile-Based Recommendation Engine Mitigating
   the Cold-Start Problem“ in Proceedings of International Conference on Electrical,
   Computer, Communications and Mechatronics Engineering (ICECCME), 2022.
-category: ml
+categories: [ml]
 ---
 
 Recommendation systems can be used in many situations in daily life. Recommending people on social media networks, products in various online shops, music, or movies are only a few use cases of these systems. The cold start problem, when no information about a new or infrequent user is available, is challenging for recommendation systems. We deal with creating restaurant and category recommendations for restaurant visitors. Recommendations are generated with different metrics and technologies based on user profiles to make recommendations as individual as possible. We use kMeans and Mean-Shift for clustering users to build a base for recommendations generated using user-based and contentbased collaborative filtering methods. These suggestions consider

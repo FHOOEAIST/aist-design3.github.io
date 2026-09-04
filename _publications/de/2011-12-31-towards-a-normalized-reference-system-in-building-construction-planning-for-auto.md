@@ -9,6 +9,6 @@ title: Towards a Normalized Reference System in Building Construction Planning
 reference: Zwettler G., Hinterholzer S., Track P., Woschitz R., Waschaurek F., Hagmann
   E. Proc. of the 3rd International ICST Conference on IT Revolutions , Cordoba, Spanien,
   2011, pp. 20.
-category: cv
+categories: [ml]
 ---
 

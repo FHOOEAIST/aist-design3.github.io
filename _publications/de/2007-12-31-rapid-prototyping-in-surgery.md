@@ -8,6 +8,6 @@ reference: Pfeifer F., Backfrieder W., Swoboda R., Zwettler G., Kratochwill H., 
   F., Malek M., Hainisch R. Tagungsband des ersten Forschungsforum der österreichischen
   Fachhochschulen, Fachhochschule Salzburg, Campus Urstein, Österreich, 2007, pp.
   401-402.
-category: ehealth
+categories: [ehealth, cv]
 ---
 

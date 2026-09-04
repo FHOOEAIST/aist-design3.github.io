@@ -8,6 +8,6 @@ title: AUTOMATED DOMAIN-SPECIFIC FEATURE SELECTION FOR CLASSIFICATION-BASED
 reference: Zwettler G., Backfrieder W. Proceedings of the 3rd International Workshop
   on Innovative Simulation for Healthcare IWISH 2014, Bordeaux, Frankreich, 2014,
   pp. 26-35.
-category: cv
+categories: [ehealth, cv, ml]
 ---
 

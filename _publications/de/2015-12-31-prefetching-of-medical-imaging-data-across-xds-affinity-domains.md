@@ -6,7 +6,8 @@ date: 2015-12-31
 title: Prefetching of Medical Imaging Data Across XDS Affinity Domains
 reference: Helm E., Schuler A., Krauss O., Franz B. eHealth2015 – Health Informatics
   Meets eHealth, Wien, Österreich, 2015.
-category: ehealthdoi: https://doi.org/10.3233/978-1-61499-524-1-211
+categories: [ehealth]
+doi: https://doi.org/10.3233/978-1-61499-524-1-211
 external_url: http://ebooks.iospress.nl/volume/ehealth2015-health-informatics-meets-ehealth-innovative-health-perspectives-personalized-health
 ---
 

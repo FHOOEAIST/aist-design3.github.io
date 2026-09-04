@@ -5,7 +5,7 @@ permalink: /publications/mining-api-interactions-to-analyze-software-revisions-f
 date: 2021-12-31
 title: Mining API Interactions to Analyze Software Revisions for the Evolution
   of Energy Consumption
-category: se
+categories: [se]
 reference: Schuler A., Kotsis G. „Mining API Interactions to Analyze Software Revisions
   for the Evolution of Energy Consumption,“ in 2021 2021 IEEE/ACM 18th International
   Conference on Mining Software Repositories (MSR),, 2021 pp. 312-316.

@@ -7,7 +7,7 @@ title: Regelbasierte Generierung von Benutzerschnittstellen für Mobile
   Anwendungsplattformen
 reference: 'Schuler A. Gesundheitswesen im Wandel – nationale und internationale Perspektiven
   (Editors: Erwin Gollner, Magdalena Thaller) – Leykam, 2014, pp. 30-35.'
-category: ehealth
+categories: [se]
 external_url: http://research.fh-ooe.at/de/publication/4439
 ---
 

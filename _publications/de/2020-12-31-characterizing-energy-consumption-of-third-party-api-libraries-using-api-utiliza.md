@@ -5,7 +5,7 @@ permalink: /publications/characterizing-energy-consumption-of-third-party-api-li
 date: 2020-12-31
 title: Characterizing Energy Consumption of Third-Party API Libraries using API
   Utilization Profiles
-category: se
+categories: [se]
 reference: Schuler A., Kotsis G. ACM/IEEE International Symposium on Empirical Software
   Engineering and Measurement (ESEM), 2020.
 doi: https://doi.org/10.13140/RG.2.2.31812.45444

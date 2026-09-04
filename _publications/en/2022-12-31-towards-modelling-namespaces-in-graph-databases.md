@@ -4,7 +4,7 @@ page_id: pub:towards-modelling-namespaces-in-graph-databases
 permalink: /publications/towards-modelling-namespaces-in-graph-databases/
 date: 2022-12-31
 title: Towards Modelling Namespaces in Graph Databases
-category: se
+categories: [se]
 reference: Pointner A., Praschl C., Krauss O. “Towards Modelling Namespaces in Graph
   Databases”. Proceedings of the 34rd European Modeling and Simulation Symposium EMSS2022,
   Rom, Italy (2022).

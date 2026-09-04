@@ -7,6 +7,6 @@ title: Robust surface based registration in an open framework for image guided s
 reference: Backfrieder W., Zwettler G. Proceedings of the 3rd International Workshop
   on Innovative Simulation for Healthcare IWISH 2014, Bordeaux, France, 2014, pp.
   36-41.
-category: cv
+categories: [ehealth, cv]
 ---
 

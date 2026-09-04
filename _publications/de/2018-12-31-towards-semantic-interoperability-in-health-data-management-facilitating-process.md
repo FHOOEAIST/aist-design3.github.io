@@ -7,6 +7,6 @@ title: Towards Semantic Interoperability in Health Data Management Facilitating
   Process Mining
 reference: Traxler B., Helm E., Krauss O., Schuler A., Kueng J. International Journal
   of Privacy and Health Information Management (IJPHIM).
-category: ehealth
+categories: [ehealth, pm]
 ---
 

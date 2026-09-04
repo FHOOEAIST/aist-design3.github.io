@@ -8,6 +8,6 @@ title: GENERIC MODEL-BASED APPLICATION OF MODULAR IMAGE PROCESSING CHAINS FOR
 reference: Zwettler G., Backfrieder W. Proceedings of The International Workshop on
   Innovative Simulation for Healthcare IWISH 2013 , Athens, Greece, Griechenland,
   2013, pp. 58-64.
-category: cv
+categories: [ehealth, cv]
 ---
 

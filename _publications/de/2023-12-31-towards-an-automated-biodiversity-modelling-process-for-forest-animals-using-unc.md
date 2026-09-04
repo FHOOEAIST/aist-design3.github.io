@@ -9,7 +9,7 @@ reference: Praschl C., Schedl D. „Towards an Automated Biodiversity Modelling 
   for Forest Animals using Uncrewed Aerial Vehicles“ in Proceedings of the 11th International
   Workshop on Simulation for Energy, Sustainable Development & Environment (SESDE
   2023), 2023.
-category: ehealth
+categories: [cv, ml, geo]
 doi: https://doi.org/10.46354/i3m.2023.sesde.002
 ---
 

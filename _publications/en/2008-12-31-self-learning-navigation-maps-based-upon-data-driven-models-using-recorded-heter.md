@@ -7,5 +7,6 @@ title: Self-Learning Navigation Maps Based Upon Data-Driven Models Using
   Recorded Heterogeneous GPS Tracks
 reference: Novak C., Franz B., Mayr H., Vesely M. Proceedings of the 20th European
   Modeling and Simulation Symposium, Campora S. Giovanni, Italien, 2008.
+categories: [ml, geo]
 ---
 

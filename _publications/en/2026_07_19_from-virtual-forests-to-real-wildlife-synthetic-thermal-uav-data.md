@@ -6,7 +6,7 @@ date: 2026-07-19  # SIGGRAPH 2026 conference start date; exact poster-session da
 title: "From Virtual Forests to Real Wildlife: Synthethic Non-Radiometric Thermal UAV Data for Animal Detection"
 reference: 'Praschl C., Schedl D. “From Virtual Forests to Real Wildlife: Synthethic
   Non-Radiometric Thermal UAV Data for Animal Detection“, Siggraph 2026.'
-category: cv
+categories: [cv, ml, geo]
 doi: https://doi.org/10.1145/3799825.3818732
 ---
 

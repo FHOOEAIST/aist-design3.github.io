@@ -8,7 +8,7 @@ title: "Imaging framework: An interoperable and extendable connector for
 reference: 'Praschl C., Pointner A., Baumgartner D., Zwettler G. Imaging framework:
   An interoperable and extendable connector for image-related Java frameworks. SoftwareX,
   Volume 16. 2021.'
-category: cv
+categories: [cv, se]
 doi: https://doi.org/10.1016/j.softx.2021.100863
 ---
 

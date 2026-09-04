@@ -8,6 +8,6 @@ title: Realisierung von prozessorientierten Bildverarbeitungsketten auf Basis
 reference: Zwettler G., Backfrieder W., Swoboda R., Pfeifer F. Tagungsband des 3.
   Forschungsforums der österreichischen Fachhochschulen, Fachhochschule Kärnten, Villach,
   Österreich, 2009, pp. 6.
-category: cv
+categories: [cv, se]
 ---
 

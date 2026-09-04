@@ -8,6 +8,6 @@ title: Evaluation of a Statistical Shape Model Based Approach for Recovering the
 reference: Swoboda R., Zwettler G., Scharinger J., Steinwender C., Leisch F. Proceedings
   of 21st European Modeling and Simulation Symposium EMSS 2009, Tenerife, Spanien,
   2009, pp. 154-160.
-category: cv
+categories: [ehealth, cv]
 ---
 

@@ -8,6 +8,6 @@ title: Automated Building Construction Design Optimization for Reduction of
 reference: Zwettler G., Hinterholzer S., Waschaurek F., Woschitz R., Hagmann E., Track
   P. Proceedings of International Conference on Computer Aided Systems Theory EUROCAST
   2011, Las Palmas, Spanien, 2011, pp. 233-235.
-category: cv
+categories: [ml]
 ---
 

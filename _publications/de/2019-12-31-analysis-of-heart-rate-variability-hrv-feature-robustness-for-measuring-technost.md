@@ -7,6 +7,6 @@ title: Analysis of Heart Rate Variability (HRV) Feature Robustness for Measuring
   Technostress
 reference: Baumgartner D., Fischer T., Riedl R., Dreiseitl S. Information Systems
   and Neuroscience, p. 221 – 228, Springer Verlag.
-category: ehealth
+categories: [ehealth, ml]
 ---
 

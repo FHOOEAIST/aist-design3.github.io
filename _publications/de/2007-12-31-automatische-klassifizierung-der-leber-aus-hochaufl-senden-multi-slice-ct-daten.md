@@ -7,6 +7,6 @@ title: Automatische Klassifizierung der Leber aus hochauflösenden Multi-Slice C
 reference: Zwettler G., Backfrieder W., Swoboda R., Pfeifer F., Kratochwill H., Fellner
   F. Tagungsband des ersten Forschungsforum der österreichischen Fachhochschulen,
   Fachhochschule Salzburg, Campus Urstein, Österreich, 2007, pp. 425-426.
-category: cv
+categories: [ehealth, cv]
 ---
 

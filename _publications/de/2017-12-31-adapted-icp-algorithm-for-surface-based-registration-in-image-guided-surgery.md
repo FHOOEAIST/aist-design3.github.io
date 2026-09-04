@@ -7,6 +7,6 @@ title: ADAPTED ICP ALGORITHM FOR SURFACE BASED REGISTRATION IN IMAGE GUIDED SURG
 reference: Backfrieder W., Zwettler G., Kerschbaumer B. Proceedings of the International
   Workshop on Innovative Simulation for Healthcare IWISH 2017, Barcelona, Spanien,
   2017.
-category: cv
+categories: [ehealth, cv]
 ---
 

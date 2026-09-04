@@ -7,7 +7,7 @@ title: Generating actionable insights from Patient Medical Records and
   structured clinical knowledge
 reference: Trajkovska N., Roiss M., Bauernfeind S., Alnajdawi M., Sandler S., Herzmanek
   D., Winkler M., Haider M., Krauss O. (2024). dHealth.
-category: ml
+categories: [ehealth, ml]
 doi: https://doi.org/10.3233/SHTI240015
 ---
 

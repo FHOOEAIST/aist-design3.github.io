@@ -5,6 +5,6 @@ permalink: /publications/automated-verification-of-structured-questionnaires-usi
 date: 2019-12-31
 title: Automated Verification of Structured Questionnaires Using HL7® FHIR®
 reference: Lin A., Krauss O., Helm E. ICT for Health Science Research.
-category: ehealth
+categories: [ehealth]
 ---
 

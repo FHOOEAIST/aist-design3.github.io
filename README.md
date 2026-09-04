@@ -127,6 +127,15 @@ Markdown description for Bambi 2...
 > single file describe multi-phase projects. The listing uses `laufzeitEnd`
 > to decide whether a project is still active.
 
+### Ordering
+
+Both sections of the projects listing (active and completed) are sorted
+alphabetically and case-insensitively. A leading `Projekt ` / `Project ` (with or
+without a colon) is **ignored** for sorting, so `Projekt Wildschwein` sorts under
+W rather than lumping every such project together under P. That key is computed
+in [`_plugins/project_sort_title.rb`](_plugins/project_sort_title.rb) as
+`sort_title`; nothing needs to be added to a project's front matter.
+
 ## Publications
 
 Research papers, shown grouped by year with a category filter.
@@ -141,7 +150,7 @@ permalink: /publications/modeling-wildlife-accident-risk-with-gaussian-mixture-m
 date: 2024-12-31
 title: Modeling Wildlife Accident Risk with Gaussian Mixture Models
 reference: Praschl C., Schedl D., Stöckl A. "Modeling Wildlife Accident Risk with Gaussian Mixture Models", EUROCAST 2024.
-category: cv            # ehealth | ml | cv
+categories: [ml, geo]   # one or more, see below
 external_url: https://example.org/abstract-book.pdf
 doi: https://doi.org/10.0000/example        # optional
 attachment: /assets/.../paper.pdf            # optional
@@ -149,6 +158,36 @@ attachment: /assets/.../paper.pdf            # optional
 
 Abstract (Markdown)...
 ```
+
+### Categories
+
+A publication carries a **list** of categories — most sit at the intersection of
+several research areas, e.g. a wildlife-detection paper is both `geo` and `cv`.
+The dropdown filter is single-select and shows an entry whenever the picked
+category appears anywhere in its list; the badges under each title are shortcuts
+into that category.
+
+| id        | Area                                |
+| --------- | ----------------------------------- |
+| `ehealth` | eHealth & Medical Informatics       |
+| `cv`      | Computer Vision & Image Processing  |
+| `ml`      | Machine Learning & Data Science     |
+| `se`      | Software Engineering                |
+| `pm`      | Process Mining & Process Analytics  |
+| `geo`     | Remote Sensing, UAV & Geospatial    |
+| `xr`      | Augmented & Virtual Reality         |
+
+The list is defined once in [`_data/publication_categories.yml`](_data/publication_categories.yml)
+(id, German/English full label for the dropdown, and a short label for the badges).
+To add a category, add an entry there and assign it in the relevant publications —
+nothing else hard-codes the taxonomy. Medical imaging work has no category of its
+own; it is tagged `[ehealth, cv]`.
+
+Both language pages render through
+[`_includes/publication-filter.html`](_includes/publication-filter.html) (dropdown,
+counts, filter behaviour) and
+[`_includes/publication-list.html`](_includes/publication-list.html) (year-grouped
+entries and badges), so `publications.html` and `publications-en.html` stay in sync.
 
 ## Theses
 Bachelor/Master theses, shown grouped by year.

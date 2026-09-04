@@ -7,7 +7,8 @@ title: Towards the Use of Standardized Terms in Clinical Case Studies for
   Process Mining in Healthcare
 reference: Helm E., Lin A.M., Baumgartner D., Lin A.C., Küng J. Int. J. Environ. Res.
   Public Health.
-category: ehealthdoi: https://doi.org/10.3390/ijerph17041348
+categories: [ehealth, pm]
+doi: https://doi.org/10.3390/ijerph17041348
 external_url: https://www.mdpi.com/1660-4601/17/4/1348
 ---
 

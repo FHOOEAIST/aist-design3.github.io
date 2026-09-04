@@ -8,6 +8,6 @@ title: FAST FULLY-AUTOMATED MODEL-DRIVEN LIVER SEGMENTATION UTILIZING SLICEWISE
 reference: Zwettler G., Backfrieder W., Swoboda R., Pfeifer F. Proceedings of 21st
   European Modeling and Simulation Symposium EMSS 2009, Tenerife, Spanien, 2009, pp.
   161-166.
-category: cv
+categories: [ehealth, cv]
 ---
 

@@ -7,7 +7,7 @@ title: A Model for Implementing an Interoperable Electronic Consent Form for
   Medical Treatment Using HL7 FHIR
 reference: Lackerbauer A., Lin A., Krauss O., Hearn J., Helm E. European Journal of
   Biomedical Informatics.
-category: ehealth
+categories: [ehealth]
 external_url: https://www.ejbi.org/abstract/a-model-for-implementing-an-interoperable-electronic-consent-form-for-medical-treatment-using-hl7-fhir-4618.html
 ---
 

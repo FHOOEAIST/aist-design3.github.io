@@ -7,6 +7,6 @@ title: Providing Semantic Interoperability for Integrated Healthcare Using a
   Model Transformation Approach
 reference: Franz B., Mayr H. Proccedings of 23rd IEEE European Modeling & Simulation
   Symposium EMSS 2011, Roma, Italien, 2011, pp. 195-200.
-category: ehealth
+categories: [ehealth]
 ---
 

@@ -6,7 +6,7 @@ date: 2015-12-31
 title: First Steps Towards Process Mining in Distributed Health Information Systems
 reference: Helm E., Paster F. International Journal of Electronics and Telecommunications,
   Vol. 61, No. 2, 2015, pp. 137-142.
-category: ehealth
+categories: [ehealth, pm]
 external_url: http://research.fh-ooe.at/de/publication/4663
 ---
 

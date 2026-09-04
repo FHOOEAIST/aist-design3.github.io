@@ -7,7 +7,7 @@ title: Segmentation and Multi-Facet Classification of Individual Logs in Wooden 
 reference: Praschl C., Auserperg-Castell P., Forster-Heinlein B. (2021). Segmentation
   and Multi-Facet Classification of Individual Logs in Wooden Piles. In Computer Aided
   Systems Theory Extended Abstract.
-category: cv
+categories: [cv, ml]
 external_url: https://eurocast2022.fulp.ulpgc.es/sites/default/files/Eurocast_2022_Extended_Abstract_Book.pdf
 ---
 

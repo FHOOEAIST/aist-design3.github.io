@@ -7,6 +7,6 @@ title: Automatisierte Gefäßbaummodellierung zur funktionalen Analyse von 2D un
   3D medizinischen Bilddaten
 reference: Zwettler G. Master/Diploma Thesis, FH OÖ Fakultät Hagenberg, Österreich,
   2009, pp. 104.
-category: cv
+categories: [ehealth, cv]
 ---
 

@@ -8,7 +8,7 @@ title: Process Mining on FHIR - An Open Standards-Based Process Analytics
 reference: Helm E., Krauss O., Lin A., Pointner A., Schuler A., Küng J. (2021). Process
   Mining on FHIR – An Open Standards-Based Process Analytics Approach for Healthcare.
   In Process Mining Workshops.
-category: ehealth
+categories: [ehealth, pm]
 ---
 
 Process mining has become its own research discipline over the last years, providing ways to analyze business processes based on event logs. In healthcare, the characteristics of organizational and treatment processes, especially regarding heterogeneous data sources, make it hard to apply process mining techniques. This work presents an approach to utilize established standards for accessing the audit trails of healthcare information systems and provides automated mapping to an event log format suitable for process mining. It also presents a way to simulate healthcare processes and uses it to validate the approach.

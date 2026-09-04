@@ -5,7 +5,7 @@ permalink: /publications/challenges-and-approaches-to-make-multidisciplinary-tea
 date: 2017-12-31
 title: Challenges and Approaches to Make Multidisciplinary Team Meetings
   Interoperable – The KIMBo Project.
-category: ehealth
+categories: [ehealth]
 reference: Krauss O., Holzer K., Schuler A., Egelkraut R., Franz B. Studies in Health
   Technology and Informatics, 2017 – 236.
 external_url: https://www.ncbi.nlm.nih.gov/pubmed/28508780

@@ -5,7 +5,8 @@ permalink: /publications/genetic-improvement-in-code-interpreters-and-compilers/
 date: 2017-12-31
 title: Genetic improvement in code interpreters and compilers
 reference: Krauss O. Akkordeon InhaltaSPLASH / OOPSLA 2017.
-category: mldoi: https://doi.org/10.1145/3135932.3135934
+categories: [ml, se]
+doi: https://doi.org/10.1145/3135932.3135934
 external_url: https://dl.acm.org/authorize?N676106
 ---
 

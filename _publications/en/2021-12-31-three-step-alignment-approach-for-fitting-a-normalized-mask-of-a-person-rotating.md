@@ -12,7 +12,7 @@ reference: 'Zwettler G., Praschl C., Baumgartner D., Zucali T., Turk D., Hanreic
   2D Images and CGI Derived Reference Target Pose.In Proceedings of the 16th International
   Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications
   – Volume 5: VISAPP, ISBN 978-989-758-488-6, pages 281-292. DOI: 10.5220/0010194102810292.'
-category: cv
+categories: [cv]
 doi: https://doi.org/10.5220/0010194102810292
 ---
 

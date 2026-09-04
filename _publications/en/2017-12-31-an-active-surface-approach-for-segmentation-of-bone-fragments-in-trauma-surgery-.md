@@ -8,6 +8,6 @@ title: An active surface approach for segmentation of bone fragments in trauma
 reference: Backfrieder W., Kerschbaumer B., Zwettler G. Proceedings of the International
   Workshop on Innovative Simulation for Health Care (IWISH), Barcelona, Spanien, 2017,
   pp. 26-31.
-category: cv
+categories: [ehealth, cv]
 ---
 

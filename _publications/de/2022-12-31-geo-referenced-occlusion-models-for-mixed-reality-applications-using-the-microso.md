@@ -9,7 +9,7 @@ reference: 'Praschl C., Krauss O. Geo-Referenced Occlusion Models for Mixed Real
   Applications Using the Microsoft HoloLens. Proceedings of the 17th International
   Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications,
   Volume 3: IVAPP. 2022.'
-category: cv
+categories: [cv, geo, xr]
 doi: https://doi.org/10.5220/0010775200003124
 ---
 

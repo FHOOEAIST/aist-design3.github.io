@@ -15,7 +15,7 @@ reference: 'Munoz-Gama J., Martin N., Fernandez-Llatas C., Johnson O.A., Sepúlv
   Z., van de Weerd I., van der Aalst W.M.P., Vanwersch R., Weske M., Wynn M.T., Zerbato
   F. Process Mining for Healthcare: Characteristics and Challenges, Journal of Biomedical
   Informatics. 2022.'
-category: ehealth
+categories: [ehealth, pm]
 doi: https://doi.org/10.1016/j.jbi.2022.103994
 ---
 

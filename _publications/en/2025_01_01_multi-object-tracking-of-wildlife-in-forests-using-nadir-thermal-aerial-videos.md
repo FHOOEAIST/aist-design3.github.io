@@ -8,5 +8,5 @@ title: Multi-Object Tracking of Wildlife in Forests Using Nadir Thermal Aerial
 reference: Praschl C., Coucke V., Maschek A., Schedl D. “Multi-Object Tracking of
   Wildlife in Forests Using Nadir Thermal Aerial Videos“, 5th Int. Workshop on Camera
   traps, AI, and Ecology 2025.
-category: cv
+categories: [cv, ml, geo]
 ---

@@ -7,5 +7,6 @@ title: "I-Navigate P&R: Erweiterung einer Automobil-Navigation um Online-
   Park&Ride-Funktionalität"
 reference: Altmann J., Mayr H., Steinbichl W. Proceedings of FFH2008 Fachhochschul
   Forschungs Forum, Wels, Österreich, 2008, pp. 3.
+categories: [geo]
 ---
 

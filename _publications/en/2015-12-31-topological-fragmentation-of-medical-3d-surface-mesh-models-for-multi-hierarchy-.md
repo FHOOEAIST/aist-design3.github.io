@@ -7,6 +7,6 @@ title: Topological Fragmentation of Medical 3D Surface Mesh Models for Multi-
   Hierarchy Anatomical Classification
 reference: Zwettler G., Backfrieder W. International Journal of Electronics and Telecommunications,
   Vol. 60, No. 6, 2015, pp. 1-8.
-category: cv
+categories: [ehealth, cv]
 ---
 

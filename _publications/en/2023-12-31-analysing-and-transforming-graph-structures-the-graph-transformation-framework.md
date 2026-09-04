@@ -7,7 +7,7 @@ title: "Analysing and Transforming Graph Structures: The Graph Transformation
   Framework"
 reference: 'Schuler S., Praschl C., Pointner A. (2023). Analysing and Transforming
   Graph Structures: The Graph Transformation Framework. In Software 2023.'
-category: ml
+categories: [ml, se]
 doi: https://doi.org/10.3390/software2020010
 ---
 

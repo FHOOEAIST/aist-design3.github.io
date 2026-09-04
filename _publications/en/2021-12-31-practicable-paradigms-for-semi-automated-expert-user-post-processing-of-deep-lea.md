@@ -7,7 +7,7 @@ title: Practicable Paradigms for Semi-Automated Expert-User Post-Processing of
   Deep-Learning Segmentations in 3D Radiology
 reference: Jany J., Zwettler G. (2021). In Proceedings of 33rd European Modeling &
   Simulation Symposium.
-category: cv
+categories: [ehealth, cv, ml]
 doi: https://doi.org/10.46354/i3m.2021.iwish.007
 ---
 

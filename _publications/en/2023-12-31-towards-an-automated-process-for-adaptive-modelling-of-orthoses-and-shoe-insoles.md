@@ -9,7 +9,7 @@ reference: Zwettler G.A., Trixner M., Schartmüller C., Bauernfeind S., Stocking
   T., Praschl C. „Towards an Automated Process for Adaptive Modelling of Orthoses
   and Shoe Insoles in Additive Manufacturing“ in Proceedings of the 12th International
   Workshop on Innovative Simulation for Healthcare (IWISH 2023), 2023.
-category: ehealth
+categories: [ehealth, ml]
 doi: https://doi.org/10.46354/i3m.2023.iwish.005
 ---
 

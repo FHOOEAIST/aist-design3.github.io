@@ -7,7 +7,7 @@ title: "Stay Local or Go Global: Geo-Referenced Bounding Boxes for Tracking Wild
 reference: 'Praschl C., Coucke V., Maschek A., Schedl D. “Stay Local or Go Global:
   Geo-Referenced Bounding Boxes for Tracking Wildlife in Thermal Drone Videos“, IET
   Computer Vision 2026.'
-category: cv
+categories: [cv, ml, geo]
 doi: https://doi.org/10.1049/cvi2.70077
 ---
 

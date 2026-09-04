@@ -8,7 +8,7 @@ reference: 'Pointner A., Spitzer E., Krauss O., Stöckl A. (2023). Anomaly-Based
   Detection Using Digital News Articles. In: Arai, K. (eds) Intelligent Systems and
   Applications. IntelliSys 2022. Lecture Notes in Networks and Systems, vol 542. Springer,
   Cham.'
-category: ml
+categories: [ml]
 doi: https://doi.org/10.1007/978-3-031-16072-1_1
 ---
 

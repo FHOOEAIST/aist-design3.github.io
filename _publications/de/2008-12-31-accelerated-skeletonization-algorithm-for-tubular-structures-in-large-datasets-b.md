@@ -8,6 +8,6 @@ title: Accelerated Skeletonization Algorithm for Tubular Structures in Large
 reference: Zwettler G., Backfrieder W., Pfeifer F., Swoboda R. Proceedings of the
   3rd International Conference on Computer Vision Theory and Applications, Funchal,
   Madeira – Portugal, Portugal, 2008, pp. 74-80.
-category: ehealth
+categories: [ehealth, cv]
 ---
 

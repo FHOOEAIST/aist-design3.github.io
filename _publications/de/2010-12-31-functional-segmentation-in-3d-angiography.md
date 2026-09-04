@@ -6,6 +6,6 @@ date: 2010-12-31
 title: Functional Segmentation in 3D Angiography
 reference: Zwettler G., Backfrieder W. Tagungsband des 4. Forschungsforum der österreichischen
   Fachhochschulen, Pinkafeld, Österreich, 2010, pp. 79-84.
-category: cv
+categories: [ehealth, cv]
 ---
 

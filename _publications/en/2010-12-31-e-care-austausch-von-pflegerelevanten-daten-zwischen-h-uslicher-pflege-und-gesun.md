@@ -7,6 +7,6 @@ title: "e-Care: Austausch von pflegerelevanten Daten zwischen häuslicher Pflege
   und Gesundheitseinrichtungen"
 reference: Franz B., Mayr H., Mayr M. Intelligente Objekte und Mobile Informationssysteme
   im Gesundheitswesen, Erlangen, Deutschland, 2010.
-category: ehealth
+categories: [ehealth]
 ---
 

@@ -9,7 +9,7 @@ reference: Mayrhuber E., Krauss O., Hanreich M., Stöckl A. „Towards an Ontolo
   Process Mining-Based System for Targeted E-Commerce Marketing Strategy Suggestions“
   in Proceedings of International Conference on Electrical, Computer, Communications
   and Mechatronics Engineering (ICECCME), 2023.
-category: ml
+categories: [ml, pm]
 ---
 
 This paper presents an ontology and process mining-based system that employs semantic technologies for targeted e-commerce marketing strategy suggestions. The proposed approach utilizes ontologies as a knowledge representation formalism to capture the domain knowledge, product descriptions, and website texts in the e-commerce domain. The ontology is populated with relevant attributes and corresponding values, allowing for a structured and standardized representation of users and content.

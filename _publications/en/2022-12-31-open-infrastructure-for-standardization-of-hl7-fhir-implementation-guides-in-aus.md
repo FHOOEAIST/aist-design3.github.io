@@ -7,7 +7,7 @@ title: Open Infrastructure for Standardization of HL7® FHIR® Implementation
   Guides in Austria.
 reference: Egelkraut R., et al. „Open Infrastructure for Standardization of HL7® FHIR®
   Implementation Guides in Austria.“ dHealth. 2022.
-category: ehealth
+categories: [ehealth]
 doi: https://doi.org/10.3233/shti220372
 ---
 

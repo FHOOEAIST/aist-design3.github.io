@@ -45,9 +45,10 @@ German is the default language (`default_lang: de`), English is secondary. This 
 - **Collections** (`_posts`, `_projects`, `_publications`, `_theses`) are split into parallel `de/` and `en/` subdirectories; every document has a `lang:` field.
 - **Top-level pages** exist twice: `page.html` (German) and `page-en.html` (English) — e.g. `projects.html` / `projects-en.html`.
 - Translated pairs are linked by a shared `page_id` front-matter value (e.g. `news:my-post`, `projects:bambi`, `pub:...`, `thesis:...`). `_includes/language-switcher.html` uses this to jump between DE/EN versions of the same content.
-- Two small hook plugins in `_plugins/` patch gaps in the polyglot/paginate-v2 combo:
+- Small hook plugins in `_plugins/`:
   - `lang_to_locale.rb` copies front matter `lang` → `locale` after posts are read (paginate-v2 filters by `locale`, polyglot writes `lang`).
   - `img_baseurl.rb` rewrites bare `src="/..."` attributes in rendered HTML output to include `site.baseurl`, since not all image references go through Liquid's `relative_url` filter.
+  - `project_sort_title.rb` derives `sort_title` on every project (title minus a leading `Projekt`/`Project`, with or without a colon) so the listings can sort projects by the name that distinguishes them rather than clumping a third of them under P.
 
 ### Content collections
 
@@ -55,6 +56,7 @@ Defined in `_config.yml` with default layouts. Front-matter shapes for each are 
 
 - **Projects** (`_projects/{de,en}/slug.md`, layout `_layouts/project.html`) can describe *multiple project phases* in one file: the Markdown body is split on `---` (rendered as `<hr />`) and zipped with the `projects:` front-matter list, so section *N* of the body pairs with `projects[N]`'s metadata (dates, partner, funder). `category` (`ehealth` | `ml` | `cv`) drives the home-page carousels and the projects-listing filter; active vs. completed on the listing page is decided by whether `laufzeitEnd` is in the past.
 - **Publications/Theses** use `output: false` (no standalone rendered page per entry) — they're listed/grouped by year on `publications.html` / `theses.html`, with an anchor `permalink` used for search/deep-linking.
+- **Publication categories** are a *list* (`categories: [ml, geo]`), not the single `category` that projects use — most papers span several research areas. The taxonomy (ids plus DE/EN labels) lives only in `_data/publication_categories.yml`; both language pages are thin wrappers around `_includes/publication-filter.html` and `_includes/publication-list.html`, so a new category means editing the data file and the affected publications, nothing else.
 - **Team** is not a collection; it's flat data in `_data/team.yml`, rendered directly from `team.html`.
 - **Nav** (`_data/nav.yml`) drives the header dropdown menu in `_layouts/default.html`.
 

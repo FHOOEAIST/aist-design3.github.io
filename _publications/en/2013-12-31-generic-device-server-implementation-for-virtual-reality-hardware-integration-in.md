@@ -7,6 +7,6 @@ title: Generic Device Server Implementation for Virtual Reality Hardware
   Integration in Surgical Training
 reference: Zwettler G., Backfrieder W. Computer Aided Systems Theory (Eurocast 2013),
   Las Palmas, Spanien, 2013, pp. 118-119.
-category: cv
+categories: [ehealth, se, xr]
 ---
 

@@ -7,7 +7,7 @@ title: Architecture and Design of a Generic Device Server for Virtual Reality
   Hardware Integration in Surgical Navigation
 reference: Zwettler G., Backfrieder W. LECTURE NOTES IN COMPUTER SCIENCE, Vol. 8112,
   No. 1, 2013, pp. 166-173.
-category: cv
+categories: [ehealth, se, xr]
 doi: https://doi.org/10.1007/978-3-642-53862-9_22
 ---
 

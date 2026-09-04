@@ -6,5 +6,5 @@ date: 2026-02-23  # Eurocast 2026 conference start date (Feb 23–27); exact day
 title: Syntethic Generation of Drone Footage using Diffusion Models
 reference: Praschl C., Karbasch M., Schedl D. “Syntethic Generation of Drone Footage
   using Diffusion Models“, Eurocast 2026.
-category: cv
+categories: [cv, ml, geo]
 ---

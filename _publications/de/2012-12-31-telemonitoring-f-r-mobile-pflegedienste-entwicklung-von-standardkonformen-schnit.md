@@ -8,7 +8,7 @@ title: "Telemonitoring für mobile Pflegedienste: Entwicklung von
 reference: Strasser M., Helm E., Schuler A., Franz B., Mayr H., David C. eHealth2012
   – Health Informatics meets eHealth – von der Wissenschaft zur Anwendung und zurück,
   Wien, Österreich, 2012, pp. 179-184.
-category: ehealth
+categories: [ehealth]
 external_url: http://research.fh-ooe.at/de/publication/2836
 ---
 

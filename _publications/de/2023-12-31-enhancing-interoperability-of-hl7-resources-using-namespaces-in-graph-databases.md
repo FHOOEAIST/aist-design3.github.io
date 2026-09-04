@@ -7,7 +7,7 @@ title: Enhancing Interoperability of HL7 Resources Using Namespaces in Graph Dat
 reference: Pointner A., Praschl C., Krauss O. „Enhancing Interoperability of HL7 Resources
   Using Namespaces in Graph Databases“ in Proceedings of the 12th International Workshop
   on Innovative Simulation for Healthcare (IWISH 2023), 2023.
-category: ehealth
+categories: [ehealth, se]
 doi: https://doi.org/10.46354/i3m.2023.iwish.001
 ---
 

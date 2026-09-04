@@ -82,15 +82,23 @@
                 );
 
                 listingItems.forEach((item) => {
-                    const title = item.querySelector(".listing-title");
+                    const toggle = item.querySelector(".listing-toggle");
                     const content = item.querySelector(".listing-content");
+                    if (!toggle || !content) return;
 
-                    content.classList.add("closed");
+                    setListingExpanded(item, false);
 
-                    title.addEventListener("click", function () {
-                        content.classList.toggle("closed");
+                    toggle.addEventListener("click", function () {
+                        setListingExpanded(
+                            item,
+                            content.classList.contains("closed"),
+                        );
                     });
                 });
+
+                // Collapsing everything above would undo an anchor the page was
+                // opened on, so re-apply it once the entries are wired up.
+                handleHashTarget();
 
                 const galleries = document.querySelectorAll(".gallery");
 
@@ -290,15 +298,39 @@
                 }
             });
 
+            // Single source of truth for an entry's open state: the content
+            // visibility, the `open` class the chevron rotates off, and the
+            // button's aria-expanded all move together.
+            function setListingExpanded(item, expanded) {
+                var content = item.querySelector(".listing-content");
+                var toggle = item.querySelector(".listing-toggle");
+                if (content) content.classList.toggle("closed", !expanded);
+                item.classList.toggle("open", expanded);
+                if (toggle) {
+                    toggle.setAttribute(
+                        "aria-expanded",
+                        expanded ? "true" : "false",
+                    );
+                }
+            }
+
             // Auto-expand listing items when navigated via hash anchor
             function handleHashTarget() {
                 var hash = window.location.hash;
                 if (!hash) return;
-                var target = document.querySelector(hash);
+                // Not every hash is an element id -- the publications filter
+                // parks its state in "#cat=...", which is not a valid selector.
+                var target;
+                try {
+                    target = document.querySelector(hash);
+                } catch (e) {
+                    return;
+                }
                 if (!target) return;
                 var item = target.closest('.listing-item') || target;
-                var content = item.querySelector('.listing-content');
-                if (content) content.classList.remove('closed');
+                if (item.classList.contains('collapsible')) {
+                    setListingExpanded(item, true);
+                }
             }
             window.addEventListener('hashchange', handleHashTarget);
             handleHashTarget();

@@ -6,7 +6,7 @@ date: 2018-12-31
 title: Dynamic fitness functions for genetic improvement in compilers and interpreters
 reference: 'Krauss O., Mössenböck H., Affenzeller M. GECCO ’18: Proceedings of the
   Genetic and Evolutionary Computation Conference Companion.'
-category: ml
+categories: [ml, se]
 external_url: https://dl.acm.org/authorize?N676105
 ---
 

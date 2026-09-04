@@ -9,6 +9,6 @@ title: Quantifizierung leichter mentaler Erregung durch korrelative
 reference: Porta S., Zwettler G., Kurschl W., Dinu C., Juttla G., Pichlkastner K.,
   Gell H., Kaiser B., Kisters K. NIEREN-UND HOCHDRUCKKRANKHEITEN, Vol. 44, No. 10,
   2015, pp. 9.
-category: cv
+categories: [ehealth]
 ---
 

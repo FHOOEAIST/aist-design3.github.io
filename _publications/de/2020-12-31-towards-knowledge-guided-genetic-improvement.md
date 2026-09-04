@@ -6,7 +6,7 @@ date: 2020-12-31
 title: Towards Knowledge-guided Genetic Improvement
 reference: Krauss O., Mössenböck H., Affenzeller M. Proceedings of the 8th International
   Workshop on Genetic Improvement.
-category: ml
+categories: [ml, se]
 doi: https://doi.org/10.1145/3387940.3392172
 ---
 

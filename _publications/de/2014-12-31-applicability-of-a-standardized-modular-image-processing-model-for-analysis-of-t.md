@@ -8,6 +8,6 @@ title: Applicability of a Standardized Modular Image Processing Model for
   Training
 reference: Zwettler G., Backfrieder W. Tagungsband des 8. Forschungsforum der österreichischen
   Fachhochschulen, Kufstein, Österreich, 2014, pp. 482-483.
-category: cv
+categories: [ehealth, cv]
 ---
 

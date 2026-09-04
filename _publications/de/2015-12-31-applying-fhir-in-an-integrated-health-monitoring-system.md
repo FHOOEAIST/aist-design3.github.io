@@ -6,7 +6,7 @@ date: 2015-12-31
 title: Applying FHIR in an Integrated Health Monitoring System
 reference: Franz B., Schuler A., Krauss O. European Journal for Biomedical Informatics,
   Vol. 11, No. 2, 2015.
-category: ehealth
+categories: [ehealth]
 doi: https://doi.org/10.24105/ejbi.2015.11.2.8
 ---
 

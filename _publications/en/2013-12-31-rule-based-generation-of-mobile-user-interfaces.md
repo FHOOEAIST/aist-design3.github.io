@@ -4,7 +4,7 @@ page_id: pub:rule-based-generation-of-mobile-user-interfaces
 permalink: /publications/rule-based-generation-of-mobile-user-interfaces/
 date: 2013-12-31
 title: Rule-Based Generation of Mobile User Interfaces
-category: se
+categories: [se]
 reference: 'Schuler A., Franz B. Proceedings of the 10th International Conference
   on Information Technology: New Generations (ITNG 2013), Las Vegas, Nevada, USA,
   2013.'

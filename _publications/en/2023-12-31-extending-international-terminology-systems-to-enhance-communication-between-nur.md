@@ -9,7 +9,7 @@ reference: Diesenreiter C., Krauss O., Traxler B. „Extending International Ter
   Systems to Enhance Communication Between Nursing Services“ in Proceedings of the
   12th International Workshop on Innovative Simulation for Healthcare (IWISH 2023),
   2023.
-category: ehealth
+categories: [ehealth]
 doi: https://doi.org/10.46354/i3m.2023.iwish.006
 ---
 

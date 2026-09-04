@@ -7,7 +7,8 @@ title: The State and Future of Genetic Improvement
 reference: Langdon W.B., Weimer W., Timperley C., Krauss O., Ding Z.Y., Lyu Y., Chausseau
   N., Schulte E., Tan S.H., Leach K., Huang Y., An G. SIGSOFT Softw. Eng. Notes 44,
   3 (July 2019). arXiv preprint arXiv:1907.03773.
-category: mldoi: https://doi.org/10.1145/3356773.3356801
+categories: [ml, se]
+doi: https://doi.org/10.1145/3356773.3356801
 external_url: https://dl.acm.org/doi/10.1145/3356773.3356801
 ---
 

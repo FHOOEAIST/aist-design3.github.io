@@ -9,5 +9,5 @@ reference: Bernert L., Krauss O., Praschl C., Sandler S., Trajkovska N., Haider 
   Hecktor R., Roiss M., Roth D. “Safety and efficacy of a clinical decision support
   system for chest pain in a tertiary care emergency department“, European Emergency
   Medicine Congress 2026.
-category: ehealth
+categories: [ehealth]
 ---

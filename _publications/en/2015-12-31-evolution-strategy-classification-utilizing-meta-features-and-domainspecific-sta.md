@@ -9,6 +9,6 @@ title: Evolution Strategy Classification Utilizing Meta Features and
 reference: Zwettler G., Backfrieder W. Proceedings of the IEEE International conference
   on Computing and Communications Technologies (ICCCT’15), Chennai, Indien, 2015,
   pp. 1-7.
-category: cv
+categories: [ehealth, cv, ml]
 ---
 

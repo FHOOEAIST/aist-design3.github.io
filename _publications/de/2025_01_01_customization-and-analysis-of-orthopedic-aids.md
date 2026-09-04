@@ -7,7 +7,7 @@ title: Customization and Analysis of Orthopedic Aids
 reference: 'Praschl C., Dalkilic M., Bauernfeind S., Wakolbinger M., Zwettler G.A.
   “Customization and Analysis of Orthopedic Aids“, In: Lecture Notes in Computer Science.
   Volume 15173 2025.'
-category: ml
+categories: [ehealth, ml]
 doi: https://doi.org/10.1007/978-3-031-82957-4_32
 ---
 

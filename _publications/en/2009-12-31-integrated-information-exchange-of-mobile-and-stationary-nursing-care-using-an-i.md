@@ -7,6 +7,6 @@ title: Integrated Information Exchange of Mobile and Stationary Nursing Care
   Using an IHE-Compliant IT Infrastructure
 reference: 'Mayr H., Franz B. Proceedings Med-e-Tel 2009, Global Telemedicine and
   eHealth Updates: Knowledge Resources Vol. 2, Luxembourg, Luxemburg, 2009, pp. 452-455.'
-category: ehealth
+categories: [ehealth]
 ---
 

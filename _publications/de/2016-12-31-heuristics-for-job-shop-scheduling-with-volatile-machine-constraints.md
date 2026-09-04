@@ -6,7 +6,7 @@ date: 2016-12-31
 title: Heuristics for Job Shop Scheduling with Volatile Machine Constraints
 reference: Krauss O., Wilfing D., Schuler A. IEEE Advanced Information Management,Communicates,Electronic
   and Automation Control Conference, Xi’an, Xi’an, China, 2016.
-category: ml
+categories: [ml]
 doi: https://doi.org/10.1109/imcec.2016.7867240
 ---
 

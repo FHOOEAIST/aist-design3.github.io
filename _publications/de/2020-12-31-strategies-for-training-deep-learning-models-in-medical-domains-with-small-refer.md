@@ -7,7 +7,7 @@ title: Strategies for Training Deep Learning Models in Medical Domains with
   Small Reference Datasets
 reference: Zwettler G., Holmes D., Backfrieder W. „Strategies for Training Deep Learning
   Models in Medical Domains with Small Reference Datasets“. WSCG ’20.
-category: cv
+categories: [ehealth, cv, ml]
 ---
 
 Mit dem stetigen Fortschritt von Deep Learning (DL)

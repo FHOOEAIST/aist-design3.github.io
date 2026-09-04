@@ -4,7 +4,7 @@ page_id: pub:how-do-android-developers-improve-non-functional-properties-of-soft
 permalink: /publications/how-do-android-developers-improve-non-functional-properties-of-software/
 date: 2022-12-31
 title: How do Android developers improve non-functional properties of software?
-category: se
+categories: [se]
 reference: 'Callan J., et al. „How do Android developers improve non-functional properties
   of software?.“ Empirical Software Engineering 27.5 (2022): 1-42.'
 doi: https://doi.org/10.1007/s10664-022-10137-2

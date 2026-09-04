@@ -8,6 +8,6 @@ title: Towards automated segmentation and classification of liver lesions for
 reference: Backfrieder W., Zwettler G., Swoboda R., Pfeifer F., Kratochwill H., Fellner
   F. International Journal of Computer Assisted Radiology and Surgery, Berlin, Deutschland,
   2007, pp. 460-461.
-category: cv
+categories: [ehealth, cv]
 ---
 

@@ -394,6 +394,48 @@ article img {
 	margin-top: 0.75rem;
 }
 
+/* Category badges sit outside .listing-content so they stay readable while the
+   entry is collapsed. Each one is a button that jumps the filter to it. */
+.publication-categories {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	margin: 0 0 0.5rem;
+}
+
+.publication-category {
+	padding: 0.1rem 0.55rem;
+	background: var(--color-bg-light);
+	color: var(--color-text-light);
+	border: 1px solid var(--pf-border);
+	border-radius: 999px;
+	font-family: var(--font-body);
+	font-size: 0.7rem;
+	font-weight: var(--font-weight-body);
+	line-height: 1.6;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.publication-category:hover {
+	background: var(--color-primary);
+	border-color: var(--color-primary);
+	color: var(--color-white);
+}
+
+.publication-category:focus-visible {
+	outline: none;
+	border-color: var(--color-primary);
+	box-shadow: 0 0 0 3px rgba(110, 193, 228, 0.45);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.publication-category {
+		transition: background-color 0.15s ease, border-color 0.15s ease,
+			color 0.15s ease;
+	}
+}
+
 /* ---------- Category filter (publications) ---------------------------------
    Custom listbox: a trigger button plus a styled option panel. The native
    <select> cannot style its open menu, hence the ARIA listbox pattern. */
@@ -476,6 +518,9 @@ article img {
 	left: 0;
 	z-index: 150; /* above the listing, below the header nav (200) */
 	min-width: 100%;
+	/* the option list outgrows short viewports -- scroll rather than overflow */
+	max-height: min(60vh, 26rem);
+	overflow-y: auto;
 	margin: 0;
 	padding: 0.35rem;
 	list-style: none;
@@ -612,59 +657,109 @@ article img {
   position: relative;
 }
 
+/* The whole title row is the control, so it has to look like one: a full-width
+   button that tints on hover and carries a chevron flipping between shut and
+   open. The chevron rotates off `.open` on the item, which the JS keeps in step
+   with aria-expanded. */
 .listing-item.collapsible .listing-title {
-  cursor: pointer;
-  position: relative;
-  padding-right: 1.5rem;
-  transition: color 0.2s ease;
+  margin-bottom: 0.25rem;
 }
 
-.listing-item.collapsible .listing-title:hover {
+.listing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  /* pulled out sideways so the label stays flush with the rest of the entry
+     while the hover surface reaches past it */
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+  padding: 0.35rem 0.5rem;
+  background: none;
+  border: none;
+  border-radius: var(--border-radius);
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.listing-toggle:hover {
+  background: var(--pf-hover);
   color: var(--color-primary);
 }
 
-.listing-item.collapsible .listing-title::after {
-  content: "▾";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.8em;
-  opacity: 0.5;
-  transition: transform 0.3s ease;
+/* keep a clearly visible focus indicator -- never remove it outright */
+.listing-toggle:focus-visible {
+  outline: none;
+  background: var(--pf-hover);
+  color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(110, 193, 228, 0.45);
 }
 
-.js .listing-item.collapsible.open .listing-title::after {
-  transform: translateY(-50%) rotate(180deg);
+.listing-toggle-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: var(--color-white);
+  border: 1px solid var(--pf-border);
+  border-radius: 50%;
+  font-size: 0.7rem;
+  color: var(--color-primary);
+}
+
+.listing-toggle:hover .listing-toggle-icon,
+.listing-toggle:focus-visible .listing-toggle-icon {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.listing-item.collapsible.open .listing-toggle-icon {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .listing-toggle {
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .listing-toggle-icon {
+    transition: background-color 0.15s ease, border-color 0.15s ease,
+      color 0.15s ease, transform 0.25s ease;
+  }
 }
 
 .js .listing-item.collapsible .listing-content.closed {
   display: none;
 }
 
-.js .listing-item.collapsible .listing-content {
-  max-height: 2000px;
-  overflow: hidden;
-  opacity: 1;
-  transition: max-height 0.4s ease-out, opacity 0.3s ease;
-}
-
-.js .listing-item.collapsible .listing-content.closed {
-  max-height: 0;
-  opacity: 0;
-}
-
-:not(.js) .listing-item.collapsible .listing-content {
+/* Without JS nothing collapses, so the control must not advertise itself as
+   one: every entry is simply shown in full.
+   Scoped to `html` on purpose -- a bare `:not(.js)` matches <body>, <main> and
+   every wrapper <div> too (none of them carry the class), so it would apply
+   even with JS on, and win on specificity. */
+html:not(.js) .listing-item.collapsible .listing-content {
   display: block;
 }
 
-:not(.js) .listing-item.collapsible .listing-title {
+html:not(.js) .listing-toggle {
+  width: 100%;
+  margin: 0;
+  padding: 0;
   cursor: default;
-  padding-right: 0;
 }
 
-:not(.js) .listing-item.collapsible .listing-title::after {
-  content: none;
+html:not(.js) .listing-toggle:hover {
+  background: none;
+  color: inherit;
+}
+
+html:not(.js) .listing-toggle-icon {
+  display: none;
 }
 
 .btn {
@@ -1157,17 +1252,14 @@ footer a:hover {
   border-radius: 2px;
 }
 
+/* Highlight an entry arrived at via an anchor link. Expanding it is the JS's
+   job (see setListingExpanded) -- forcing it open from here would override a
+   deliberate collapse afterwards. */
 .listing-item:has(.listing-title:target) {
   border-left: 3px solid var(--color-primary);
   padding-left: 1rem;
   background: rgba(30, 78, 121, 0.04);
   border-radius: var(--border-radius);
-}
-
-.listing-item:has(.listing-title:target) .listing-content.closed {
-  display: block !important;
-  max-height: none !important;
-  opacity: 1 !important;
 }
 
 @keyframes fadeIn {

@@ -8,5 +8,5 @@ reference: 'Trajkovska N., Kastenhofer S., Bauernfeind S., Sandler S., Praschl C
   Krauss O., Hecktor R., Herzmanek D., Roiss M., Haider M., Rechenmacher M., Roth
   D. “Tracing Clinical Pathways from Unstructured Medical Documents: A Case Study
   on a Standard Operating Procedure for Chest Pain“, Eurocast 2026.'
-category: ehealth
+categories: [ehealth, ml, pm]
 ---

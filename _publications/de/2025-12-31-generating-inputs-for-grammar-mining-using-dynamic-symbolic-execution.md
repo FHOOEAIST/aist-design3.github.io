@@ -7,7 +7,7 @@ title: Generating Inputs for Grammar Mining using Dynamic Symbolic Execution
 reference: Pointner A., Pichler J., Prähofer H. 2025. Generating Inputs for Grammar
   Mining using Dynamic Symbolic Execution. The Art, Science, and Engineering of Programming,
   10(2), Article 16.
-category: se
+categories: [se]
 doi: https://doi.org/10.22152/programming-journal.org/2025/10/16
 ---
 

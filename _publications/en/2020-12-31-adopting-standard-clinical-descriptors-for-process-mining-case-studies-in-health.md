@@ -7,7 +7,7 @@ title: Adopting Standard Clinical Descriptors for Process Mining Case Studies in
   Healthcare
 reference: Helm E., Lin A.M., Baumgartner D., Lin A.C., Küng J. 2020. “Adopting Standard
   Clinical Descriptors for Process Mining Case Studies in Healthcare”.
-category: ehealth
+categories: [ehealth, pm]
 external_url: http://pods4h.com/wp-content/uploads/2019/08/PODS4H19_paper13v2.pdf
 ---
 

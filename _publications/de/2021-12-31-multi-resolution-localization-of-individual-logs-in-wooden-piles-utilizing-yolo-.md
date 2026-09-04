@@ -7,7 +7,7 @@ title: Multi-Resolution Localization of Individual Logs in Wooden Piles
   Utilizing YOLO with Tiling on Client/Server Architectures
 reference: Praschl C., Auserperg-Castell P., Forster-Heinlein B. (2021). In Proceedings
   of 33rd European Modeling & Simulation Symposium.
-category: cv
+categories: [cv, ml]
 doi: https://doi.org/10.46354/i3m.2021.emss.042
 ---
 

@@ -7,5 +7,6 @@ title: Energie- und kostenoptimierter Gebäudeentwurf durch automatische
   Simulation von Architektur und Materialauswahl
 reference: Zwettler G., Hinterholzer S., Track P., Waschaurek F., Hagmann E., Woschitz
   R. Tagungsband FFH 2012, Graz, Österreich, 2012, pp. 185-189.
+categories: [ml]
 ---
 

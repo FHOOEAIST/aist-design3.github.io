@@ -6,7 +6,7 @@ date: 2024-12-31
 title: Reconstructionless Airborne Radiance Fields
 reference: Praschl C., Böss L., Schedl D.C. 2024. Reconstructionless Airborne Radiance
   Fields. SIGGRAPH 2024.
-category: cv
+categories: [cv, geo]
 doi: https://doi.org/10.1145/3641234.3671077
 ---
 

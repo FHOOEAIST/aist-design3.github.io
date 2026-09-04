@@ -6,7 +6,7 @@ date: 2024-12-31
 title: The Human-Centered AI-DATA Model for Digital Customer Journeys in E-Commerce
 reference: Mühle H., Krauss O., Stöckl A. “The Human-Centered AI-DATA Model for Digital
   Customer Journeys in E-Commerce“, EUROCAST 2024.
-category: ml
+categories: [ml]
 external_url: https://eurocast2024.fulp.ulpgc.es/documents/Eurocast_2024_Extended_Abstract_Book.pdf
 ---
 

@@ -8,7 +8,7 @@ title: Mobile health solutions for empowered, health-conscious individuals and
 reference: Strasser M., Helm E., Franz B., Mayr H. Proceedings of the 10th International
   Conference on Information Communication Technologies in Health, Samos, Greece, Griechenland,
   2012, pp. 422-432.
-category: ehealth
+categories: [ehealth]
 external_url: http://research.fh-ooe.at/de/publication/2854
 ---
 

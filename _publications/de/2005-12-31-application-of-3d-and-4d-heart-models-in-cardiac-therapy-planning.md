@@ -7,6 +7,6 @@ title: Application of 3D and 4D Heart Models in Cardiac Therapy Planning
 reference: Swoboda R., Backfrieder W., Zwettler G., Carpella M., Steinwender C., Leisch
   F., Gabriel C. Proceedings of Conceptual Modeling and Simulation Conference (CMS
   2005), Marseille, Frankreich, 2005, pp. 185-191.
-category: ehealth
+categories: [ehealth, cv]
 ---
 

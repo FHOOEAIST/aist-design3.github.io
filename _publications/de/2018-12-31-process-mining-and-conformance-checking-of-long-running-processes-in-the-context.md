@@ -7,7 +7,8 @@ title: Process Mining and Conformance Checking of Long Running Processes in the
   Context of Melanoma Surveillance
 reference: Rinner C., Helm E., Dunkl R., Kittler H., Rinderle-Ma S. International
   journal of environmental research and public health.
-category: mldoi: https://doi.org/10.3390/ijerph15122809
+categories: [ehealth, pm]
+doi: https://doi.org/10.3390/ijerph15122809
 external_url: https://www.mdpi.com/1660-4601/15/12/2809/htm
 ---
 

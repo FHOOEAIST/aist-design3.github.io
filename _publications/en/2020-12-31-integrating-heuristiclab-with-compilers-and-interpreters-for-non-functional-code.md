@@ -5,7 +5,7 @@ permalink: /publications/integrating-heuristiclab-with-compilers-and-interpreter
 date: 2020-12-31
 title: Integrating HeuristicLab with Compilers and Interpreters for
   Non-Functional Code Optimization
-category: se
+categories: [ml, se]
 reference: 'Dorfmeister D., Krauss O. 2020. “Integrating HeuristicLab with Compilers
   and Interpreters for Non-Functional Code Optimization.” In Proceedings of the Genetic
   and Evolutionary Computation Conference Companion – GECCO ’20. Cancun, Mexico: ACM

@@ -8,7 +8,7 @@ reference: 'Trajkovska N., Kastenhofer S., Bauernfeind S., Sandler S., Praschl C
   Krauss O., Hecktor R., Herzmanek D., Roiss M., Haider M., Rechenmacher M., Roth
   D. “Process Mining on FHIR AuditEvents: Conformance Checking with a Standard Operating
   Procedure for Chest Pain“, MIE 2026.'
-category: ehealth
+categories: [ehealth, pm]
 doi: https://doi.org/10.3233/SHTI260425
 ---
 

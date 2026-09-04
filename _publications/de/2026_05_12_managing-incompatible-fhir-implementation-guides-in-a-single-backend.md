@@ -7,7 +7,7 @@ title: "Managing Incompatible FHIR Implementation Guides in a Single Backend: Na
 reference: 'Krauss O., Pointner A., Praschl C. “Managing Incompatible FHIR Implementation
   Guides in a Single Backend: Namespace-Based Storage in Neo4j and Multi-Profile Delivery“,
   DHealth 2026.'
-category: ehealth
+categories: [ehealth, se]
 doi: https://doi.org/10.3233/SHTI260085
 ---
 

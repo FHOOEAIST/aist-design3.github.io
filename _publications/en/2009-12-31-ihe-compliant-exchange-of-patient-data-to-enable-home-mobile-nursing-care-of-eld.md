@@ -8,6 +8,6 @@ title: IHE-Compliant Exchange of Patient Data to Enable Home & Mobile Nursing
 reference: 'Franz B., Lehner M., Mayr H., Mayr M. Proceedings of the 6th International
   Conference on Information Technology : New Generations, Las Vegas, Vereinigte Staaten
   von Amerika, 2009.'
-category: ehealth
+categories: [ehealth]
 ---
 

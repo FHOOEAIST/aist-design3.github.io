@@ -6,7 +6,7 @@ date: 2020-12-31
 title: Evolving sqrt into 1/x via Software Data Maintenance
 reference: 'Langdon W., Krauss O. GECCO ’20: Proceedings of the Genetic and Evolutionary
   Computation Conference Companion.'
-category: ml
+categories: [ml, se]
 doi: https://doi.org/10.1145/3377929.3398110
 ---
 

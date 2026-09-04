@@ -8,6 +8,6 @@ title: A New Hybrid Algorithm Based on Watershed Method, Confidence Connected
   Classification of General Medical Images
 reference: Zwettler G., Backfrieder W. Proceedings of the 24th European Modeling and
   Simulation Symposium EMSS 2012, Vienna, Österreich, 2012, pp. 73-81.
-category: cv
+categories: [ehealth, cv]
 ---
 

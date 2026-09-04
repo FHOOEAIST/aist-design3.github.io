@@ -7,7 +7,7 @@ title: A Comparison of Data Traffic in Standardized Personal Health Monitoring
   Solutions
 reference: Schuler A., Franz B., Krauss O. International Journal of Electronics and
   Telecommunications, Vol. 61, No. 2, 2015.
-category: ehealth
+categories: [ehealth]
 doi: https://doi.org/10.1515/eletel-2015-0018
 ---
 

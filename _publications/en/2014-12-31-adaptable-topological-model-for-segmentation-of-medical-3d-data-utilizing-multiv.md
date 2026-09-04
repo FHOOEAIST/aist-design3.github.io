@@ -7,6 +7,6 @@ title: Adaptable Topological Model for Segmentation of Medical 3D Data Utilizing
   Multivariate Heuristic Feature Classification
 reference: Zwettler G., Backfrieder W. Tagungsband des 8. Forschungsforum der österreichischen
   Fachhochschulen, Kufstein, Österreich, 2014, pp. 296-300.
-category: cv
+categories: [ehealth, cv, ml]
 ---
 
