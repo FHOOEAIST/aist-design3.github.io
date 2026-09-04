@@ -1,46 +1,27 @@
-<footer>
-    <div>
+{% assign en = false %}{% if site.active_lang == 'en' %}{% assign en = true %}{% endif %}
+<footer class="site-footer">
+    <div class="container">
         <div class="footer-columns">
             <div class="footer-col">
                 <img
+                    class="footer-brand-logo"
                     src="{{ '/assets/images/footer/aist-logo.png' | relative_url }}"
                     alt="AIST Logo"
                 />
-                <h3>
-                    {% if site.active_lang == 'en' %}Researchgroup AIST{% else
-                    %}Forschungsgruppe AIST{% endif %}
-                </h3>
-                <p>
-                    {% if site.active_lang == 'en' %}Departments of Software
-                    Engineering (SE),<br />Artificial Intelligence Solutions
-                    (AIS),<br />Medical and Bio informatics (MBI),<br />and Data
-                    Science Engineering (DSE){% else %}Fachbereiche Software
-                    Engineering (SE),<br />Artificial Intelligence Solutions
-                    (AIS),<br />Medizin- und Bioinformatik (MBI),<br />und Data
-                    Science Engineering (DSE){% endif %}
+                <p class="footer-brand-title">
+                    {% if en %}Research Group AIST{% else %}Forschungsgruppe AIST{% endif %}
                 </p>
                 <p>
-                    University of Applied Sciences Upper Austria,<br />Softwarepark
-                    11, 4232 Hagenberg, Austria
-                </p>
-                <h3>
-                    {% if site.active_lang == 'en' %}Contact{% else %}Kontakt{%
-                    endif %}
-                </h3>
-                <p>
-                    {% if site.active_lang == 'en' %}<strong>Phone</strong>: +43
-                    5 0804 22038<br /><strong>Mail</strong>:
-                    <a href="mailto:gerald.zwettler@fh-hagenberg.at"
-                        >gerald.zwettler@fh-hagenberg.at</a
-                    >{% else %}<strong>Telefon</strong>: +43 5 0804 22038<br /><strong
-                        >E-Mail</strong
-                    >:
-                    <a href="mailto:gerald.zwettler@fh-hagenberg.at"
-                        >gerald.zwettler@fh-hagenberg.at</a
-                    >{% endif %}
+                    {% if en %}Departments of Software Engineering (SE),
+                    Artificial Intelligence Solutions (AIS),
+                    Medical and Bio informatics (MBI),
+                    and Data Science Engineering (DSE){% else %}Fachbereiche Software
+                    Engineering (SE), Artificial Intelligence Solutions (AIS),
+                    Medizin- und Bioinformatik (MBI) und Data Science
+                    Engineering (DSE){% endif %}
                 </p>
                 <div class="social-icons">
-                    <a href="https://twitter.com/fhooeaist" aria-label="Twitter"
+                    <a href="https://twitter.com/fhooeaist" aria-label="Twitter" target="_blank" rel="noopener"
                         ><img
                             src="{{ '/assets/images/footer/twitter-icon.svg' | relative_url }}"
                             alt="Twitter"
@@ -48,53 +29,84 @@
                     <a
                         href="https://www.linkedin.com/company/fhooeaist/"
                         aria-label="LinkedIn"
+                        target="_blank" rel="noopener"
                         ><img
                             src="{{ '/assets/images/footer/linkedin-icon.svg' | relative_url }}"
                             alt="LinkedIn"
                     /></a>
+                    <a href="https://github.com/FHOOEAIST" aria-label="GitHub" target="_blank" rel="noopener"
+                        ><i class="fab fa-github" aria-hidden="true" style="color:#fff;font-size:18px"></i
+                    ></a>
                 </div>
             </div>
+
+            <div class="footer-col footer-contact">
+                <h3>{% if en %}Contact{% else %}Kontakt{% endif %}</h3>
+                <p>
+                    <i class="fas fa-location-dot" aria-hidden="true"></i>
+                    <span>University of Applied Sciences Upper Austria<br />Softwarepark 11<br />4232 Hagenberg, Austria</span>
+                </p>
+                <p>
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <span>+43 5 0804 22038</span>
+                </p>
+                <p>
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <a href="mailto:gerald.zwettler@fh-hagenberg.at">gerald.zwettler@fh-hagenberg.at</a>
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>{% if en %}Explore{% else %}Entdecken{% endif %}</h3>
+                <ul class="footer-list">
+                    {% for item in site.data.nav %}
+                        {% if item.page_id %}
+                            {% assign target_page = site.pages | where: "page_id", item.page_id | where: "lang", site.active_lang | first %}
+                            <li><a href="{{ target_page.permalink | relative_url }}">{% if en %}{{ item.label_en }}{% else %}{{ item.label_de }}{% endif %}</a></li>
+                        {% endif %}
+                        {% for subitem in item.subitems %}
+                            {% if subitem.page_id %}
+                                {% assign sub_target = site.pages | where: "page_id", subitem.page_id | where: "lang", site.active_lang | first %}
+                                <li><a href="{{ sub_target.permalink | relative_url }}">{% if en %}{{ subitem.label_en }}{% else %}{{ subitem.label_de }}{% endif %}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+                <button
+                    type="button"
+                    class="footer-search-btn"
+                    onclick="customElements.whenDefined('pagefind-modal').then(function () { document.querySelector('pagefind-modal').open(); })"
+                >
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    {% if en %}Search the site{% else %}Website durchsuchen{% endif %}
+                    <kbd>Ctrl K</kbd>
+                </button>
+            </div>
+
             <div class="footer-col">
                 <img
+                    class="footer-fh-logo"
                     src="{{ '/assets/images/footer/fhooe-logo.svg' | relative_url }}"
-                    alt="FH OOE Logo"
+                    alt="FH OÖ Logo"
                 />
-                <h3>
-                    {% if site.active_lang == 'en' %}University of Applied
-                    Sciences<br />Upper Austria{% else %}Fachhochschule
-                    Oberösterreich{% endif %}
-                </h3>
                 <p>
-                    {% if site.active_lang == 'en' %}Campus Hagenberg<br /><a
-                        href="https://www.fh-ooe.at/en/hagenberg-campus/"
-                        >https://www.fh-ooe.at/en/hagenberg-campus/</a
-                    >{% else %}Campus Hagenberg<br /><a
-                        href="https://www.fh-ooe.at/campus-hagenberg/"
-                        >https://www.fh-ooe.at/campus-hagenberg/</a
-                    >{% endif %}
+                    <strong>{% if en %}University of Applied Sciences Upper Austria{% else %}Fachhochschule Oberösterreich{% endif %}</strong><br />
+                    Campus Hagenberg
                 </p>
-                <div class="footer-search">
-                    <button
-                        onclick="
-                            customElements
-                                .whenDefined('pagefind-modal')
-                                .then(function () {
-                                    document
-                                        .querySelector('pagefind-modal')
-                                        .open();
-                                })
-                        "
-                        class="footer-search-btn"
-                    >
-                        <i class="fas fa-search"></i> {% if site.active_lang ==
-                        'en' %}Search…{% else %}Suche…{% endif %}
-                    </button>
-                </div>
                 <p>
-                    <a href="{{ '/impressum/' | relative_url }}"
-                        >{% if site.active_lang == 'en' %}Imprint{% else %}Impressum{% endif %}</a
-                    >
+                    {% if en %}<a href="https://www.fh-ooe.at/en/hagenberg-campus/" target="_blank" rel="noopener">fh-ooe.at/en/hagenberg-campus <i class="fas fa-arrow-up-right-from-square" aria-hidden="true" style="font-size:0.7em"></i></a>{% else %}<a href="https://www.fh-ooe.at/campus-hagenberg/" target="_blank" rel="noopener">fh-ooe.at/campus-hagenberg <i class="fas fa-arrow-up-right-from-square" aria-hidden="true" style="font-size:0.7em"></i></a>{% endif %}
                 </p>
+                <p>
+                    <a href="https://aist.myspreadshop.at/" target="_blank" rel="noopener">{% if en %}AIST Shop{% else %}AIST Shop{% endif %} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true" style="font-size:0.7em"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© {{ site.time | date: "%Y" }} {% if en %}Research Group AIST · University of Applied Sciences Upper Austria{% else %}Forschungsgruppe AIST · FH Oberösterreich{% endif %}</span>
+            <div class="footer-bottom-links">
+                <a href="{{ '/impressum/' | relative_url }}">{% if en %}Imprint{% else %}Impressum{% endif %}</a>
+                <a href="https://github.com/FHOOEAIST" target="_blank" rel="noopener">GitHub</a>
             </div>
         </div>
     </div>

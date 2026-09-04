@@ -2,60 +2,121 @@
 layout: default
 css: projects
 ---
-<article>
-  <header class="project-header">
-    <h1>{{ page.title }}</h1>
-    {% if page.background %}
-    <div class="project-background" style="background-image: url('{{ page.background | relative_url }}');">
-      {% if page.logo %}
-      <img src="{{ page.logo | relative_url }}" alt="{{ page.title }}">
-      {% endif %}
-    </div>
-    {% endif %}
-  </header>
+{% assign projects_page = site.pages | where: "page_id", "projects-index" | where: "lang", site.active_lang | first %}
+{% assign en = false %}{% if site.active_lang == 'en' %}{% assign en = true %}{% endif %}
 
-  {%- comment -%}
-    Split content by <hr /> which is what Jekyll converts --- to
-    This allows handling multi-project pages with sections separated by ---
-  {%- endcomment -%}
-  {% capture full_content %}{{ content }}{% endcapture %}
-  {% assign content_sections = full_content | split: '<hr />' %}
-
-  {% assign projects_count = page.projects.size %}
-  {% if projects_count == null %}
-    {% assign projects_count = 0 %}
+{%- comment -%} Category label from the shared taxonomy (ids match the project categories). {%- endcomment -%}
+{% assign cat_label = "" %}
+{% for cat in site.data.publication_categories %}
+  {% if cat.id == page.category %}
+    {% if en %}{% assign cat_label = cat.short_en %}{% else %}{% assign cat_label = cat.short_de %}{% endif %}
   {% endif %}
+{% endfor %}
 
-  <div class="entry-content">
-    {% for proj in page.projects %}
-    <div class="project-section">
-      {% assign section_index = forloop.index0 %}
-      {% if content_sections[section_index] %}
-        {{ content_sections[section_index] }}
+{%- comment -%} Running vs. completed: decided on the first phase's end date, as on the listing. {%- endcomment -%}
+{% assign now_int = site.time | date: "%Y%m%d" | plus: 0 %}
+{% assign is_active = false %}
+{% for p in page.projects limit:1 %}
+  {% if p.laufzeitEnd %}
+    {% assign end_parts = p.laufzeitEnd | split: "." %}
+    {% assign end_int = end_parts[2] | append: end_parts[1] | append: end_parts[0] | plus: 0 %}
+    {% if end_int >= now_int %}{% assign is_active = true %}{% endif %}
+  {% endif %}
+{% endfor %}
+
+<div class="project-hero"{% if page.background %} style="--project-bg: url('{{ page.background | relative_url }}');"{% endif %}>
+  <div class="container">
+    <a class="project-back" href="{{ projects_page.permalink | relative_url }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> {% if en %}All projects{% else %}Alle Projekte{% endif %}</a>
+    <div class="project-hero-card">
+      {% if page.logo %}
+      <div class="project-logo">
+        <img src="{{ page.logo | relative_url }}" alt="{{ page.title }}">
+      </div>
       {% endif %}
-      <div class="project-section-metadata">
-        {% if proj.laufzeitStart %}
-        <p><strong>{% if site.active_lang == 'de' %}Laufzeit{% else %}Duration{% endif %}:</strong> {{ proj.laufzeitStart }}{% if proj.laufzeitEnd %} - {{ proj.laufzeitEnd }}{% endif %}</p>
-        {% endif %}
-        {% if proj.partner and proj.partner != "" %}
-        <p><strong>Partner:</strong> {{ proj.partner }}</p>
-        {% endif %}
-        {% if proj.dissertant %}
-        <p><strong>Dissertant:</strong> {{ proj.dissertant }}</p>
-        {% endif %}
-        {% if proj.foerdergeber %}
-        <p><strong>{% if site.active_lang == 'de' %}Fördergeber{% else %}Funding{% endif %}:</strong> {{ proj.foerdergeber }}</p>
-        {% endif %}
+      <div class="project-hero-text">
+        <p class="eyebrow">{% if en %}Project{% else %}Projekt{% endif %}{% if cat_label != "" %} · {{ cat_label }}{% endif %}</p>
+        <h1>{{ page.title }}</h1>
+        <div class="project-hero-badges">
+          {% if is_active %}
+          <span class="badge badge-live">{% if en %}Running{% else %}Laufend{% endif %}</span>
+          {% else %}
+          <span class="badge">{% if en %}Completed{% else %}Abgeschlossen{% endif %}</span>
+          {% endif %}
+          {% if cat_label != "" %}<span class="badge badge-{{ page.category }}">{{ cat_label }}</span>{% endif %}
+          {% if page.projects.size > 1 %}<span class="badge">{{ page.projects.size }} {% if en %}phases{% else %}Phasen{% endif %}</span>{% endif %}
+        </div>
       </div>
     </div>
-    {% endfor %}
-
-    {% if content_sections.size > projects_count %}
-      {% for section in content_sections offset: projects_count %}
-        {% if section != '' %}
-          {{ section }}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
   </div>
-</article>
+</div>
+
+<div class="container container-narrow">
+  <article class="project-article">
+    {%- comment -%}
+      Split content by <hr /> which is what Jekyll converts --- to
+      This allows handling multi-project pages with sections separated by ---
+    {%- endcomment -%}
+    {% capture full_content %}{{ content }}{% endcapture %}
+    {% assign content_sections = full_content | split: '<hr />' %}
+
+    {% assign projects_count = page.projects.size %}
+    {% if projects_count == null %}
+      {% assign projects_count = 0 %}
+    {% endif %}
+
+    <div class="entry-content article-body">
+      {% for proj in page.projects %}
+      <section class="project-section">
+        {% assign section_index = forloop.index0 %}
+        {% if content_sections[section_index] %}
+          {{ content_sections[section_index] }}
+        {% endif %}
+
+        {% if proj.laufzeitStart or proj.partner != "" or proj.dissertant or proj.foerdergeber %}
+        <dl class="project-facts">
+          {% if projects_count > 1 %}
+          <div class="project-facts-head">{% if en %}Phase{% else %}Phase{% endif %} {{ forloop.index }}{% if proj.title and proj.title != page.title %} · {{ proj.title }}{% endif %}</div>
+          {% endif %}
+          {% if proj.laufzeitStart %}
+          <div class="project-fact">
+            <dt><i class="far fa-calendar" aria-hidden="true"></i>{% if en %}Duration{% else %}Laufzeit{% endif %}</dt>
+            <dd>{{ proj.laufzeitStart }}{% if proj.laufzeitEnd %} – {{ proj.laufzeitEnd }}{% endif %}</dd>
+          </div>
+          {% endif %}
+          {% if proj.partner and proj.partner != "" %}
+          <div class="project-fact">
+            <dt><i class="fas fa-handshake" aria-hidden="true"></i>Partner</dt>
+            <dd>{{ proj.partner }}</dd>
+          </div>
+          {% endif %}
+          {% if proj.dissertant %}
+          <div class="project-fact">
+            <dt><i class="fas fa-user-graduate" aria-hidden="true"></i>{% if en %}Doctoral student{% else %}Dissertant{% endif %}</dt>
+            <dd>{{ proj.dissertant }}</dd>
+          </div>
+          {% endif %}
+          {% if proj.foerdergeber %}
+          <div class="project-fact">
+            <dt><i class="fas fa-coins" aria-hidden="true"></i>{% if en %}Funding{% else %}Fördergeber{% endif %}</dt>
+            <dd>{{ proj.foerdergeber }}</dd>
+          </div>
+          {% endif %}
+        </dl>
+        {% endif %}
+      </section>
+      {% endfor %}
+
+      {% if content_sections.size > projects_count %}
+        {% for section in content_sections offset: projects_count %}
+          {% if section != '' %}
+            <section class="project-section">{{ section }}</section>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <footer class="article-footer">
+      <a class="link-arrow" href="{{ projects_page.permalink | relative_url }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> {% if en %}All projects{% else %}Alle Projekte{% endif %}</a>
+    </footer>
+  </article>
+</div>

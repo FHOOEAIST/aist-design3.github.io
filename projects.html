@@ -4,23 +4,19 @@ lang: de
 title: Projekte
 permalink: /projekte/
 page_id: projects-index
+css: projects
 ---
 
 {% comment %} Ordered by `sort_title`, which _plugins/project_sort_title.rb
 derives from the title minus any "Projekt"/"Project" prefix -- otherwise a
 third of the projects clump together under P. sort_natural rather than sort
-because Liquid's sort is ASCII-ordered. Both listings below iterate this one
-sorted list. {% endcomment %}
-{% assign de_projects = site.projects | where: "lang", "de" | sort_natural: "sort_title" %}
+because Liquid's sort is ASCII-ordered. Running vs. completed is decided on the
+first phase's end date. {% endcomment %}
+{% assign all_projects = site.projects | where: "lang", "de" | sort_natural: "sort_title" %}
 {% assign now_int = site.time | date: "%Y%m%d" | plus: 0 %}
-
-<div class="page-header">
-  <h1>Projekte</h1>
-</div>
-
-<h2>Laufende Projekte</h2>
-<ul class="project-grid">
-{% for project in de_projects %}
+{% assign active_projects = "" | split: "" %}
+{% assign done_projects = "" | split: "" %}
+{% for project in all_projects %}
   {% assign is_active = false %}
   {% for p in project.projects limit:1 %}
     {% if p.laufzeitEnd %}
@@ -30,24 +26,55 @@ sorted list. {% endcomment %}
     {% endif %}
   {% endfor %}
   {% if is_active %}
-    {% include project-card.html %}
+    {% assign active_projects = active_projects | push: project %}
+  {% else %}
+    {% assign done_projects = done_projects | push: project %}
   {% endif %}
 {% endfor %}
-</ul>
 
-<h2>Abgeschlossene Projekte</h2>
-<ul class="project-grid complete">
-{% for project in de_projects %}
-  {% assign is_active = false %}
-  {% for p in project.projects limit:1 %}
-    {% if p.laufzeitEnd %}
-      {% assign end_parts = p.laufzeitEnd | split: "." %}
-      {% assign end_int = end_parts[2] | append: end_parts[1] | append: end_parts[0] | plus: 0 %}
-      {% if end_int >= now_int %}{% assign is_active = true %}{% endif %}
-    {% endif %}
-  {% endfor %}
-  {% unless is_active %}
-    {% include project-card.html %}
-  {% endunless %}
-{% endfor %}
-</ul>
+{% include page-header.html eyebrow="Forschung" title="Projekte" lead="Unsere Forschungsprojekte in den Bereichen eHealth, Machine Learning &amp; Data Mining und Computer Vision – von laufenden Vorhaben bis zu abgeschlossenen Arbeiten." %}
+
+<div class="container">
+  <div class="project-filter" data-project-filter role="group" aria-label="Nach Forschungsbereich filtern">
+    <span class="project-filter-label">Bereich</span>
+    <button type="button" class="filter-pill is-active" data-filter="all" aria-pressed="true">Alle <span class="count">{{ all_projects.size }}</span></button>
+    {% for cat in site.data.publication_categories %}
+      {% assign in_cat = all_projects | where: "category", cat.id %}
+      {% if in_cat.size > 0 %}
+      <button type="button" class="filter-pill" data-filter="{{ cat.id }}" aria-pressed="false" style="--dot: var(--area-{{ cat.id }}, var(--color-primary));"><span class="dot" aria-hidden="true"></span>{{ cat.short_de }} <span class="count">{{ in_cat.size }}</span></button>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <section class="project-group" data-project-group>
+    <div class="section-head">
+      <div>
+        <h2>Laufende Projekte</h2>
+        <p>{{ active_projects.size }} Projekte in Bearbeitung</p>
+      </div>
+    </div>
+    <ul class="project-grid">
+    {% for project in active_projects %}
+      {% assign is_active = true %}
+      {% include project-card.html %}
+    {% endfor %}
+    </ul>
+    <p class="project-group-empty" data-empty hidden>Keine laufenden Projekte in diesem Bereich.</p>
+  </section>
+
+  <section class="project-group" data-project-group>
+    <div class="section-head">
+      <div>
+        <h2>Abgeschlossene Projekte</h2>
+        <p>{{ done_projects.size }} abgeschlossene Projekte</p>
+      </div>
+    </div>
+    <ul class="project-grid complete">
+    {% for project in done_projects %}
+      {% assign is_active = false %}
+      {% include project-card.html %}
+    {% endfor %}
+    </ul>
+    <p class="project-group-empty" data-empty hidden>Keine abgeschlossenen Projekte in diesem Bereich.</p>
+  </section>
+</div>

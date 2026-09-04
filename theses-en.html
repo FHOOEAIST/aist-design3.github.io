@@ -6,47 +6,32 @@ permalink: /theses/
 page_id: theses-index
 ---
 
-<div class="page-header">
-    <h1>Theses</h1>
-    <p>
-        The research group AIST offers students the opportunity to deal with
-        their diploma theses (Bachelor, Master) in the context of research
-        projects in a practical way and thus to deal with the respective topic
-        area more intensively. The practical support is provided by a research
-        assistant (in addition to the assessor from the University of Applied
-        Sciences).
-    </p>
-</div>
+{% capture theses_lead %}The research group AIST offers students the opportunity to deal with their diploma theses (Bachelor, Master) in the context of research projects in a practical way and thus to deal with the respective topic area more intensively. The practical support is provided by a research assistant (in addition to the assessor from the University of Applied Sciences).{% endcapture %}
+{% include page-header.html eyebrow="Teaching & Research" title="Theses" lead=theses_lead %}
 
-<div class="listing-items">
-    {% assign en_theses = site.theses | where: "lang", "en" | sort: "date" |
-    reverse %} {% assign year = "" %} {% for thesis in en_theses %} {% assign
-    thesis_year = thesis.date | date: "%Y" %} {% if thesis_year != year %}
-    <h2 class="mt-3">{{ thesis_year }}</h2>
-    {% assign year = thesis_year %} {% endif %}
-    <div class="listing-item thesis-entry collapsible">
+<div class="container">
+  <div class="listing-items">
+    {% assign en_theses = site.theses | where: "lang", "en" | sort: "date" | reverse %}
+    {% assign year = "" %}
+    {% for thesis in en_theses %}
+      {% assign thesis_year = thesis.date | date: "%Y" %}
+      {% if thesis_year != year %}
+      <h2 class="mt-3 year-heading">{{ thesis_year }}</h2>
+      {% assign year = thesis_year %}
+      {% endif %}
+      <div class="listing-item thesis-entry collapsible">
         {% assign anchor = thesis.permalink | slugify %}
         <h3 class="listing-title" id="{{ anchor }}">
-            <button
-                type="button"
-                class="listing-toggle"
-                aria-controls="{{ anchor }}-content"
-            >
-                <span class="listing-toggle-text"
-                    >{{ thesis.title }} ({{ thesis.student }}, {{ thesis.date |
-                    date: "%Y" }})</span
-                >
-                <span class="listing-toggle-icon" aria-hidden="true">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </span>
-            </button>
+          <button type="button" class="listing-toggle" aria-controls="{{ anchor }}-content">
+            <span class="listing-toggle-text">{{ thesis.title }}</span>
+            <span class="listing-toggle-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
         </h3>
+        <p class="thesis-meta"><i class="fas fa-user-graduate" aria-hidden="true"></i> {{ thesis.student }} · {{ thesis.date | date: "%Y" }}</p>
         <div class="listing-content" id="{{ anchor }}-content">
-            {% if thesis.student %}
-            <p class="thesis-meta">{{ thesis.student }}</p>
-            {% endif %}
-            <p>{{thesis.content}}</p>
+          {{ thesis.content }}
         </div>
-    </div>
+      </div>
     {% endfor %}
+  </div>
 </div>

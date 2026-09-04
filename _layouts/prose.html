@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% comment %}
+Long-form Markdown pages (history, imprint): a page-header band followed by a
+reading-width article. `heading` overrides the band title when the page title
+carries a suffix meant for the browser tab only.
+{% endcomment %}
+{% assign band_title = page.heading | default: page.title %}
+{% include page-header.html eyebrow=page.eyebrow title=band_title lead=page.lead %}
+
+<div class="container container-narrow">
+  <article class="article-body prose-page">
+    {{ content }}
+  </article>
+</div>

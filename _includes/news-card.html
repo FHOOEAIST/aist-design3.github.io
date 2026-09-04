@@ -1,0 +1,22 @@
+{% comment %}
+Card for one news post. Expects `post`. Uses the site's active language for
+date formatting and the read-more label.
+{% endcomment %}
+<a class="news-card" href="{{ post.url | relative_url }}">
+  {% if post.title_image %}
+  <div class="news-card-media">
+    <img src="{{ post.title_image | relative_url }}" alt="" loading="lazy">
+  </div>
+  {% else %}
+  <div class="news-card-media is-placeholder" aria-hidden="true">
+    <img src="{{ '/assets/images/footer/aist-logo.png' | relative_url }}" alt="">
+  </div>
+  {% endif %}
+  <div class="news-card-body">
+    <span class="date"><i class="far fa-calendar" aria-hidden="true"></i>{% if site.active_lang == 'en' %}{{ post.date | date: "%B %-d, %Y" }}{% else %}{{ post.date | date: "%d.%m.%Y" }}{% endif %}</span>
+    <h3>{{ post.title }}</h3>
+    {% assign excerpt = post.excerpt | strip_html | strip_newlines | strip %}
+    {% if excerpt != "" %}<p class="excerpt">{{ excerpt | truncate: 160 }}</p>{% endif %}
+    <span class="link-arrow">{% if site.active_lang == 'en' %}Read more{% else %}Weiterlesen{% endif %} <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+  </div>
+</a>

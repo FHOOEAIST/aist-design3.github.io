@@ -1,62 +1,261 @@
-.project-header {
-  position: relative;
-  margin-bottom: 2rem;
+/* ==========================================================================
+   Projects – listing filter + single project page
+   ========================================================================== */
+
+/* ------------------------------------------------------- listing filter */
+.project-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.project-background {
-  position: relative;
-  width: 100%;
-  min-height: 300px;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+.project-filter-label {
+  margin-right: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-pill);
+  background: var(--color-white);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease),
+    color 0.2s var(--ease);
+}
+
+.filter-pill:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filter-pill.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.filter-pill .count {
+  padding: 0.05rem 0.5rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-muted);
+  color: var(--color-text-light);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.filter-pill.is-active .count {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+}
+
+.filter-pill .dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--dot, var(--color-primary));
+}
+
+.project-group {
+  margin-bottom: 3.5rem;
+}
+
+.project-group .section-head {
+  margin-bottom: 1.5rem;
+}
+
+.project-group-empty {
+  padding: 2rem;
+  border: 1px dashed var(--color-line-strong);
   border-radius: var(--border-radius);
-  overflow: hidden;
+  color: var(--color-text-light);
+  text-align: center;
 }
 
-.project-background::before {
+/* ----------------------------------------------------------- hero band */
+.project-hero {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  padding: 2.5rem 0 3rem;
+  background: var(--navy-900);
+  color: var(--color-white);
+}
+
+.project-hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.5);
+  inset: 0;
+  background-image: var(--project-bg, none);
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px) saturate(1.1);
+  transform: scale(1.08);
+  opacity: 0.55;
+}
+
+.project-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12, 34, 56, 0.55) 0%, rgba(12, 34, 56, 0.85) 100%);
+}
+
+.project-hero .container {
+  position: relative;
   z-index: 1;
 }
 
-.project-background img {
-  position: relative;
-  z-index: 2;
-  max-width: 200px;
-  padding: 2rem;
+.project-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-.project-metadata {
-  margin-top: 2rem;
-  padding: 1.5rem;
+.project-back:hover {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.project-hero-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.project-logo {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 140px;
+  padding: 1.25rem;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.project-hero-text .eyebrow {
+  color: var(--color-primary-light);
+}
+
+.project-hero-text h1 {
+  color: var(--color-white);
+  margin-bottom: 0.9rem;
+}
+
+.project-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-hero-badges .badge {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--color-white);
+}
+
+.project-hero-badges .badge-live {
+  background: rgba(46, 204, 113, 0.22);
+  color: #9ff0bf;
+}
+
+/* ------------------------------------------------------------ content */
+.project-article {
+  padding-bottom: 1rem;
+}
+
+.project-section + .project-section {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.project-section > h2:first-child {
+  margin-top: 0;
+}
+
+.project-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 2rem 0 0;
+  padding: 1.35rem 1.5rem;
   background: var(--color-bg-light);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--color-line);
   border-left: 4px solid var(--color-primary);
+  border-radius: var(--border-radius);
 }
 
-.project-metadata p {
-  margin-bottom: 0.5rem;
+.project-facts-head {
+  grid-column: 1 / -1;
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
 }
 
-.project-metadata p:last-child {
-  margin-bottom: 0;
+.project-fact dt {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
 }
 
-.entry-content {
-  line-height: 1.75;
+.project-fact dt i {
+  color: var(--color-primary-light);
 }
 
-/* --------------------------------------------------------------------------
-   Responsive
-   -------------------------------------------------------------------------- */
-@media (max-width: 1024px) {
-  .project-background {
-    background-attachment: scroll;
+.project-fact dd {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-heading);
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------------------ responsive */
+@media (max-width: 720px) {
+  .project-hero-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .project-logo {
+    width: 160px;
+    height: 110px;
+    padding: 1rem;
+  }
+
+  .project-facts {
+    grid-template-columns: 1fr;
   }
 }

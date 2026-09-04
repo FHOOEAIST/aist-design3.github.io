@@ -6,9 +6,11 @@ permalink: /publikationen/
 page_id: publications-index
 ---
 
-<div class="page-header">
-    <h1>Publikationen</h1>
-</div>
+{% assign n_pubs = site.publications | where: "lang", "de" | size %}
+{% capture pub_lead %}{{ n_pubs }} wissenschaftliche Beiträge aus Konferenzen, Journalen und Büchern – nach Jahr sortiert und nach Forschungsbereich filterbar.{% endcapture %}
+{% include page-header.html eyebrow="Forschung" title="Publikationen" lead=pub_lead %}
 
-{% include publication-filter.html lang=page.lang %} {% include
-publication-list.html lang=page.lang %}
+<div class="container">
+    {% include publication-filter.html lang=page.lang %}
+    {% include publication-list.html lang=page.lang %}
+</div>

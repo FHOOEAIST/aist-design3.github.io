@@ -14,42 +14,36 @@ pagination:
   locale: en
 ---
 
-<div class="page-header">
-  <h1>News</h1>
-</div>
+{% include page-header.html eyebrow="Latest" title="News" lead="Reports from projects, conferences, events and everyday life in the research group." %}
 
-{% if paginator.posts.size > 0 %}
-<div class="listing-items news-grid">
-  {% for post in paginator.posts %}
-  <a class="listing-item" href="{{ post.url | relative_url }}">
-    {% if post.title_image %}
-    <img src="{{ post.title_image | relative_url }}" alt="{{ post.title }}">
-    {% endif %}
-    <p class="date">{{ post.date | date: "%d.%m.%Y" }}</p>
-    <h2>{{ post.title }}</h2>
-  </a>
-  {% endfor %}
-</div>
-{% endif %}
-
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Newer</a>
-  {% endif %}
-
-  {% if paginator.page_trail %}
-    {% for trail in paginator.page_trail %}
-      {% if page.url == trail.path %}
-        <span class="current">{{ trail.num }}</span>
-      {% else %}
-        <a href="{{ trail.path | relative_url }}">{{ trail.num }}</a>
-      {% endif %}
+<div class="container">
+  {% if paginator.posts.size > 0 %}
+  <div class="listing-items news-grid">
+    {% for post in paginator.posts %}
+      {% include news-card.html post=post %}
     {% endfor %}
+  </div>
   {% endif %}
 
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}">Older &raquo;</a>
+  {% if paginator.total_pages > 1 %}
+  <nav class="pagination" aria-label="Pages">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Newer</a>
+    {% endif %}
+
+    {% if paginator.page_trail %}
+      {% for trail in paginator.page_trail %}
+        {% if page.url == trail.path %}
+          <span class="current" aria-current="page">{{ trail.num }}</span>
+        {% else %}
+          <a href="{{ trail.path | relative_url }}">{{ trail.num }}</a>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Older &raquo;</a>
+    {% endif %}
+  </nav>
   {% endif %}
 </div>
-{% endif %}

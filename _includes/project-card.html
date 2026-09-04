@@ -1,13 +1,41 @@
+{% comment %}
+One project in the listing. Expects `project` and `is_active`.
+Running projects get a full card, completed ones a compact logo tile. Both
+carry data-category so the area filter (assets/js/main.js) can hide them.
+{% endcomment %}
+{% assign card_cat_label = "" %}
+{% for cat in site.data.publication_categories %}
+  {% if cat.id == project.category %}
+    {% if site.active_lang == 'en' %}{% assign card_cat_label = cat.short_en %}{% else %}{% assign card_cat_label = cat.short_de %}{% endif %}
+  {% endif %}
+{% endfor %}
+{% assign phase = project.projects | first %}
 {% if is_active %}
-<li class="project-card" style="background-image: url('{{ project.background | relative_url }}');">
+<li class="project-card" data-category="{{ project.category }}"{% if project.background %} style="background-image: url('{{ project.background | relative_url }}');"{% endif %}>
   <div class="card-overlay"></div>
+  {% if card_cat_label != "" %}
+  <div class="card-badges"><span class="badge badge-{{ project.category }}">{{ card_cat_label }}</span></div>
+  {% endif %}
   <div class="card-content">
-    <a href="{{ project.url | relative_url }}"><img src="{{ project.logo | relative_url }}" alt="Icon for {{ project.title }}"></a>
-    <h3>{{ project.title }}</h3>
+    <div class="card-logo">
+      {% if project.logo %}<img src="{{ project.logo | relative_url }}" alt="" loading="lazy">{% endif %}
+    </div>
+    <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+    <div class="card-meta">
+      {% if phase.laufzeitStart %}
+      <span><i class="far fa-calendar" aria-hidden="true"></i>{{ phase.laufzeitStart }}{% if phase.laufzeitEnd %} – {{ phase.laufzeitEnd }}{% endif %}</span>
+      {% endif %}
+      {% if phase.foerdergeber %}
+      <span><i class="fas fa-coins" aria-hidden="true"></i>{{ phase.foerdergeber }}</span>
+      {% endif %}
+    </div>
   </div>
 </li>
 {% else %}
-<li class="project-card inactive">
-  <a href="{{ project.url | relative_url }}"><img src="{{ project.logo | relative_url }}" alt="Icon for {{ project.title }}"></a>
+<li class="project-card inactive" data-category="{{ project.category }}">
+  <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
+    {% if project.logo %}<img src="{{ project.logo | relative_url }}" alt="" loading="lazy">{% endif %}
+    <span class="card-title">{{ project.title }}</span>
+  </a>
 </li>
 {% endif %}

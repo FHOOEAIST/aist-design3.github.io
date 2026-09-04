@@ -1,16 +1,28 @@
 ---
 layout: default
 ---
-<article>
-  <header>
-    <h1>{{ page.title }}</h1>
-    <p>{% if site.active_lang == 'en' %}{{ page.date | date: "%B %d, %Y" }}{% else %}{{ page.date | date: "%d.%m.%Y" }}{% endif %}</p>
-    {% if page.title_image %}
-    <img src="{{ page.title_image | relative_url }}" alt="{{ page.title }}">
-    {% endif %}
-  </header>
+{% assign news_page = site.pages | where: "page_id", "news" | where: "lang", site.active_lang | first %}
+<div class="container container-narrow" style="padding-top: 3rem;">
+  <article>
+    <header class="article-header">
+      <p class="eyebrow">{% if site.active_lang == 'en' %}News{% else %}Neuigkeiten{% endif %}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="article-meta">
+        <span><i class="far fa-calendar" aria-hidden="true"></i>{% if site.active_lang == 'en' %}{{ page.date | date: "%B %-d, %Y" }}{% else %}{{ page.date | date: "%d.%m.%Y" }}{% endif %}</span>
+      </p>
+      {% if page.title_image %}
+      <div class="article-hero-image">
+        <img src="{{ page.title_image | relative_url }}" alt="{{ page.title }}">
+      </div>
+      {% endif %}
+    </header>
 
-  <div>
-    {{ content }}
-  </div>
-</article>
+    <div class="article-body">
+      {{ content }}
+    </div>
+
+    <footer class="article-footer">
+      <a class="link-arrow" href="{{ news_page.permalink | relative_url }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> {% if site.active_lang == 'en' %}All news{% else %}Alle Neuigkeiten{% endif %}</a>
+    </footer>
+  </article>
+</div>

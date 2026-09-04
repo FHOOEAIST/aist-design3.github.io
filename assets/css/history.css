@@ -1,126 +1,150 @@
+/* ==========================================================================
+   History page – long-form article with side-by-side text/image blocks
+   ========================================================================== */
+.prose-page > h2:first-child {
+  margin-top: 0;
+}
+
+.prose-page h2 {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.prose-page h2:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.prose-page h3 {
+  margin-top: 2.5rem;
+  color: var(--color-primary);
+}
+
+.prose-page h5 {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: var(--color-heading);
+}
+
+/* author / period lines are written as h6 in the Markdown */
+.prose-page h6 {
+  margin: -0.25rem 0 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
 
 .content-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
   gap: 2rem;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 2rem;
   align-items: start;
 }
 
-.content-columns .content-text {
-  min-width: 0;
-}
-
+.content-columns .content-text,
 .content-columns .content-image {
   min-width: 0;
 }
 
-.content-columns .content-image img {
+.content-columns .content-text > :last-child {
+  margin-bottom: 0;
+}
+
+.content-columns .content-image img,
+.image-pair img,
+.image-captioned img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
 }
 
-.content-columns .content-image em {
+.content-columns .content-image em,
+.image-pair em,
+.image-captioned em,
+.image-stack-item em {
   display: block;
-  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  font-style: normal;
   color: var(--color-text-light);
-  line-height: 1.4;
-  font-style: italic;
-  margin-top: 0.375rem;
 }
 
-.content-columns .content-image .image-stack {
+.content-columns .content-image p {
+  margin: 0;
+}
+
+.image-stack {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-
-.content-columns .content-image .image-stack .image-stack-item em {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--color-text-light);
-  line-height: 1.4;
-  font-style: italic;
-  margin-top: 0.375rem;
+  gap: 1.25rem;
 }
 
 .image-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 2rem;
 }
 
-.image-pair .image-pair-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: var(--border-radius);
-}
-
-.image-pair .image-pair-item em {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--color-text-light);
-  line-height: 1.4;
-  font-style: italic;
-  margin-top: 0.375rem;
+.image-captioned {
+  margin: 1.5rem 0 2rem;
 }
 
 .fun-fact {
-  background-color: var(--color-bg-light);
-  border-left: 4px solid var(--color-primary-light);
+  position: relative;
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem 1.25rem 1.75rem;
+  background: var(--sky-100);
   border-radius: var(--border-radius);
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
+}
+
+.fun-fact::before {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  bottom: 0.9rem;
+  left: 0;
+  width: 4px;
+  border-radius: 4px;
+  background: var(--color-primary-light);
 }
 
 .fun-fact-title {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.75rem;
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
-  font-size: 0.9rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.375rem;
+  color: var(--color-primary);
+}
+
+.fun-fact-title::before {
+  content: "\f0eb";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
 }
 
 .fun-fact p {
   margin: 0;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
-/* --- Single Image with Caption --- */
-.image-captioned {
-  margin: 1.5rem 0;
-}
-
-.image-captioned img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: var(--border-radius);
-}
-
-.image-captioned em {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--color-text-light);
-  line-height: 1.4;
-  font-style: italic;
-  margin-top: 0.375rem;
-}
-
-@media (max-width: 840px) {
-  .content-columns {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
+@media (max-width: 720px) {
+  .content-columns,
   .image-pair {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.25rem;
   }
 }

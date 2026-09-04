@@ -7,212 +7,262 @@ page_id: home
 css: home
 ---
 
+{% assign projects_page = site.pages | where: "page_id", "projects-index" | where: "lang", "en" | first %}
+{% assign pubs_page = site.pages | where: "page_id", "publications-index" | where: "lang", "en" | first %}
+{% assign theses_page = site.pages | where: "page_id", "theses-index" | where: "lang", "en" | first %}
+{% assign team_page = site.pages | where: "page_id", "team" | where: "lang", "en" | first %}
+{% assign news_page = site.pages | where: "page_id", "news" | where: "lang", "en" | first %}
+{% assign contact_page = site.pages | where: "page_id", "contact" | where: "lang", "en" | first %}
+
+{% assign n_projects = site.projects | where: "lang", "en" | size %}
+{% assign n_pubs = site.publications | where: "lang", "en" | size %}
+{% assign n_theses = site.theses | where: "lang", "en" | size %}
+{% assign n_team = site.data.team.members | size %}
+
 <section class="home-hero">
-    <h1>Home</h1>
-    <p class="home-intro">
-        The research group "AIST – Advanced Information Systems and Technology"
-        conducts research on software solutions in the areas of eHealth, Machine
-        Learning and Data Mining, as well as Computer Vision.
-    </p>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Research Group · FH Upper Austria, Campus Hagenberg</p>
+        <h1>Advanced Information Systems <span>and Technology</span></h1>
+        <p class="home-intro">
+          The research group "AIST – Advanced Information Systems and Technology" conducts research on software solutions in the areas of eHealth, Machine Learning and Data Mining, as well as Computer Vision.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="{{ projects_page.permalink | relative_url }}">Explore projects</a>
+          <a class="btn btn-ghost-light" href="{{ pubs_page.permalink | relative_url }}">Publications</a>
+        </div>
+      </div>
+
+      <ul class="hero-areas" data-pagefind-ignore>
+        <li>
+          <a href="#ehealth">
+            <span class="area-thumb"><img src="{{ '/assets/images/index/ehealth.svg' | relative_url }}" alt=""></span>
+            <span><strong>eHealth</strong><small>Integrated care &amp; medical informatics</small></span>
+            <i class="fas fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#ml">
+            <span class="area-thumb"><img src="{{ '/assets/images/index/machine-learning.svg' | relative_url }}" alt=""></span>
+            <span><strong>Machine Learning &amp; Data Mining</strong><small>Learning systems &amp; data analytics</small></span>
+            <i class="fas fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#cv">
+            <span class="area-thumb"><img src="{{ '/assets/images/index/computervision.svg' | relative_url }}" alt=""></span>
+            <span><strong>Computer Vision</strong><small>Image analysis &amp; mixed reality</small></span>
+            <i class="fas fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="hero-stats" data-pagefind-ignore>
+      <li><a href="{{ projects_page.permalink | relative_url }}"><span class="stat-value">{{ n_projects }}</span><span class="stat-label">Research projects</span></a></li>
+      <li><a href="{{ pubs_page.permalink | relative_url }}"><span class="stat-value">{{ n_pubs }}</span><span class="stat-label">Publications</span></a></li>
+      <li><a href="{{ theses_page.permalink | relative_url }}"><span class="stat-value">{{ n_theses }}</span><span class="stat-label">Supervised theses</span></a></li>
+      <li><a href="{{ team_page.permalink | relative_url }}"><span class="stat-value">{{ n_team }}</span><span class="stat-label">Team members</span></a></li>
+    </ul>
+  </div>
 </section>
 
-<section class="home-areas">
-    <div class="area-card">
+<section class="section" id="research">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Research areas</p>
+        <h2>What we work on</h2>
+      </div>
+      <a class="link-arrow" href="{{ projects_page.permalink | relative_url }}">All projects <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="home-areas">
+      <div class="area-card" id="ehealth" data-area="ehealth">
         <div class="area-icon">
-            <img
-                src="{{ '/assets/images/index/ehealth.svg' | relative_url }}"
-                alt="eHealth Icon"
-                loading="lazy"
-            />
+          <img src="{{ '/assets/images/index/ehealth.svg' | relative_url }}" alt="eHealth Icon" loading="lazy">
         </div>
         <h2>eHealth</h2>
         <p>
-            The IT support of integrated care (“eHealth”) enables the
-            definition, analysis and optimization of suitable interfaces,
-            adequate care processes and affordable business models for
-            high-quality care and case management in the healthcare sector. The
-            goal of integrated care is to provide comprehensive, coordinated and
-            continuous services that ensure a seamless care process along the
-            entire care continuum.
-            <em>[according to Hagen Kühn, Wissenschaftszentrum Berlin]</em>
+          The IT support of integrated care (“eHealth”) enables the definition, analysis and optimization of suitable interfaces, adequate care processes and affordable business models for high-quality care and case management in the healthcare sector. The goal of integrated care is to provide comprehensive, coordinated and continuous services that ensure a seamless care process along the entire care continuum. <em>[according to Hagen Kühn, Wissenschaftszentrum Berlin]</em>
         </p>
-        {% assign ehealth_projects = site.projects | where: 'lang', 'en' |
-        where: 'category', 'ehealth' | sort: 'title' %} {% if
-        ehealth_projects.size > 0 %}
+        {% assign ehealth_projects = site.projects | where: 'lang', 'en' | where: 'category', 'ehealth' | sort: 'title' %}
+        {% if ehealth_projects.size > 0 %}
+        <p class="area-projects-label"><span>Projects</span><a href="{{ projects_page.permalink | relative_url }}#area=ehealth">View {{ ehealth_projects.size }} projects</a></p>
         <div class="carousel" data-category="ehealth">
-            <div class="carousel-viewport">
-                <div class="carousel-track">
-                    {% for project in ehealth_projects %} {% if project.logo %}
-                    <div class="carousel-slide">
-                        <a
-                            href="{{ project.url | relative_url }}"
-                            title="{{ project.title }}"
-                        >
-                            <img
-                                src="{{ project.logo | relative_url }}"
-                                alt="{{ project.title }}"
-                                loading="lazy"
-                            />
-                        </a>
-                    </div>
-                    {% endif %} {% endfor %}
-                </div>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              {% for project in ehealth_projects %}
+                {% if project.logo %}
+                  <div class="carousel-slide">
+                    <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
+                      <img src="{{ project.logo | relative_url }}" alt="{{ project.title }}" loading="lazy">
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
             </div>
+          </div>
         </div>
         {% endif %}
-    </div>
+      </div>
 
-    <div class="area-card">
+      <div class="area-card" id="ml" data-area="ml">
         <div class="area-icon">
-            <img
-                src="{{ '/assets/images/index/machine-learning.svg' | relative_url }}"
-                alt="Machine Learning Icon"
-                loading="lazy"
-            />
+          <img src="{{ '/assets/images/index/machine-learning.svg' | relative_url }}" alt="Machine Learning Icon" loading="lazy">
         </div>
         <h2>Machine Learning &amp; Data Mining</h2>
         <p>
-            The department of Machine Learning deals with algorithms, that are
-            able to automatically find a domain-specific result based on
-            patterns in data. This includes methods for the classification and
-            identification of subjects in digital information, which are also
-            capable of continuously improving their own result by expanding the
-            data. The basic idea is not to teach algorithms explicitly how to
-            solve a task, but to achieve this automatically using training data.
+          The department of Machine Learning deals with algorithms, that are able to automatically find a domain-specific result based on patterns in data. This includes methods for the classification and identification of subjects in digital information, which are also capable of continuously improving their own result by expanding the data. The basic idea is not to teach algorithms explicitly how to solve a task, but to achieve this automatically using training data.
         </p>
-        {% assign ml_projects = site.projects | where: 'lang', 'en' | where:
-        'category', 'ml' | sort: 'title' %} {% if ml_projects.size > 0 %}
+        {% assign ml_projects = site.projects | where: 'lang', 'en' | where: 'category', 'ml' | sort: 'title' %}
+        {% if ml_projects.size > 0 %}
+        <p class="area-projects-label"><span>Projects</span><a href="{{ projects_page.permalink | relative_url }}#area=ml">View {{ ml_projects.size }} projects</a></p>
         <div class="carousel" data-category="ml">
-            <div class="carousel-viewport">
-                <div class="carousel-track">
-                    {% for project in ml_projects %} {% if project.logo %}
-                    <div class="carousel-slide">
-                        <a
-                            href="{{ project.url | relative_url }}"
-                            title="{{ project.title }}"
-                        >
-                            <img
-                                src="{{ project.logo | relative_url }}"
-                                alt="{{ project.title }}"
-                                loading="lazy"
-                            />
-                        </a>
-                    </div>
-                    {% endif %} {% endfor %}
-                </div>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              {% for project in ml_projects %}
+                {% if project.logo %}
+                  <div class="carousel-slide">
+                    <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
+                      <img src="{{ project.logo | relative_url }}" alt="{{ project.title }}" loading="lazy">
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
             </div>
+          </div>
         </div>
         {% endif %}
-    </div>
+      </div>
 
-    <div class="area-card">
+      <div class="area-card" id="cv" data-area="cv">
         <div class="area-icon">
-            <img
-                src="{{ '/assets/images/index/computervision.svg' | relative_url }}"
-                alt="Computer Vision Icon"
-                loading="lazy"
-            />
+          <img src="{{ '/assets/images/index/computervision.svg' | relative_url }}" alt="Computer Vision Icon" loading="lazy">
         </div>
         <h2>Computer Vision</h2>
         <p>
-            Computer Vision deals with the analysis of image content and thus
-            the extraction of semantic information. Similar to the ability of
-            humans to understand their environment by means of visual
-            impressions, this research field tries to create a comparable
-            capability for digital systems. For example, in the thematic field
-            of Mixed Reality it is necessary to combine information from the
-            real world with digital data. For this purpose, image information
-            must first be created, pre-processed and then analyzed.
+          Computer Vision deals with the analysis of image content and thus the extraction of semantic information. Similar to the ability of humans to understand their environment by means of visual impressions, this research field tries to create a comparable capability for digital systems. For example, in the thematic field of Mixed Reality it is necessary to combine information from the real world with digital data. For this purpose, image information must first be created, pre-processed and then analyzed.
         </p>
-        {% assign cv_projects = site.projects | where: 'lang', 'en' | where:
-        'category', 'cv' | sort: 'title' %} {% if cv_projects.size > 0 %}
+        {% assign cv_projects = site.projects | where: 'lang', 'en' | where: 'category', 'cv' | sort: 'title' %}
+        {% if cv_projects.size > 0 %}
+        <p class="area-projects-label"><span>Projects</span><a href="{{ projects_page.permalink | relative_url }}#area=cv">View {{ cv_projects.size }} projects</a></p>
         <div class="carousel" data-category="cv">
-            <div class="carousel-viewport">
-                <div class="carousel-track">
-                    {% for project in cv_projects %} {% if project.logo %}
-                    <div class="carousel-slide">
-                        <a
-                            href="{{ project.url | relative_url }}"
-                            title="{{ project.title }}"
-                        >
-                            <img
-                                src="{{ project.logo | relative_url }}"
-                                alt="{{ project.title }}"
-                                loading="lazy"
-                            />
-                        </a>
-                    </div>
-                    {% endif %} {% endfor %}
-                </div>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              {% for project in cv_projects %}
+                {% if project.logo %}
+                  <div class="carousel-slide">
+                    <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
+                      <img src="{{ project.logo | relative_url }}" alt="{{ project.title }}" loading="lazy">
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
             </div>
+          </div>
         </div>
         {% endif %}
+      </div>
     </div>
+  </div>
+</section>
+
+{% assign latest_posts = site.posts | where: "lang", "en" %}
+{% if latest_posts.size > 0 %}
+<section class="section section-tint home-news" data-pagefind-ignore>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Latest</p>
+        <h2>News from the research group</h2>
+      </div>
+      <a class="link-arrow" href="{{ news_page.permalink | relative_url }}">All news <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="news-grid">
+      {% for post in latest_posts limit: 3 %}
+        {% include news-card.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" data-pagefind-ignore>
+  <div class="container">
+    <div class="home-cta">
+      <div>
+        <h2>Collaboration &amp; theses</h2>
+        <p>Interested in a cooperation, a joint research project, or writing your thesis as part of our research? We look forward to hearing from you.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="{{ contact_page.permalink | relative_url }}">Get in touch</a>
+        <a class="btn btn-ghost-light" href="{{ theses_page.permalink | relative_url }}">Theses</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <script>
-    (function () {
-        function initCarousels() {
-            var carousels = document.querySelectorAll(".carousel");
-            carousels.forEach(function (carousel) {
-                var track = carousel.querySelector(".carousel-track");
-                if (!track) return;
-                var slides = track.children;
-                if (slides.length === 0) return;
+(function() {
+  function initCarousels() {
+    var carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(function(carousel) {
+      var track = carousel.querySelector('.carousel-track');
+      if (!track) return;
+      var slides = track.children;
+      if (slides.length === 0) return;
 
-                var slideCount = slides.length;
-                var fragment = document.createDocumentFragment();
-                for (var i = 0; i < slideCount; i++) {
-                    fragment.appendChild(slides[i].cloneNode(true));
-                }
-                track.appendChild(fragment);
+      // Clone all slides and append for seamless loop
+      var slideCount = slides.length;
+      var fragment = document.createDocumentFragment();
+      for (var i = 0; i < slideCount; i++) {
+        fragment.appendChild(slides[i].cloneNode(true));
+      }
+      track.appendChild(fragment);
 
-                var currentIndex = 0;
-                var paused = false;
+      var currentIndex = 0;
+      var paused = false;
 
-                var viewport = carousel.querySelector(".carousel-viewport");
+      function getSlideStep() {
+        var slide = track.children[0];
+        return slide ? slide.getBoundingClientRect().width : 200;
+      }
 
-                function getSlideStep() {
-                    return viewport
-                        ? viewport.getBoundingClientRect().width
-                        : 200;
-                }
+      carousel.addEventListener('mouseenter', function() { paused = true; });
+      carousel.addEventListener('mouseleave', function() { paused = false; });
+      carousel.addEventListener('focusin', function() { paused = true; });
+      carousel.addEventListener('focusout', function() { paused = false; });
 
-                carousel.addEventListener("mouseenter", function () {
-                    paused = true;
-                });
-                carousel.addEventListener("mouseleave", function () {
-                    paused = false;
-                });
+      function advance() {
+        if (!paused) {
+          currentIndex++;
+          var step = getSlideStep();
+          track.style.transform = 'translateX(-' + (currentIndex * step) + 'px)';
 
-                function advance() {
-                    if (!paused) {
-                        currentIndex++;
-                        var step = getSlideStep();
-                        track.style.transform =
-                            "translateX(-" + currentIndex * step + "px)";
-
-                        if (currentIndex >= slideCount) {
-                            setTimeout(function () {
-                                track.style.transition = "none";
-                                currentIndex = 0;
-                                track.style.transform = "translateX(0)";
-                                void track.offsetHeight;
-                                track.style.transition =
-                                    "transform 0.5s ease-in-out";
-                            }, 550);
-                        }
-                    }
-                }
-
-                setInterval(advance, 1500);
-            });
+          // When we've scrolled past the original set, reset instantly
+          if (currentIndex >= slideCount) {
+            setTimeout(function() {
+              track.style.transition = 'none';
+              currentIndex = 0;
+              track.style.transform = 'translateX(0)';
+              // Force reflow
+              void track.offsetHeight;
+              track.style.transition = 'transform 0.5s ease-in-out';
+            }, 550);
+          }
         }
+      }
 
-        if (document.readyState === "loading") {
-            document.addEventListener("DOMContentLoaded", initCarousels);
-        } else {
-            initCarousels();
-        }
-    })();
+      setInterval(advance, 2500); // 2s pause + 0.5s slide
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCarousels);
+  } else {
+    initCarousels();
+  }
+})();
 </script>

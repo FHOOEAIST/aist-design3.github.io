@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: prose
+eyebrow: About
+heading: History
 lang: en
 title: History – AIST
 permalink: /history/

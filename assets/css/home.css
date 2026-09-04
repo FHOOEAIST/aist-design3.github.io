@@ -1,77 +1,298 @@
+/* ==========================================================================
+   Home page
+   ========================================================================== */
 
-/* Hero Section */
+/* ---------------------------------------------------------------- hero */
 .home-hero {
-  text-align: center;
-  padding: 2.5rem 0 1rem;
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0 3.5rem;
+  color: var(--color-white);
+  background:
+    radial-gradient(70rem 30rem at 110% -10%, rgba(110, 193, 228, 0.28), transparent 60%),
+    radial-gradient(40rem 25rem at -10% 110%, rgba(47, 116, 181, 0.35), transparent 60%),
+    linear-gradient(160deg, var(--navy-800) 0%, var(--navy-900) 55%, var(--navy-950) 100%);
+}
+
+/* wave motif borrowed from the logo */
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='320' viewBox='0 0 120 320'%3E%3Cpath d='M20 0c20 40 20 80 0 120s-20 80 0 120 20 80 0 120' fill='none' stroke='%23ffffff' stroke-opacity='0.06' stroke-width='14' stroke-linecap='round'/%3E%3Cpath d='M80 0c20 40 20 80 0 120s-20 80 0 120 20 80 0 120' fill='none' stroke='%23ffffff' stroke-opacity='0.06' stroke-width='14' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 120px 320px;
+  mask-image: linear-gradient(90deg, transparent 35%, #000 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 35%, #000 100%);
+}
+
+.home-hero .container {
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.home-hero .eyebrow {
+  color: var(--color-primary-light);
 }
 
 .home-hero h1 {
-  font-size: 2.25rem;
-  color: var(--color-heading);
-  margin-bottom: 1rem;
+  color: var(--color-white);
+  font-size: clamp(2.2rem, 1.4rem + 2.8vw, 3.6rem);
+  line-height: 1.08;
+  margin-bottom: 1.25rem;
+}
+
+.home-hero h1 span {
+  color: var(--color-primary-light);
 }
 
 .home-intro {
-  font-size: 1.1rem;
-  color: var(--color-text);
-  max-width: 900px;
-  margin: 0 auto;
-  line-height: 1.75;
+  max-width: 58ch;
+  margin-bottom: 2rem;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
 }
 
-/* Research Areas Section */
-.home-areas {
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* area shortcuts on the right */
+.hero-areas {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  padding: 3rem 0;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.area-card {
-  text-align: center;
-  min-width: 0;
-}
-
-.area-card h2 {
-  color: var(--color-primary);
-  font-size: 1.3rem;
-  margin: 1rem 0 0.75rem;
+.hero-areas a {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
+  gap: 1rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--color-white);
+  text-decoration: none;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  transition: background-color 0.2s var(--ease), transform 0.2s var(--ease),
+    border-color 0.2s var(--ease);
 }
 
-.area-icon {
-  display: flex;
-  justify-content: center;
+.hero-areas a:hover,
+.hero-areas a:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(4px);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.hero-areas .area-thumb {
+  flex: none;
+  display: inline-flex;
   align-items: center;
-  margin-bottom: 0.25rem;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 12px;
+  background: var(--color-white);
 }
 
-.area-icon img {
-  width: 110px;
-  height: 110px;
+.hero-areas .area-thumb img {
+  width: 2rem;
+  height: 2rem;
   object-fit: contain;
 }
 
-.area-card p {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: var(--color-text);
-  text-align: left;
+.hero-areas strong {
+  display: block;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
-/* Project Logo Carousel */
+.hero-areas small {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+.hero-areas i {
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+}
+
+/* numbers strip */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  list-style: none;
+  margin: 3.5rem 0 0;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.hero-stats .stat-value {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+  font-variant-numeric: tabular-nums;
+}
+
+.hero-stats .stat-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.hero-stats a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero-stats a:hover .stat-value {
+  color: var(--color-primary-light);
+}
+
+/* ------------------------------------------------------- research areas */
+.home-areas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.area-card {
+  --area-color: var(--color-primary);
+  --area-soft: var(--sky-100);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 2rem 1.75rem 1.5rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.area-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.area-card[data-area="ehealth"] {
+  --area-color: var(--area-ehealth);
+  --area-soft: var(--area-ehealth-soft);
+}
+
+.area-card[data-area="ml"] {
+  --area-color: var(--area-ml);
+  --area-soft: var(--area-ml-soft);
+}
+
+.area-card[data-area="cv"] {
+  --area-color: var(--area-cv);
+  --area-soft: var(--area-cv-soft);
+}
+
+.area-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.25rem;
+  height: 4.25rem;
+  margin-bottom: 1.25rem;
+  border-radius: 18px;
+  background: var(--area-soft);
+}
+
+.area-icon img {
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+}
+
+.area-card h2 {
+  font-size: 1.35rem;
+  margin: 0 0 0.75rem;
+}
+
+.area-card > p {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.area-card em {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+}
+
+.area-projects-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-line);
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--area-color);
+}
+
+.area-projects-label a {
+  font-size: 0.78rem;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 500;
+  color: var(--color-text-light);
+}
+
+/* Project logo carousel (auto-advancing, see index.html) */
 .carousel {
-  margin-top: 1.5rem;
-  padding: 0.75rem 0;
+  margin-top: 0.5rem;
   width: 100%;
 }
 
 .carousel-viewport {
   overflow: hidden;
   width: 100%;
+  border-radius: var(--border-radius);
+  background: var(--color-bg-light);
 }
 
 .carousel-track {
@@ -84,15 +305,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90px;
-  padding: 0.5rem;
-  border-radius: var(--border-radius);
-  transition: transform 0.2s ease;
+  height: 96px;
+  padding: 0.75rem 1rem;
   box-sizing: border-box;
-}
-
-.carousel-slide:hover {
-  transform: scale(1.08);
 }
 
 .carousel-slide a {
@@ -107,56 +322,124 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: grayscale(40%);
-  opacity: 0.75;
-  transition: filter 0.3s ease, opacity 0.3s ease;
+  filter: grayscale(60%);
+  opacity: 0.8;
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s var(--ease);
 }
 
 .carousel-slide:hover img {
-  filter: grayscale(0%);
+  filter: none;
   opacity: 1;
+  transform: scale(1.05);
 }
 
-.home-carousel-section {
-  padding: 2rem 0;
+/* -------------------------------------------------------------- news */
+.home-news .news-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.home-carousel-section h2 {
-  color: var(--color-primary);
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+/* ------------------------------------------------------------ cta band */
+.home-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 2.5rem;
+  border-radius: var(--radius-lg);
+  color: var(--color-white);
+  background:
+    radial-gradient(40rem 20rem at 100% 0%, rgba(110, 193, 228, 0.35), transparent 60%),
+    linear-gradient(135deg, var(--color-primary) 0%, var(--navy-800) 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) auto;
+  gap: 2rem;
+  align-items: center;
 }
 
-.home-carousel-section .carousel {
-  max-width: 400px;
+.home-cta h2 {
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
 }
 
+.home-cta p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 60ch;
+}
+
+.home-cta .hero-actions {
+  justify-content: flex-end;
+}
+
+/* ------------------------------------------------------------ responsive */
 @media (max-width: 1024px) {
-  .home-areas {
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 840px) {
-  .home-hero h1 {
-    font-size: 1.75rem;
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
-  .home-intro {
-    font-size: 1rem;
+  .hero-areas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-areas a {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .hero-areas i {
+    display: none;
   }
 
   .home-areas {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem 0;
+  }
+
+  .home-news .news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .home-cta .hero-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .hero-areas {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-areas a {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .hero-stats .stat-value {
+    font-size: 1.6rem;
+  }
+
+  .home-news .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-cta {
+    padding: 2.25rem 1.5rem;
   }
 
   .carousel-slide {
-    height: 70px;
-  }
-
-  .home-carousel-section {
-    padding: 1rem 0;
+    height: 80px;
   }
 }

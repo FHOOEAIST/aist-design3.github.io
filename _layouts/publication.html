@@ -1,23 +1,26 @@
 ---
 layout: default
 ---
-<article class="publication-entry">
-  <header>
-    <h1>{{ page.title }}</h1>
-    <p class="publication-meta">{{ page.date }}</p>
-    {% if page.reference %}
-    <p class="publication-meta">{{ page.reference }}</p>
+<div class="container container-narrow" style="padding-top: 3rem;">
+  <article class="publication-entry">
+    <header class="article-header">
+      <p class="eyebrow">{% if site.active_lang == 'de' %}Publikation{% else %}Publication{% endif %}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="publication-meta">{{ page.date }}</p>
+      {% if page.reference %}
+      <p class="publication-meta">{{ page.reference }}</p>
+      {% endif %}
+    </header>
+
+    {% if page.doi %}
+    <p class="publication-links"><strong>DOI:</strong> <a href="{{ page.doi }}" class="doi-link">{{ page.doi | remove: "https://doi.org/" }}</a></p>
     {% endif %}
-  </header>
+    {% if page.attachment %}
+    <p><a href="{{ page.attachment }}" class="btn btn-sm"><i class="fas fa-download" aria-hidden="true"></i> {% if site.active_lang == 'de' %}Anhang herunterladen{% else %}Download attachment{% endif %}</a></p>
+    {% endif %}
 
-  {% if page.doi %}
-  <p><strong>DOI:</strong> <a href="{{ page.doi }}" class="doi-link">{{ page.doi | remove: "https://doi.org/" }}</a></p>
-  {% endif %}
-  {% if page.attachment %}
-  <p><strong>{% if site.active_lang == 'de' %}Anhang{% else %}Attachment{% endif %}:</strong> <a href="{{ page.attachment }}" class="btn">Download</a></p>
-  {% endif %}
-
-  <div>
-    {{ content }}
-  </div>
-</article>
+    <div class="article-body">
+      {{ content }}
+    </div>
+  </article>
+</div>

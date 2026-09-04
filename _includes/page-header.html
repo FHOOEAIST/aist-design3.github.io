@@ -1,0 +1,15 @@
+{% comment %}
+Page title band. Parameters:
+  title    — the h1 (required)
+  eyebrow  — small uppercase label above the title (optional)
+  lead     — intro paragraph, may contain HTML (optional)
+  meta     — extra HTML rendered below the lead, e.g. badges (optional)
+{% endcomment %}
+<div class="page-header">
+  <div class="container">
+    {% if include.eyebrow %}<p class="eyebrow">{{ include.eyebrow }}</p>{% endif %}
+    <h1>{{ include.title }}</h1>
+    {% if include.lead %}<p class="lead">{{ include.lead }}</p>{% endif %}
+    {% if include.meta %}<div class="page-header-meta">{{ include.meta }}</div>{% endif %}
+  </div>
+</div>

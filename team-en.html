@@ -7,35 +7,39 @@ page_id: team
 css: team
 ---
 
-<div class="page-header">
-  <h1>Team</h1>
-</div>
+{% assign n_team = site.data.team.members | size %}
+{% capture team_lead %}The people behind the AIST research group – {{ n_team }} researchers, developers and lecturers at Campus Hagenberg.{% endcapture %}
+{% include page-header.html eyebrow="About" title="Team" lead=team_lead %}
 
-<div class="team-grid">
-{% for member in site.data.team.members %}
-  <div class="team-card">
-    {% if member.image %}
-    <div class="team-card-image">
-      <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" loading="lazy">
-    </div>
-    {% endif %}
-    <div class="team-card-info">
-      <h3>{{ member.name }}</h3>
-      {% if member.role %}
-      <p class="team-role">{{ member.role }}</p>
-      {% endif %}
-      <div class="team-contact">
-        {% if member.email %}
-        <p><span class="team-label">Email:</span> <a href="mailto:{{ member.email }}">{{ member.email }}</a></p>
-        {% endif %}
-        {% if member.phone %}
-        <p><span class="team-label">Phone:</span> {{ member.phone }}</p>
+<div class="container">
+  <div class="team-grid">
+  {% for member in site.data.team.members %}
+    <div class="team-card">
+      <div class="team-card-image">
+        {% if member.image %}
+        <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" loading="lazy">
+        {% else %}
+        <span class="team-card-placeholder" aria-hidden="true"><i class="fas fa-user"></i></span>
         {% endif %}
       </div>
-      {% if member.details_url %}
-      <a class="team-details-link" href="{{ member.details_url }}" target="_blank" rel="noopener">Details</a>
-      {% endif %}
+      <div class="team-card-info">
+        <h3>{{ member.name }}</h3>
+        {% if member.role %}
+        <p class="team-role">{{ member.role }}</p>
+        {% endif %}
+        <div class="team-contact">
+          {% if member.email %}
+          <p><i class="fas fa-envelope" aria-hidden="true"></i><span class="team-label visually-hidden">Email:</span> <a href="mailto:{{ member.email }}">{{ member.email }}</a></p>
+          {% endif %}
+          {% if member.phone %}
+          <p><i class="fas fa-phone" aria-hidden="true"></i><span class="team-label visually-hidden">Phone:</span> <a href="tel:{{ member.phone | remove: ' ' }}">{{ member.phone }}</a></p>
+          {% endif %}
+        </div>
+        {% if member.details_url %}
+        <a class="team-details-link" href="{{ member.details_url }}" target="_blank" rel="noopener">Details <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        {% endif %}
+      </div>
     </div>
+  {% endfor %}
   </div>
-{% endfor %}
 </div>

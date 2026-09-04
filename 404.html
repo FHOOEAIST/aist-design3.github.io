@@ -3,9 +3,12 @@ permalink: /404.html
 layout: default
 ---
 
-<div class="text-center" style="padding: 4rem 0;">
-  <h1 style="font-size: 6rem; margin-bottom: 1rem;">404</h1>
-  <h2>Page not found</h2>
-  <p>The requested page could not be found.</p>
-  <a href="{{ '/' | relative_url }}" class="btn mt-3">Go Home</a>
+<div class="container text-center" style="padding: 6rem 0 4rem;">
+  <p class="eyebrow" style="justify-content:center;">404</p>
+  <h1>Page not found / Seite nicht gefunden</h1>
+  <p style="max-width: 48ch; margin: 0 auto 2rem; color: var(--color-text-light);">The requested page could not be found.<br>Die angeforderte Seite konnte nicht gefunden werden.</p>
+  <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+    <a href="{{ '/' | relative_url }}" class="btn"><i class="fas fa-house" aria-hidden="true"></i> Home</a>
+    <button type="button" class="btn btn-outline" onclick="customElements.whenDefined('pagefind-modal').then(function(){document.querySelector('pagefind-modal').open()})"><i class="fas fa-search" aria-hidden="true"></i> Search / Suche</button>
+  </div>
 </div>

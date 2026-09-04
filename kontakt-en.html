@@ -2,37 +2,58 @@
 layout: default
 lang: en
 title: Contact
-permalink: /kontakt/
+permalink: /contact/
 page_id: contact
 css: contact
 ---
 
-<div class="page-header">
-  <h1>Contact</h1>
-</div>
+{% include page-header.html eyebrow="About" title="Contact" lead="You can reach the AIST research group at Campus Hagenberg of the University of Applied Sciences Upper Austria – by phone, by email, or in person." %}
 
-<div class="contact-page">
+<div class="container contact-page">
   <div class="contact-layout">
     <div class="contact-text">
-      <div class="contact-section">
+      <div class="contact-card">
         <h3>Research Group AIST</h3>
-        <p>Departments of Software Engineering (SE),<br>
+        <p class="contact-departments">Departments of Software Engineering (SE),<br>
         Artificial Intelligence Solutions (AIS),<br>
         Medical and Bio informatics (MBI),<br>
         and Data Science Engineering (DSE)</p>
-        <p>University of Applied Sciences<br>Upper Austria<br>
-        Softwarepark 11<br>
-        4232 Hagenberg, Austria</p>
-      </div>
 
-      <div class="contact-details">
-        <p><strong>Phone</strong>: +43 5 0804 22038</p>
-        <p><strong>Mail</strong>: <a href="mailto:gerald.zwettler@fh-hagenberg.at">gerald.zwettler@fh-hagenberg.at</a></p>
+        <ul class="contact-list">
+          <li>
+            <i class="fas fa-location-dot" aria-hidden="true"></i>
+            <div>
+              <span class="contact-label">Address</span>
+              <p>University of Applied Sciences<br>Upper Austria<br>
+              Softwarepark 11<br>
+              4232 Hagenberg, Austria</p>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <div>
+              <span class="contact-label">Phone</span>
+              <p><a href="tel:+43508042203">+43 5 0804 22038</a></p>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <div>
+              <span class="contact-label">Mail</span>
+              <p><a href="mailto:gerald.zwettler@fh-hagenberg.at">gerald.zwettler@fh-hagenberg.at</a></p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="contact-actions">
+          <a class="btn" href="mailto:gerald.zwettler@fh-hagenberg.at"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send an email</a>
+          <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&destination=Softwarepark+11,+4232+Hagenberg+im+M%C3%BChlkreis" target="_blank" rel="noopener"><i class="fas fa-diamond-turn-right" aria-hidden="true"></i> Get directions</a>
+        </div>
       </div>
     </div>
 
     <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2650.593217405333!2d14.514469100000001!3d48.3683397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773a699552c0acf%3A0x9d8ec058688548b9!2sFH1%2C%20Softwarepark%2011%2C%204232%20Hagenberg%20im%20M%C3%BChlkreis!5e0!3m2!1sen!2sat!4v1777911714206!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="Map: University of Applied Sciences Upper Austria, Campus Hagenberg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2650.593217405333!2d14.514469100000001!3d48.3683397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773a699552c0acf%3A0x9d8ec058688548b9!2sFH1%2C%20Softwarepark%2011%2C%204232%20Hagenberg%20im%20M%C3%BChlkreis!5e0!3m2!1sen!2sat!4v1777911714206!5m2!1sen!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </div>

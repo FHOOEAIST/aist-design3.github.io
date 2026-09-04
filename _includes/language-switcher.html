@@ -1,7 +1,7 @@
-<span class="language-switcher">
+<span class="language-switcher" aria-label="{% if site.active_lang == 'en' %}Language{% else %}Sprache{% endif %}">
   {% for lang in site.languages %}
     {% if lang == site.active_lang %}
-      <strong>{{ lang | upcase }}</strong>
+      <strong aria-current="true">{{ lang | upcase }}</strong>
     {% else %}
       {% if page.permalink_lang and page.permalink_lang[lang] %}
         {% assign plink = page.permalink_lang[lang] | remove_first: "/" %}
@@ -13,8 +13,7 @@
       {% else %}
         {% capture switch_url %}{{ site.baseurl }}/{{ lang }}/{{ plink }}{% endcapture %}
       {% endif %}
-      <a {% static_href %}href="{{ switch_url }}"{% endstatic_href %}>{{ lang | upcase }}</a>
+      <a {% static_href %}href="{{ switch_url }}"{% endstatic_href %} hreflang="{{ lang }}" title="{% if lang == 'en' %}English{% else %}Deutsch{% endif %}">{{ lang | upcase }}</a>
     {% endif %}
-    {% unless forloop.last %} | {% endunless %}
   {% endfor %}
 </span>

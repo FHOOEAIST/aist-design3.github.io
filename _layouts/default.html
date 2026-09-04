@@ -41,20 +41,34 @@
 
         <!-- Theme -->
         <meta name="theme-color" content="{{ site.theme_color }}" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Styles -->
         <link
             rel="stylesheet"
             href="{{ '/assets/css/main.css' | relative_url }}"
         />
-        <pagefind-config bundle-path="{{ '/pagefind/' | relative_url }}"></pagefind-config>
-        <link href="{{ '/pagefind/pagefind-component-ui.css' | relative_url }}" rel="stylesheet">
-        <script src="{{ '/pagefind/pagefind-component-ui.js' | relative_url }}" type="module"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         {% if page.css %}
         <link
             rel="stylesheet"
             href="{{ page.css | prepend: '/assets/css/' | append: '.css' | relative_url }}"
         />
-        {% endif %} {% for lang in site.languages %} {% if page.permalink_lang
+        {% endif %}
+
+        <!-- Search -->
+        <pagefind-config bundle-path="{{ '/pagefind/' | relative_url }}"></pagefind-config>
+        <link href="{{ '/pagefind/pagefind-component-ui.css' | relative_url }}" rel="stylesheet">
+        <script src="{{ '/pagefind/pagefind-component-ui.js' | relative_url }}" type="module"></script>
+
+        {% for lang in site.languages %} {% if page.permalink_lang
         and page.permalink_lang[lang] %} {% assign plink =
         page.permalink_lang[lang] | remove_first: "/" %} {% else %} {% assign
         plink = "" %} {% endif %} {% if lang == site.default_lang %} {% capture
@@ -75,272 +89,33 @@
         <script>
             document.documentElement.className = "js";
         </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const listingItems = document.querySelectorAll(
-                    ".listing-item.collapsible",
-                );
-
-                listingItems.forEach((item) => {
-                    const toggle = item.querySelector(".listing-toggle");
-                    const content = item.querySelector(".listing-content");
-                    if (!toggle || !content) return;
-
-                    setListingExpanded(item, false);
-
-                    toggle.addEventListener("click", function () {
-                        setListingExpanded(
-                            item,
-                            content.classList.contains("closed"),
-                        );
-                    });
-                });
-
-                // Collapsing everything above would undo an anchor the page was
-                // opened on, so re-apply it once the entries are wired up.
-                handleHashTarget();
-
-                const galleries = document.querySelectorAll(".gallery");
-
-                if (galleries.length > 0) {
-                    const lightbox = document.createElement("div");
-                    lightbox.className = "gallery-lightbox";
-                    lightbox.innerHTML = `
-              <span class="gallery-lightbox-close">&times;</span>
-              <span class="gallery-lightbox-nav gallery-lightbox-prev">&#10094;</span>
-              <img class="gallery-lightbox-img" src="" alt="">
-              <span class="gallery-lightbox-nav gallery-lightbox-next">&#10095;</span>
-          `;
-                    document.body.appendChild(lightbox);
-
-                    const lightboxImg = lightbox.querySelector(
-                        ".gallery-lightbox-img",
-                    );
-                    const closeBtn = lightbox.querySelector(
-                        ".gallery-lightbox-close",
-                    );
-                    const prevBtn = lightbox.querySelector(
-                        ".gallery-lightbox-prev",
-                    );
-                    const nextBtn = lightbox.querySelector(
-                        ".gallery-lightbox-next",
-                    );
-
-                    let currentImages = [];
-                    let currentIndex = 0;
-
-                    function showLightbox(index) {
-                        lightboxImg.src = currentImages[index].src;
-                        currentIndex = index;
-                        lightbox.classList.add("active");
-                        document.body.style.overflow = "hidden";
-                    }
-
-                    function closeLightbox() {
-                        lightbox.classList.remove("active");
-                        document.body.style.overflow = "";
-                    }
-
-                    function nextImage() {
-                        currentIndex =
-                            (currentIndex + 1) % currentImages.length;
-                        lightboxImg.src = currentImages[currentIndex].src;
-                    }
-
-                    function prevImage() {
-                        currentIndex =
-                            (currentIndex - 1 + currentImages.length) %
-                            currentImages.length;
-                        lightboxImg.src = currentImages[currentIndex].src;
-                    }
-
-                    galleries.forEach((gallery) => {
-                        const images = Array.from(
-                            gallery.querySelectorAll("img"),
-                        );
-                        if (images.length === 0) return;
-
-                        let galleryIndex = 0;
-
-                        const prevNav = document.createElement("button");
-                        prevNav.className = "gallery-nav gallery-nav-prev";
-                        prevNav.innerHTML = "&#10094;";
-                        prevNav.setAttribute("aria-label", "Previous image");
-
-                        const nextNav = document.createElement("button");
-                        nextNav.className = "gallery-nav gallery-nav-next";
-                        nextNav.innerHTML = "&#10095;";
-                        nextNav.setAttribute("aria-label", "Next image");
-
-                        const counter = document.createElement("div");
-                        counter.className = "gallery-counter";
-
-                        gallery.appendChild(prevNav);
-                        gallery.appendChild(nextNav);
-                        gallery.appendChild(counter);
-
-                        function updateGallery() {
-                            images.forEach((img, idx) => {
-                                img.classList.toggle(
-                                    "active",
-                                    idx === galleryIndex,
-                                );
-                            });
-                            counter.textContent = `${galleryIndex + 1} / ${images.length}`;
-
-                            prevNav.style.visibility =
-                                images.length > 1 ? "visible" : "hidden";
-                            nextNav.style.visibility =
-                                images.length > 1 ? "visible" : "hidden";
-                        }
-
-                        prevNav.addEventListener("click", function (e) {
-                            e.stopPropagation();
-                            galleryIndex =
-                                (galleryIndex - 1 + images.length) %
-                                images.length;
-                            updateGallery();
-                        });
-
-                        nextNav.addEventListener("click", function (e) {
-                            e.stopPropagation();
-                            galleryIndex = (galleryIndex + 1) % images.length;
-                            updateGallery();
-                        });
-
-                        images.forEach((img, index) => {
-                            img.addEventListener("click", function () {
-                                currentImages = images;
-                                showLightbox(index);
-                            });
-                        });
-
-                        updateGallery();
-
-                        function updateGalleryHeight() {
-                            const containerWidth = gallery.offsetWidth;
-                            if (containerWidth === 0) return;
-
-                            const viewportCap = window.innerHeight * 0.8;
-                            let maxHeight = 0;
-                            let hasAny = false;
-
-                            images.forEach((img) => {
-                                if (img.naturalWidth > 0 && img.naturalHeight > 0) {
-                                    const scaledHeight = (img.naturalHeight / img.naturalWidth) * containerWidth;
-                                    maxHeight = Math.max(maxHeight, scaledHeight);
-                                    hasAny = true;
-                                }
-                            });
-
-                            if (hasAny) {
-                                gallery.style.minHeight = Math.min(maxHeight, viewportCap) + 'px';
-                            }
-                        }
-
-                        images.forEach((img) => {
-                            if (img.complete) {
-                                updateGalleryHeight();
-                            } else {
-                                img.addEventListener('load', updateGalleryHeight);
-                                img.addEventListener('error', updateGalleryHeight);
-                            }
-                        });
-
-                        updateGalleryHeight();
-                    });
-
-                    var galleryResizeTimeout;
-                    window.addEventListener('resize', function () {
-                        clearTimeout(galleryResizeTimeout);
-                        galleryResizeTimeout = setTimeout(function () {
-                            const viewportCap = window.innerHeight * 0.8;
-                            galleries.forEach((gallery) => {
-                                const imgs = Array.from(gallery.querySelectorAll('img'));
-                                const containerWidth = gallery.offsetWidth;
-                                if (containerWidth === 0) return;
-
-                                let maxHeight = 0;
-                                let hasAny = false;
-
-                                imgs.forEach((img) => {
-                                    if (img.naturalWidth > 0 && img.naturalHeight > 0) {
-                                        const scaledHeight = (img.naturalHeight / img.naturalWidth) * containerWidth;
-                                        maxHeight = Math.max(maxHeight, scaledHeight);
-                                        hasAny = true;
-                                    }
-                                });
-
-                                if (hasAny) {
-                                    gallery.style.minHeight = Math.min(maxHeight, viewportCap) + 'px';
-                                }
-                            });
-                        }, 150);
-                    });
-
-                    closeBtn.addEventListener("click", closeLightbox);
-                    prevBtn.addEventListener("click", prevImage);
-                    nextBtn.addEventListener("click", nextImage);
-
-                    lightbox.addEventListener("click", function (e) {
-                        if (e.target === lightbox) {
-                            closeLightbox();
-                        }
-                    });
-
-                    document.addEventListener("keydown", function (e) {
-                        if (!lightbox.classList.contains("active")) return;
-
-                        if (e.key === "Escape") closeLightbox();
-                        if (e.key === "ArrowLeft") prevImage();
-                        if (e.key === "ArrowRight") nextImage();
-                    });
-                }
-            });
-
-            // Single source of truth for an entry's open state: the content
-            // visibility, the `open` class the chevron rotates off, and the
-            // button's aria-expanded all move together.
-            function setListingExpanded(item, expanded) {
-                var content = item.querySelector(".listing-content");
-                var toggle = item.querySelector(".listing-toggle");
-                if (content) content.classList.toggle("closed", !expanded);
-                item.classList.toggle("open", expanded);
-                if (toggle) {
-                    toggle.setAttribute(
-                        "aria-expanded",
-                        expanded ? "true" : "false",
-                    );
-                }
-            }
-
-            // Auto-expand listing items when navigated via hash anchor
-            function handleHashTarget() {
-                var hash = window.location.hash;
-                if (!hash) return;
-                // Not every hash is an element id -- the publications filter
-                // parks its state in "#cat=...", which is not a valid selector.
-                var target;
-                try {
-                    target = document.querySelector(hash);
-                } catch (e) {
-                    return;
-                }
-                if (!target) return;
-                var item = target.closest('.listing-item') || target;
-                if (item.classList.contains('collapsible')) {
-                    setListingExpanded(item, true);
-                }
-            }
-            window.addEventListener('hashchange', handleHashTarget);
-            handleHashTarget();
-        </script>
+        <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
     </head>
     <body>
-        <header>
-            <div>
-                <a href="{{ '/' | relative_url }}"><img class="logo" src="{{ '/assets/images/footer/aist-logo.png' | relative_url }}" alt="AIST Logo"></a>
-                <nav>
+        {% assign t_search = "Suche" %}
+        {% assign t_menu = "Menü" %}
+        {% assign t_home = "Startseite" %}
+        {% if site.active_lang == 'en' %}
+            {% assign t_search = "Search" %}
+            {% assign t_menu = "Menu" %}
+            {% assign t_home = "Home" %}
+        {% endif %}
+
+        <header class="site-header">
+            <div class="container">
+                <a class="brand" href="{{ '/' | relative_url }}" aria-label="AIST – {{ t_home }}">
+                    <img class="brand-logo" src="{{ '/assets/images/footer/aist-logo.png' | relative_url }}" alt="AIST Logo">
+                    <span class="brand-text">
+                        <span>Advanced Information Systems and Technology</span>
+                        <span>{% if site.active_lang == 'en' %}Research Group · FH Upper Austria{% else %}Forschungsgruppe · FH Oberösterreich{% endif %}</span>
+                    </span>
+                </a>
+
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="{{ t_menu }}">
+                    <span class="bars"></span>
+                </button>
+
+                <nav class="site-nav" id="siteNav" aria-label="{{ t_menu }}">
                     {% for item in site.data.nav %}
                         {% if item.subitems and item.subitems.size > 0 %}
                         <div class="nav-dropdown">
@@ -363,7 +138,7 @@
                                 <a href="{{ subitem.href }}" target="_blank" rel="noopener">
                                 {% else %}
                                 {% assign sub_target = site.pages | where: "page_id", subitem.page_id | where: "lang", site.active_lang | first %}
-                                <a href="{{ sub_target.permalink | relative_url }}">
+                                <a href="{{ sub_target.permalink | relative_url }}"{% if page.page_id == subitem.page_id %} class="active"{% endif %}>
                                 {% endif %}
                                     {% if site.active_lang == 'de' %}{{ subitem.label_de }}{% else %}{{ subitem.label_en }}{% endif %}
                                 </a>
@@ -381,18 +156,20 @@
                         </a>
                         {% endif %}
                     {% endfor %}
-                    <button class="search-toggle" onclick="customElements.whenDefined('pagefind-modal').then(function(){document.querySelector('pagefind-modal').open()})" aria-label="{% if site.active_lang == 'en' %}Search{% else %}Suche{% endif %}" title="{% if site.active_lang == 'en' %}Search{% else %}Suche{% endif %} (Ctrl+K)">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    {% include language-switcher.html %}
+
+                    <div class="nav-tools">
+                        <button class="search-toggle" type="button" onclick="customElements.whenDefined('pagefind-modal').then(function(){document.querySelector('pagefind-modal').open()})" aria-label="{{ t_search }}" title="{{ t_search }} (Ctrl+K)">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                            <span class="search-label">{{ t_search }}</span>
+                        </button>
+                        {% include language-switcher.html %}
+                    </div>
                     <pagefind-modal></pagefind-modal>
                 </nav>
             </div>
         </header>
 
-        <main data-pagefind-body>
-            <div>{{ content }}</div>
-        </main>
+        <main data-pagefind-body>{{ content }}</main>
 
         {% include footer.html %}
     </body>

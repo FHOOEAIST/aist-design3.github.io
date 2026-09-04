@@ -1,44 +1,54 @@
+/* ==========================================================================
+   Imprint
+   ========================================================================== */
 .impressum-page {
-	max-width: var(--max-width);
-	line-height: 1.6;
+  line-height: 1.65;
 }
 
-.impressum-page h2 {
-	color: var(--color-primary);
-	margin-top: 2rem;
-	margin-bottom: 0.75rem;
-	font-size: 1.3rem;
+.impressum-block {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--border-radius);
 }
 
-.impressum-page h3 {
-	color: var(--color-primary);
-	margin-top: 1.5rem;
-	margin-bottom: 0.5rem;
+.impressum-block h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  color: var(--color-primary);
 }
 
-.impressum-page p {
-	margin: 0.5rem 0;
+.impressum-block p {
+  margin: 0.5rem 0;
 }
 
-.impressum-page .impressum-block {
-	margin-bottom: 1.5rem;
+.impressum-block > :last-child {
+  margin-bottom: 0;
 }
 
-.impressum-page .impressum-list {
-	list-style: none;
-	padding-left: 0;
-	margin: 0.5rem 0;
+.impressum-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
-.impressum-page .impressum-list li {
-	padding: 0.15rem 0;
+.impressum-list li {
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-light);
+  font-size: 0.88rem;
 }
 
 .impressum-page a {
-	color: var(--color-primary-light);
-	word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
-.impressum-page a:hover {
-	color: var(--color-primary);
+.impressum-copyright {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
 }
