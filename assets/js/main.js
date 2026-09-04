@@ -615,10 +615,10 @@
   }
 
   /* ----------------------------------------------------------- hero mosaic */
-  // Home page, "tiles" design: the photo tiles of the hero mosaic fade to a
-  // random other picture from the pool in data-mosaic (JSON, built from
-  // _data/home_mosaic.yml) every few seconds. A tile never shows a picture
-  // another tile is showing. Each photo tile holds two <img> layers: the
+  // Home page, "tiles" design: the photo tiles of the hero mosaic take turns
+  // (top right, bottom left, top right, ...) fading to a random other picture
+  // from the pool in data-mosaic (JSON, built from _data/home_mosaic.yml)
+  // every few seconds. A tile never shows a picture another tile is showing. Each photo tile holds two <img> layers: the
   // next picture loads into the hidden one, is faded in on top, and the old
   // one stays underneath (.is-behind) until the fade is over. Paused while
   // the tab is hidden, the mosaic is scrolled out of view, or the visitor
@@ -641,6 +641,7 @@
       : { matches: false };
     var inView = true;
     var timer = null;
+    var turn = 0; // index of the tile that swaps next (round robin)
     var FADE_MS = 1300;
     var MIN_WAIT = 3500;
     var EXTRA_WAIT = 4000;
@@ -662,11 +663,12 @@
         return;
       }
 
-      var tile = tiles[Math.floor(Math.random() * tiles.length)];
+      var tile = tiles[turn % tiles.length];
       if (tile.getAttribute("data-busy")) {
         schedule();
         return;
       }
+      turn = (turn + 1) % tiles.length;
       var used = shownIndexes();
       var candidates = [];
       for (var i = 0; i < pool.length; i++) {
@@ -680,7 +682,10 @@
       var entry = pool[next];
       var front = tile.querySelector("img.is-front");
       var back = tile.querySelector("img:not(.is-front)");
-      if (!front || !back) return;
+      if (!front || !back) {
+        schedule();
+        return;
+      }
 
       tile.setAttribute("data-busy", "1");
       back.style.objectPosition = entry.position || "";

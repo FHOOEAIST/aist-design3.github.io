@@ -29,7 +29,11 @@ html.design-tiles {
 
   --shadow-lg: 0 16px 40px rgba(16, 20, 24, 0.12), 0 4px 12px rgba(16, 20, 24, 0.06);
 
-  background-color: var(--color-white);
+  /* Root canvas colour (see html in main.css): it shows in the sub-pixel row
+     below a footer of fractional height, so it has to be the footer's blue,
+     not white, or a hairline appears under the footer. The body keeps the
+     white background for the page itself. */
+  background-color: var(--color-primary);
 }
 
 html.design-tiles h1,
@@ -264,9 +268,15 @@ html.design-tiles .news-card .date {
    Footer: flat block in the AIST blue, as on the original site
    -------------------------------------------------------------------------- */
 html.design-tiles .site-footer {
-  margin-top: 0;
   background: var(--color-primary);
   color: rgba(255, 255, 255, 0.86);
+}
+
+/* The home page ends with the full-bleed CTA band, which sits directly on
+   the footer; every other page ends with plain content and keeps the usual
+   gap (margin-top: var(--section-gap) in main.css). */
+html.design-tiles main:has(> .tiles-cta:last-of-type) + .site-footer {
+  margin-top: 0;
 }
 
 html.design-tiles .site-footer a {

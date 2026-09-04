@@ -42,7 +42,8 @@
    (top-left corner above, bottom-right corner below), so the cluster steps
    from the top right to the bottom left like the header image on fh-ooe.at.
    The photos show group pictures from the pool in _data/home_mosaic.yml and
-   fade to another one every few seconds (initMosaic in main.js); the small
+   take turns fading to another one every few seconds (initMosaic in
+   main.js); the small
    squares are flat colour only, the AIST blue and its tints. */
 .tile-mosaic {
   --tile-gap: 8px;

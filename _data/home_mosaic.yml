@@ -2,8 +2,9 @@
 #
 # Each entry names a news post by its page_id; the tile shows the post's
 # title_image and links to the post in the current language. The first two
-# entries are rendered on page load, afterwards the tiles fade to a random
-# other picture from the pool every few seconds (initMosaic in main.js).
+# entries are rendered on page load, afterwards the two photo tiles take turns
+# fading to a random other picture from the pool every few seconds (initMosaic
+# in main.js).
 #
 #   page_id   the post's page_id (shared by the DE and EN versions)
 #   image     optional: use this image instead of the post's title_image
