@@ -16,4 +16,4 @@ category: ml
 
 ## Hokify
 
-In der Projektkooperation mit der hokify GmbH geht es um die Erstellung eines Globalen Employer Knowledge Graphs\. Dabei sollen mittels Web\-Crawler verschiedene heterogene Datenquellen zu den jeweiligen Arbeitgeber·innen angebunden werden\. Diese Informationen sind dann bezüglich deren Güte und Zuverlässigkeit zu validieren und im Sinne von Data Mining zu einem Gesamtbild zu vereinen\. Die Darstellung dieser einzelnen Bewertungsaspekte der Arbeitgeber soll in einem Knowledge Graph als modernes und zweckmäßiges Visualisierungsparadigma erfolgen\.
+In der Projektkooperation mit der hokify GmbH geht es um die Erstellung eines Globalen Employer Knowledge Graphs. Dabei sollen mittels Web-Crawler verschiedene heterogene Datenquellen zu den jeweiligen Arbeitgeber·innen angebunden werden. Diese Informationen sind dann bezüglich deren Güte und Zuverlässigkeit zu validieren und im Sinne von Data Mining zu einem Gesamtbild zu vereinen. Die Darstellung dieser einzelnen Bewertungsaspekte der Arbeitgeber soll in einem Knowledge Graph als modernes und zweckmäßiges Visualisierungsparadigma erfolgen.

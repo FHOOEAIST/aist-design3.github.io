@@ -6,9 +6,7 @@ date: 2010-12-31
 title: "e-Care: mobile Informationssysteme im Gesundheitswesen. Elektronischer
   Austausch pflegerelevanter Daten zwischen häuslicher Pflege und
   Gesundheitseinrichtungen"
-reference: |-
-  Krankenhaus\-IT Journal, Vol\. 50, No\. 4, 2010, pp\. 60\-61
-  B\. Franz
-category: ehealth
+reference: Franz B. Krankenhaus-IT Journal, Vol. 50, No. 4, 2010, pp. 60-61.
+categories: [ehealth]
 ---
 

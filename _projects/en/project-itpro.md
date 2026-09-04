@@ -16,4 +16,4 @@ category: unknown
 
 ## Project ITPRO
 
-The objective of this research project is to develop a prototype of an automatic tracking system for laundry carts\. Recognizing and recording the correct loading and unloading of laundry carts will be possible by detecting tagged carts via RFID\. It is important to overcome some difficulties, for example the high occurrence of false signals inside the metallic trunk of the truck\.
+The objective of this research project is to develop a prototype of an automatic tracking system for laundry carts. Recognizing and recording the correct loading and unloading of laundry carts will be possible by detecting tagged carts via RFID. It is important to overcome some difficulties, for example the high occurrence of false signals inside the metallic trunk of the truck.

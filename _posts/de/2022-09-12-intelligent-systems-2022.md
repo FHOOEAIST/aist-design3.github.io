@@ -7,9 +7,9 @@ title_image: /assets/images/news/Intelligent_Systems_2022_title.png
 
 ---
 
-Andreas durfte im Rahmen der Intelligent Systems \(IntelliSys\) 2022 Konferenz in Amsterdam einige der Ergebnisse aus dem [RCPM](https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-rcpm) Forschungsprojekt präsentieren\. Dabei gewann er zusammen mit seinen Co\-Author\*innen Eva\-Maria Spitzer, Oliver Krauss und Andreas Stöckl den „Best Paper Award“ für ihre Publikation „Anomaly\-based Risk Detection using Digital News Articles“\. In dieser Arbeit beschäftigten sich die Beteiligten mit der Analyse von Nachrichtenartikeln zur professionellen Risikobewertung unter zu Hilfenahme von Natural Language Processing\.
+Andreas durfte im Rahmen der Intelligent Systems (IntelliSys) 2022 Konferenz in Amsterdam einige der Ergebnisse aus dem [RCPM](https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-rcpm) Forschungsprojekt präsentieren. Dabei gewann er zusammen mit seinen Co-Author\*innen Eva-Maria Spitzer, Oliver Krauss und Andreas Stöckl den „Best Paper Award“ für ihre Publikation „Anomaly-based Risk Detection using Digital News Articles“. In dieser Arbeit beschäftigten sich die Beteiligten mit der Analyse von Nachrichtenartikeln zur professionellen Risikobewertung unter zu Hilfenahme von Natural Language Processing.
 
-Wir gratulieren an dieser Stelle ganz herzlichen allen beteiligten Kolleg\*innen\!
+Wir gratulieren an dieser Stelle ganz herzlichen allen beteiligten Kolleg\*innen!
 
 ## Gallery
 

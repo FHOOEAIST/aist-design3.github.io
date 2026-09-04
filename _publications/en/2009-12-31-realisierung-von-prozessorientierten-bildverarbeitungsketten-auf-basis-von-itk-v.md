@@ -5,11 +5,9 @@ permalink: /publications/realisierung-von-prozessorientierten-bildverarbeitungsk
 date: 2009-12-31
 title: Realisierung von prozessorientierten Bildverarbeitungsketten auf Basis
   von ITK, VTK und RCP
-reference: >-
-  Tagungsband des 3\. Forschungsforums der österreichischen Fachhochschulen,
-  Fachhochschule Kärnten, Villach, Österreich, 2009, pp\. 6
-
-  G\. Zwettler, W\. Backfrieder, R\. Swoboda, F\. Pfeifer
-category: cv
+reference: Zwettler G., Backfrieder W., Swoboda R., Pfeifer F. Tagungsband des 3.
+  Forschungsforums der österreichischen Fachhochschulen, Fachhochschule Kärnten, Villach,
+  Österreich, 2009, pp. 6.
+categories: [cv, se]
 ---
 

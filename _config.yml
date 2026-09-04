@@ -30,6 +30,12 @@ pagination:
     before: 2
     after: 2
 
+# Local tooling – not part of the published site
+exclude:
+  - docker/
+  - docker-compose.yml
+  - .dockerignore
+
 collections:
   projects:
     output: true

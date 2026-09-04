@@ -16,4 +16,4 @@ category: unknown
 
 ## Projekt Safetydrain
 
-Ziel des Forschungsprojekts ist die Entwicklung eines interaktiven Bediensystems für Smart\-Duschanlagen\. Über einen in der Dusche integrierten Bildschirm sollen BenutzerInnen die Möglichkeit erhalten, durch innovative Interaktionsmöglichkeiten \(bspw\. Sprache, Gestik, Berührung\) verschiedene Einstellungen der Dusche \(Durchflussmenge, Temperatur\) zu regulieren\. Die Bedienung wird dabei trotz erschwerender Umstände \(Wasser, Schaum\) möglichst funktional und eingängig konzipiert\.
+Ziel des Forschungsprojekts ist die Entwicklung eines interaktiven Bediensystems für Smart-Duschanlagen. Über einen in der Dusche integrierten Bildschirm sollen BenutzerInnen die Möglichkeit erhalten, durch innovative Interaktionsmöglichkeiten (bspw. Sprache, Gestik, Berührung) verschiedene Einstellungen der Dusche (Durchflussmenge, Temperatur) zu regulieren. Die Bedienung wird dabei trotz erschwerender Umstände (Wasser, Schaum) möglichst funktional und eingängig konzipiert.

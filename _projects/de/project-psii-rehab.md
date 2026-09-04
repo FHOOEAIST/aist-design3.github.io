@@ -16,4 +16,4 @@ category: ehealth
 
 ## Projekt Psii Rehab
 
-Im Rahmen des Forschungsprojektes VREHA wird an Methoden und Ansätzen gearbeitet, die es ermöglichen die Durchführung von therapeutischen Übungen, insbesondere für die Rehabilitation von Schlaganfall\-Patienten, durch Virtual Reality Technologien zu unterstützen\.
+Im Rahmen des Forschungsprojektes VREHA wird an Methoden und Ansätzen gearbeitet, die es ermöglichen die Durchführung von therapeutischen Übungen, insbesondere für die Rehabilitation von Schlaganfall-Patienten, durch Virtual Reality Technologien zu unterstützen.

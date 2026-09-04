@@ -17,4 +17,4 @@ category: cv
 
 ## StraSE
 
-Im Projekt STRAtegic Sofware Engineering \(StraSE\) steht die Konzeptionierung und Entwicklung eines Softwareprototyps für eine sprachunabhängige, dynamische, symbolische Ausführung auf Basis der eKnows Software im Mittelpunkt\. Dabei steht der Einsatz von Fuzzing im Fokus\.
+Im Projekt STRAtegic Sofware Engineering (StraSE) steht die Konzeptionierung und Entwicklung eines Softwareprototyps für eine sprachunabhängige, dynamische, symbolische Ausführung auf Basis der eKnows Software im Mittelpunkt. Dabei steht der Einsatz von Fuzzing im Fokus.

@@ -5,9 +5,7 @@ permalink: /publications/semantikerhaltung-beim-austausch-elektronischer-gesundh
 date: 2012-12-31
 title: Semantikerhaltung beim Austausch elektronischer Gesundheitsdaten zur
   Unterstützung der integrierten Versorgung älterer Menschen
-reference: |-
-  Proceedings IV Kongress 2012, Linz, Österreich, 2012
-  B\. Franz
-category: ehealth
+reference: Franz B. Proceedings IV Kongress 2012, Linz, Österreich, 2012.
+categories: [ehealth]
 ---
 

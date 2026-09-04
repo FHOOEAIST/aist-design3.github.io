@@ -7,9 +7,9 @@ title_image: /assets/images/news/HL7_WGM_Montreal_title.jpg
 
 ---
 
-Im Mai wurde in Montreal das neueste HL7 Workgroup Meeting durchgeführt\. Andreas Schuler und Oliver Krauss konnten wieder mit Unterstützung durch die HL7 Austria das WGM besuchen\. Vielen Dank Hl7 Austria\!
+Im Mai wurde in Montreal das neueste HL7 Workgroup Meeting durchgeführt. Andreas Schuler und Oliver Krauss konnten wieder mit Unterstützung durch die HL7 Austria das WGM besuchen. Vielen Dank Hl7 Austria!
 
-FHIR wird mittlerweile stabiler, und die Arbeit geht in Richtung Normierung der Ressourcen\.
+FHIR wird mittlerweile stabiler, und die Arbeit geht in Richtung Normierung der Ressourcen.
 
 ## Gallery
 

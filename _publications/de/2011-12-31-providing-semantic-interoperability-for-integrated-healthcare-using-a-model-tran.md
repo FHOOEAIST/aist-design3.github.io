@@ -5,11 +5,8 @@ permalink: /publications/providing-semantic-interoperability-for-integrated-heal
 date: 2011-12-31
 title: Providing Semantic Interoperability for Integrated Healthcare Using a
   Model Transformation Approach
-reference: >-
-  Proccedings of 23rd IEEE European Modeling & Simulation Symposium EMSS 2011,
-  Roma, Italien, 2011, pp\. 195\-200
-
-  B\. Franz, H\. Mayr
-category: ehealth
+reference: Franz B., Mayr H. Proccedings of 23rd IEEE European Modeling & Simulation
+  Symposium EMSS 2011, Roma, Italien, 2011, pp. 195-200.
+categories: [ehealth]
 ---
 

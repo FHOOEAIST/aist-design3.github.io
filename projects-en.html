@@ -6,7 +6,12 @@ permalink: /projects/
 page_id: projects-index
 ---
 
-{% assign en_projects = site.projects | where: "lang", "en" | sort: "title" %}
+{% comment %} Ordered by `sort_title`, which _plugins/project_sort_title.rb
+derives from the title minus any "Projekt"/"Project" prefix -- otherwise a
+third of the projects clump together under P. sort_natural rather than sort
+because Liquid's sort is ASCII-ordered. Both listings below iterate this one
+sorted list. {% endcomment %}
+{% assign en_projects = site.projects | where: "lang", "en" | sort_natural: "sort_title" %}
 {% assign now_int = site.time | date: "%Y%m%d" | plus: 0 %}
 
 <div class="page-header">

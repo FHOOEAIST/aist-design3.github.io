@@ -7,15 +7,15 @@ title_image: /assets/images/news/Rudolf_Trauner_Preis_2019_title.jpg
 
 ---
 
-Wir bedanken uns herzlich für die Einladung zur gestrigen Verleihung des Rudolf Trauner Preis 2019\.
+Wir bedanken uns herzlich für die Einladung zur gestrigen Verleihung des Rudolf Trauner Preis 2019.
 
-Wir sind stolz zusammen mit unseren Projektpartnern zwei der fünf Preise für unsere Projekte [Drive for Knowledge](https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-formelracing) und [Kimiku](https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-kimiku) erhalten zu haben\.
+Wir sind stolz zusammen mit unseren Projektpartnern zwei der fünf Preise für unsere Projekte [Drive for Knowledge](https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-formelracing) und [Kimiku](https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-kimiku) erhalten zu haben.
 
-Des Weiteren gratulieren wir unserem ehemaligen Projekpartner Rewellio \(ehemals [psii\.rehab](https://aist.fh-hagenberg.at/index.php/de/projekte/project-psii-rehab)\) zu dem erhaltenem Preis\.
+Des Weiteren gratulieren wir unserem ehemaligen Projekpartner Rewellio (ehemals [psii.rehab](https://aist.fh-hagenberg.at/index.php/de/projekte/project-psii-rehab)) zu dem erhaltenem Preis.
 
    
 
-Weitere Fotos können Sie auf [cityfoto\.at](https://www.cityfoto.at/content/de/fotogalerie/15308?img=1877190) finden\.
+Weitere Fotos können Sie auf [cityfoto.at](https://www.cityfoto.at/content/de/fotogalerie/15308?img=1877190) finden.
 
 ## Gallery
 

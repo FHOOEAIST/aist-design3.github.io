@@ -7,11 +7,11 @@ title_image: /assets/images/news/ARS_Electronica_Festival_title.jpg
 
 ---
 
-Anna Maria Brunnhofer \(AMB GmbH\) invited the members of the research group, who are involved in the TrueSize project, to the ARS Electronica Festival in Linz’s PostCity\.
+Anna Maria Brunnhofer (AMB GmbH) invited the members of the research group, who are involved in the TrueSize project, to the ARS Electronica Festival in Linz’s PostCity.
 
-The day took the participants through various exhibits from the fields of art and technology – from robots that draw autonomously to exhibits on the subject of anonymization and artificial intelligence\.
+The day took the participants through various exhibits from the fields of art and technology – from robots that draw autonomously to exhibits on the subject of anonymization and artificial intelligence.
 
-Thank you very much Anna for the invitation\.
+Thank you very much Anna for the invitation.
 
 ## Gallery
 

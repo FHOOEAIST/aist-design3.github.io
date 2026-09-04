@@ -5,9 +5,8 @@ permalink: /publications/automatisierte-rekonstruktion-klinischer-pfade-basieren
 date: 2011-12-31
 title: Automatisierte Rekonstruktion klinischer Pfade basierend auf
   IHE-Integrationsprofilen
-reference: |-
-  eHealth 2011, Wien, Österreich, 2011, pp\. 209\-214
-  F\. Pfeifer, B\. Franz, E\. Helm, J\. Altmann, B\. Aichinger
-category: ehealth
+reference: Pfeifer F., Franz B., Helm E., Altmann J., Aichinger B. eHealth 2011, Wien,
+  Österreich, 2011, pp. 209-214.
+categories: [ehealth, pm]
 ---
 

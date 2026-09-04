@@ -17,4 +17,4 @@ category: cv
 
 ## StraSE
 
-The STRAtegic Sofware Engineering \(StraSE\) project focuses on the conceptual design and development of a software prototype for a language\-independent, dynamic, symbolic execution based on the eKnows software\. The focus is on the use of fuzzing\.
+The STRAtegic Sofware Engineering (StraSE) project focuses on the conceptual design and development of a software prototype for a language-independent, dynamic, symbolic execution based on the eKnows software. The focus is on the use of fuzzing.

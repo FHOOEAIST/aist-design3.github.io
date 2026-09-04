@@ -5,9 +5,7 @@ permalink: /publications/e-health-die-it-basis-f-r-eine-integrierte-versorgung-c
 date: 2012-12-31
 title: "e-Health – Die IT-Basis für eine Integrierte Versorgung: Chancen und
   Risiken aus technischer Sicht"
-reference: |-
-  Proceedings IV Kongress 2012, Linz, Österreich, 2012
-  H\. Mayr, B\. Franz
-category: ehealth
+reference: Mayr H., Franz B. Proceedings IV Kongress 2012, Linz, Österreich, 2012.
+categories: [ehealth]
 ---
 

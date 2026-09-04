@@ -7,6 +7,6 @@ title_image: /assets/images/news/4th_International_Workshop_on_Camera_Traps,_AI,
 
 ---
 
-Our colleague Christoph Praschl, together with David Schedl, had the pleasure of hosting this year’s edition of the international workshop on Camera Traps, AI and Ecology from September 5th to 6th, 2024 at our Hagenberg campus\. During the two days, four keynotes on the topic of wildlife and ecology monitoring were presented, as well as two tutorials and ten submissions from 34 authors representing 12 organizations from 6 countries worldwide\.
+Our colleague Christoph Praschl, together with David Schedl, had the pleasure of hosting this year’s edition of the international workshop on Camera Traps, AI and Ecology from September 5th to 6th, 2024 at our Hagenberg campus. During the two days, four keynotes on the topic of wildlife and ecology monitoring were presented, as well as two tutorials and ten submissions from 34 authors representing 12 organizations from 6 countries worldwide.
 
-More information is available on the workshop homepage: [https://camtrap2024\.fh\-ooe\.at/](https://camtrap2024.fh-ooe.at/)
+More information is available on the workshop homepage: [https://camtrap2024.fh-ooe.at/](https://camtrap2024.fh-ooe.at/)

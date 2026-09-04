@@ -17,4 +17,4 @@ category: cv
 
 ## Trustworthy AI
 
-KI erzeugt zunehmend medizinische Daten \(bis zu Diagnosen\)\. Damit diese nutzbar und vertrauenswürdig sind, müssen sie transparent gekennzeichnet und mit prüfbaren Kontextinfos \(Entstehung, Rahmenbedingungen\) versehen werden\. Da klinische Kommunikation über FHIR läuft, braucht es klare Methoden und Best Practices, um KI\-Ausgaben im FHIR\-Ökosystem strukturiert, nachvollziehbar und sicher abzubilden—für patientensichere, ethisch verantwortbare und effektive Nutzung von KI im Gesundheitswesen\.
+KI erzeugt zunehmend medizinische Daten (bis zu Diagnosen). Damit diese nutzbar und vertrauenswürdig sind, müssen sie transparent gekennzeichnet und mit prüfbaren Kontextinfos (Entstehung, Rahmenbedingungen) versehen werden. Da klinische Kommunikation über FHIR läuft, braucht es klare Methoden und Best Practices, um KI-Ausgaben im FHIR-Ökosystem strukturiert, nachvollziehbar und sicher abzubilden—für patientensichere, ethisch verantwortbare und effektive Nutzung von KI im Gesundheitswesen.

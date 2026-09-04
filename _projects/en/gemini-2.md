@@ -16,4 +16,4 @@ category: ml
 
 ## Gemini
 
-GEMINI deals with online marketing using process mining\. From anonymized records of how websites are used a customer journey is identified\. Based on the customer journey, recommendations are made to improve the products and services for online marketing\. The research in this project deals primarily with the fields of data science and process mining\.
+GEMINI deals with online marketing using process mining. From anonymized records of how websites are used a customer journey is identified. Based on the customer journey, recommendations are made to improve the products and services for online marketing. The research in this project deals primarily with the fields of data science and process mining.

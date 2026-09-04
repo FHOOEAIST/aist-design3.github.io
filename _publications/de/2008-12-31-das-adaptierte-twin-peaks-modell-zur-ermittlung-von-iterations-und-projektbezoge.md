@@ -5,8 +5,7 @@ permalink: /publications/das-adaptierte-twin-peaks-modell-zur-ermittlung-von-ite
 date: 2008-12-31
 title: Das Adaptierte Twin-Peaks-Modell zur Ermittlung von iterations- und
   projektbezogenen Kennzahlen für das Requirement Management
-reference: |-
-  Requirements Days 2008, Nürnberg, Deutschland, 2008, pp\. 19
-  H\. Mayr
+categories: [se]
+reference: Mayr H. Requirements Days 2008, Nürnberg, Deutschland, 2008, pp. 19.
 ---
 

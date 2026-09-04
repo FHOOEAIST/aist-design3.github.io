@@ -16,4 +16,4 @@ category: cv
 
 ## Project: Epilepsie Monitoring
 
-The project Epilepsie Monitoring wants to create innovation in the field of image\-based epilepsy monitoring\. A good indication of an impending seizure can be awakening with open eyes and focus, i\.e\. staring the eyes in the direction of the affected neurological area before the actual cramp symptoms set in\. In the course of this research project, the feasibility of comfortable and fully automatic image monitoring using night vision camera technology is evaluated to be able to recognize these body signals\.
+The project Epilepsie Monitoring wants to create innovation in the field of image-based epilepsy monitoring. A good indication of an impending seizure can be awakening with open eyes and focus, i.e. staring the eyes in the direction of the affected neurological area before the actual cramp symptoms set in. In the course of this research project, the feasibility of comfortable and fully automatic image monitoring using night vision camera technology is evaluated to be able to recognize these body signals.

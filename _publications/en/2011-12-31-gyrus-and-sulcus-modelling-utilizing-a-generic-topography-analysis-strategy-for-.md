@@ -5,11 +5,8 @@ permalink: /publications/gyrus-and-sulcus-modelling-utilizing-a-generic-topograp
 date: 2011-12-31
 title: Gyrus and Sulcus Modelling Utilizing a Generic Topography Analysis
   Strategy for Processing Arbitrarily Oriented 3D Surfaces
-reference: >-
-  Proceedings of the 23rd European Modeling & Simulation Symposium, Rom,
-  Italien, 2011, pp\. 111\-117
-
-  G\. Zwettler, W\. Backfrieder, R\. Pichler
-category: cv
+reference: Zwettler G., Backfrieder W., Pichler R. Proceedings of the 23rd European
+  Modeling & Simulation Symposium, Rom, Italien, 2011, pp. 111-117.
+categories: [ehealth, cv]
 ---
 

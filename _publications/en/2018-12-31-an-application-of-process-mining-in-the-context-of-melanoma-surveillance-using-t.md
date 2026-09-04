@@ -5,12 +5,9 @@ permalink: /publications/an-application-of-process-mining-in-the-context-of-mela
 date: 2018-12-31
 title: An Application of Process Mining in the Context of Melanoma Surveillance
   using Time Boxing
-reference: >-
-  International Conference on Business Process Management
-  \([Details](https://link.springer.com/chapter/10.1007/978-3-030-11641-5_14)\)
-
-  Rinner C\., Helm E\., Dunkl R\., Kittler H\., Rinderle\-Ma S\.
-category: ml
+reference: Rinner C., Helm E., Dunkl R., Kittler H., Rinderle-Ma S. International
+  Conference on Business Process Management.
+categories: [ehealth, pm]
 external_url: https://link.springer.com/chapter/10.1007/978-3-030-11641-5_14
 ---
 

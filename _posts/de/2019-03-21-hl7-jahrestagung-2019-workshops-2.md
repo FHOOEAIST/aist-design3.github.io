@@ -6,7 +6,7 @@ page_id: news:hl7-jahrestagung-2019-workshops-2
 
 ---
 
-Dieses Jahr gleich 2 FHIR Workshops von Kollegen Schuler & Krauss\. Hier die Folien zum Workshop\. Wir danken Ihnen für die Teilnahme und das Feedback und freuen uns über Fragen und Anmerkungen
+Dieses Jahr gleich 2 FHIR Workshops von Kollegen Schuler & Krauss. Hier die Folien zum Workshop. Wir danken Ihnen für die Teilnahme und das Feedback und freuen uns über Fragen und Anmerkungen
 
 - [FHIR Starter](https://aist.fh-hagenberg.at/wp-content/uploads/2019/03/FHIR_HL7_Starter_2019.pdf)
 - [FHIR Arsonists Teil 1](https://aist.fh-hagenberg.at/wp-content/uploads/2019/03/FHIR_HL7_Arsonists_2019-1-50.pdf)

@@ -16,4 +16,4 @@ category: ehealth
 
 ## Project Psii Rehab
 
-In course of the VREHA research project new methodologies and approaches are developed in order to support rehabilitation therapy with state of the art virtual reality technology\.
+In course of the VREHA research project new methodologies and approaches are developed in order to support rehabilitation therapy with state of the art virtual reality technology.

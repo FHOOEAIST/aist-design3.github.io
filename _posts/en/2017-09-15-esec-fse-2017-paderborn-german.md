@@ -7,9 +7,9 @@ title_image: /assets/images/news/ESEC/FSE_2017_Paderborn,_Deutschland_title.jpg
 
 ---
 
-From the 04\. till the 08\. of September 2017 the ESEC/FSE 2017 \(11TH Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering\) conference was held in Paderborn, Germany\. [Andreas Schuler](http://ehealth.fh-hagenberg.at/index.php/team/) did present his PhD thesis there\.
+From the 04. till the 08. of September 2017 the ESEC/FSE 2017 (11TH Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering) conference was held in Paderborn, Germany. [Andreas Schuler](http://ehealth.fh-hagenberg.at/index.php/team/) did present his PhD thesis there.
 
-Andreas Schuler presented the paper „[Application of search\-based software engineering methodologies for test suite optimization and evolution in mission critical mobile application development](https://dl.acm.org/citation.cfm?id=3119876)“, which handles the core of his PhD thesis\. The presentations were in the tracks of the Doctoral Symposium\. Thank you to all the participants which provided valuable feedback and input for further research opportunities\!
+Andreas Schuler presented the paper „[Application of search-based software engineering methodologies for test suite optimization and evolution in mission critical mobile application development](https://dl.acm.org/citation.cfm?id=3119876)“, which handles the core of his PhD thesis. The presentations were in the tracks of the Doctoral Symposium. Thank you to all the participants which provided valuable feedback and input for further research opportunities!
 
 ## Gallery
 

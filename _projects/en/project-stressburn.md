@@ -16,4 +16,4 @@ category: cv
 
 ## Project StressBurn
 
-Therapy methods for burnout patients, respectivley for stress reduction, are worked out in cooperation with the VR Dimension e\.U\. company and the research group Playful Interactive Environments \(PIE\)\. Sensors from the field of Personal Health are used to determine the patients stress level and further to dynamically adapt virtual reality scenes to reduce this level\. Those scenes are adapted per person and their emotional state using generative algorithms\.
+Therapy methods for burnout patients, respectivley for stress reduction, are worked out in cooperation with the VR Dimension e.U. company and the research group Playful Interactive Environments (PIE). Sensors from the field of Personal Health are used to determine the patients stress level and further to dynamically adapt virtual reality scenes to reduce this level. Those scenes are adapted per person and their emotional state using generative algorithms.

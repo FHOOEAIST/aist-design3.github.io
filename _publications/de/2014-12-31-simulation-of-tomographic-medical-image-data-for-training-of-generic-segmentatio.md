@@ -5,9 +5,8 @@ permalink: /publications/simulation-of-tomographic-medical-image-data-for-traini
 date: 2014-12-31
 title: Simulation of Tomographic Medical Image Data for Training of Generic
   Segmentation Models Utilizing Multivariate Feature Classification
-reference: |-
-  California, USA, Vereinigte Staaten von Amerika, 2014, pp\. 9
-  G\. Zwettler, W\. Backfrieder
-category: cv
+reference: Zwettler G., Backfrieder W. California, USA, Vereinigte Staaten von Amerika,
+  2014, pp. 9.
+categories: [ehealth, cv, ml]
 ---
 

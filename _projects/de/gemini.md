@@ -16,4 +16,4 @@ category: ml
 
 ## Gemini
 
-GEMINI behandelt das digitale Marketing im Bereich von Process Mining\. Aus datenschutzkonformen, anonymisierten Aufzeichnungen von Userverhalten auf Webseiten wird eine Customer Journey identifiziert\. Zugrundeliegend dieser sollen Empfehlungen für diverse Anwendungsfälle abgeleitet werden, um die Produkte und Dienstleistung im Onlinemarketing verbessern zu können\. Die Forschungsinhalte des Projekts behandeln primär die Felder Data Science und Process Mining\.
+GEMINI behandelt das digitale Marketing im Bereich von Process Mining. Aus datenschutzkonformen, anonymisierten Aufzeichnungen von Userverhalten auf Webseiten wird eine Customer Journey identifiziert. Zugrundeliegend dieser sollen Empfehlungen für diverse Anwendungsfälle abgeleitet werden, um die Produkte und Dienstleistung im Onlinemarketing verbessern zu können. Die Forschungsinhalte des Projekts behandeln primär die Felder Data Science und Process Mining.

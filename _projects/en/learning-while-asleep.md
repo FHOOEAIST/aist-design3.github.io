@@ -16,4 +16,4 @@ category: ml
 
 ## Learning while asleep
 
-The main goal of the planned development is a toolset for learning and consolidating learning content that is played back in the subconscious during certain sleep phases by means of auditory playback in order to be able to reproduce it from memory when awake\.
+The main goal of the planned development is a toolset for learning and consolidating learning content that is played back in the subconscious during certain sleep phases by means of auditory playback in order to be able to reproduce it from memory when awake.

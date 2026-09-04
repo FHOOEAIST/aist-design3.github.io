@@ -5,10 +5,8 @@ permalink: /publications/i-navigate-p-r-erweiterung-einer-automobil-navigation-u
 date: 2008-12-31
 title: "I-Navigate P&R: Erweiterung einer Automobil-Navigation um Online-
   Park&Ride-Funktionalität"
-reference: >-
-  Proceedings of FFH2008 Fachhochschul Forschungs Forum, Wels, Österreich, 2008,
-  pp\. 3
-
-  J\. Altmann, H\. Mayr, W\. Steinbichl
+reference: Altmann J., Mayr H., Steinbichl W. Proceedings of FFH2008 Fachhochschul
+  Forschungs Forum, Wels, Österreich, 2008, pp. 3.
+categories: [geo]
 ---
 

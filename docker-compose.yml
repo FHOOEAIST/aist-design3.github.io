@@ -1,0 +1,47 @@
+# Local testing of the site. Requires `git lfs pull` beforehand, otherwise the
+# images in the built site are LFS pointer files.
+#
+#   docker compose up --build          production-like: build + pagefind, then serve
+#                                      -> http://localhost:4000/aist.github.io/
+#   docker compose --profile dev up    live-rebuild dev server (no search index)
+#   docker compose run --rm site build build only, no server
+name: aist-site
+
+x-site: &site
+  build:
+    context: .
+    dockerfile: docker/Dockerfile
+  image: aist-site:local
+  volumes:
+    # Content is bind-mounted so edits are picked up without rebuilding the image.
+    - .:/srv/site
+    # Generated output and host (Windows) gems stay out of the container.
+    - site-build:/srv/site/_site
+    - jekyll-cache:/srv/site/.jekyll-cache
+    - /srv/site/vendor
+
+services:
+  # Build the site the way CI does (jekyll build + pagefind), then serve the result.
+  site:
+    <<: *site
+    command: ["serve"]
+    environment:
+      JEKYLL_ENV: production
+    ports:
+      - "4000:4000"
+
+  # `jekyll serve` with watching/livereload. Faster loop, but the pagefind index
+  # is not regenerated, so the search UI stays empty here.
+  dev:
+    <<: *site
+    command: ["dev"]
+    environment:
+      JEKYLL_ENV: development
+    profiles: ["dev"]
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+
+volumes:
+  site-build:
+  jekyll-cache:

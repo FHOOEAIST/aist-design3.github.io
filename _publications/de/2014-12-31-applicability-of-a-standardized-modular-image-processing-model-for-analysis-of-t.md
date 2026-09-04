@@ -6,11 +6,8 @@ date: 2014-12-31
 title: Applicability of a Standardized Modular Image Processing Model for
   Analysis of Tomographic 3D Patient Data in Clinical Research and Radiographer
   Training
-reference: >-
-  Tagungsband des 8\. Forschungsforum der österreichischen Fachhochschulen,
-  Kufstein, Österreich, 2014, pp\. 482\-483
-
-  G\. Zwettler, W\. Backfrieder
-category: cv
+reference: Zwettler G., Backfrieder W. Tagungsband des 8. Forschungsforum der österreichischen
+  Fachhochschulen, Kufstein, Österreich, 2014, pp. 482-483.
+categories: [ehealth, cv]
 ---
 

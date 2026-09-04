@@ -5,9 +5,8 @@ permalink: /publications/towards-semantic-interoperability-in-health-data-manage
 date: 2018-12-31
 title: Towards Semantic Interoperability in Health Data Management Facilitating
   Process Mining
-reference: |-
-  International Journal of Privacy and Health Information Management \(IJPHIM\)
-  Traxler B\., Helm E\., Krauss O\., Schuler A\., Kueng J\.
-category: ehealth
+reference: Traxler B., Helm E., Krauss O., Schuler A., Kueng J. International Journal
+  of Privacy and Health Information Management (IJPHIM).
+categories: [ehealth, pm]
 ---
 

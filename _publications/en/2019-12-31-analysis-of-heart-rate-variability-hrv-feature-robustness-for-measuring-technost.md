@@ -5,9 +5,8 @@ permalink: /publications/analysis-of-heart-rate-variability-hrv-feature-robustne
 date: 2019-12-31
 title: Analysis of Heart Rate Variability (HRV) Feature Robustness for Measuring
   Technostress
-reference: |-
-  Information Systems and Neuroscience, p\. 221 – 228, Springer Verlag
-  Baumgartner D\., Fischer T\. Riedl R\., Dreiseitl S\.
-category: ehealth
+reference: Baumgartner D., Fischer T., Riedl R., Dreiseitl S. Information Systems
+  and Neuroscience, p. 221 – 228, Springer Verlag.
+categories: [ehealth, ml]
 ---
 

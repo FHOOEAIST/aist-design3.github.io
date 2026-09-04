@@ -16,4 +16,4 @@ category: cv
 
 ## Projekt: Mixed Reality Coverage Calculation
 
-Das Forschungsprojekt „Mixed Reality Coverage Calculation“ \(MRCC\)“ beschäftigt sich mit Methoden zur Verdeckungsberechnung im Umfeld von Outdoor Mixed Reality Anwendungen\. Dabei ist das Ziel eine möglichst exakte Verdeckungsberechnung anhand von realen Objekten wie Häusern aber auch durch die topografischen Gegebenheiten \(Hügel, Berge\) zu realisieren\. Dies soll die Immersion für Nutzern entsprechender Geräte \(etwa die Microsoft HoloLens\) verbessern und so die Möglichkeiten von Mixed Reality Anwendungen weiter verbessern\.
+Das Forschungsprojekt „Mixed Reality Coverage Calculation“ (MRCC)“ beschäftigt sich mit Methoden zur Verdeckungsberechnung im Umfeld von Outdoor Mixed Reality Anwendungen. Dabei ist das Ziel eine möglichst exakte Verdeckungsberechnung anhand von realen Objekten wie Häusern aber auch durch die topografischen Gegebenheiten (Hügel, Berge) zu realisieren. Dies soll die Immersion für Nutzern entsprechender Geräte (etwa die Microsoft HoloLens) verbessern und so die Möglichkeiten von Mixed Reality Anwendungen weiter verbessern.

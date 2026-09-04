@@ -5,9 +5,7 @@ permalink: /publications/cross-enterprise-communication-and-data-exchange-in-rad
 date: 2018-12-31
 title: "Cross-Enterprise Communication and Data Exchange in Radiology in
   Austria: Technology and Use Cases"
-reference: |-
-  Studies in health technology and informatics
-  Helm E\., Schuler A\., Mayr H\.
-category: ehealth
+reference: Helm E., Schuler A., Mayr H. Studies in health technology and informatics.
+categories: [ehealth]
 ---
 

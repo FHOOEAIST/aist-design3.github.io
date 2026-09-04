@@ -7,7 +7,7 @@ title_image: /assets/images/news/3_Preise,_2_Preisträger_title.jpg
 
 ---
 
-Auf der diesjährigen Weihnachtsfeier der gesamten Fachhochschule Oberösterreich in der Stahlwelt der Voestalpine in Linz, wurde nach pandemiebedingter Pause letztendlich wieder in Person gefeiert und auf das vergangene Jahr zurückgeblickt\. In Zuge dieser Feier wurden Dissertant\*innen sowie Jungforscher\*innen für ihre Leistungen in den vergangenen Monaten und Jahren geehrt\. Dabei freut es uns, als Forschungsgruppe AIST sehr, auch heuer wieder unter den Preisträger\*innen vertreten gewesen zu sein\. Auf diesem Weg wollen wir erneut unseren beiden Preisträgern Oliver Krauss \(Dissertations\- und Forscherpreis\), sowie Emmanuel Helm \(Forscherpreis\) ganz herzlich für die wohlverdienten Preise gratulieren\.
+Auf der diesjährigen Weihnachtsfeier der gesamten Fachhochschule Oberösterreich in der Stahlwelt der Voestalpine in Linz, wurde nach pandemiebedingter Pause letztendlich wieder in Person gefeiert und auf das vergangene Jahr zurückgeblickt. In Zuge dieser Feier wurden Dissertant\*innen sowie Jungforscher\*innen für ihre Leistungen in den vergangenen Monaten und Jahren geehrt. Dabei freut es uns, als Forschungsgruppe AIST sehr, auch heuer wieder unter den Preisträger\*innen vertreten gewesen zu sein. Auf diesem Weg wollen wir erneut unseren beiden Preisträgern Oliver Krauss (Dissertations- und Forscherpreis), sowie Emmanuel Helm (Forscherpreis) ganz herzlich für die wohlverdienten Preise gratulieren.
 
 ## Gallery
 

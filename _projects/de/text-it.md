@@ -16,4 +16,4 @@ category: unknown
 
 ## text-it
 
-Als Containerformat für technische Publikationen standardisiert iiRDS den Austausch von Inhalten über Metadaten\. Und diese Metadaten müssen sinnvoll gewählt und gesetzt werden\. Die Projektkooperation mit text\-it zielt darauf ab, die technischen Anforderungen und notwendigen Ressourcen für ein KI\-basiertes, automatisiertes Tool zu analysieren, das iiRDS\-Metadaten richtig und zuverlässig vergibt und eigenständig erweitert\.
+Als Containerformat für technische Publikationen standardisiert iiRDS den Austausch von Inhalten über Metadaten. Und diese Metadaten müssen sinnvoll gewählt und gesetzt werden. Die Projektkooperation mit text-it zielt darauf ab, die technischen Anforderungen und notwendigen Ressourcen für ein KI-basiertes, automatisiertes Tool zu analysieren, das iiRDS-Metadaten richtig und zuverlässig vergibt und eigenständig erweitert.

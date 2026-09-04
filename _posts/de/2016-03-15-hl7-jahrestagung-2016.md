@@ -6,8 +6,8 @@ page_id: news:hl7-jahrestagung-2016
 
 ---
 
-Morgen werden 6 Mitglieder der Forschungsgruppe bei der **HL7 Jahrestagung in Wien** teilnehmen\.
+Morgen werden 6 Mitglieder der Forschungsgruppe bei der **HL7 Jahrestagung in Wien** teilnehmen.
 
-[Andreas Schuler und Oliver Krauss](http://ehealth.fh-hagenberg.at/index.php/team/) veranstalten außerdem am 17\.03\. einen **Workshop zum Thema FHIR**\.
+[Andreas Schuler und Oliver Krauss](http://ehealth.fh-hagenberg.at/index.php/team/) veranstalten außerdem am 17.03. einen **Workshop zum Thema FHIR**.
 
 Weitere Infos: [HL7 Jahrestagung 2016](http://www.hl7.at/events/hl7-jahrestagung-2016/)

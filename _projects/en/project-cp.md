@@ -16,4 +16,4 @@ category: cv
 
 ## Project CP+
 
-Managing everyday life poses a severe problem for people with cerebral paresis and other disabilities where you are impeded in your speech, movement and mental capabilities\. Modern technology like computer and tablet can support them by their daily routines but interacting with these devices isn’t easy either\. Goal of the CP\+ project is to develop a concept for a software and hardware combination that gives the patient the opportunity to interact with the computer more easily and live a more autonomous life\.
+Managing everyday life poses a severe problem for people with cerebral paresis and other disabilities where you are impeded in your speech, movement and mental capabilities. Modern technology like computer and tablet can support them by their daily routines but interacting with these devices isn’t easy either. Goal of the CP+ project is to develop a concept for a software and hardware combination that gives the patient the opportunity to interact with the computer more easily and live a more autonomous life.

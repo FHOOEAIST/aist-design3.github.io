@@ -21,10 +21,10 @@ category: ml
 
 ## Smart Menus
 
-Ziel des gemeinsamen Forschungsprojektes ist es, die Integration von Menütexten intelligenter zu gestalten, sodass ein Algorithmus bereits die Unterscheidung zwischen einzelnen Elementen wie z\.B\. Hauptspeise, Vorspeise, Preis etc\. vornimmt\. Daraus ergibt sich in weiterer Folge die Möglichkeit, eine verbesserte Darstellung der Menüs vorzunehmen und zusätzlich könnten mit statistischen Verfahren die Häufigkeiten bestimmter Speisen bzw\. die Kombinationen eruiert und in Empfehlungssysteme für Endkunden einfließen\.
+Ziel des gemeinsamen Forschungsprojektes ist es, die Integration von Menütexten intelligenter zu gestalten, sodass ein Algorithmus bereits die Unterscheidung zwischen einzelnen Elementen wie z.B. Hauptspeise, Vorspeise, Preis etc. vornimmt. Daraus ergibt sich in weiterer Folge die Möglichkeit, eine verbesserte Darstellung der Menüs vorzunehmen und zusätzlich könnten mit statistischen Verfahren die Häufigkeiten bestimmter Speisen bzw. die Kombinationen eruiert und in Empfehlungssysteme für Endkunden einfließen.
 
 ---
 
 ## Menu Analysis
 
-mittag\.at sammelt Mittagsmenüs aus ganz Österreich und bringt diese strukturiert auf der Website zur Darstellung\. Die Daten werden dabei entweder manuell durch GaststättenbetreiberInnen eingetragen \(selten\) oder mittels Webcrawler automatisch im Internet gesammelt\. Um zukünftig Mehrwertdienste anbieten zu können, sollen die Menütexte semantisch analysiert werden\.
+mittag.at sammelt Mittagsmenüs aus ganz Österreich und bringt diese strukturiert auf der Website zur Darstellung. Die Daten werden dabei entweder manuell durch GaststättenbetreiberInnen eingetragen (selten) oder mittels Webcrawler automatisch im Internet gesammelt. Um zukünftig Mehrwertdienste anbieten zu können, sollen die Menütexte semantisch analysiert werden.

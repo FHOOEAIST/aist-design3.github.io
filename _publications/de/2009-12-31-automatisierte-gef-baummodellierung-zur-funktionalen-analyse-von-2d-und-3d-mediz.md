@@ -5,9 +5,8 @@ permalink: /publications/automatisierte-gef-baummodellierung-zur-funktionalen-an
 date: 2009-12-31
 title: Automatisierte Gefäßbaummodellierung zur funktionalen Analyse von 2D und
   3D medizinischen Bilddaten
-reference: |-
-  Master/Diploma Thesis, FH OÖ Fakultät Hagenberg, Österreich, 2009, pp\. 104
-  G\. Zwettler
-category: cv
+reference: Zwettler G. Master/Diploma Thesis, FH OÖ Fakultät Hagenberg, Österreich,
+  2009, pp. 104.
+categories: [ehealth, cv]
 ---
 

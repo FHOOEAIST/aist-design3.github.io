@@ -21,12 +21,12 @@ category: ml
 
 ## Smart Menus
 
-The aim of the joint research project is to make the integration of menu texts smarter, so that an algorithm already makes the distinction between individual elements such as e\.g\. main course, appetizer, price, etc\. This results in the further possibility of making an improved presentation of the menus and in addition with statistical methods could be determined the frequencies of certain foods or the combinations and incorporated into recommendation systems for end customers\.
+The aim of the joint research project is to make the integration of menu texts smarter, so that an algorithm already makes the distinction between individual elements such as e.g. main course, appetizer, price, etc. This results in the further possibility of making an improved presentation of the menus and in addition with statistical methods could be determined the frequencies of certain foods or the combinations and incorporated into recommendation systems for end customers.
 
 ---
 
 ## Menu Analysis
 
-**Runtime:**01\.04\.2018\-31\.08\.2018
-**Partner:**mittag\.at
+**Runtime:**01.04.2018-31.08.2018
+**Partner:**mittag.at
 **Funding:**Easy2Research

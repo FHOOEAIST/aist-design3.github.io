@@ -16,4 +16,4 @@ category: unknown
 
 ## Kohärenzprüfung von Umfragen
 
-Ziel der Projektkooperation mit Redem ist zu untersuchen, wie die Kohärenz aller Antworten eines Umfrageteilnehmers in einer quantitativen Erhebung automatisiert geprüft werden kann\. Durch die Analyse aller Frage\-Antwort\-Kombinationen im Gesamtkontext soll geprüft werden, ob ein Interview kohärent bzw\. glaubwürdig ist und mit einem Score zwischen 0 und 100 bewertet werden\.
+Ziel der Projektkooperation mit Redem ist zu untersuchen, wie die Kohärenz aller Antworten eines Umfrageteilnehmers in einer quantitativen Erhebung automatisiert geprüft werden kann. Durch die Analyse aller Frage-Antwort-Kombinationen im Gesamtkontext soll geprüft werden, ob ein Interview kohärent bzw. glaubwürdig ist und mit einem Score zwischen 0 und 100 bewertet werden.

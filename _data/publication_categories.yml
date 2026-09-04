@@ -1,0 +1,53 @@
+# Research categories used by _publications/{de,en}/*.md via their `categories:`
+# list, and rendered by _includes/publication-filter.html (dropdown) and
+# _includes/publication-list.html (badges).
+#
+# A publication may carry several ids. Adding a category here plus assigning it
+# in the affected publications is all that is needed — nothing else hard-codes
+# the list. The order below is the order shown in the dropdown.
+#
+#   id       — the value written into a publication's `categories:` list
+#   label_*  — full name, used in the filter dropdown
+#   short_*  — abbreviated name, used for the badges on each entry
+
+- id: ehealth
+  label_de: eHealth & Medizininformatik
+  label_en: eHealth & Medical Informatics
+  short_de: eHealth
+  short_en: eHealth
+
+- id: cv
+  label_de: Computer Vision & Bildverarbeitung
+  label_en: Computer Vision & Image Processing
+  short_de: Computer Vision
+  short_en: Computer Vision
+
+- id: ml
+  label_de: Machine Learning & Data Science
+  label_en: Machine Learning & Data Science
+  short_de: Machine Learning
+  short_en: Machine Learning
+
+- id: se
+  label_de: Software Engineering
+  label_en: Software Engineering
+  short_de: Software Engineering
+  short_en: Software Engineering
+
+- id: pm
+  label_de: Process Mining & Prozessanalyse
+  label_en: Process Mining & Process Analytics
+  short_de: Process Mining
+  short_en: Process Mining
+
+- id: geo
+  label_de: Fernerkundung, UAV & Geodaten
+  label_en: Remote Sensing, UAV & Geospatial
+  short_de: Fernerkundung & UAV
+  short_en: Remote Sensing & UAV
+
+- id: xr
+  label_de: Augmented & Virtual Reality
+  label_en: Augmented & Virtual Reality
+  short_de: AR & VR
+  short_en: AR & VR

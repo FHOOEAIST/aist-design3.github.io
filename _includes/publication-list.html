@@ -1,0 +1,92 @@
+{% comment %}
+Publications grouped by year, newest first. Expects:
+  include.lang — "de" or "en"
+
+Each entry exposes its `categories:` list as a space-separated `data-categories`
+attribute for the filter in _includes/publication-filter.html, and repeats them
+as badges that double as a shortcut into that category.
+{% endcomment %}
+
+{% assign cats = site.data.publication_categories %}
+{% assign pubs = site.publications | where: "lang", include.lang | sort: "date" | reverse %}
+
+{% if include.lang == "de" %}
+    {% assign t_filter_by = "Nach Kategorie filtern" %}
+{% else %}
+    {% assign t_filter_by = "Filter by category" %}
+{% endif %}
+
+<div class="listing-items">
+    {% assign year = "" %}
+    {% for pub in pubs %}
+    {% assign pub_year = pub.date | date: "%Y" %}
+    {% if pub_year != year %}
+    <h2 class="mt-3 year-heading" data-year="{{ pub_year }}">{{ pub_year }}</h2>
+    {% assign year = pub_year %}
+    {% endif %}
+    <div
+        class="listing-item publication-entry collapsible"
+        data-categories="{{ pub.categories | join: ' ' }}"
+    >
+        {% assign anchor = pub.permalink | slugify %}
+        <h3 class="listing-title" id="{{ anchor }}">
+            <button
+                type="button"
+                class="listing-toggle"
+                aria-controls="{{ anchor }}-content"
+            >
+                <span class="listing-toggle-text">{{ pub.title }}</span>
+                <span class="listing-toggle-icon" aria-hidden="true">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+            </button>
+        </h3>
+        {% if pub.categories.size > 0 %}
+        <p class="publication-categories">
+            {%- for id in pub.categories -%}
+            {%- for cat in cats -%}
+            {%- if cat.id == id -%}
+            {%- if include.lang == "de" -%}
+            {%- assign short = cat.short_de -%}{%- assign full = cat.label_de -%}
+            {%- else -%}
+            {%- assign short = cat.short_en -%}{%- assign full = cat.label_en -%}
+            {%- endif -%}
+            <button
+                type="button"
+                class="publication-category"
+                data-category="{{ cat.id }}"
+                title="{{ t_filter_by }}: {{ full | escape }}"
+            >{{ short | escape }}</button>
+            {% endif -%}
+            {%- endfor -%}
+            {%- endfor -%}
+        </p>
+        {% endif %}
+        <div class="listing-content" id="{{ anchor }}-content">
+            {% if pub.reference %}
+            <p class="publication-meta">{{ pub.reference }}</p>
+            {% endif %} {% if pub.doi %}
+            <p class="publication-links">
+                <strong>DOI:</strong>
+                <a
+                    href="{{ pub.doi }}"
+                    class="doi-link"
+                    target="_blank"
+                    rel="noopener"
+                    >{{ pub.doi | remove: "https://doi.org/" }}</a
+                >
+            </p>
+            {% endif %} {% if pub.external_url %}
+            <p class="publication-links">
+                <strong>Link:</strong>
+                <a href="{{ pub.external_url }}" target="_blank" rel="noopener"
+                    >{{ pub.external_url }}</a
+                >
+            </p>
+            {% endif %} {% if pub.content and pub.content != "" %}
+            <div class="publication-abstract">{{ pub.content }}</div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

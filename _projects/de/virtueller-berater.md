@@ -16,4 +16,4 @@ category: cv
 
 ## Virtueller Berater
 
-Gemeinsam entwickeln und evaluieren wir Algorithmen für ein Werkzeug, das auf spielerische Art und Weise das Investitionsverhalten von Usern analysiert, personalisierte Empfehlungen gibt und gleichzeitig als Kommunikationsplattform dient\. User bekommen so mithilfe von intelligenten Algorithmen zur richtigen Zeit in höchstem Maße personalisierte Empfehlungen für die richtigen Bank\- und Versicherungsprodukte\.
+Gemeinsam entwickeln und evaluieren wir Algorithmen für ein Werkzeug, das auf spielerische Art und Weise das Investitionsverhalten von Usern analysiert, personalisierte Empfehlungen gibt und gleichzeitig als Kommunikationsplattform dient. User bekommen so mithilfe von intelligenten Algorithmen zur richtigen Zeit in höchstem Maße personalisierte Empfehlungen für die richtigen Bank- und Versicherungsprodukte.

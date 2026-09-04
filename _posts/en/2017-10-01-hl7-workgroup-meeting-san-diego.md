@@ -7,11 +7,11 @@ title_image: /assets/images/news/HL7_Arbeitsgruppentreffen_San_Diego_title.jpg
 
 ---
 
-Reinhard Egelkraut from [Compu Group Medical Austria](http://www.cgm.com/us/index.en.jsp) and [Andreas Schuler](http://ehealth.fh-hagenberg.at/index.php/team/) attended the September Work Group Meeting \(WGM\) of HL7 for our Project [KIMBO](http://ehealth.fh-hagenberg.at/index.php/projekte/)\. A big thank you to [HL7 Austria](http://www.hl7.at/) for sponsoring Andreass attendance\.
+Reinhard Egelkraut from [Compu Group Medical Austria](http://www.cgm.com/us/index.en.jsp) and [Andreas Schuler](http://ehealth.fh-hagenberg.at/index.php/team/) attended the September Work Group Meeting (WGM) of HL7 for our Project [KIMBO](http://ehealth.fh-hagenberg.at/index.php/projekte/). A big thank you to [HL7 Austria](http://www.hl7.at/) for sponsoring Andreass attendance.
 
-At the Connecthaton Reinhard and Andreas participated in the Security and Workflow tracks, evaluating the results achieved in the project so far\.
+At the Connecthaton Reinhard and Andreas participated in the Security and Workflow tracks, evaluating the results achieved in the project so far.
 
-We are looking forward to the next Connectathon and Workgroup Meeting in New Orleans – USA\.
+We are looking forward to the next Connectathon and Workgroup Meeting in New Orleans – USA.
 
 ## Gallery
 

@@ -16,4 +16,4 @@ category: ehealth
 
 ## Lica Ried
 
-Ziel des Projektes ist, die in den Grundfunktionen vorhandenen Applikationen Lica und prototypisch definierte Workflows in der Praxis zu testen und zu verbessern\. Dafür machen wir eine Region mit Versorgungspartnern auf allen Ebenen \(zu Hause, mobile Pflege/Therapie, primäres und sekundäres Gesundheitswesen\) zu einem ‚Living Lab‘\. In diesem werden alle beteiligten Partner in eine e\-Health/Care Infrastruktur eingebunden, um das Funktionieren oder Nichtfunktionieren einer effektiveren und effizienteren Versorgung verifizieren zu können\.
+Ziel des Projektes ist, die in den Grundfunktionen vorhandenen Applikationen Lica und prototypisch definierte Workflows in der Praxis zu testen und zu verbessern. Dafür machen wir eine Region mit Versorgungspartnern auf allen Ebenen (zu Hause, mobile Pflege/Therapie, primäres und sekundäres Gesundheitswesen) zu einem ‚Living Lab‘. In diesem werden alle beteiligten Partner in eine e-Health/Care Infrastruktur eingebunden, um das Funktionieren oder Nichtfunktionieren einer effektiveren und effizienteren Versorgung verifizieren zu können.

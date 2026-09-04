@@ -16,4 +16,4 @@ category: ehealth
 
 ## Lica Ried
 
-The aim of the project is to test and improve the applications Lica and prototypically defined workflows in practice\. For this purpose, a region with care partners at all levels \(home, mobile care/therapy, primary and secondary healthcare\) is made a ‘Living Lab’\. In this, all partners involved will be integrated into an e\-health/care infrastructure to be able to verify the functioning or non\-functioning of more effective and efficient care\.
+The aim of the project is to test and improve the applications Lica and prototypically defined workflows in practice. For this purpose, a region with care partners at all levels (home, mobile care/therapy, primary and secondary healthcare) is made a ‘Living Lab’. In this, all partners involved will be integrated into an e-health/care infrastructure to be able to verify the functioning or non-functioning of more effective and efficient care.

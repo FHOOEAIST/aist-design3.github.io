@@ -7,9 +7,9 @@ title_image: /assets/images/news/Besuch_bei_RedBull_in_Elsbethen_title.jpg
 
 ---
 
-Die Mitarbeiter David Baumgartner, Emmanuel Helm, Andreas Pointner, Christoph Praschl, Simone Sandler und Eva\-Maria Spitzer, sowie Studenten des Data Science and Enginieering Studiengangs um FH\-Prof\. Gerald Lirk wurden von RedBull nach Elsbethen eingeladen\. Dabei durften die Beteiligten alles rund um Process Mining, Data Science, Machine Learning und Computer Vision bei RedBull kennenlernen\.
+Die Mitarbeiter David Baumgartner, Emmanuel Helm, Andreas Pointner, Christoph Praschl, Simone Sandler und Eva-Maria Spitzer, sowie Studenten des Data Science and Enginieering Studiengangs um FH-Prof. Gerald Lirk wurden von RedBull nach Elsbethen eingeladen. Dabei durften die Beteiligten alles rund um Process Mining, Data Science, Machine Learning und Computer Vision bei RedBull kennenlernen.
 
-Vielen Dank für die Einladung an RedBull insbesondere an Markus Buchmann, Christian Stoxreiter, Antonio Rosato und Michael Haslauer für die tollen Vorträge\.
+Vielen Dank für die Einladung an RedBull insbesondere an Markus Buchmann, Christian Stoxreiter, Antonio Rosato und Michael Haslauer für die tollen Vorträge.
 
 ## Gallery
 

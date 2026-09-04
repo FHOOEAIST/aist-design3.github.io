@@ -16,4 +16,4 @@ category: unknown
 
 ## Project Credi2
 
-Goal of this project is the automatisation of online\-identifications using a videostream\. During the project, different imaging methods and face validation frameworks are tested and evaluated\. The different safety features of passports are investigated and methods implemented, to determine if a certain features is present or not\. Main aspect of this project is the secure identification and different techniques are used to identify if the user attempts to deceive the system\.
+Goal of this project is the automatisation of online-identifications using a videostream. During the project, different imaging methods and face validation frameworks are tested and evaluated. The different safety features of passports are investigated and methods implemented, to determine if a certain features is present or not. Main aspect of this project is the secure identification and different techniques are used to identify if the user attempts to deceive the system.

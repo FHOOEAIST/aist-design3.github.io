@@ -17,4 +17,4 @@ category: ml
 
 ## Big Power Data
 
-The Big Power Data project deals with the high\-performance management of time series data in the context of the energy industry for further processing using machine models\. For this purpose, the use of novel NewSQL databases is evaluated, which ensure the persistence of the high\-frequency data sets used\.
+The Big Power Data project deals with the high-performance management of time series data in the context of the energy industry for further processing using machine models. For this purpose, the use of novel NewSQL databases is evaluated, which ensure the persistence of the high-frequency data sets used.

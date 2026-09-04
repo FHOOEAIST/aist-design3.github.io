@@ -7,11 +7,11 @@ title_image: /assets/images/news/AIST_Team_Event_2026_title.jpg
 
 ---
 
-Das diesjährige AIST\-Teamevent bot eine erfrischende Abwechslung\. Anstelle unserer traditionellen Bogenschießaktion haben wir uns zum ersten Mal gemeinsam auf die Bowlingbahn begeben\. Die Veranstaltung bot eine großartige Gelegenheit, Zeit als Team zu verbringen, gemeinsam Spaß zu haben und unsere Erfolge zu feiern\.
+Das diesjährige AIST-Teamevent bot eine erfrischende Abwechslung. Anstelle unserer traditionellen Bogenschießaktion haben wir uns zum ersten Mal gemeinsam auf die Bowlingbahn begeben. Die Veranstaltung bot eine großartige Gelegenheit, Zeit als Team zu verbringen, gemeinsam Spaß zu haben und unsere Erfolge zu feiern.
 
-Mit dieser Veranstaltung wollten wir auch all unseren Mitarbeitern und derzeitigen Praktikanten unseren aufrichtigen Dank für ihren Einsatz, ihr Engagement und ihre hervorragende Arbeit während des ganzen Jahres aussprechen\. Und auch wenn einige der Bilder etwas anderes vermuten lassen mögen, niemand wurde während der Veranstaltung verletzt\! 😀
+Mit dieser Veranstaltung wollten wir auch all unseren Mitarbeitern und derzeitigen Praktikanten unseren aufrichtigen Dank für ihren Einsatz, ihr Engagement und ihre hervorragende Arbeit während des ganzen Jahres aussprechen. Und auch wenn einige der Bilder etwas anderes vermuten lassen mögen, niemand wurde während der Veranstaltung verletzt! 😀
 
-Vielen Dank an euch alle, dass ihr ein so wichtiger Teil des AIST\-Teams seid\!
+Vielen Dank an euch alle, dass ihr ein so wichtiger Teil des AIST-Teams seid!
 
 ## Gallery
 

@@ -7,9 +7,9 @@ title_image: /assets/images/news/Forschungsbrunch_@_Softwarepark_title.jpg
 
 ---
 
-A series of events was launched at Softwarepark Hagenberg as the “Research Brunch”, which is intended to bring business and research partners closer together\. Within the framework of this event, there were several presentations in the context of R&D projects on the part of FH Oberösterreich, RISC, SCCH and JKU\. Gerald Zwettler and Christoph Praschl were allowed to present cooperation possibilities with the AIST research group using the research project [MOVE](https://aist.fh-hagenberg.at/index.php/en/projects/move) as an example\.
+A series of events was launched at Softwarepark Hagenberg as the “Research Brunch”, which is intended to bring business and research partners closer together. Within the framework of this event, there were several presentations in the context of R&D projects on the part of FH Oberösterreich, RISC, SCCH and JKU. Gerald Zwettler and Christoph Praschl were allowed to present cooperation possibilities with the AIST research group using the research project [MOVE](https://aist.fh-hagenberg.at/index.php/en/projects/move) as an example.
 
-We would like to take this opportunity to thank all participants for the interesting presentations and the discussions during the first “Research Brunch”\.
+We would like to take this opportunity to thank all participants for the interesting presentations and the discussions during the first “Research Brunch”.
 
    
 

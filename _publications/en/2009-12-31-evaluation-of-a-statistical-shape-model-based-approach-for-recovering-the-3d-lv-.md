@@ -5,11 +5,9 @@ permalink: /publications/evaluation-of-a-statistical-shape-model-based-approach-
 date: 2009-12-31
 title: Evaluation of a Statistical Shape Model Based Approach for Recovering the
   3D LV Shape from Projective X-Ray Images
-reference: >-
-  Proceedings of 21st European Modeling and Simulation Symposium EMSS 2009,
-  Tenerife, Spanien, 2009, pp\. 154\-160
-
-  R\. Swoboda, G\. Zwettler, J\. Scharinger, C\. Steinwender, F\. Leisch
-category: cv
+reference: Swoboda R., Zwettler G., Scharinger J., Steinwender C., Leisch F. Proceedings
+  of 21st European Modeling and Simulation Symposium EMSS 2009, Tenerife, Spanien,
+  2009, pp. 154-160.
+categories: [ehealth, cv]
 ---
 

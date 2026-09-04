@@ -7,13 +7,13 @@ title_image: /assets/images/news/Fortschritte_im_eHealth-Bereich_Ein_Bericht_von
 
 ---
 
-We’re thrilled to announce that Oliver, Elisabeth, and Andreas recently visited Goce Delchev University Shtip to discuss potential collaborations in eHealth and healthcare security\. The visit was a fantastic opportunity to explore innovative solutions and establish new partnerships in these critical fields\.
+We’re thrilled to announce that Oliver, Elisabeth, and Andreas recently visited Goce Delchev University Shtip to discuss potential collaborations in eHealth and healthcare security. The visit was a fantastic opportunity to explore innovative solutions and establish new partnerships in these critical fields.
 
-The team engaged in productive conversations about integrating advanced eHealth systems and enhancing the security of healthcare data\. With a shared vision for improving patient care through technology, the discussions were both promising and inspiring\.
+The team engaged in productive conversations about integrating advanced eHealth systems and enhancing the security of healthcare data. With a shared vision for improving patient care through technology, the discussions were both promising and inspiring.
 
-Amidst the productive meetings, there was also some time for sightseeing, allowing our colleagues to experience the beauty of Shtip and enjoy the local culture\.
+Amidst the productive meetings, there was also some time for sightseeing, allowing our colleagues to experience the beauty of Shtip and enjoy the local culture.
 
-We’re excited about the future possibilities and look forward to sharing more updates as these discussions develop into concrete projects\. Stay tuned for more news on our collaborative efforts\!
+We’re excited about the future possibilities and look forward to sharing more updates as these discussions develop into concrete projects. Stay tuned for more news on our collaborative efforts!
 
 ## Gallery
 

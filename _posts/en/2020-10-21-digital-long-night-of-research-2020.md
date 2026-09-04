@@ -7,4 +7,4 @@ title_image: /assets/images/news/Digitale_Lange_Nacht_der_Forschung_2020_title.p
 
 ---
 
-During the Long Night of Research 2020, which took place digitally this year due to the current Covid\-19 pandemic, some colleagues from the research group were allowed to give insights into the everyday life of a research employee\.
+During the Long Night of Research 2020, which took place digitally this year due to the current Covid-19 pandemic, some colleagues from the research group were allowed to give insights into the everyday life of a research employee.

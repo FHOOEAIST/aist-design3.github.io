@@ -16,4 +16,4 @@ category: cv
 
 ## Virtual Advisor
 
-Together, we are developing and evaluating algorithms for a tool that analyses the investment behaviour of users in a playful way, provides personalised recommendations and serves as a communication platform at the same time\. With the help of intelligent algorithms, users receive highly personalised recommendations for the right banking and insurance products at the right time\.
+Together, we are developing and evaluating algorithms for a tool that analyses the investment behaviour of users in a playful way, provides personalised recommendations and serves as a communication platform at the same time. With the help of intelligent algorithms, users receive highly personalised recommendations for the right banking and insurance products at the right time.
