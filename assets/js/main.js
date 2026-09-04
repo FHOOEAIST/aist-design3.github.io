@@ -614,6 +614,123 @@
     }
   }
 
+  /* ----------------------------------------------------------- hero mosaic */
+  // Home page, "tiles" design: the photo tiles of the hero mosaic fade to a
+  // random other picture from the pool in data-mosaic (JSON, built from
+  // _data/home_mosaic.yml) every few seconds. A tile never shows a picture
+  // another tile is showing. Each photo tile holds two <img> layers: the
+  // next picture loads into the hidden one, is faded in on top, and the old
+  // one stays underneath (.is-behind) until the fade is over. Paused while
+  // the tab is hidden, the mosaic is scrolled out of view, or the visitor
+  // prefers reduced motion.
+  function initMosaic() {
+    var mosaic = document.querySelector(".tile-mosaic[data-mosaic]");
+    if (!mosaic) return;
+
+    var pool;
+    try {
+      pool = JSON.parse(mosaic.getAttribute("data-mosaic"));
+    } catch (e) {
+      return;
+    }
+    var tiles = Array.prototype.slice.call(mosaic.querySelectorAll(".tile-photo"));
+    if (!pool || !tiles.length || pool.length <= tiles.length) return;
+
+    var reduce = window.matchMedia
+      ? window.matchMedia("(prefers-reduced-motion: reduce)")
+      : { matches: false };
+    var inView = true;
+    var timer = null;
+    var FADE_MS = 1300;
+    var MIN_WAIT = 3500;
+    var EXTRA_WAIT = 4000;
+
+    function schedule() {
+      clearTimeout(timer);
+      timer = setTimeout(swap, MIN_WAIT + Math.random() * EXTRA_WAIT);
+    }
+
+    function shownIndexes() {
+      return tiles.map(function (tile) {
+        return parseInt(tile.getAttribute("data-index"), 10);
+      });
+    }
+
+    function swap() {
+      if (document.hidden || !inView || reduce.matches) {
+        schedule();
+        return;
+      }
+
+      var tile = tiles[Math.floor(Math.random() * tiles.length)];
+      if (tile.getAttribute("data-busy")) {
+        schedule();
+        return;
+      }
+      var used = shownIndexes();
+      var candidates = [];
+      for (var i = 0; i < pool.length; i++) {
+        if (used.indexOf(i) < 0) candidates.push(i);
+      }
+      if (!candidates.length) {
+        schedule();
+        return;
+      }
+      var next = candidates[Math.floor(Math.random() * candidates.length)];
+      var entry = pool[next];
+      var front = tile.querySelector("img.is-front");
+      var back = tile.querySelector("img:not(.is-front)");
+      if (!front || !back) return;
+
+      tile.setAttribute("data-busy", "1");
+      back.style.objectPosition = entry.position || "";
+
+      function show() {
+        back.onload = back.onerror = null;
+        if (entry.url) tile.setAttribute("href", entry.url);
+        if (entry.title) {
+          tile.setAttribute("title", entry.title);
+          tile.setAttribute("aria-label", entry.title);
+        }
+        tile.setAttribute("data-index", String(next));
+        front.classList.remove("is-front");
+        front.classList.add("is-behind");
+        // let the browser paint the stacked state before the fade starts
+        requestAnimationFrame(function () {
+          back.classList.add("is-front");
+        });
+        setTimeout(function () {
+          front.classList.remove("is-behind");
+          front.removeAttribute("src");
+          tile.removeAttribute("data-busy");
+        }, FADE_MS);
+        schedule();
+      }
+
+      function fail() {
+        back.onload = back.onerror = null;
+        tile.removeAttribute("data-busy");
+        schedule();
+      }
+
+      back.onload = show;
+      back.onerror = fail;
+      back.src = entry.image;
+      if (back.complete && back.naturalWidth) show();
+    }
+
+    if (window.IntersectionObserver) {
+      new IntersectionObserver(function (entries) {
+        inView = entries[0].isIntersecting;
+      }).observe(mosaic);
+    }
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) schedule();
+    });
+
+    schedule();
+  }
+
   /* --------------------------------------------------------------- boot */
   function boot() {
     initHeader();
@@ -622,6 +739,7 @@
     initProjectFilter();
     initListingFilter();
     initHeroWaves();
+    initMosaic();
   }
 
   if (document.readyState === "loading") {

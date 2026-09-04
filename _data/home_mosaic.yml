@@ -1,0 +1,18 @@
+# Photo pool for the hero mosaic of the "tiles" design (site_design: tiles).
+#
+# Each entry names a news post by its page_id; the tile shows the post's
+# title_image and links to the post in the current language. The first three
+# entries are rendered on page load, afterwards the tiles fade to a random
+# other picture from the pool every few seconds (initMosaic in main.js).
+#
+#   page_id   the post's page_id (shared by the DE and EN versions)
+#   image     optional: use this image instead of the post's title_image
+#   position  optional: CSS object-position for the square crop, e.g.
+#             "left center" to keep something at the left edge in view
+- page_id: news:dem-wetter-trotzend
+- page_id: news:iceccme-2023
+- page_id: news:weihnachtsfeier-2023
+  position: left center   # keeps the "Merry Christmas" banner in the square crop
+- page_id: news:frohe-weihnachten-2024
+- page_id: news:zeit-fuer-einen-abschied
+- page_id: news:i3m-2023

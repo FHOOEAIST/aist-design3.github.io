@@ -1,6 +1,7 @@
 {% comment %}
 Home page, "tiles" design (site_design: tiles in _config.yml): light layout in
-the style of fh-ooe.at with a mosaic of square tiles in the hero. English
+the style of fh-ooe.at with a mosaic of square tiles in the hero (photo
+pool: _data/home_mosaic.yml, cycling: initMosaic in assets/js/main.js). English
 version; tiles-de.html is the German twin. Styles: assets/css/home-tiles.css.
 {% endcomment %}
 {% assign projects_page = site.pages | where: "page_id", "projects-index" | where: "lang", "en" | first %}
@@ -16,11 +17,23 @@ version; tiles-de.html is the German twin. Styles: assets/css/home-tiles.css.
 {% assign n_theses = site.theses | where: "lang", "en" | size %}
 {% assign n_team = site.data.team.members | size %}
 
-{% comment %} photo tiles: the newest posts that carry a title image {% endcomment %}
-{% assign photo_posts = site.posts | where: "lang", "en" | where_exp: "p", "p.title_image" %}
-{% assign photo_1 = photo_posts[0] %}
-{% assign photo_2 = photo_posts[1] %}
-{% assign photo_3 = photo_posts[2] %}
+{% comment %}
+Photo pool for the mosaic from _data/home_mosaic.yml: the first three entries
+are rendered, the whole pool goes into data-mosaic for the cycling in main.js.
+{% endcomment %}
+{% assign mosaic_pool = "" | split: "" %}
+{% for entry in site.data.home_mosaic %}
+  {% assign mpost = site.posts | where: "page_id", entry.page_id | where: "lang", "en" | first %}
+  {% assign mimage = entry.image | default: mpost.title_image %}
+  {% if mimage %}
+    {% assign mtitle = mpost.title | default: "" %}
+    {% assign murl = mpost.url | default: "" %}
+    {% assign mposition = entry.position | default: "" %}
+    {% capture mitem %}{{ mimage | relative_url }}|{{ murl | relative_url }}|{{ mposition }}|{{ mtitle }}{% endcapture %}
+    {% assign mosaic_pool = mosaic_pool | push: mitem %}
+  {% endif %}
+{% endfor %}
+{% capture mosaic_json %}[{% for mitem in mosaic_pool %}{% assign mparts = mitem | split: "|" %}{% unless forloop.first %},{% endunless %}{"image":{{ mparts[0] | jsonify }},"url":{{ mparts[1] | jsonify }},"position":{{ mparts[2] | jsonify }},"title":{{ mparts[3] | jsonify }}}{% endfor %}]{% endcapture %}
 
 <section class="tiles-hero">
   <div class="container">
@@ -37,32 +50,38 @@ version; tiles-de.html is the German twin. Styles: assets/css/home-tiles.css.
         </div>
       </div>
 
-      <div class="tile-mosaic" aria-label="Recent pictures from the research group" data-pagefind-ignore>
-        <span class="tile tile-solid tile-sky" style="--i: 1" aria-hidden="true"></span>
-        {% if photo_1 %}
-        <a class="tile tile-photo" style="--i: 2" href="{{ photo_1.url | relative_url }}" title="{{ photo_1.title | escape }}">
-          <img src="{{ photo_1.title_image | relative_url }}" alt="{{ photo_1.title | escape }}" loading="eager">
+      <div class="tile-mosaic" aria-label="Group pictures from the research group" data-mosaic="{{ mosaic_json | escape }}" data-pagefind-ignore>
+        <span class="tile tile-solid tile-light" style="--i: 1" aria-hidden="true"></span>
+        {% assign mparts = mosaic_pool[0] | split: "|" %}
+        {% if mparts[0] %}
+        <a class="tile tile-photo" style="--i: 2" data-index="0" href="{{ mparts[1] }}" aria-label="{{ mparts[3] | escape }}" title="{{ mparts[3] | escape }}">
+          <img class="is-front" src="{{ mparts[0] }}" alt=""{% if mparts[2] != "" %} style="object-position: {{ mparts[2] }}"{% endif %} loading="eager">
+          <img alt="" aria-hidden="true">
         </a>
         {% else %}
-        <span class="tile tile-solid tile-primary" style="--i: 2" aria-hidden="true"></span>
+        <span class="tile tile-solid tile-blue" style="--i: 2" aria-hidden="true"></span>
         {% endif %}
-        <span class="tile tile-solid tile-navy" style="--i: 3" aria-hidden="true"></span>
-        {% if photo_2 %}
-        <a class="tile tile-photo" style="--i: 4" href="{{ photo_2.url | relative_url }}" title="{{ photo_2.title | escape }}">
-          <img src="{{ photo_2.title_image | relative_url }}" alt="{{ photo_2.title | escape }}" loading="eager">
+        <span class="tile tile-solid tile-blue" style="--i: 3" aria-hidden="true"></span>
+        {% assign mparts = mosaic_pool[1] | split: "|" %}
+        {% if mparts[0] %}
+        <a class="tile tile-photo" style="--i: 4" data-index="1" href="{{ mparts[1] }}" aria-label="{{ mparts[3] | escape }}" title="{{ mparts[3] | escape }}">
+          <img class="is-front" src="{{ mparts[0] }}" alt=""{% if mparts[2] != "" %} style="object-position: {{ mparts[2] }}"{% endif %} loading="eager">
+          <img alt="" aria-hidden="true">
         </a>
         {% else %}
-        <span class="tile tile-solid tile-sky" style="--i: 4" aria-hidden="true"></span>
+        <span class="tile tile-solid tile-blue" style="--i: 4" aria-hidden="true"></span>
         {% endif %}
-        {% if photo_3 %}
-        <a class="tile tile-photo" style="--i: 5" href="{{ photo_3.url | relative_url }}" title="{{ photo_3.title | escape }}">
-          <img src="{{ photo_3.title_image | relative_url }}" alt="{{ photo_3.title | escape }}" loading="eager">
+        {% assign mparts = mosaic_pool[2] | split: "|" %}
+        {% if mparts[0] %}
+        <a class="tile tile-photo" style="--i: 5" data-index="2" href="{{ mparts[1] }}" aria-label="{{ mparts[3] | escape }}" title="{{ mparts[3] | escape }}">
+          <img class="is-front" src="{{ mparts[0] }}" alt=""{% if mparts[2] != "" %} style="object-position: {{ mparts[2] }}"{% endif %} loading="eager">
+          <img alt="" aria-hidden="true">
         </a>
         {% else %}
-        <span class="tile tile-solid tile-navy" style="--i: 5" aria-hidden="true"></span>
+        <span class="tile tile-solid tile-blue" style="--i: 5" aria-hidden="true"></span>
         {% endif %}
-        <span class="tile tile-solid tile-primary" style="--i: 6" aria-hidden="true"></span>
-        <span class="tile tile-solid tile-light" style="--i: 7" aria-hidden="true"></span>
+        <span class="tile tile-solid tile-mid" style="--i: 6" aria-hidden="true"></span>
+        <span class="tile tile-solid tile-sky" style="--i: 7" aria-hidden="true"></span>
       </div>
     </div>
   </div>
@@ -227,8 +246,8 @@ version; tiles-de.html is the German twin. Styles: assets/css/home-tiles.css.
         <p>Interested in a cooperation, a joint research project or a thesis within the scope of our research? We look forward to hearing from you.</p>
       </div>
       <div class="tiles-hero-actions">
-        <a class="btn btn-light" href="{{ contact_page.permalink | relative_url }}">Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-        <a class="btn btn-ghost-light" href="{{ theses_page.permalink | relative_url }}">Theses</a>
+        <a class="btn" href="{{ contact_page.permalink | relative_url }}">Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn-outline" href="{{ theses_page.permalink | relative_url }}">Theses</a>
       </div>
     </div>
   </div>

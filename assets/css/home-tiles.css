@@ -38,9 +38,10 @@
 
 /* The mosaic: square tiles on a 5 × 4 grid, stepping down from the top
    right to the bottom left like the header image on fh-ooe.at. Three
-   photo tiles (the newest posts with a title image) carry the picture,
-   four flat colour squares and the white gaps give the cluster its rhythm.
-   No text lives in the tiles; the research areas follow right below. */
+   photo tiles show group pictures from the pool in _data/home_mosaic.yml
+   and fade to another one every few seconds (initMosaic in main.js); four
+   flat squares in the AIST blue and its tints plus the white gaps give the
+   cluster its rhythm. No text lives in the tiles. */
 .tile-mosaic {
   --tile-gap: 10px;
   display: grid;
@@ -63,29 +64,48 @@
 }
 
 /* explicit placement (row-start / col-start / row-end / col-end) */
-.tile:nth-child(1) { grid-area: 1 / 3 / 2 / 4; }   /* sky           */
+.tile:nth-child(1) { grid-area: 1 / 3 / 2 / 4; }   /* light blue    */
 .tile:nth-child(2) { grid-area: 1 / 4 / 3 / 6; }   /* photo 1  2×2  */
-.tile:nth-child(3) { grid-area: 2 / 3 / 3 / 4; }   /* navy          */
+.tile:nth-child(3) { grid-area: 2 / 3 / 3 / 4; }   /* AIST blue     */
 .tile:nth-child(4) { grid-area: 3 / 2 / 5 / 4; }   /* photo 2  2×2  */
 .tile:nth-child(5) { grid-area: 3 / 4 / 4 / 5; }   /* photo 3       */
-.tile:nth-child(6) { grid-area: 4 / 4 / 5 / 5; }   /* primary       */
-.tile:nth-child(7) { grid-area: 4 / 1 / 5 / 2; }   /* light         */
+.tile:nth-child(6) { grid-area: 4 / 4 / 5 / 5; }   /* mid blue      */
+.tile:nth-child(7) { grid-area: 4 / 1 / 5 / 2; }   /* sky           */
 
-.tile-navy { background: var(--navy-900); }
-.tile-primary { background: var(--color-primary); }
-.tile-sky { background: var(--color-primary-light); }
-.tile-light { background: var(--sky-100); }
+.tile-blue { background: var(--color-primary); }
+.tile-mid { background: var(--color-primary-500); }
+.tile-light { background: var(--color-primary-light); }
+.tile-sky { background: var(--sky-200); }
 
+/* Photo tiles hold two stacked images: the visible one (.is-front) and a
+   spare that main.js loads the next picture into. The incoming picture
+   fades in on top of the current one, which stays underneath (.is-behind)
+   until the fade is over, so no background ever shows through. */
 .tile-photo {
-  background: var(--color-bg-muted);
+  background: var(--sky-100);
 }
 
 .tile-photo img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s var(--ease);
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 1.2s ease, transform 0.6s var(--ease);
+}
+
+.tile-photo img.is-front {
+  opacity: 1;
+  z-index: 2;
+}
+
+.tile-photo img.is-behind {
+  opacity: 1;
+  z-index: 1;
+  transition: none;
 }
 
 .tile-photo:hover img,
@@ -165,6 +185,7 @@
 }
 
 .area-tile {
+  /* one palette for all three areas: the AIST blue and its tints */
   --area-color: var(--color-primary);
   --area-soft: var(--sky-100);
   display: flex;
@@ -180,10 +201,6 @@
 .area-tile:hover {
   border-color: var(--area-color);
 }
-
-.area-tile[data-area="ehealth"] { --area-color: var(--area-ehealth); --area-soft: var(--area-ehealth-soft); }
-.area-tile[data-area="ml"] { --area-color: var(--area-ml); --area-soft: var(--area-ml-soft); }
-.area-tile[data-area="cv"] { --area-color: var(--area-cv); --area-soft: var(--area-cv-soft); }
 
 .area-tile-icon {
   display: inline-flex;
@@ -278,7 +295,7 @@
   gap: 0.2rem;
   aspect-ratio: 1;
   padding: 1.1rem;
-  background: var(--navy-900);
+  background: var(--color-primary);
   color: var(--color-white);
   text-decoration: none;
   transition: background-color 0.2s var(--ease);
@@ -341,8 +358,8 @@
   position: relative;
   overflow: hidden;
   padding: 4.5rem 0;
-  background: var(--navy-900);
-  color: var(--color-white);
+  background: var(--sky-100);
+  color: var(--color-text);
 }
 
 .tiles-cta .container {
@@ -357,23 +374,14 @@
   align-items: center;
 }
 
-.tiles-cta .eyebrow {
-  color: var(--color-primary-light);
-}
-
-.tiles-cta .eyebrow::before {
-  background: var(--color-primary-light);
-}
-
 .tiles-cta h2 {
-  color: var(--color-white);
+  color: var(--color-primary);
   margin-bottom: 0.5rem;
 }
 
 .tiles-cta p:last-child {
   margin: 0;
   max-width: 60ch;
-  color: rgba(255, 255, 255, 0.8);
 }
 
 .tiles-cta .tiles-hero-actions {
@@ -396,10 +404,10 @@
   display: block;
 }
 
-.tiles-cta-deco i:nth-child(1) { grid-area: 1 / 3; background: rgba(110, 193, 228, 0.22); }
-.tiles-cta-deco i:nth-child(2) { grid-area: 2 / 2; background: rgba(47, 116, 181, 0.55); }
-.tiles-cta-deco i:nth-child(3) { grid-area: 2 / 3; background: rgba(110, 193, 228, 0.5); }
-.tiles-cta-deco i:nth-child(4) { grid-area: 3 / 1; background: rgba(255, 255, 255, 0.1); }
+.tiles-cta-deco i:nth-child(1) { grid-area: 1 / 3; background: var(--sky-200); }
+.tiles-cta-deco i:nth-child(2) { grid-area: 2 / 2; background: var(--color-primary); }
+.tiles-cta-deco i:nth-child(3) { grid-area: 2 / 3; background: var(--color-primary-light); }
+.tiles-cta-deco i:nth-child(4) { grid-area: 3 / 1; background: var(--color-white); }
 
 /* ------------------------------------------------------------ responsive */
 @media (max-width: 1024px) {
