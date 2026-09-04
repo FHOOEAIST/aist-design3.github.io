@@ -1,7 +1,7 @@
 {% comment %}
 Filter bar for the year-grouped listings (publications, theses). Expects:
   include.lang — "de" or "en"
-  include.kind — "publications" (category + year) or "theses" (year + type)
+  include.kind — "publications" (category + year) or "theses" (category + year + type)
 
 Each control is an ARIA listbox (the native <select> cannot style its open
 menu). Options and counts are generated here, so the taxonomy in
@@ -48,7 +48,6 @@ values are mirrored into the hash as `#cat=...&year=...`.
 {% endif %}
 
 <div class="cat-filter" data-listing-filter data-results-template="{{ t_results }}">
-    {% if include.kind != "theses" %}
     <span class="cat-filter-label" id="filterLabel-cat">{{ t_cat }}</span>
     <div class="cat-filter-control" data-filter-key="cat">
         <button
@@ -79,7 +78,6 @@ values are mirrored into the hash as `#cat=...&year=...`.
             {% endfor %}
         </ul>
     </div>
-    {% endif %}
 
     <span class="cat-filter-label" id="filterLabel-year">{{ t_year }}</span>
     <div class="cat-filter-control cat-filter-control--compact" data-filter-key="year">

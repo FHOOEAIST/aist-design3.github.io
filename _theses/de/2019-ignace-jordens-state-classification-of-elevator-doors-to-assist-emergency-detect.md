@@ -7,6 +7,7 @@ title: State classification of elevator doors to assist emergency detection in
   elevator networks
 student: Ignace Jordens
 thesis_type: bachelor
+categories: [cv, ml]
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-eden
 ---
 

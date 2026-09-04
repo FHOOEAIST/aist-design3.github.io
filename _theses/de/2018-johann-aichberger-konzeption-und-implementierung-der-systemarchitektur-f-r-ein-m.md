@@ -7,6 +7,7 @@ title: Konzeption und Implementierung der Systemarchitektur für ein Mixed
   Reality-Brettspiel
 student: Johann Aichberger
 thesis_type: bachelor
+categories: [xr, se]
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-rudy-games
 ---
 

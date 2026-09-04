@@ -7,6 +7,7 @@ title: Influence of depth data on the performance of instance segmentation
   utilizing Mask R-CNN and RGB-D images
 student: Lukas Reithmeier
 thesis_type: bachelor
+categories: [cv, ml]
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-eden
 ---
 

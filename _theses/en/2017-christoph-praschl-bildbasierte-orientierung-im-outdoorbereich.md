@@ -6,6 +6,7 @@ date: 2017-12-31
 title: Image-based Outdoor Orientation
 student: Christoph Praschl
 thesis_type: bachelor
+categories: [cv, xr]
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-formelracing
 ---
 

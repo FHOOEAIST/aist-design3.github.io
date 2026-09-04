@@ -6,6 +6,7 @@ date: 2018-12-31
 title: Analysen von Bauplänen
 student: Lukas Reithmeier
 thesis_type: bachelor
+categories: [cv, ml]
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-aicher
 ---
 

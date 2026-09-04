@@ -7,6 +7,7 @@ title: Implementierung des IHE MHD-Profils und Integration in ein bestehendes
   System des Gesundheitswesens
 student: Anna Lackerbauer
 thesis_type: bachelor
+categories: [ehealth]
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-cgm-clinical
 ---
 

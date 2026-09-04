@@ -6,6 +6,7 @@ date: 2019-12-31
 title: Self-optimization of the emergency detection in elevator networks
 student: David Baumgartner
 thesis_type: master
+categories: [ml]
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-eden
 ---
 

@@ -190,7 +190,7 @@ counts, filter behaviour) and
 entries and badges), so `publications.html` and `publications-en.html` stay in sync.
 
 ## Theses
-Bachelor/Master theses and dissertations, shown grouped by year and filterable by year and type.
+Bachelor/Master theses and dissertations, shown grouped by year and filterable by research category, year and type. Categories use the same taxonomy as the publications ([`_data/publication_categories.yml`](_data/publication_categories.yml)) and appear as badges on each entry.
 
 - **Location:** `_theses/{de,en}/YYYY-student-title.md`
 
@@ -203,6 +203,7 @@ date: 2023-12-31
 title: Process Mining im Radiologiebereich
 student: Andreas Erhard
 thesis_type: master  # bachelor | master | dissertation -- shown as a label and used by the type filter
+categories: [pm, ehealth]  # ids from _data/publication_categories.yml, usually one or two
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/pica  # optional
 ---
 

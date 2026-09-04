@@ -6,6 +6,7 @@ date: 2025-12-31
 title: Generative Methoden für Vierkanal-Luftbildaufnahmen zur Wildtierüberwachung
 student: Michael Würflinger
 thesis_type: bachelor
+categories: [geo, cv, ml]
 ---
 
 Die Wildtierüberwachung mittels Drohnentechnologie bietet wertvolle Einblicke in Tierpopulationen und deren Lebensräume. Da Drohnenflüge jedoch zeitintensiv und kostspielig sind, zielt diese Bachelorarbeit darauf ab, die zugrunde liegende Datenbasis mithilfe von Bildgeneratoren künstlich zu erweitern. Aufgrund der 4 verwendeten Kanäle (3 für RGB, 1 für Thermal) wurde auf ein vortrainiertes Modell verzichtet, da Modelle aus dem Stand der Technik typischerweise nur bis zu 3 Kanäle unterstützen. Somit musste eine bestehende Architektur auf 4 Kanäle erweitert werden. CompVis latent-diffusion wurde aufgrund seiner hervorragenden Bildqualität und seiner Fähigkeit zur Generierung vielfältiger Bildinhalte ausgewählt.

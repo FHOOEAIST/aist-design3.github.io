@@ -7,6 +7,7 @@ title: "Digital documentation of nursing services: Analysis of fields of action
   and terminology systems"
 student: Clara Diesenreiter
 thesis_type: bachelor
+categories: [ehealth]
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/pica
 ---
 

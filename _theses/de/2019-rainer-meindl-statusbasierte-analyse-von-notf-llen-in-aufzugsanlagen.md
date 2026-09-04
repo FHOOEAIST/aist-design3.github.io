@@ -6,6 +6,7 @@ date: 2019-12-31
 title: Statusbasierte Analyse von Notfällen in Aufzugsanlagen
 student: Rainer Meindl
 thesis_type: master
+categories: [ml]
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-eden
 ---
 

@@ -7,6 +7,7 @@ title: An Exploratory Approach for Finding Similarities Within Heterogeneous
   Data Sets of Small and Medium-Sized Enterprises
 student: Eva-Maria Spitzer
 thesis_type: master
+categories: [ml]
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-kimiku
 ---
 

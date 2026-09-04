@@ -11,6 +11,8 @@ page_id: theses-index
 
 <div class="container">
   {% include listing-filter.html lang=page.lang kind="theses" %}
+  {% assign cats = site.data.publication_categories %}
+  {% assign t_filter_by = "Filter by category" %}
   <div class="listing-items">
     {% assign en_theses = site.theses | where: "lang", "en" | sort: "date" | reverse %}
     {% assign year = "" %}
@@ -20,7 +22,7 @@ page_id: theses-index
       <h2 class="mt-3 year-heading">{{ thesis_year }}</h2>
       {% assign year = thesis_year %}
       {% endif %}
-      <div class="listing-item thesis-entry collapsible" data-year="{{ thesis_year }}" data-type="{{ thesis.thesis_type }}">
+      <div class="listing-item thesis-entry collapsible" data-year="{{ thesis_year }}" data-type="{{ thesis.thesis_type }}" data-categories="{{ thesis.categories | join: ' ' }}">
         {% assign anchor = thesis.permalink | slugify %}
         <h3 class="listing-title" id="{{ anchor }}">
           <button type="button" class="listing-toggle" aria-controls="{{ anchor }}-content">
@@ -29,6 +31,17 @@ page_id: theses-index
           </button>
         </h3>
         <p class="thesis-meta"><i class="fas fa-user-graduate" aria-hidden="true"></i> {{ thesis.student }}{% if thesis.thesis_type %}<span class="thesis-type thesis-type-{{ thesis.thesis_type }}">{% if thesis.thesis_type == "bachelor" %}Bachelor thesis{% elsif thesis.thesis_type == "master" %}Master thesis{% elsif thesis.thesis_type == "dissertation" %}Dissertation{% endif %}</span>{% endif %}</p>
+        {% if thesis.categories.size > 0 %}
+        <p class="publication-categories">
+          {%- for id in thesis.categories -%}
+          {%- for cat in cats -%}
+          {%- if cat.id == id -%}
+          <button type="button" class="publication-category" data-category="{{ cat.id }}" title="{{ t_filter_by }}: {{ cat.label_en | escape }}">{{ cat.short_en | escape }}</button>
+          {% endif -%}
+          {%- endfor -%}
+          {%- endfor -%}
+        </p>
+        {% endif %}
         <div class="listing-content" id="{{ anchor }}-content">
           {{ thesis.content }}
         </div>

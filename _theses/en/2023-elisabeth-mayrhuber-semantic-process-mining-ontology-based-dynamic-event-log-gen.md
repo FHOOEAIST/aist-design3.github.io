@@ -6,6 +6,7 @@ date: 2023-12-31
 title: "Semantic Process Mining: Ontology-based Dynamic Event Log Generation"
 student: Elisabeth Mayrhuber
 thesis_type: master
+categories: [pm]
 ---
 
 Analysing log data is a widely adopted technique in the industry known as Process Mining (PM) to assess the performance and development of systems. However, traditional analysis approaches often overlook the valuable semantic information that can be extracted from log data. By incorporating semantic metadata, provided by domain experts or extracted from the dataset itself, the quality of insights can be enhanced, offering new possibilities to draw meaningful conclusions from the data. This master’s thesis aims to create a semantic header from domain knowledge, represented as an ontology. The ontology will capture significant process semantics, including entities and relationships between features. By integrating this semantic header into event data, new opportunities for data analysis arise. The primary advantage lies in the ability to shift the perspective through which the data is analysed by creating a new event log with the same activities but with a different case identifier. This perspective shift enables, analysing a process from different objects, while still using familiar formats like eXtensible Event Stream (XES) without requiring complex data exchange protocols.

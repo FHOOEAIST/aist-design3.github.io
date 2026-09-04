@@ -6,6 +6,7 @@ date: 2025-12-31
 title: Generative Methods for Four-Channel Aerial Imagery for Wildlife Monitoring
 student: Michael Würflinger
 thesis_type: bachelor
+categories: [geo, cv, ml]
 ---
 
 Wildlife Monitoring using drone technology provides valuable insights into animal populations and also their habitats. Since drone flights are time consuming and need proper preparation, this Bachelor Thesis aims to expand existing Data artificial using image generation. It generates high quality data, that is also able to generate a diverse range of new images. As pretrained models use 3 channels instead of the required 4 channels (3 for RGB, 1 for thermal), the model was trained from scratch. This meant that an existing image generation model had to be extended to 4 channels.

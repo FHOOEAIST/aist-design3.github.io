@@ -7,6 +7,7 @@ title: Inter-institutional communication for health service providers using the
   existing Austrian e-health infrastructure
 student: Jacqueline Schwebach
 thesis_type: bachelor
+categories: [ehealth]
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-cas
 ---
 
