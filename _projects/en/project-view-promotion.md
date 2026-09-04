@@ -12,7 +12,7 @@ projects:
     laufzeitEnd: 31.12.2016
     partner: VIEW Promotion GmbH
     foerdergeber: FFG – Basic
-category: unknown
+category: ml
 ---
 
 ## ARISE – Advertisement Recommendation and Intelligent Scheduling for Elevators

@@ -11,7 +11,7 @@ projects:
     laufzeitEnd: 31.12.2021
     partner: Apro Kassensysteme GmbH
     foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
-category: unknown
+category: ml
 ---
 
 ## Projekt Voigas
