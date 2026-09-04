@@ -42,9 +42,8 @@
    (top-left corner above, bottom-right corner below), so the cluster steps
    from the top right to the bottom left like the header image on fh-ooe.at.
    The photos show group pictures from the pool in _data/home_mosaic.yml and
-   fade to another one every few seconds (initMosaic in main.js; one of the
-   small squares is the third photo tile); the flat squares use the AIST blue
-   and its tints. No text lives in the tiles. */
+   fade to another one every few seconds (initMosaic in main.js); the small
+   squares are flat colour only, the AIST blue and its tints. */
 .tile-mosaic {
   --tile-gap: 8px;
   display: grid;
@@ -72,9 +71,9 @@
 .tile:nth-child(3) { grid-area: 2 / 2 / 3 / 3; }   /* AIST blue   (top-left quadrant, bottom right) */
 .tile:nth-child(4) { grid-area: 2 / 1 / 3 / 2; }   /* sky         (top-left quadrant, bottom left)  */
 .tile:nth-child(5) { grid-area: 3 / 1 / 5 / 3; }   /* photo 2     (bottom-left quadrant)            */
-.tile:nth-child(6) { grid-area: 3 / 3 / 4 / 4; }   /* photo 3     (bottom-right quadrant, top left) */
-.tile:nth-child(7) { grid-area: 3 / 4 / 4 / 5; }   /* mid blue    (bottom-right quadrant, top right)*/
-.tile:nth-child(8) { grid-area: 4 / 3 / 5 / 4; }   /* light blue  (bottom-right quadrant, bottom left) */
+.tile:nth-child(6) { grid-area: 3 / 3 / 4 / 4; }   /* mid blue    (bottom-right quadrant, top left) */
+.tile:nth-child(7) { grid-area: 3 / 4 / 4 / 5; }   /* sky         (bottom-right quadrant, top right)*/
+.tile:nth-child(8) { grid-area: 4 / 3 / 5 / 4; }   /* AIST blue   (bottom-right quadrant, bottom left) */
 
 .tile-blue { background: var(--color-primary); }
 .tile-mid { background: var(--color-primary-500); }
