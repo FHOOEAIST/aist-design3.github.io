@@ -19,7 +19,11 @@ css: home
 {% assign n_theses = site.theses | where: "lang", "de" | size %}
 {% assign n_team = site.data.team.members | size %}
 
-<section class="home-hero">
+{% comment %} animated_header: small | thick | animated (see _config.yml) {% endcomment %}
+{% assign hero_mode = site.animated_header %}
+{% if hero_mode != 'small' and hero_mode != 'thick' %}{% assign hero_mode = 'animated' %}{% endif %}
+<section class="home-hero{% if hero_mode != 'small' %} home-hero-waves{% endif %}{% if hero_mode == 'animated' %} home-hero-animated{% endif %}">
+  {% if hero_mode != 'small' %}<span class="hero-glow" aria-hidden="true"></span>{% endif %}
   <div class="container">
     <div class="hero-grid">
       <div class="hero-copy">

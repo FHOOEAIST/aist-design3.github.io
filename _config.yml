@@ -8,6 +8,13 @@ twitter_handle: "@FHOOEAIST"
 og_image: "/assets/images/footer/aist-logo.png"
 theme_color: "#ffffff"
 
+# Home-page hero background:
+#   small     the thin static wave tile
+#   thick     the thick wave strokes and the soft light, standing still
+#   animated  the thick strokes drifting in from the right and the light
+#             wandering (canvas, see initHeroWaves in assets/js/main.js)
+animated_header: animated
+
 permalink: /:year/:month/:day/:title:output_ext
 
 languages: ["de", "en"]

@@ -14,16 +14,32 @@
     linear-gradient(160deg, var(--navy-800) 0%, var(--navy-900) 55%, var(--navy-950) 100%);
 }
 
-/* Wave motif borrowed from the logo: a CSS-tiled SVG. The tile is one full
-   period (240px) of a wave made of two cubic curves whose end tangents match,
-   so the vertical repeat is continuous. The path is drawn one period past
-   both tile edges and clipped by the viewBox: a stroke that merely *ends* at
-   the edge gets a butt cap perpendicular to its (diagonal) tangent, which
-   leaves a sub-pixel wedge at every seam. */
+/* Thick / animated background (`animated_header: thick | animated` in
+   _config.yml), drawn by initHeroWaves() in main.js: the logo's wave
+   strokes enter at the right edge, travel to the left while flowing
+   downward, and thin and fade out about 70% of the way across; `thick`
+   shows one still frame of that. The canvas is inserted by the script; a
+   soft light (.hero-glow, markup in index*.html) sits behind it on the
+   right and wanders when animated. */
+.hero-waves {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Small version (`animated_header: small`, and the no-JS fallback): the
+   wave motif as a thin CSS-tiled SVG. The tile is
+   one full period (240px) of a wave made of two cubic curves whose end
+   tangents match, so the vertical repeat is continuous. The path is drawn one
+   period past both tile edges and clipped by the viewBox: a stroke that merely
+   *ends* at the edge gets a butt cap perpendicular to its (diagonal) tangent,
+   which leaves a sub-pixel wedge at every seam. */
 .home-hero::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='240' viewBox='0 0 120 240'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.06' stroke-width='14'%3E%3Cpath d='M20 -240c20 40 20 80 0 120s-20 80 0 120 20 80 0 120-20 80 0 120 20 80 0 120-20 80 0 120'/%3E%3Cpath d='M80 -240c20 40 20 80 0 120s-20 80 0 120 20 80 0 120-20 80 0 120 20 80 0 120-20 80 0 120'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
@@ -32,8 +48,39 @@
   -webkit-mask-image: linear-gradient(90deg, transparent 35%, #000 100%);
 }
 
+.home-hero.has-waves::before {
+  display: none;
+}
+
+.hero-glow {
+  position: absolute;
+  z-index: 0;
+  top: -20%;
+  right: -10%;
+  width: min(60vw, 52rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(110, 193, 228, 0.32) 0%, rgba(110, 193, 228, 0.12) 35%, transparent 65%);
+  mix-blend-mode: screen;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero-animated .hero-glow {
+    animation: hero-glow 22s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+}
+
+@keyframes hero-glow {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-28%, 22%) scale(1.15); }
+  100% { transform: translate(-45%, -8%) scale(0.95); }
+}
+
 .home-hero .container {
   position: relative;
+  z-index: 1;
 }
 
 .hero-grid {

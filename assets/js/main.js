@@ -473,6 +473,139 @@
     apply();
   }
 
+  /* ----------------------------------------------------------- hero waves */
+  // Home-page hero background: the logo's wave stroke drawn on a canvas.
+  // Each wave enters at the right edge at full width, drifts to the left
+  // while its pattern flows downward, and thins and fades out after
+  // TRAVEL of the hero width. All waves share one wavelength and phase, so
+  // their crests line up across the band. The waves are laid out edge to
+  // edge with a constant GAP, so the spacing between strokes stays the same
+  // while they thin out (which means a wave slows down a little as it
+  // shrinks); as many waves are in flight, at evenly spaced stages of that
+  // life, as fit into that distance. The static CSS tile stays as the no-JS
+  // fallback and is hidden once the canvas is in place. Honours
+  // prefers-reduced-motion (one still frame) and stops drawing while the
+  // hero is scrolled out of view or the tab is hidden.
+  // `animated_header` in _config.yml picks the mode: the home-hero-waves
+  // class asks for the canvas at all (thick, animated), home-hero-animated
+  // for the motion; without both the static CSS tile stays (small).
+  function initHeroWaves() {
+    var hero = document.querySelector(".home-hero-waves");
+    if (!hero || !window.requestAnimationFrame) return;
+
+    var canvas = document.createElement("canvas");
+    canvas.className = "hero-waves";
+    canvas.setAttribute("aria-hidden", "true");
+    var ctx = canvas.getContext && canvas.getContext("2d");
+    if (!ctx) return;
+    hero.insertBefore(canvas, hero.firstChild);
+    hero.classList.add("has-waves");
+
+    var GAP = 36; // gap between neighbouring strokes
+    var LIFE = 40; // seconds from entering at the right edge until gone
+    var TRAVEL = 0.7; // share of the hero width a wave crosses before it is gone
+    var PERIOD = 480; // wave length in px (the logo tile has 240)
+    var AMP = 20; // horizontal swing of a full-size stroke
+    var STROKE = 150; // width of a freshly entered stroke
+    var ALPHA = 0.07; // opacity of a freshly entered stroke
+    var FLOW = PERIOD / 16; // downward drift, px per second (one period per 16 s)
+    var MIN_SCALE = 0.12; // share of STROKE a wave has thinned to when it vanishes
+    var STILL_AT = LIFE * 0.37; // moment shown as the reduced-motion still frame
+
+    var W = 0;
+    var H = 0;
+    var count = 0; // waves in flight
+
+    function resize() {
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = hero.clientWidth;
+      H = hero.clientHeight;
+      // average stroke width over a wave's life plus the gap is the distance
+      // one wave occupies; fill TRAVEL of the width with them
+      count = Math.max(2, Math.round((TRAVEL * W) / ((STROKE * (1 + MIN_SCALE)) / 2 + GAP)));
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function strokeWave(cx, phase) {
+      var step = PERIOD / 32;
+      ctx.beginPath();
+      for (var y = -step; y <= H + step; y += step) {
+        var x = cx + AMP * Math.sin(((y - phase) * 2 * Math.PI) / PERIOD);
+        if (y === -step) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+
+    function draw(t) {
+      ctx.clearRect(0, 0, W, H);
+      ctx.strokeStyle = "#fff";
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      var phase = (t * FLOW) % PERIOD;
+      for (var i = 0; i < count; i++) {
+        var p = (t / LIFE + i / count) % 1; // 0 = entering at the right, 1 = gone
+        var scale = 1 - (1 - MIN_SCALE) * p;
+        var alpha = ALPHA * (1 - p);
+        if (alpha <= 0.002) continue;
+        // distance travelled so far: the widths and gaps of every stage
+        // already passed (integral of stroke width + gap over p)
+        var dist = count * ((STROKE + GAP) * p - (STROKE * (1 - MIN_SCALE) * p * p) / 2);
+        var cx = W + STROKE / 2 + AMP - dist;
+        ctx.globalAlpha = alpha;
+        ctx.lineWidth = STROKE * scale;
+        strokeWave(cx, phase);
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    var reduce = window.matchMedia
+      ? window.matchMedia("(prefers-reduced-motion: reduce)")
+      : { matches: false };
+    var inView = true;
+    var running = false;
+    var raf = 0;
+    var start = 0;
+
+    function frame(now) {
+      if (!start) start = now;
+      draw((now - start) / 1000);
+      raf = window.requestAnimationFrame(frame);
+    }
+
+    function update() {
+      var animated = hero.classList.contains("home-hero-animated");
+      var shouldRun = animated && inView && !document.hidden && !reduce.matches;
+      if (shouldRun && !running) {
+        running = true;
+        raf = window.requestAnimationFrame(frame);
+      } else if (!shouldRun && running) {
+        running = false;
+        window.cancelAnimationFrame(raf);
+      }
+      if (!running) draw(STILL_AT);
+    }
+
+    resize();
+    update();
+
+    window.addEventListener("resize", function () {
+      resize();
+      update();
+    });
+    document.addEventListener("visibilitychange", update);
+    if (reduce.addEventListener) reduce.addEventListener("change", update);
+    else if (reduce.addListener) reduce.addListener(update);
+    if (window.IntersectionObserver) {
+      new IntersectionObserver(function (entries) {
+        inView = entries[0].isIntersecting;
+        update();
+      }).observe(hero);
+    }
+  }
+
   /* --------------------------------------------------------------- boot */
   function boot() {
     initHeader();
@@ -480,6 +613,7 @@
     initGalleries();
     initProjectFilter();
     initListingFilter();
+    initHeroWaves();
   }
 
   if (document.readyState === "loading") {
