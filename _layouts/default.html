@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.active_lang }}">
+<html lang="{{ site.active_lang }}"{% if site.site_design == 'tiles' %} class="design-tiles"{% endif %}>
     <head>
         {% assign meta_image = page.title_image | default: page.logo | default: page.background | default: site.og_image %}
         {% assign meta_description = page.excerpt | strip_html | strip_newlines | truncate: 200 | escape %}
@@ -62,6 +62,12 @@
             href="{{ page.css | prepend: '/assets/css/' | append: '.css' | relative_url }}"
         />
         {% endif %}
+        {% if site.site_design == 'tiles' %}
+        <link rel="stylesheet" href="{{ '/assets/css/theme-tiles.css' | relative_url }}" />
+        {% if page.page_id == 'home' %}
+        <link rel="stylesheet" href="{{ '/assets/css/home-tiles.css' | relative_url }}" />
+        {% endif %}
+        {% endif %}
 
         <!-- Search -->
         <pagefind-config bundle-path="{{ '/pagefind/' | relative_url }}"></pagefind-config>
@@ -87,7 +93,7 @@
         />
         {% endfor %}
         <script>
-            document.documentElement.className = "js";
+            document.documentElement.classList.add("js");
         </script>
         <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
     </head>
@@ -104,7 +110,7 @@
         <header class="site-header">
             <div class="container">
                 <a class="brand" href="{{ '/' | relative_url }}" aria-label="AIST – {{ t_home }}">
-                    <img class="brand-logo" src="{{ '/assets/images/aist-logo.svg' | relative_url }}" alt="AIST Logo">
+                    {% if site.site_design == 'tiles' %}{% include aist-logo-mark.html %}{% else %}<img class="brand-logo" src="{{ '/assets/images/aist-logo.svg' | relative_url }}" alt="AIST Logo">{% endif %}
                     <span class="brand-text">
                         <span>Advanced Information Systems and Technology</span>
                         <span>{% if site.active_lang == 'en' %}Research Group · University of Applied Sciences Upper Austria{% else %}Forschungsgruppe · FH Oberösterreich{% endif %}</span>

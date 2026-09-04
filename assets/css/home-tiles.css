@@ -1,0 +1,540 @@
+/* ==========================================================================
+   Home page, "tiles" design (site_design: tiles in _config.yml)
+   Markup: _includes/home/tiles-{de,en}.html. Loaded after theme-tiles.css on
+   the home page only; the carousel styles come from home.css.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------- hero */
+.tiles-hero {
+  padding: 4.5rem 0 0;
+  background: var(--color-white);
+}
+
+.tiles-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 4rem;
+  align-items: center;
+}
+
+.tiles-hero-copy h1 {
+  margin-bottom: 1.25rem;
+  line-height: 1.05;
+}
+
+.tiles-hero-lead {
+  max-width: 56ch;
+  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.tiles-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* The mosaic: a 4 × 4 grid of squares like the header image on fh-ooe.at.
+   Two photo tiles span 2 × 2, three tiles link to the research areas,
+   the rest are flat colour blocks; the top-left cell stays empty so the
+   block reads as a staggered cluster rather than a filled rectangle. */
+.tile-mosaic {
+  --tile-gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  gap: var(--tile-gap);
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 34rem;
+  margin-left: auto;
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* explicit placement */
+.tile:nth-child(1) { grid-area: 1 / 2 / 2 / 3; }   /* navy   */
+.tile:nth-child(2) { grid-area: 1 / 3 / 3 / 5; }   /* photo  2×2 */
+.tile:nth-child(3) { grid-area: 2 / 1 / 3 / 2; }   /* sky    */
+.tile:nth-child(4) { grid-area: 2 / 2 / 3 / 3; }   /* eHealth */
+.tile:nth-child(5) { grid-area: 3 / 1 / 5 / 3; }   /* photo  2×2 */
+.tile:nth-child(6) { grid-area: 3 / 3 / 4 / 4; }   /* ML     */
+.tile:nth-child(7) { grid-area: 3 / 4 / 4 / 5; }   /* brand  */
+.tile:nth-child(8) { grid-area: 4 / 3 / 5 / 4; }   /* photo  */
+.tile:nth-child(9) { grid-area: 4 / 4 / 5 / 5; }   /* CV     */
+
+.tile-navy { background: var(--navy-900); }
+.tile-primary { background: var(--color-primary); }
+.tile-sky { background: var(--sky-200); }
+
+.tile-brand {
+  background: var(--color-primary-500);
+}
+
+.tile-brand img {
+  width: 70%;
+  height: auto;
+}
+
+.tile-photo {
+  background: var(--color-bg-muted);
+}
+
+.tile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease);
+}
+
+.tile-photo:hover img,
+.tile-photo:focus-visible img {
+  transform: scale(1.06);
+}
+
+.tile-area {
+  --area-color: var(--color-primary);
+  --area-soft: var(--sky-100);
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.5rem;
+  background: var(--area-soft);
+  color: var(--color-heading);
+  text-align: center;
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.tile-area[data-area="ehealth"] { --area-color: var(--area-ehealth); --area-soft: var(--area-ehealth-soft); }
+.tile-area[data-area="ml"] { --area-color: var(--area-ml); --area-soft: var(--area-ml-soft); }
+.tile-area[data-area="cv"] { --area-color: var(--area-cv); --area-soft: var(--area-cv-soft); }
+
+.tile-area img {
+  width: 46%;
+  height: auto;
+  max-height: 50%;
+  object-fit: contain;
+}
+
+.tile-area span {
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+.tile-area:hover,
+.tile-area:focus-visible {
+  background: var(--area-color);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.tile-area:hover img,
+.tile-area:focus-visible img {
+  filter: brightness(0) invert(1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tile {
+    opacity: 0;
+    transform: scale(0.85);
+    animation: tile-in 0.55s var(--ease) forwards;
+    animation-delay: calc(var(--i, 0) * 60ms);
+  }
+}
+
+@keyframes tile-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* numbers strip: four cells separated by hairlines */
+.tiles-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 3.5rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.tiles-stats li + li {
+  border-left: 1px solid var(--color-line);
+}
+
+.tiles-stats a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1.5rem 1.5rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.2s var(--ease);
+}
+
+.tiles-stats a:hover,
+.tiles-stats a:focus-visible {
+  background: var(--color-bg-light);
+  text-decoration: none;
+}
+
+.tiles-stats .stat-value {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.tiles-stats .stat-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
+
+/* ------------------------------------------------------- research areas */
+.area-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.area-tile {
+  --area-color: var(--color-primary);
+  --area-soft: var(--sky-100);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.75rem 1.75rem 1.5rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-top: 5px solid var(--area-color);
+  transition: border-color 0.2s var(--ease);
+}
+
+.area-tile:hover {
+  border-color: var(--area-color);
+}
+
+.area-tile[data-area="ehealth"] { --area-color: var(--area-ehealth); --area-soft: var(--area-ehealth-soft); }
+.area-tile[data-area="ml"] { --area-color: var(--area-ml); --area-soft: var(--area-ml-soft); }
+.area-tile[data-area="cv"] { --area-color: var(--area-cv); --area-soft: var(--area-cv-soft); }
+
+.area-tile-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-bottom: 1.25rem;
+  background: var(--area-soft);
+}
+
+.area-tile-icon img {
+  width: 3.25rem;
+  height: 3.25rem;
+  object-fit: contain;
+}
+
+.area-tile h2 {
+  font-size: 1.35rem;
+  margin: 0 0 0.75rem;
+}
+
+.area-tile > p {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.area-tile em {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+}
+
+.area-tile .carousel {
+  margin-top: 0.25rem;
+}
+
+.area-tile .carousel-viewport {
+  border-radius: 0;
+  border: 1px solid var(--color-line);
+  background: var(--color-bg-light);
+}
+
+.area-tile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-line);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--area-color);
+}
+
+.area-tile-link i {
+  font-size: 0.8em;
+  transition: transform 0.2s var(--ease);
+}
+
+.area-tile-link:hover {
+  color: var(--area-color);
+  text-decoration: none;
+}
+
+.area-tile-link:hover i {
+  transform: translateX(3px);
+}
+
+/* -------------------------------------------------------------- news */
+.tiles-news-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* -------------------------------------------------------- quick tiles */
+.quick-tiles {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quick-tiles a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.2rem;
+  aspect-ratio: 1;
+  padding: 1.1rem;
+  background: var(--navy-900);
+  color: var(--color-white);
+  text-decoration: none;
+  transition: background-color 0.2s var(--ease);
+}
+
+.quick-tiles a:hover,
+.quick-tiles a:focus-visible {
+  background: var(--color-primary-500);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.quick-tiles a > i {
+  position: absolute;
+  top: 1.1rem;
+  left: 1.1rem;
+  font-size: 1.5rem;
+  color: var(--color-primary-light);
+  transition: color 0.2s var(--ease);
+}
+
+.quick-tiles a:hover > i,
+.quick-tiles a:focus-visible > i {
+  color: var(--color-white);
+}
+
+.quick-tiles a::after {
+  content: "\f061";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  transition: transform 0.2s var(--ease), opacity 0.2s var(--ease);
+}
+
+.quick-tiles a:hover::after,
+.quick-tiles a:focus-visible::after {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.quick-tiles span {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.quick-tiles small {
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ------------------------------------------------------------ cta band */
+.tiles-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 0;
+  background: var(--navy-900);
+  color: var(--color-white);
+}
+
+.tiles-cta .container {
+  position: relative;
+  z-index: 1;
+}
+
+.tiles-cta-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.tiles-cta .eyebrow {
+  color: var(--color-primary-light);
+}
+
+.tiles-cta .eyebrow::before {
+  background: var(--color-primary-light);
+}
+
+.tiles-cta h2 {
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.tiles-cta p:last-child {
+  margin: 0;
+  max-width: 60ch;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tiles-cta .tiles-hero-actions {
+  justify-content: flex-end;
+}
+
+/* a small cluster of squares echoing the hero mosaic */
+.tiles-cta-deco {
+  position: absolute;
+  right: -1rem;
+  bottom: -1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 4.5rem);
+  grid-template-rows: repeat(3, 4.5rem);
+  gap: 8px;
+  pointer-events: none;
+}
+
+.tiles-cta-deco i {
+  display: block;
+}
+
+.tiles-cta-deco i:nth-child(1) { grid-area: 1 / 3; background: rgba(110, 193, 228, 0.22); }
+.tiles-cta-deco i:nth-child(2) { grid-area: 2 / 2; background: rgba(47, 116, 181, 0.55); }
+.tiles-cta-deco i:nth-child(3) { grid-area: 2 / 3; background: rgba(110, 193, 228, 0.5); }
+.tiles-cta-deco i:nth-child(4) { grid-area: 3 / 1; background: rgba(255, 255, 255, 0.1); }
+
+/* ------------------------------------------------------------ responsive */
+@media (max-width: 1024px) {
+  .tiles-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .tile-mosaic {
+    margin-left: 0;
+    max-width: 30rem;
+  }
+
+  .area-tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .tiles-news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quick-tiles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tiles-cta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tiles-cta .tiles-hero-actions {
+    justify-content: flex-start;
+  }
+
+  .tiles-cta-deco {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 640px) {
+  .tiles-hero {
+    padding-top: 2.5rem;
+  }
+
+  .tile-mosaic {
+    --tile-gap: 6px;
+    max-width: none;
+  }
+
+  .tile-area span {
+    font-size: 0.6rem;
+  }
+
+  .tiles-stats {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2.5rem;
+  }
+
+  .tiles-stats li:nth-child(3) {
+    border-left: none;
+  }
+
+  .tiles-stats li:nth-child(n + 3) {
+    border-top: 1px solid var(--color-line);
+  }
+
+  .tiles-stats a {
+    padding: 1.1rem 1rem;
+  }
+
+  .tiles-stats .stat-value {
+    font-size: 1.9rem;
+  }
+
+  .tiles-news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tiles-cta {
+    padding: 3rem 0;
+  }
+}

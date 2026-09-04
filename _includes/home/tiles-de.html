@@ -1,0 +1,248 @@
+{% comment %}
+Home page, "tiles" design (site_design: tiles in _config.yml): light layout in
+the style of fh-ooe.at with a mosaic of square tiles in the hero. German
+version; tiles-en.html is the English twin. Styles: assets/css/home-tiles.css.
+{% endcomment %}
+{% assign projects_page = site.pages | where: "page_id", "projects-index" | where: "lang", "de" | first %}
+{% assign pubs_page = site.pages | where: "page_id", "publications-index" | where: "lang", "de" | first %}
+{% assign theses_page = site.pages | where: "page_id", "theses-index" | where: "lang", "de" | first %}
+{% assign team_page = site.pages | where: "page_id", "team" | where: "lang", "de" | first %}
+{% assign news_page = site.pages | where: "page_id", "news" | where: "lang", "de" | first %}
+{% assign contact_page = site.pages | where: "page_id", "contact" | where: "lang", "de" | first %}
+{% assign history_page = site.pages | where: "page_id", "history" | where: "lang", "de" | first %}
+
+{% assign n_projects = site.projects | where: "lang", "de" | size %}
+{% assign n_pubs = site.publications | where: "lang", "de" | size %}
+{% assign n_theses = site.theses | where: "lang", "de" | size %}
+{% assign n_team = site.data.team.members | size %}
+
+{% comment %} photo tiles: the newest posts that carry a title image {% endcomment %}
+{% assign photo_posts = site.posts | where: "lang", "de" | where_exp: "p", "p.title_image" %}
+{% assign photo_1 = photo_posts[0] %}
+{% assign photo_2 = photo_posts[1] %}
+{% assign photo_3 = photo_posts[2] %}
+
+<section class="tiles-hero">
+  <div class="container">
+    <div class="tiles-hero-grid">
+      <div class="tiles-hero-copy">
+        <p class="eyebrow">Forschungsgruppe · FH Oberösterreich, Campus Hagenberg</p>
+        <h1>Advanced Information Systems and&nbsp;Technology</h1>
+        <p class="tiles-hero-lead">
+          Die Forschungsgruppe „AIST – Advanced Information Systems and Technology" forscht an Softwarelösungen in den Bereichen eHealth, Machine Learning und Data Mining sowie Computer Vision.
+        </p>
+        <div class="tiles-hero-actions">
+          <a class="btn" href="{{ projects_page.permalink | relative_url }}">Projekte entdecken <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-outline" href="{{ pubs_page.permalink | relative_url }}">Publikationen</a>
+        </div>
+      </div>
+
+      <div class="tile-mosaic" aria-label="Forschungsschwerpunkte" data-pagefind-ignore>
+        <span class="tile tile-solid tile-navy" style="--i: 1" aria-hidden="true"></span>
+        {% if photo_1 %}
+        <a class="tile tile-photo tile-2x2" style="--i: 2" href="{{ photo_1.url | relative_url }}" title="{{ photo_1.title | escape }}">
+          <img src="{{ photo_1.title_image | relative_url }}" alt="{{ photo_1.title | escape }}" loading="eager">
+        </a>
+        {% else %}
+        <span class="tile tile-solid tile-primary tile-2x2" style="--i: 2" aria-hidden="true"></span>
+        {% endif %}
+        <span class="tile tile-solid tile-sky" style="--i: 3" aria-hidden="true"></span>
+        <a class="tile tile-area" style="--i: 4" href="#ehealth" data-area="ehealth">
+          <img src="{{ '/assets/images/index/ehealth.svg' | relative_url }}" alt="">
+          <span>eHealth</span>
+        </a>
+        {% if photo_2 %}
+        <a class="tile tile-photo tile-2x2" style="--i: 5" href="{{ photo_2.url | relative_url }}" title="{{ photo_2.title | escape }}">
+          <img src="{{ photo_2.title_image | relative_url }}" alt="{{ photo_2.title | escape }}" loading="eager">
+        </a>
+        {% else %}
+        <span class="tile tile-solid tile-navy tile-2x2" style="--i: 5" aria-hidden="true"></span>
+        {% endif %}
+        <a class="tile tile-area" style="--i: 6" href="#ml" data-area="ml">
+          <img src="{{ '/assets/images/index/machine-learning.svg' | relative_url }}" alt="">
+          <span>Machine Learning</span>
+        </a>
+        <span class="tile tile-brand" style="--i: 7" aria-hidden="true">
+          <img src="{{ '/assets/images/aist-logo.svg' | relative_url }}" alt="">
+        </span>
+        {% if photo_3 %}
+        <a class="tile tile-photo" style="--i: 8" href="{{ photo_3.url | relative_url }}" title="{{ photo_3.title | escape }}">
+          <img src="{{ photo_3.title_image | relative_url }}" alt="{{ photo_3.title | escape }}" loading="eager">
+        </a>
+        {% else %}
+        <span class="tile tile-solid tile-sky" style="--i: 8" aria-hidden="true"></span>
+        {% endif %}
+        <a class="tile tile-area" style="--i: 9" href="#cv" data-area="cv">
+          <img src="{{ '/assets/images/index/computervision.svg' | relative_url }}" alt="">
+          <span>Computer Vision</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <ul class="tiles-stats" data-pagefind-ignore>
+      <li><a href="{{ projects_page.permalink | relative_url }}"><span class="stat-value">{{ n_projects }}</span><span class="stat-label">Forschungsprojekte</span></a></li>
+      <li><a href="{{ pubs_page.permalink | relative_url }}"><span class="stat-value">{{ n_pubs }}</span><span class="stat-label">Publikationen</span></a></li>
+      <li><a href="{{ theses_page.permalink | relative_url }}"><span class="stat-value">{{ n_theses }}</span><span class="stat-label">Betreute Diplomarbeiten</span></a></li>
+      <li><a href="{{ team_page.permalink | relative_url }}"><span class="stat-value">{{ n_team }}</span><span class="stat-label">Teammitglieder</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="forschung">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Forschungsschwerpunkte</p>
+        <h2>Woran wir forschen</h2>
+      </div>
+      <a class="link-arrow" href="{{ projects_page.permalink | relative_url }}">Alle Projekte <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="area-tiles">
+      <div class="area-tile" id="ehealth" data-area="ehealth">
+        <div class="area-tile-icon">
+          <img src="{{ '/assets/images/index/ehealth.svg' | relative_url }}" alt="eHealth Icon" loading="lazy">
+        </div>
+        <h2>eHealth</h2>
+        <p>
+          Die IT-Unterstützung integrierter Versorgung („eHealth") ermöglicht die Definition, Analyse und Optimierung geeigneter Schnitt-/Nahtstellen, adäquater Versorgungsprozesse sowie leistbarer Geschäftsmodelle für qualitativ hochwertiges Care- und Case-Management im Gesundheitswesen. Das Ziel integrierter Versorgung ist die Bereitstellung umfassender, koordinierter und kontinuierlicher Dienstleistungen, die für einen nahtlosen Versorgungsprozess entlang des gesamten Versorgungskontinuums sorgen. <em>[nach Hagen Kühn, Wissenschaftszentrum Berlin]</em>
+        </p>
+        {% assign ehealth_projects = site.projects | where: 'lang', 'de' | where: 'category', 'ehealth' | sort: 'title' %}
+        {% if ehealth_projects.size > 0 %}
+        <div class="carousel" data-category="ehealth">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              {% for project in ehealth_projects %}
+                {% if project.logo %}
+                  <div class="carousel-slide">
+                    <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
+                      <img src="{{ project.logo | relative_url }}" alt="{{ project.title }}" loading="lazy">
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <a class="area-tile-link" href="{{ projects_page.permalink | relative_url }}#area=ehealth">{{ ehealth_projects.size }} Projekte ansehen <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        {% endif %}
+      </div>
+
+      <div class="area-tile" id="ml" data-area="ml">
+        <div class="area-tile-icon">
+          <img src="{{ '/assets/images/index/machine-learning.svg' | relative_url }}" alt="Machine Learning Icon" loading="lazy">
+        </div>
+        <h2>Machine Learning &amp; Data Mining</h2>
+        <p>
+          Der Fachbereich Machine Learning beschäftigt sich mit Algorithmen, welche automatisiert in der Lage sind, basierend auf Mustern in Daten ein domänenspezifisches Ergebnis zu finden. Dazu zählen Methoden zur Klassifikation und Identifikation von Subjekten in digitalen Informationen, welche zudem dazu imstande sind das eigene Ergebnis durch die Erweiterung der Datenlage stetig zu verbessern. Die Grundidee ist es Algorithmen nicht explizit beizubringen wie eine Aufgabe gelöst werden kann, sondern dies anhand von Trainingsdaten automatisiert zu erreichen.
+        </p>
+        {% assign ml_projects = site.projects | where: 'lang', 'de' | where: 'category', 'ml' | sort: 'title' %}
+        {% if ml_projects.size > 0 %}
+        <div class="carousel" data-category="ml">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              {% for project in ml_projects %}
+                {% if project.logo %}
+                  <div class="carousel-slide">
+                    <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
+                      <img src="{{ project.logo | relative_url }}" alt="{{ project.title }}" loading="lazy">
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <a class="area-tile-link" href="{{ projects_page.permalink | relative_url }}#area=ml">{{ ml_projects.size }} Projekte ansehen <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        {% endif %}
+      </div>
+
+      <div class="area-tile" id="cv" data-area="cv">
+        <div class="area-tile-icon">
+          <img src="{{ '/assets/images/index/computervision.svg' | relative_url }}" alt="Computer Vision Icon" loading="lazy">
+        </div>
+        <h2>Computer Vision</h2>
+        <p>
+          Computer Vision beschäftigt sich mit der Analyse von Bildinhalten und somit der Extraktion von semantischen Informationen. Ähnlich wie es dem Menschen möglich ist, sein Umfeld anhand von visuellen Eindrücken zu verstehen, versucht dieses Forschungsfeld eine vergleichbare Fähigkeit für digitale Systeme zu erschaffen. Etwa im Themenumfeld von Mixed Reality ist es notwendig Informationen aus der realen Welt mit digitalen Daten zu kombinieren. Hierfür müssen Bildinformationen zunächst erstellt, vorverarbeitet und im Anschluss analysiert werden.
+        </p>
+        {% assign cv_projects = site.projects | where: 'lang', 'de' | where: 'category', 'cv' | sort: 'title' %}
+        {% if cv_projects.size > 0 %}
+        <div class="carousel" data-category="cv">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              {% for project in cv_projects %}
+                {% if project.logo %}
+                  <div class="carousel-slide">
+                    <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
+                      <img src="{{ project.logo | relative_url }}" alt="{{ project.title }}" loading="lazy">
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <a class="area-tile-link" href="{{ projects_page.permalink | relative_url }}#area=cv">{{ cv_projects.size }} Projekte ansehen <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% assign latest_posts = site.posts | where: "lang", "de" %}
+{% if latest_posts.size > 0 %}
+<section class="section section-tint home-news" data-pagefind-ignore>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Aktuelles</p>
+        <h2>Neuigkeiten aus der Forschungsgruppe</h2>
+      </div>
+      <a class="link-arrow" href="{{ news_page.permalink | relative_url }}">Alle Neuigkeiten <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="news-grid tiles-news-grid">
+      {% for post in latest_posts limit: 3 %}
+        {% include news-card.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" data-pagefind-ignore>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Auf einen Blick</p>
+        <h2>Die Forschungsgruppe entdecken</h2>
+      </div>
+    </div>
+    <ul class="quick-tiles">
+      <li><a href="{{ team_page.permalink | relative_url }}"><i class="fas fa-people-group" aria-hidden="true"></i><span>Team</span><small>{{ n_team }} Mitglieder</small></a></li>
+      <li><a href="{{ pubs_page.permalink | relative_url }}"><i class="fas fa-book-open" aria-hidden="true"></i><span>Publikationen</span><small>{{ n_pubs }} Beiträge</small></a></li>
+      <li><a href="{{ theses_page.permalink | relative_url }}"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Diplomarbeiten</span><small>{{ n_theses }} betreute Arbeiten</small></a></li>
+      <li><a href="{{ history_page.permalink | relative_url }}"><i class="fas fa-clock-rotate-left" aria-hidden="true"></i><span>Geschichte</span><small>Von den Anfängen bis heute</small></a></li>
+      <li><a href="https://github.com/FHOOEAIST" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span>GitHub</span><small>Open-Source-Software</small></a></li>
+      <li><a href="{{ contact_page.permalink | relative_url }}"><i class="fas fa-envelope" aria-hidden="true"></i><span>Kontakt</span><small>Campus Hagenberg</small></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="tiles-cta" data-pagefind-ignore>
+  <span class="tiles-cta-deco" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  <div class="container">
+    <div class="tiles-cta-grid">
+      <div>
+        <p class="eyebrow">Kooperation</p>
+        <h2>Zusammenarbeit &amp; Diplomarbeiten</h2>
+        <p>Sie interessieren sich für eine Kooperation, ein gemeinsames Forschungsprojekt oder eine Diplomarbeit im Rahmen unserer Forschung? Wir freuen uns über Ihre Nachricht.</p>
+      </div>
+      <div class="tiles-hero-actions">
+        <a class="btn btn-light" href="{{ contact_page.permalink | relative_url }}">Kontakt aufnehmen <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn-ghost-light" href="{{ theses_page.permalink | relative_url }}">Diplomarbeiten</a>
+      </div>
+    </div>
+  </div>
+</section>

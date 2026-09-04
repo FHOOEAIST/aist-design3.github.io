@@ -1,0 +1,278 @@
+/* ==========================================================================
+   "Tiles" design (site_design: tiles in _config.yml)
+
+   Site-wide overrides that move the site towards the design language of
+   fh-ooe.at: a light, white page with a white header, square corners
+   everywhere, flat colour blocks instead of gradients, and a small square as
+   the eyebrow marker. Loaded after main.css on every page; the home page adds
+   home-tiles.css on top. Everything is scoped to html.design-tiles so the
+   original design is untouched when the switch is off.
+   ========================================================================== */
+
+html.design-tiles {
+  /* square corners everywhere */
+  --border-radius: 0;
+  --radius-sm: 0;
+  --radius-lg: 0;
+  --radius-pill: 0;
+
+  /* grotesk headings, tighter tracking */
+  --font-heading: var(--font-body);
+  --font-weight-heading: 700;
+
+  /* near-black text on white, as on the university site */
+  --color-heading: #101418;
+  --color-text: #2f3941;
+  --color-text-light: #5f6b78;
+  --color-bg-light: #f3f5f8;
+  --color-bg-muted: #e9edf2;
+
+  --shadow-lg: 0 16px 40px rgba(16, 20, 24, 0.12), 0 4px 12px rgba(16, 20, 24, 0.06);
+
+  background-color: var(--color-white);
+}
+
+html.design-tiles h1,
+html.design-tiles h2,
+html.design-tiles h3 {
+  letter-spacing: -0.03em;
+}
+
+html.design-tiles h1 {
+  font-size: clamp(2.2rem, 1.5rem + 2.4vw, 3.4rem);
+}
+
+/* eyebrow: square marker instead of the line */
+html.design-tiles .eyebrow {
+  color: var(--color-primary);
+  letter-spacing: 0.1em;
+}
+
+html.design-tiles .eyebrow::before {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 0;
+  background: var(--color-primary);
+}
+
+/* buttons: rectangular, arrow icons stay on the baseline */
+html.design-tiles .btn {
+  padding: 0.8rem 1.4rem;
+  border-width: 2px;
+}
+
+html.design-tiles .btn:hover,
+html.design-tiles .btn:focus-visible {
+  transform: none;
+  box-shadow: none;
+}
+
+html.design-tiles .btn-outline {
+  border-color: var(--color-primary);
+}
+
+html.design-tiles .btn i {
+  font-size: 0.85em;
+  transition: transform 0.2s var(--ease);
+}
+
+html.design-tiles .btn:hover i {
+  transform: translateX(3px);
+}
+
+html.design-tiles .link-arrow {
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Header: white bar, dark text, blue underline for the active item
+   -------------------------------------------------------------------------- */
+html.design-tiles .site-header {
+  background: var(--color-white);
+  color: var(--color-heading);
+  box-shadow: none;
+  border-bottom: 1px solid var(--color-line);
+}
+
+html.design-tiles .site-header.is-scrolled {
+  box-shadow: 0 6px 20px rgba(16, 20, 24, 0.08);
+}
+
+html.design-tiles .brand,
+html.design-tiles .brand:hover,
+html.design-tiles .brand:focus-visible {
+  color: var(--color-heading);
+}
+
+/* inline logo mark (_includes/aist-logo-mark.html), same box as the image */
+html.design-tiles .brand-logo-inline {
+  display: block;
+  height: 68px;
+  width: 124px;
+  margin: -8px 0;
+  color: var(--navy-900);
+}
+
+html.design-tiles .brand-text {
+  border-left-color: var(--color-line-strong);
+}
+
+html.design-tiles .brand-text span:last-child {
+  color: var(--color-text-light);
+}
+
+html.design-tiles .site-nav > a,
+html.design-tiles .nav-dropdown-toggle {
+  color: var(--color-text);
+  font-weight: 600;
+  border-radius: 0;
+}
+
+html.design-tiles .site-nav > a:hover,
+html.design-tiles .nav-dropdown-toggle:hover,
+html.design-tiles .nav-dropdown:focus-within .nav-dropdown-toggle {
+  background: var(--color-bg-light);
+  color: var(--color-heading);
+}
+
+html.design-tiles .site-nav > a.active,
+html.design-tiles .nav-dropdown-toggle.active {
+  color: var(--color-primary);
+  border-radius: 0;
+  box-shadow: inset 0 -3px 0 var(--color-primary);
+}
+
+html.design-tiles .nav-dropdown-menu {
+  border-radius: 0;
+  border-color: var(--color-line-strong);
+  box-shadow: 0 16px 40px rgba(16, 20, 24, 0.14);
+}
+
+html.design-tiles .nav-tools {
+  border-left-color: var(--color-line);
+}
+
+html.design-tiles .search-toggle {
+  border: 1px solid var(--color-line-strong);
+  border-radius: 0;
+  background: var(--color-white);
+  color: var(--color-heading);
+}
+
+html.design-tiles .search-toggle:hover {
+  background: var(--color-bg-light);
+  border-color: var(--color-heading);
+}
+
+html.design-tiles .language-switcher {
+  border-radius: 0;
+  background: var(--color-bg-muted);
+}
+
+html.design-tiles .language-switcher a,
+html.design-tiles .language-switcher strong {
+  border-radius: 0;
+}
+
+html.design-tiles .language-switcher a {
+  color: var(--color-text-light);
+}
+
+html.design-tiles .language-switcher a:hover {
+  color: var(--color-heading);
+}
+
+html.design-tiles .language-switcher strong {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+html.design-tiles .nav-toggle {
+  border: 1px solid var(--color-line-strong);
+  border-radius: 0;
+  background: var(--color-white);
+  color: var(--color-heading);
+}
+
+@media (max-width: 960px) {
+  html.design-tiles .site-nav {
+    background: var(--color-white);
+    border-top: 1px solid var(--color-line);
+    box-shadow: 0 20px 40px rgba(16, 20, 24, 0.14);
+  }
+
+  html.design-tiles .site-nav > a.active,
+  html.design-tiles .nav-dropdown-toggle.active {
+    background: var(--color-bg-light);
+    box-shadow: inset 3px 0 0 var(--color-primary);
+  }
+
+  html.design-tiles .nav-dropdown-menu {
+    border-left-color: var(--color-line-strong);
+    box-shadow: none;
+  }
+
+  html.design-tiles .nav-dropdown-menu a {
+    color: var(--color-text);
+  }
+
+  html.design-tiles .nav-dropdown-menu a:hover,
+  html.design-tiles .nav-dropdown-menu a:focus-visible {
+    background: var(--color-bg-light);
+    color: var(--color-primary);
+  }
+
+  html.design-tiles .nav-dropdown-menu a[target="_blank"]::after {
+    color: var(--color-text-light);
+  }
+
+  html.design-tiles .nav-tools {
+    border-bottom-color: var(--color-line);
+  }
+
+  html.design-tiles .search-toggle {
+    border-radius: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Shared components: flat, square
+   -------------------------------------------------------------------------- */
+html.design-tiles .page-header {
+  background: var(--color-bg-light);
+}
+
+html.design-tiles .news-card:hover,
+html.design-tiles .news-card:focus-visible {
+  transform: none;
+  border-color: var(--color-heading);
+  box-shadow: none;
+}
+
+html.design-tiles .news-card-media.is-placeholder {
+  background: var(--navy-900);
+}
+
+html.design-tiles .news-card .date {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+/* --------------------------------------------------------------------------
+   Footer: flat navy block with a blue top edge
+   -------------------------------------------------------------------------- */
+html.design-tiles .site-footer {
+  margin-top: 0;
+  background: var(--navy-950);
+  border-top: 6px solid var(--color-primary);
+}
+
+html.design-tiles .site-footer::before {
+  display: none;
+}
+
+html.design-tiles .social-icons a {
+  border-radius: 0;
+}

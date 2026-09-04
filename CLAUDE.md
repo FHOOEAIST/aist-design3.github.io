@@ -60,6 +60,15 @@ Defined in `_config.yml` with default layouts. Front-matter shapes for each are 
 - **Team** is not a collection; it's flat data in `_data/team.yml`, rendered directly from `team.html`. Each member has a `category` (`professor` | `project_manager` | `researcher` | `student`) whose DE/EN labels live in `_data/team_categories.yml` (German labels are gendered via each member's `gender: m|f`, with a neutral fallback); `role` is free text shown next to it (study programme of student employees).
 - **Nav** (`_data/nav.yml`) drives the header dropdown menu in `_layouts/default.html`.
 
+### Design variants (`site_design`)
+
+`site_design` in `_config.yml` switches between two complete looks so they can be compared by flipping one value (no content changes involved):
+
+- `waves` – the dark navy header/footer and the wave hero (`_includes/home/waves-{de,en}.html`, `assets/css/home.css`; `animated_header` picks the hero background).
+- `tiles` – the light layout in the design language of fh-ooe.at: white header with the logo mark inlined as SVG (`_includes/aist-logo-mark.html`, coloured via `currentColor`), square corners site-wide, flat colour blocks, and a hero built from a mosaic of square tiles (`_includes/home/tiles-{de,en}.html`, `assets/css/home-tiles.css`). `_layouts/default.html` adds `class="design-tiles"` on `<html>` and loads `assets/css/theme-tiles.css` after `main.css` on every page; everything in that sheet is scoped to `html.design-tiles`, so the `waves` variant renders exactly as before when the switch is off (the only markup difference is the `js` class now being added to `<html>` instead of assigned).
+
+`index.html` / `index-en.html` are thin wrappers: front matter, the include picked by `site_design`, and the project-logo carousel script both variants share. The mosaic's photo tiles are the newest posts that carry a `title_image`, so they refresh with the news.
+
 ### Layout & styling (2026 redesign)
 
 - `_layouts/default.html` renders the sticky header (`.site-header`, hamburger below 960px), then `<main data-pagefind-body>{{ content }}</main>` with **no inner wrapper** — every page adds its own `<div class="container">` (or `container-narrow`) so hero bands and tinted sections can run full-bleed.

@@ -1,0 +1,248 @@
+{% comment %}
+Home page, "tiles" design (site_design: tiles in _config.yml): light layout in
+the style of fh-ooe.at with a mosaic of square tiles in the hero. English
+version; tiles-de.html is the German twin. Styles: assets/css/home-tiles.css.
+{% endcomment %}
+{% assign projects_page = site.pages | where: "page_id", "projects-index" | where: "lang", "en" | first %}
+{% assign pubs_page = site.pages | where: "page_id", "publications-index" | where: "lang", "en" | first %}
+{% assign theses_page = site.pages | where: "page_id", "theses-index" | where: "lang", "en" | first %}
+{% assign team_page = site.pages | where: "page_id", "team" | where: "lang", "en" | first %}
+{% assign news_page = site.pages | where: "page_id", "news" | where: "lang", "en" | first %}
+{% assign contact_page = site.pages | where: "page_id", "contact" | where: "lang", "en" | first %}
+{% assign history_page = site.pages | where: "page_id", "history" | where: "lang", "en" | first %}
+
+{% assign n_projects = site.projects | where: "lang", "en" | size %}
+{% assign n_pubs = site.publications | where: "lang", "en" | size %}
+{% assign n_theses = site.theses | where: "lang", "en" | size %}
+{% assign n_team = site.data.team.members | size %}
+
+{% comment %} photo tiles: the newest posts that carry a title image {% endcomment %}
+{% assign photo_posts = site.posts | where: "lang", "en" | where_exp: "p", "p.title_image" %}
+{% assign photo_1 = photo_posts[0] %}
+{% assign photo_2 = photo_posts[1] %}
+{% assign photo_3 = photo_posts[2] %}
+
+<section class="tiles-hero">
+  <div class="container">
+    <div class="tiles-hero-grid">
+      <div class="tiles-hero-copy">
+        <p class="eyebrow">Research Group · University of Applied Sciences Upper Austria, Campus Hagenberg</p>
+        <h1>Advanced Information Systems and&nbsp;Technology</h1>
+        <p class="tiles-hero-lead">
+          The research group "AIST – Advanced Information Systems and Technology" conducts research on software solutions in the areas of eHealth, Machine Learning and Data Mining, as well as Computer Vision.
+        </p>
+        <div class="tiles-hero-actions">
+          <a class="btn" href="{{ projects_page.permalink | relative_url }}">Explore projects <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-outline" href="{{ pubs_page.permalink | relative_url }}">Publications</a>
+        </div>
+      </div>
+
+      <div class="tile-mosaic" aria-label="Research areas" data-pagefind-ignore>
+        <span class="tile tile-solid tile-navy" style="--i: 1" aria-hidden="true"></span>
+        {% if photo_1 %}
+        <a class="tile tile-photo tile-2x2" style="--i: 2" href="{{ photo_1.url | relative_url }}" title="{{ photo_1.title | escape }}">
+          <img src="{{ photo_1.title_image | relative_url }}" alt="{{ photo_1.title | escape }}" loading="eager">
+        </a>
+        {% else %}
+        <span class="tile tile-solid tile-primary tile-2x2" style="--i: 2" aria-hidden="true"></span>
+        {% endif %}
+        <span class="tile tile-solid tile-sky" style="--i: 3" aria-hidden="true"></span>
+        <a class="tile tile-area" style="--i: 4" href="#ehealth" data-area="ehealth">
+          <img src="{{ '/assets/images/index/ehealth.svg' | relative_url }}" alt="">
+          <span>eHealth</span>
+        </a>
+        {% if photo_2 %}
+        <a class="tile tile-photo tile-2x2" style="--i: 5" href="{{ photo_2.url | relative_url }}" title="{{ photo_2.title | escape }}">
+          <img src="{{ photo_2.title_image | relative_url }}" alt="{{ photo_2.title | escape }}" loading="eager">
+        </a>
+        {% else %}
+        <span class="tile tile-solid tile-navy tile-2x2" style="--i: 5" aria-hidden="true"></span>
+        {% endif %}
+        <a class="tile tile-area" style="--i: 6" href="#ml" data-area="ml">
+          <img src="{{ '/assets/images/index/machine-learning.svg' | relative_url }}" alt="">
+          <span>Machine Learning</span>
+        </a>
+        <span class="tile tile-brand" style="--i: 7" aria-hidden="true">
+          <img src="{{ '/assets/images/aist-logo.svg' | relative_url }}" alt="">
+        </span>
+        {% if photo_3 %}
+        <a class="tile tile-photo" style="--i: 8" href="{{ photo_3.url | relative_url }}" title="{{ photo_3.title | escape }}">
+          <img src="{{ photo_3.title_image | relative_url }}" alt="{{ photo_3.title | escape }}" loading="eager">
+        </a>
+        {% else %}
+        <span class="tile tile-solid tile-sky" style="--i: 8" aria-hidden="true"></span>
+        {% endif %}
+        <a class="tile tile-area" style="--i: 9" href="#cv" data-area="cv">
+          <img src="{{ '/assets/images/index/computervision.svg' | relative_url }}" alt="">
+          <span>Computer Vision</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <ul class="tiles-stats" data-pagefind-ignore>
+      <li><a href="{{ projects_page.permalink | relative_url }}"><span class="stat-value">{{ n_projects }}</span><span class="stat-label">Research projects</span></a></li>
+      <li><a href="{{ pubs_page.permalink | relative_url }}"><span class="stat-value">{{ n_pubs }}</span><span class="stat-label">Publications</span></a></li>
+      <li><a href="{{ theses_page.permalink | relative_url }}"><span class="stat-value">{{ n_theses }}</span><span class="stat-label">Supervised theses</span></a></li>
+      <li><a href="{{ team_page.permalink | relative_url }}"><span class="stat-value">{{ n_team }}</span><span class="stat-label">Team members</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="research">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Research areas</p>
+        <h2>What we work on</h2>
+      </div>
+      <a class="link-arrow" href="{{ projects_page.permalink | relative_url }}">All projects <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="area-tiles">
+      <div class="area-tile" id="ehealth" data-area="ehealth">
+        <div class="area-tile-icon">
+          <img src="{{ '/assets/images/index/ehealth.svg' | relative_url }}" alt="eHealth icon" loading="lazy">
+        </div>
+        <h2>eHealth</h2>
+        <p>
+          IT support for integrated care ("eHealth") enables the definition, analysis and optimisation of suitable interfaces, adequate care processes and affordable business models for high-quality care and case management in healthcare. The goal of integrated care is the provision of comprehensive, coordinated and continuous services that ensure a seamless care process along the entire continuum of care. <em>[after Hagen Kühn, Wissenschaftszentrum Berlin]</em>
+        </p>
+        {% assign ehealth_projects = site.projects | where: 'lang', 'en' | where: 'category', 'ehealth' | sort: 'title' %}
+        {% if ehealth_projects.size > 0 %}
+        <div class="carousel" data-category="ehealth">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              {% for project in ehealth_projects %}
+                {% if project.logo %}
+                  <div class="carousel-slide">
+                    <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
+                      <img src="{{ project.logo | relative_url }}" alt="{{ project.title }}" loading="lazy">
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <a class="area-tile-link" href="{{ projects_page.permalink | relative_url }}#area=ehealth">View {{ ehealth_projects.size }} projects <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        {% endif %}
+      </div>
+
+      <div class="area-tile" id="ml" data-area="ml">
+        <div class="area-tile-icon">
+          <img src="{{ '/assets/images/index/machine-learning.svg' | relative_url }}" alt="Machine Learning icon" loading="lazy">
+        </div>
+        <h2>Machine Learning &amp; Data Mining</h2>
+        <p>
+          The field of Machine Learning deals with algorithms that are able to automatically find a domain-specific result based on patterns in data. This includes methods for the classification and identification of subjects in digital information, which are also able to continuously improve their own results as more data becomes available. The basic idea is not to explicitly teach algorithms how to solve a task, but to achieve this automatically using training data.
+        </p>
+        {% assign ml_projects = site.projects | where: 'lang', 'en' | where: 'category', 'ml' | sort: 'title' %}
+        {% if ml_projects.size > 0 %}
+        <div class="carousel" data-category="ml">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              {% for project in ml_projects %}
+                {% if project.logo %}
+                  <div class="carousel-slide">
+                    <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
+                      <img src="{{ project.logo | relative_url }}" alt="{{ project.title }}" loading="lazy">
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <a class="area-tile-link" href="{{ projects_page.permalink | relative_url }}#area=ml">View {{ ml_projects.size }} projects <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        {% endif %}
+      </div>
+
+      <div class="area-tile" id="cv" data-area="cv">
+        <div class="area-tile-icon">
+          <img src="{{ '/assets/images/index/computervision.svg' | relative_url }}" alt="Computer Vision icon" loading="lazy">
+        </div>
+        <h2>Computer Vision</h2>
+        <p>
+          Computer Vision deals with the analysis of image content and thus the extraction of semantic information. Just as humans are able to understand their environment through visual impressions, this field of research attempts to create a comparable ability for digital systems. In the context of Mixed Reality, for example, it is necessary to combine information from the real world with digital data. To do this, image information must first be created, pre-processed and then analysed.
+        </p>
+        {% assign cv_projects = site.projects | where: 'lang', 'en' | where: 'category', 'cv' | sort: 'title' %}
+        {% if cv_projects.size > 0 %}
+        <div class="carousel" data-category="cv">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              {% for project in cv_projects %}
+                {% if project.logo %}
+                  <div class="carousel-slide">
+                    <a href="{{ project.url | relative_url }}" title="{{ project.title }}">
+                      <img src="{{ project.logo | relative_url }}" alt="{{ project.title }}" loading="lazy">
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <a class="area-tile-link" href="{{ projects_page.permalink | relative_url }}#area=cv">View {{ cv_projects.size }} projects <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% assign latest_posts = site.posts | where: "lang", "en" %}
+{% if latest_posts.size > 0 %}
+<section class="section section-tint home-news" data-pagefind-ignore>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Latest</p>
+        <h2>News from the research group</h2>
+      </div>
+      <a class="link-arrow" href="{{ news_page.permalink | relative_url }}">All news <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="news-grid tiles-news-grid">
+      {% for post in latest_posts limit: 3 %}
+        {% include news-card.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" data-pagefind-ignore>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">At a glance</p>
+        <h2>Explore the research group</h2>
+      </div>
+    </div>
+    <ul class="quick-tiles">
+      <li><a href="{{ team_page.permalink | relative_url }}"><i class="fas fa-people-group" aria-hidden="true"></i><span>Team</span><small>{{ n_team }} members</small></a></li>
+      <li><a href="{{ pubs_page.permalink | relative_url }}"><i class="fas fa-book-open" aria-hidden="true"></i><span>Publications</span><small>{{ n_pubs }} papers</small></a></li>
+      <li><a href="{{ theses_page.permalink | relative_url }}"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Theses</span><small>{{ n_theses }} supervised theses</small></a></li>
+      <li><a href="{{ history_page.permalink | relative_url }}"><i class="fas fa-clock-rotate-left" aria-hidden="true"></i><span>History</span><small>From the beginnings until today</small></a></li>
+      <li><a href="https://github.com/FHOOEAIST" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span>GitHub</span><small>Open-source software</small></a></li>
+      <li><a href="{{ contact_page.permalink | relative_url }}"><i class="fas fa-envelope" aria-hidden="true"></i><span>Contact</span><small>Campus Hagenberg</small></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="tiles-cta" data-pagefind-ignore>
+  <span class="tiles-cta-deco" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  <div class="container">
+    <div class="tiles-cta-grid">
+      <div>
+        <p class="eyebrow">Cooperation</p>
+        <h2>Collaboration &amp; theses</h2>
+        <p>Interested in a cooperation, a joint research project or a thesis within the scope of our research? We look forward to hearing from you.</p>
+      </div>
+      <div class="tiles-hero-actions">
+        <a class="btn btn-light" href="{{ contact_page.permalink | relative_url }}">Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn-ghost-light" href="{{ theses_page.permalink | relative_url }}">Theses</a>
+      </div>
+    </div>
+  </div>
+</section>

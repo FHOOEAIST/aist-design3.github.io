@@ -66,6 +66,17 @@ Conventions:
 - **Top-level pages** exist as a German version (`page.html`) and an English version (`page-en.html`).
 - Translations of the *same* content are linked by a shared `page_id` (e.g. `news:my-post`, `projects:bambi`, `pub:...`, `thesis:...`). The language switcher uses this to jump between the DE and EN versions.
 
+## Design Variants
+
+Two complete designs live side by side; `site_design` in `_config.yml` picks the one that is built:
+
+```yaml
+site_design: tiles   # light layout with the square tile mosaic (fh-ooe.at style)
+site_design: waves   # dark navy header and the animated wave hero
+```
+
+Only the value has to change – content, collections and page front matter are shared by both variants. See `CLAUDE.md` (Design variants) for the files involved.
+
 ## News Posts
 
 Blog-style news entries shown on the news page.

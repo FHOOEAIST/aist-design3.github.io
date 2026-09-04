@@ -15,6 +15,13 @@ theme_color: "#ffffff"
 #             wandering (canvas, see initHeroWaves in assets/js/main.js)
 animated_header: animated
 
+# Site design:
+#   waves  the dark navy header/footer and the wave hero (animated_header above)
+#   tiles  the light layout in the style of fh-ooe.at: white header, square
+#          corners and the tile mosaic on the home page
+#          (assets/css/theme-tiles.css, home-tiles.css, _includes/home/tiles-*.html)
+site_design: tiles
+
 permalink: /:year/:month/:day/:title:output_ext
 
 languages: ["de", "en"]
