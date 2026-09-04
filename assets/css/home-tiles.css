@@ -36,56 +36,45 @@
   gap: 0.75rem;
 }
 
-/* The mosaic: a 4 × 4 grid of squares like the header image on fh-ooe.at.
-   Two photo tiles span 2 × 2, three tiles link to the research areas,
-   the rest are flat colour blocks; the top-left cell stays empty so the
-   block reads as a staggered cluster rather than a filled rectangle. */
+/* The mosaic: square tiles on a 5 × 4 grid, stepping down from the top
+   right to the bottom left like the header image on fh-ooe.at. Three
+   photo tiles (the newest posts with a title image) carry the picture,
+   four flat colour squares and the white gaps give the cluster its rhythm.
+   No text lives in the tiles; the research areas follow right below. */
 .tile-mosaic {
-  --tile-gap: 8px;
+  --tile-gap: 10px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-template-rows: repeat(4, minmax(0, 1fr));
   gap: var(--tile-gap);
-  aspect-ratio: 1;
+  aspect-ratio: 5 / 4;
   width: 100%;
-  max-width: 34rem;
+  max-width: 36rem;
   margin-left: auto;
 }
 
 .tile {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   min-width: 0;
   min-height: 0;
   overflow: hidden;
   text-decoration: none;
 }
 
-/* explicit placement */
-.tile:nth-child(1) { grid-area: 1 / 2 / 2 / 3; }   /* navy   */
-.tile:nth-child(2) { grid-area: 1 / 3 / 3 / 5; }   /* photo  2×2 */
-.tile:nth-child(3) { grid-area: 2 / 1 / 3 / 2; }   /* sky    */
-.tile:nth-child(4) { grid-area: 2 / 2 / 3 / 3; }   /* eHealth */
-.tile:nth-child(5) { grid-area: 3 / 1 / 5 / 3; }   /* photo  2×2 */
-.tile:nth-child(6) { grid-area: 3 / 3 / 4 / 4; }   /* ML     */
-.tile:nth-child(7) { grid-area: 3 / 4 / 4 / 5; }   /* brand  */
-.tile:nth-child(8) { grid-area: 4 / 3 / 5 / 4; }   /* photo  */
-.tile:nth-child(9) { grid-area: 4 / 4 / 5 / 5; }   /* CV     */
+/* explicit placement (row-start / col-start / row-end / col-end) */
+.tile:nth-child(1) { grid-area: 1 / 3 / 2 / 4; }   /* sky           */
+.tile:nth-child(2) { grid-area: 1 / 4 / 3 / 6; }   /* photo 1  2×2  */
+.tile:nth-child(3) { grid-area: 2 / 3 / 3 / 4; }   /* navy          */
+.tile:nth-child(4) { grid-area: 3 / 2 / 5 / 4; }   /* photo 2  2×2  */
+.tile:nth-child(5) { grid-area: 3 / 4 / 4 / 5; }   /* photo 3       */
+.tile:nth-child(6) { grid-area: 4 / 4 / 5 / 5; }   /* primary       */
+.tile:nth-child(7) { grid-area: 4 / 1 / 5 / 2; }   /* light         */
 
 .tile-navy { background: var(--navy-900); }
 .tile-primary { background: var(--color-primary); }
-.tile-sky { background: var(--sky-200); }
-
-.tile-brand {
-  background: var(--color-primary-500);
-}
-
-.tile-brand img {
-  width: 70%;
-  height: auto;
-}
+.tile-sky { background: var(--color-primary-light); }
+.tile-light { background: var(--sky-100); }
 
 .tile-photo {
   background: var(--color-bg-muted);
@@ -102,48 +91,6 @@
 .tile-photo:hover img,
 .tile-photo:focus-visible img {
   transform: scale(1.06);
-}
-
-.tile-area {
-  --area-color: var(--color-primary);
-  --area-soft: var(--sky-100);
-  flex-direction: column;
-  gap: 0.35rem;
-  padding: 0.5rem;
-  background: var(--area-soft);
-  color: var(--color-heading);
-  text-align: center;
-  transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
-}
-
-.tile-area[data-area="ehealth"] { --area-color: var(--area-ehealth); --area-soft: var(--area-ehealth-soft); }
-.tile-area[data-area="ml"] { --area-color: var(--area-ml); --area-soft: var(--area-ml-soft); }
-.tile-area[data-area="cv"] { --area-color: var(--area-cv); --area-soft: var(--area-cv-soft); }
-
-.tile-area img {
-  width: 46%;
-  height: auto;
-  max-height: 50%;
-  object-fit: contain;
-}
-
-.tile-area span {
-  font-size: 0.68rem;
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
-}
-
-.tile-area:hover,
-.tile-area:focus-visible {
-  background: var(--area-color);
-  color: var(--color-white);
-  text-decoration: none;
-}
-
-.tile-area:hover img,
-.tile-area:focus-visible img {
-  filter: brightness(0) invert(1);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -463,7 +410,7 @@
 
   .tile-mosaic {
     margin-left: 0;
-    max-width: 30rem;
+    max-width: 32rem;
   }
 
   .area-tiles {
@@ -499,10 +446,6 @@
   .tile-mosaic {
     --tile-gap: 6px;
     max-width: none;
-  }
-
-  .tile-area span {
-    font-size: 0.6rem;
   }
 
   .tiles-stats {

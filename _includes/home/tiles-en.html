@@ -37,45 +37,32 @@ version; tiles-de.html is the German twin. Styles: assets/css/home-tiles.css.
         </div>
       </div>
 
-      <div class="tile-mosaic" aria-label="Research areas" data-pagefind-ignore>
-        <span class="tile tile-solid tile-navy" style="--i: 1" aria-hidden="true"></span>
+      <div class="tile-mosaic" aria-label="Recent pictures from the research group" data-pagefind-ignore>
+        <span class="tile tile-solid tile-sky" style="--i: 1" aria-hidden="true"></span>
         {% if photo_1 %}
-        <a class="tile tile-photo tile-2x2" style="--i: 2" href="{{ photo_1.url | relative_url }}" title="{{ photo_1.title | escape }}">
+        <a class="tile tile-photo" style="--i: 2" href="{{ photo_1.url | relative_url }}" title="{{ photo_1.title | escape }}">
           <img src="{{ photo_1.title_image | relative_url }}" alt="{{ photo_1.title | escape }}" loading="eager">
         </a>
         {% else %}
-        <span class="tile tile-solid tile-primary tile-2x2" style="--i: 2" aria-hidden="true"></span>
+        <span class="tile tile-solid tile-primary" style="--i: 2" aria-hidden="true"></span>
         {% endif %}
-        <span class="tile tile-solid tile-sky" style="--i: 3" aria-hidden="true"></span>
-        <a class="tile tile-area" style="--i: 4" href="#ehealth" data-area="ehealth">
-          <img src="{{ '/assets/images/index/ehealth.svg' | relative_url }}" alt="">
-          <span>eHealth</span>
-        </a>
+        <span class="tile tile-solid tile-navy" style="--i: 3" aria-hidden="true"></span>
         {% if photo_2 %}
-        <a class="tile tile-photo tile-2x2" style="--i: 5" href="{{ photo_2.url | relative_url }}" title="{{ photo_2.title | escape }}">
+        <a class="tile tile-photo" style="--i: 4" href="{{ photo_2.url | relative_url }}" title="{{ photo_2.title | escape }}">
           <img src="{{ photo_2.title_image | relative_url }}" alt="{{ photo_2.title | escape }}" loading="eager">
         </a>
         {% else %}
-        <span class="tile tile-solid tile-navy tile-2x2" style="--i: 5" aria-hidden="true"></span>
+        <span class="tile tile-solid tile-sky" style="--i: 4" aria-hidden="true"></span>
         {% endif %}
-        <a class="tile tile-area" style="--i: 6" href="#ml" data-area="ml">
-          <img src="{{ '/assets/images/index/machine-learning.svg' | relative_url }}" alt="">
-          <span>Machine Learning</span>
-        </a>
-        <span class="tile tile-brand" style="--i: 7" aria-hidden="true">
-          <img src="{{ '/assets/images/aist-logo.svg' | relative_url }}" alt="">
-        </span>
         {% if photo_3 %}
-        <a class="tile tile-photo" style="--i: 8" href="{{ photo_3.url | relative_url }}" title="{{ photo_3.title | escape }}">
+        <a class="tile tile-photo" style="--i: 5" href="{{ photo_3.url | relative_url }}" title="{{ photo_3.title | escape }}">
           <img src="{{ photo_3.title_image | relative_url }}" alt="{{ photo_3.title | escape }}" loading="eager">
         </a>
         {% else %}
-        <span class="tile tile-solid tile-sky" style="--i: 8" aria-hidden="true"></span>
+        <span class="tile tile-solid tile-navy" style="--i: 5" aria-hidden="true"></span>
         {% endif %}
-        <a class="tile tile-area" style="--i: 9" href="#cv" data-area="cv">
-          <img src="{{ '/assets/images/index/computervision.svg' | relative_url }}" alt="">
-          <span>Computer Vision</span>
-        </a>
+        <span class="tile tile-solid tile-primary" style="--i: 6" aria-hidden="true"></span>
+        <span class="tile tile-solid tile-light" style="--i: 7" aria-hidden="true"></span>
       </div>
     </div>
   </div>
