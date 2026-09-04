@@ -5,6 +5,7 @@ permalink: /theses/rainer-meindl-ausbildungssimulationen-mithilfe-von-virtueller
 date: 2017-12-31
 title: Ausbildungssimulationen mithilfe von Virtueller Realität
 student: Rainer Meindl
+thesis_type: bachelor
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-formelracing
 ---
 

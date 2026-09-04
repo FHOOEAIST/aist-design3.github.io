@@ -5,6 +5,7 @@ permalink: /theses/lukas-reithmeier-analysen-von-baupl-nen/
 date: 2018-12-31
 title: Analysis of Buildingplans
 student: Lukas Reithmeier
+thesis_type: bachelor
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-aicher
 ---
 

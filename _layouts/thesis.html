@@ -9,6 +9,7 @@ layout: default
       <p class="article-meta">
         <span><i class="fas fa-user-graduate" aria-hidden="true"></i>{{ page.student }}</span>
         <span><i class="far fa-calendar" aria-hidden="true"></i>{{ page.year }}</span>
+        {% if page.thesis_type %}<span><i class="fas fa-graduation-cap" aria-hidden="true"></i>{% if page.thesis_type == "bachelor" %}{% if site.active_lang == 'de' %}Bachelorarbeit{% else %}Bachelor thesis{% endif %}{% elsif page.thesis_type == "master" %}{% if site.active_lang == 'de' %}Masterarbeit{% else %}Master thesis{% endif %}{% else %}Dissertation{% endif %}</span>{% endif %}
       </p>
     </header>
 

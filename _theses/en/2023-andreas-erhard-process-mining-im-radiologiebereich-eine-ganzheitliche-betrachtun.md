@@ -6,6 +6,7 @@ date: 2023-12-31
 title: Process Mining in Radiology - A Holistic View of Organizational and Data
   Maturity Using a Canonical Maturity Model
 student: Andreas Erhard
+thesis_type: master
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/pica
 ---
 

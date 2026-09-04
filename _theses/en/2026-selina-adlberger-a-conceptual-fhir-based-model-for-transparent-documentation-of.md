@@ -6,6 +6,7 @@ date: 2026-12-31
 title: A Conceptual FHIR-Based Model for Transparent Documentation of AI Usage in
   Medical Data
 student: Selina Adlberger
+thesis_type: master
 ---
 
 Artificial Intelligence (AI) is increasingly used in healthcare to support the processing, interpretation, and analysis of medical data. While AI-based systems can improve clinical workflows, their use also introduces challenges related to transparency, traceability, accountability, and the trustworthy handling of patient data. In clinical contexts, documenting only the final result is often insufficient. It should also be possible to reconstruct which AI system was used, which data contributed to an output, under which conditions the system was executed, and how the result was reviewed by a healthcare professional.

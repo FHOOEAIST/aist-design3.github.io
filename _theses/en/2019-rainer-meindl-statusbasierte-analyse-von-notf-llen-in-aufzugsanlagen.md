@@ -5,6 +5,7 @@ permalink: /theses/rainer-meindl-statusbasierte-analyse-von-notf-llen-in-aufzugs
 date: 2019-12-31
 title: State Oriented Detection ofEmergencies in Elevator Networks – APetri Net View
 student: Rainer Meindl
+thesis_type: master
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-eden
 ---
 

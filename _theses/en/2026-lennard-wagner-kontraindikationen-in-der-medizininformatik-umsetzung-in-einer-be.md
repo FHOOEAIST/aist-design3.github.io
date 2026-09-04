@@ -6,6 +6,7 @@ date: 2026-12-31
 title: Contraindications in Medical Informatics – Implementation in an Existing
   Software
 student: Lennard Wagner
+thesis_type: bachelor
 ---
 
 The goal of this thesis is the digitalization and computer-aided validation of contraindications in radiologic diagnostics based upon Clinical Decision Support Systems (CDSS). CDSSs aid healthcare professionals in dealing with growing complexity of health-related information and reduce errors. In order to replace the often dangerous manual processing steps, the thesis has developed a software module as part of a CDSS in an already existing radiology information system.

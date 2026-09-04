@@ -2300,3 +2300,27 @@ html:not(.js) .listing-toggle-icon {
 .publication-entry:not(.collapsible) .listing-title {
   padding: 0.25rem 0;
 }
+
+/* thesis level label next to the student */
+.thesis-type {
+  display: inline-block;
+  margin-left: 0.6rem;
+  padding: 0.05rem 0.55rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-muted);
+  color: var(--color-text);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+  vertical-align: 0.1em;
+}
+
+.thesis-type-master {
+  background: var(--sky-100);
+  color: var(--color-primary);
+}
+
+.thesis-type-dissertation {
+  background: var(--area-ml-soft);
+  color: var(--area-ml);
+}

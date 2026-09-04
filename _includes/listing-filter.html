@@ -1,13 +1,13 @@
 {% comment %}
 Filter bar for the year-grouped listings (publications, theses). Expects:
   include.lang — "de" or "en"
-  include.kind — "publications" (category + year) or "theses" (year only)
+  include.kind — "publications" (category + year) or "theses" (year + type)
 
 Each control is an ARIA listbox (the native <select> cannot style its open
 menu). Options and counts are generated here, so the taxonomy in
 _data/publication_categories.yml stays the single source of truth. The
 behaviour lives in assets/js/main.js (initListingFilter): entries are
-`.listing-item[data-year]`, optionally with `data-categories`, and the chosen
+`.listing-item[data-year]`, optionally with `data-categories` / `data-type`, and the chosen
 values are mirrored into the hash as `#cat=...&year=...`.
 {% endcomment %}
 
@@ -26,6 +26,8 @@ values are mirrored into the hash as `#cat=...&year=...`.
     {% assign t_year = "Jahr" %}
     {% assign t_all = "Alle" %}
     {% assign t_all_years = "Alle Jahre" %}
+    {% assign t_type = "Art" %}
+    {% assign t_all_types = "Alle Arten" %}
     {% if include.kind == "theses" %}
         {% assign t_results = "{n} von {total} Diplomarbeiten" %}
     {% else %}
@@ -36,6 +38,8 @@ values are mirrored into the hash as `#cat=...&year=...`.
     {% assign t_year = "Year" %}
     {% assign t_all = "All" %}
     {% assign t_all_years = "All years" %}
+    {% assign t_type = "Type" %}
+    {% assign t_all_types = "All types" %}
     {% if include.kind == "theses" %}
         {% assign t_results = "{n} of {total} theses" %}
     {% else %}
@@ -105,6 +109,46 @@ values are mirrored into the hash as `#cat=...&year=...`.
             {% endfor %}
         </ul>
     </div>
+
+    {% if include.kind == "theses" %}
+    {% assign type_ids = "bachelor|master|dissertation" | split: "|" %}
+    {% if include.lang == "de" %}
+        {% assign type_labels = "Bachelorarbeit|Masterarbeit|Dissertation" | split: "|" %}
+    {% else %}
+        {% assign type_labels = "Bachelor thesis|Master thesis|Dissertation" | split: "|" %}
+    {% endif %}
+    <span class="cat-filter-label" id="filterLabel-type">{{ t_type }}</span>
+    <div class="cat-filter-control cat-filter-control--compact" data-filter-key="type">
+        <button
+            type="button"
+            class="cat-filter-trigger"
+            id="filterTrigger-type"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-labelledby="filterLabel-type filterTrigger-type"
+        >
+            <span class="cat-filter-value">{{ t_all_types }}</span>
+            <i class="fa-solid fa-chevron-down cat-filter-chevron" aria-hidden="true"></i>
+        </button>
+        <ul class="cat-filter-menu" role="listbox" tabindex="-1" aria-labelledby="filterLabel-type">
+            <li id="opt-type-all" role="option" data-value="all" aria-selected="true">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span class="cat-filter-name">{{ t_all_types }}</span>
+                <span class="cat-filter-count">{{ n_all }}</span>
+            </li>
+            {% for type_id in type_ids %}
+            {% assign matching = all_items | where: "thesis_type", type_id %}
+            {% if matching.size > 0 %}
+            <li id="opt-type-{{ type_id }}" role="option" data-value="{{ type_id }}" aria-selected="false">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                <span class="cat-filter-name">{{ type_labels[forloop.index0] }}</span>
+                <span class="cat-filter-count">{{ matching.size }}</span>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
 
     <p class="cat-filter-results" aria-live="polite"></p>
 </div>

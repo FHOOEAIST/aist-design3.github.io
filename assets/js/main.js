@@ -380,9 +380,11 @@
   }
 
   /* ----------------------------------------------------- listing filter */
-  // Publications and theses: one listbox per facet (category, year). An entry
-  // is shown when it matches every facet; year headings without visible
-  // entries are hidden. State is mirrored into the hash (#cat=ml&year=2024).
+  // Publications and theses: one listbox per facet (category, year, type).
+  // "cat" matches against the entry's space-separated data-categories list,
+  // every other facet against data-<key>. An entry is shown when it matches
+  // every facet; year headings without visible entries are hidden. State is
+  // mirrored into the hash (#cat=ml&year=2024).
   function initListingFilter() {
     var root = document.querySelector("[data-listing-filter]");
     if (!root) return;
@@ -395,17 +397,22 @@
     items.forEach(function (item) {
       var raw = item.getAttribute("data-categories") || "";
       item.catList = raw.split(" ").filter(Boolean);
-      item.year = item.getAttribute("data-year");
     });
 
+    function matches(item, key, value) {
+      if (value === "all") return true;
+      if (key === "cat") return item.catList.indexOf(value) !== -1;
+      return item.getAttribute("data-" + key) === value;
+    }
+
     function apply() {
-      var cat = boxes.cat ? boxes.cat.value() : "all";
-      var year = boxes.year ? boxes.year.value() : "all";
+      var keys = Object.keys(boxes);
       var shown = 0;
 
       items.forEach(function (item) {
-        var ok = (cat === "all" || item.catList.indexOf(cat) !== -1) &&
-                 (year === "all" || item.year === year);
+        var ok = keys.every(function (key) {
+          return matches(item, key, boxes[key].value());
+        });
         item.style.display = ok ? "" : "none";
         if (ok) shown++;
       });

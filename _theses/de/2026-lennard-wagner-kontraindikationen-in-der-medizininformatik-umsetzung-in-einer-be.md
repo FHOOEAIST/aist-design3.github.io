@@ -6,6 +6,7 @@ date: 2026-12-31
 title: Kontraindikationen in der Medizininformatik – Umsetzung in einer bestehenden
   Software
 student: Lennard Wagner
+thesis_type: bachelor
 ---
 
 In dieser Arbeit wird die Digitalisierung und softwaretechnische Absicherung von Kontraindikationen in der radiologischen Diagnostik durch den Einsatz von Clinical Decision Support Systems (CDSS) behandelt. Solche Systeme unterstützen das medizinische Personal dabei, die stetig wachsende Komplexität medizinischer Informationen zu bewältigen und Fehler zu reduzieren. Zur Lösung der potenziell fehleranfälligen manuellen Abläufe wird in dieser Arbeit ein Softwaremodul als integratives CDSS innerhalb eines bestehenden Radiologieinformationssystems entwickelt.

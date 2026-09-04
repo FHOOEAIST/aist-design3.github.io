@@ -6,5 +6,6 @@ date: 2021-12-31
 title: "Synthetic Football Data: Modding FIFA 20 for Labelled Data Generation
   for Deep Learning Tasks"
 student: Clara Kainz
+thesis_type: bachelor
 ---
 

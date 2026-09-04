@@ -6,6 +6,7 @@ date: 2022-12-31
 title: "Digital documentation of nursing services: Analysis of fields of action
   and terminology systems"
 student: Clara Diesenreiter
+thesis_type: bachelor
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/pica
 ---
 

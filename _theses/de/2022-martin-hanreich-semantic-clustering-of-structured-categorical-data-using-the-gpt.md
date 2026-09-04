@@ -6,6 +6,7 @@ date: 2022-12-31
 title: Semantic clustering of structured categorical data using the GPT-3
   language model
 student: Martin Hanreich
+thesis_type: master
 ---
 
 Clustering ist ein weit verbreitetes Verfahren des maschinellen Lernens, das dazu genutzt werden kann, Elemente nach ihrer Ähnlichkeit in Klassen einzuteilen. Damit das Clustering-Verfahren bestimmen kann, zu welcher Klasse ein Element zuzuordnen ist, braucht es Informationen über die Ähnlichkeit der Elemente zueinander. Mit numerischen Werten ist diese Ähnlichkeit leicht zu berechnen, da mathematische Operationen angewandt werden können. Mit sogenannten kategoriellen Daten, welche aus nicht-numerischen Werten bestehen wie etwa ’grob’, ’Data Scientist’ oder ’Google Chrome’, fällt diese Berechnung deutlich schwerer. Zur Anwendung kommen in der Praxis verschiedene Methoden, die sich hauptsächlich auf die Verteilung der Werte innerhalb des Datensatzes beziehen.

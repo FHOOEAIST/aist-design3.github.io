@@ -6,6 +6,7 @@ date: 2019-12-31
 title: Einrichtungsübergreifende Kommunikation für Gesundheitsdiensteanbieter
   unter Verwendung der bestehenden österreichischen e-Health-Infrastruktur
 student: Jacqueline Schwebach
+thesis_type: bachelor
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/projekt-cas
 ---
 

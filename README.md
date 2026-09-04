@@ -190,7 +190,7 @@ counts, filter behaviour) and
 entries and badges), so `publications.html` and `publications-en.html` stay in sync.
 
 ## Theses
-Bachelor/Master theses, shown grouped by year.
+Bachelor/Master theses and dissertations, shown grouped by year and filterable by year and type.
 
 - **Location:** `_theses/{de,en}/YYYY-student-title.md`
 
@@ -202,6 +202,7 @@ permalink: /theses/andreas-erhard-process-mining-.../  # optional, used as ancho
 date: 2023-12-31
 title: Process Mining im Radiologiebereich
 student: Andreas Erhard
+thesis_type: master  # bachelor | master | dissertation -- shown as a label and used by the type filter
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/pica  # optional
 ---
 

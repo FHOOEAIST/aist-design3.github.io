@@ -6,6 +6,7 @@ date: 2022-12-31
 title: "Digitale Dokumentation von Pflegedienstleistungen: Analyse der
   Handlungsfelder und Terminologiesysteme"
 student: Clara Diesenreiter
+thesis_type: bachelor
 project_url: https://aist.fh-hagenberg.at/index.php/de/projekte/pica
 ---
 
