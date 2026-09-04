@@ -1,0 +1,34 @@
+# Staff categories used by _data/team.yml via each member's `category:` field
+# and rendered on team.html / team-en.html as a label after the name.
+#
+#   id          — the value written into a member's `category:` field
+#   label_de_m  — German label for members with `gender: m`
+#   label_de_f  — German label for members with `gender: f`
+#   label_de    — gender-neutral German fallback when `gender` is missing
+#   label_en    — English label
+#
+# The order below is not used for sorting; members keep the order of team.yml.
+
+- id: professor
+  label_de_m: Professor
+  label_de_f: Professorin
+  label_de: Professor*in
+  label_en: Professor
+
+- id: project_manager
+  label_de_m: Forschungsprojektleiter
+  label_de_f: Forschungsprojektleiterin
+  label_de: Forschungsprojektleiter*in
+  label_en: Research Project Manager
+
+- id: researcher
+  label_de_m: Wissenschaftlicher Mitarbeiter
+  label_de_f: Wissenschaftliche Mitarbeiterin
+  label_de: Wissenschaftliche*r Mitarbeiter*in
+  label_en: Research Associate
+
+- id: student
+  label_de_m: Studentischer Mitarbeiter
+  label_de_f: Studentische Mitarbeiterin
+  label_de: Studentische*r Mitarbeiter*in
+  label_en: Student Employee

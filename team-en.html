@@ -24,8 +24,12 @@ css: team
       </div>
       <div class="team-card-info">
         <h3>{{ member.name }}</h3>
-        {% if member.role %}
-        <p class="team-role">{{ member.role }}</p>
+        {% assign member_cat = site.data.team_categories | where: "id", member.category | first %}
+        {% if member_cat or member.role %}
+        <p class="team-role">
+          {% if member_cat %}<span class="team-category team-category-{{ member.category }}">{{ member_cat.label_en }}</span>{% endif %}
+          {% if member.role %}<span class="team-role-detail">{{ member.role }}</span>{% endif %}
+        </p>
         {% endif %}
         <div class="team-contact">
           {% if member.email %}

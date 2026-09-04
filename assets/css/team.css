@@ -65,9 +65,47 @@
 }
 
 .team-role {
-  margin: 0;
+  margin: 0.2rem 0 0;
   font-size: 0.85rem;
+  line-height: 1.9;
   color: var(--color-text-light);
+}
+
+.team-role-detail {
+  display: block;
+  line-height: 1.5;
+  margin-top: 0.15rem;
+}
+
+/* inline + clone so a label that wraps ("Wissenschaftliche*r Mitarbeiter*in")
+   renders as two rounded segments instead of one tall block */
+.team-category {
+  display: inline;
+  padding: 0.1rem 0.55rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-muted);
+  color: var(--color-text);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}
+
+.team-category-professor {
+  background: var(--sky-100);
+  color: var(--color-primary);
+}
+
+.team-category-project_manager {
+  background: var(--area-ml-soft);
+  color: var(--area-ml);
+}
+
+.team-category-student {
+  background: var(--area-ehealth-soft);
+  color: var(--area-ehealth);
 }
 
 .team-contact {

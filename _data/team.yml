@@ -1,69 +1,99 @@
 members:
   - name: Selina Adlberger MSc
+    category: researcher
+    gender: f
     email: selina.adlberger@fh-hagenberg.at
     image: /assets/images/team/selina_adlberger_msc.jpg
   - name: Sophie Bauernfeind MSc
+    category: researcher
+    gender: f
     email: sophie.bauernfeind@fh-hagenberg.at
     image: /assets/images/team/sophie_bauernfeind_msc.jpg
     details_url: https://pure.fh-ooe.at/en/persons/sophie-bauernfeind
   - name: FH-Prof. Univ.-Doz. DI Dr. Ulrich Bodenhofer
+    category: professor
+    gender: m
     email: ulrich.bodenhofer@fh-hagenberg.at
     phone: +43 5 0804 22321
     image: /assets/images/team/fh_prof_univ_doz_di_dr_ulrich_bodenhofer.jpg
     details_url: https://pure.fh-ooe.at/en/persons/ulrich-bodenhofer
   - name: Harald Brunner
+    category: student
+    gender: m
     role: Software Engineering Bachelor
     email: harald.brunner@fh-hagenberg.at
     image: /assets/images/team/harald_brunner.jpg
   - name: Mert Dalkilic MSc
+    category: researcher
+    gender: m
     email: mert.dalkilic@fh-hagenberg.at
     image: /assets/images/team/mert_dalkilic_msc.jpg
     details_url: https://pure.fh-ooe.at/en/persons/mert-ismail-dalkilic/
   - name: Martin Hanreich MSc
+    category: researcher
+    gender: m
     email: martin.hanreich@fh-hagenberg.at
     phone: +43 5 0804 27118
     image: /assets/images/team/martin_hanreich_msc.jpg
     details_url: https://pure.fh-ooe.at/en/persons/martin-hanreich
   - name: FH-Assistenzprof. Dr. Oliver Krauss MSc
+    category: professor
+    gender: m
     email: oliver.krauss@fh-hagenberg.at
     phone: +43 5 0804 27195
     image: /assets/images/team/fh_assistenzprof_dr_oliver_krauss_msc.jpg
     details_url: https://pure.fh-ooe.at/en/persons/oliver-krauss
   - name: Helga Billensteiner MSc
+    category: researcher
+    gender: f
     email: helga.ludwig@fh-hagenberg.at
     phone: +43 5 0804 27172
     image: /assets/images/team/helga_billensteiner_msc.jpg
     details_url: https://pure.fh-ooe.at/en/persons/helga-ludwig
   - name: FH-Prof. DI Dr. Herwig Mayr
+    category: professor
+    gender: m
     email: herwig.mayr@fh-hagenberg.at
     phone: +43 5 0804 22021
     image: /assets/images/team/fh_prof_di_dr_herwig_mayr.jpg
     details_url: https://pure.fh-ooe.at/en/persons/herwig-mayr
   - name: FH-Assistenzprof. Andreas Pointner MSc
+    category: project_manager
+    gender: m
     email: andreas.pointner@fh-hagenberg.at
     phone: +43 5 0804 27143
     image: /assets/images/team/fh_assistenzprof_andreas_pointner_msc.jpg
     details_url: https://pure.fh-ooe.at/en/persons/andreas-manfred-pointner
   - name: FH-Assistenzprof. Christoph Praschl MSc
+    category: project_manager
+    gender: m
     email: christoph.praschl@fh-hagenberg.at
     phone: +43 5 0804 27150
     image: /assets/images/team/fh_assistenzprof_christoph_praschl_msc.jpg
     details_url: https://pure.fh-ooe.at/en/persons/christoph-praschl
   - name: Sebastian Pritz MSc
+    category: researcher
+    gender: m
     email: sebastian.pritz@fh-hagenberg.at
     phone: +43 5 0804 27196
     image: /assets/images/team/sebastian_pritz_msc.jpg
     details_url: https://pure.fh-ooe.at/en/persons/sebastian-pritz
   - name: Simone Sandler MSc
+    category: researcher
+    gender: f
     email: simone.sandler@fh-hagenberg.at
     phone: +43 5 0804 27135
     image: /assets/images/team/simone_sandler_msc.jpg
     details_url: https://pure.fh-ooe.at/en/persons/simone-sandler
   - name: Dipl.-Ing. Natasha Trajkovska MSc
+    category: researcher
+    gender: f
     email: natasha.trajkovska@fh-hagenberg.at
     image: /assets/images/team/dipl_ing_natasha_trajkovska_msc.jpg
     details_url: https://pure.fh-ooe.at/en/persons/natasha-trajkovska
   - name: DI (FH) Dr. Gerald Adam Zwettler MSc
+    category: professor
+    gender: m
     email: gerald.zwettler@fh-hagenberg.at
     phone: +43 5 0804 22038
     image: /assets/images/team/di_fh_dr_gerald_adam_zwettler_msc.jpg

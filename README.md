@@ -211,7 +211,7 @@ Abstract (Markdown)...
 
 # Team
 
-Team members are listed from [`_data/team.yml`](_data/team.yml)
+Team members are listed from [`_data/team.yml`](_data/team.yml). Each member carries a `category:` (`professor` | `project_manager` | `researcher` | `student`, labels in [`_data/team_categories.yml`](_data/team_categories.yml)) that is shown after the name, and a `gender:` (`m` | `f`) that picks the German form of that label (neutral fallback without it); an optional `role:` (e.g. the study programme of a student employee) is shown next to it.
 
 ---
 
