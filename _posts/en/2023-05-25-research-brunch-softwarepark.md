@@ -15,7 +15,6 @@ We would like to take this opportunity to thank all participants for the interes
 
 Photos © Softwarepark Hagenberg
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

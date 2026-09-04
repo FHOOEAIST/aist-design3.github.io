@@ -11,7 +11,6 @@ Auch heuer fand wieder die alljährliche AIST Weihnachtsfeier in Hagenberg statt
 
 Auf diesem Weg wollen wir uns auch bei allen Projektpartner\*innen und Kolleg\*innen für das vergangene Jahr bedanken und besinnliche Feiertage, sowie einen guten Rutsch in das Jahr 2023 wünschen.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

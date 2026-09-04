@@ -11,7 +11,6 @@ Christoph konnte im Rahmen der Projekte [Bambi](https://aist.fh-hagenberg.at/ind
 
 Vielen Dank für den inhaltlichen Austausch und die vielen interessanten Präsentationen innerhalb der heutigen Session.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

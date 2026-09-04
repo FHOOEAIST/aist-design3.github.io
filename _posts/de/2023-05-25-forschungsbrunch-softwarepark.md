@@ -15,7 +15,6 @@ An dieser Stelle möchten wir uns für die interessanten Vorträge und die Gespr
 
 Fotos © Softwarepark Hagenberg
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

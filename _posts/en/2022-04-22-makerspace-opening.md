@@ -15,7 +15,6 @@ One of our international interns, Anthony, jammed at the event, supplying the ev
 
 Our team is happy about the new addition to the Hagenberg landscape and is excited for what projects may result from it.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

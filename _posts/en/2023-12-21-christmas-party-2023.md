@@ -13,7 +13,6 @@ We would like to take this opportunity to thank all our project partners and col
 
 Best wishes and Merry Christmas!
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

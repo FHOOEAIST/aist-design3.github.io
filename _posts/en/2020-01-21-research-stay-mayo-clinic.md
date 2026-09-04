@@ -13,7 +13,6 @@ From July 2019 to February 2020, Gerald Zwettler worked as an external scientist
 
 [More about the IEEE Talk can be found here](https://events.vtools.ieee.org/m/217912).
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

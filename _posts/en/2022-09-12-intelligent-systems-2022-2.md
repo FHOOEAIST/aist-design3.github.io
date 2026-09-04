@@ -11,7 +11,6 @@ Andreas had the opportunity to present some of the results of the [RCPM](https:/
 
 We would like to congratulate all colleagues involved!
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

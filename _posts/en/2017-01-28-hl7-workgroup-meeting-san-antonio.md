@@ -13,7 +13,6 @@ At the Connecthaton Reinhard and Oliver participated in the [Attachments](http:/
 
 We are looking forward to the next Connectathon and Workgroup Meeting in Madrid – Spain.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

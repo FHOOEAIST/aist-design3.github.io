@@ -11,7 +11,6 @@ Im Mai 2018 fand ein Arbeitsgruppentreffen der HL7 in Köln statt. Emmauel Helm,
 
 Die Teamitglieder nahmen an den Connecaton Tracks für GDPR (Datenschutz Grundverordnung, und Auswirkungen für die Medizin), und [FHIRCast](https://github.com/fhircast) teil. [FHIRCast](http://fhircast.org/)ist ein relativ neues Projekt das der live-synchronisation zwischen verschiedenen Softwarekomponenten im Medizinischen Bereich dienen soll.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

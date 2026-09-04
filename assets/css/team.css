@@ -1,45 +1,43 @@
 /* ==========================================================================
    Team
+   The portraits are small 3:4 images, so the card never crops them: the
+   frame keeps the portrait ratio and letterboxes anything that deviates.
    ========================================================================== */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
 }
 
 .team-card {
   display: flex;
-  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.25rem;
   background: var(--color-white);
   border: 1px solid var(--color-line);
   border-radius: var(--radius-lg);
-  overflow: hidden;
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
 
 .team-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .team-card-image {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  background: linear-gradient(160deg, var(--color-bg-muted), var(--color-bg-light));
+  flex: none;
+  width: 96px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--border-radius);
+  background: var(--color-bg-muted);
   overflow: hidden;
 }
 
 .team-card-image img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  transition: transform 0.5s var(--ease);
-}
-
-.team-card:hover .team-card-image img {
-  transform: scale(1.03);
+  object-fit: contain;
 }
 
 .team-card-placeholder {
@@ -48,7 +46,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  font-size: 3rem;
+  font-size: 2.25rem;
   color: var(--color-line-strong);
 }
 
@@ -56,13 +54,12 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 0.35rem;
-  padding: 1.15rem 1.25rem 1.25rem;
+  gap: 0.3rem;
   min-width: 0;
 }
 
 .team-card-info h3 {
-  font-size: 1.02rem;
+  font-size: 1rem;
   line-height: 1.35;
   margin: 0;
 }
@@ -74,7 +71,7 @@
 }
 
 .team-contact {
-  margin-top: 0.5rem;
+  margin-top: 0.35rem;
   font-size: 0.85rem;
 }
 
@@ -82,7 +79,7 @@
   display: flex;
   align-items: baseline;
   gap: 0.55rem;
-  margin: 0.25rem 0;
+  margin: 0.2rem 0;
   min-width: 0;
 }
 
@@ -110,7 +107,7 @@
   align-items: center;
   gap: 0.4rem;
   margin-top: auto;
-  padding-top: 0.75rem;
+  padding-top: 0.6rem;
   font-size: 0.85rem;
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
@@ -122,11 +119,16 @@
 
 @media (max-width: 640px) {
   .team-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  .team-card-info {
-    padding: 0.9rem 1rem 1rem;
+  .team-card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .team-card-image {
+    width: 80px;
   }
 }

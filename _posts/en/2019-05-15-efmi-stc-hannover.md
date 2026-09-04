@@ -10,7 +10,6 @@ In April our colleaguen [Anna Lackerbauer](https://aist.fh-hagenberg.at/index.ph
 
 The conference took place in the historic building Leibnizhaus.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

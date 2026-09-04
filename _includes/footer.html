@@ -72,15 +72,6 @@
                         {% endfor %}
                     {% endfor %}
                 </ul>
-                <button
-                    type="button"
-                    class="footer-search-btn"
-                    onclick="customElements.whenDefined('pagefind-modal').then(function () { document.querySelector('pagefind-modal').open(); })"
-                >
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    {% if en %}Search the site{% else %}Website durchsuchen{% endif %}
-                    <kbd>Ctrl K</kbd>
-                </button>
             </div>
 
             <div class="footer-col">
@@ -91,10 +82,7 @@
                 />
                 <p>
                     <strong>{% if en %}University of Applied Sciences Upper Austria{% else %}Fachhochschule Oberösterreich{% endif %}</strong><br />
-                    Campus Hagenberg
-                </p>
-                <p>
-                    {% if en %}<a href="https://www.fh-ooe.at/en/hagenberg-campus/" target="_blank" rel="noopener">fh-ooe.at/en/hagenberg-campus <i class="fas fa-arrow-up-right-from-square" aria-hidden="true" style="font-size:0.7em"></i></a>{% else %}<a href="https://www.fh-ooe.at/campus-hagenberg/" target="_blank" rel="noopener">fh-ooe.at/campus-hagenberg <i class="fas fa-arrow-up-right-from-square" aria-hidden="true" style="font-size:0.7em"></i></a>{% endif %}
+                    {% if en %}<a href="https://www.fh-ooe.at/en/hagenberg-campus/" target="_blank" rel="noopener">Campus Hagenberg <i class="fas fa-arrow-up-right-from-square" aria-hidden="true" style="font-size:0.7em"></i></a>{% else %}<a href="https://www.fh-ooe.at/campus-hagenberg/" target="_blank" rel="noopener">Campus Hagenberg <i class="fas fa-arrow-up-right-from-square" aria-hidden="true" style="font-size:0.7em"></i></a>{% endif %}
                 </p>
                 <p>
                     <a href="https://aist.myspreadshop.at/" target="_blank" rel="noopener">{% if en %}AIST Shop{% else %}AIST Shop{% endif %} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true" style="font-size:0.7em"></i></a>

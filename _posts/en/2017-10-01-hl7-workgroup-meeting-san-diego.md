@@ -13,7 +13,6 @@ At the Connecthaton Reinhard and Andreas participated in the Security and Workfl
 
 We are looking forward to the next Connectathon and Workgroup Meeting in New Orleans – USA.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

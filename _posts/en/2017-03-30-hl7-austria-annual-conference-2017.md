@@ -15,7 +15,6 @@ You can downloade the slides of the presentation [ here ](https://aist.fh-hagenb
 
 They are licensed by Creative Commons and could be reused, if you like to. We are happy to receive your questions and suggestions for the workshop.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

@@ -12,7 +12,7 @@ projects:
     partner: team Technology Management GmbH, cloudflight GmbH, Johannes Kepler
       Universität Linz, Kunstuniversität Linz
     foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – KIRAS
-category: unknown
+category: ml
 ---
 
 ## iReduce

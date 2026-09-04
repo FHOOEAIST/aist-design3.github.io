@@ -11,7 +11,6 @@ Andreas durfte im Rahmen der Intelligent Systems (IntelliSys) 2022 Konferenz in 
 
 Wir gratulieren an dieser Stelle ganz herzlichen allen beteiligten Kolleg\*innen!
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

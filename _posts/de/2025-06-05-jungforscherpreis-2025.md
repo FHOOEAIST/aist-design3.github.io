@@ -15,7 +15,6 @@ Wir gratulieren auch unseren beiden Kolleginnen Sarah Heupl und Julia Maurer zum
 
 Bildnachweis: B. Plank – imBILDE.at
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

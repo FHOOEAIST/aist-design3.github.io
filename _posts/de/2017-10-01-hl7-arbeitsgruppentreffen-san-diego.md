@@ -13,7 +13,6 @@ Am Connectathon nahmen Reinhard und Andreas am Security und Workflow Track teil,
 
 Wir freuen uns auf den nächsten Connectathon und Workgroup Meeting in New Orleans – USA.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

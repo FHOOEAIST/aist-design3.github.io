@@ -10,7 +10,7 @@ projects:
     laufzeitStart: 01.07.2024
     laufzeitEnd: 30.09.2024
     partner: Lmnop group GmbH
-category: unknown
+category: ml
 ---
 
 ## Vereinsgesundheit

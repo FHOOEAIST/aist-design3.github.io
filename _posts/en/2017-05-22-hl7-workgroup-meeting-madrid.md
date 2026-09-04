@@ -13,7 +13,6 @@ In another first, the [FHIR Workflow](http://www.hl7.org/fhir/workflow.html) con
 
 We are looking forward to the next Connectathon and Workgroup Meeting in San Diego.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

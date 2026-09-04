@@ -9,7 +9,6 @@ title_image: /assets/images/news/Traumberufe_Technik_2023_title.jpg
 
 Im Rahmen der [Traumberufe Technik Tage](https://www.traumberuftechnik.at/) bieten die FH Oberösterreich und die Johannes Kepler Universität Linz jedes Jahr für Schüler\*innen einen praktischen Einblick in die Studien- und Berufswelt der Technikerinnen und Techniker in der oberösterreichischen Wirtschaft. Unsere Kolleg\*innen Gerald Zwettler, Elisabeth Mayrhuber und Christoph Praschl durften den Schüler\*innen innerhalb des Workshops „Computergestützte Diagnostik: der Blick ins Innere von Patient\*innen“ eine Einführung in die Analyse von hochauflösenden dreidimensionalen Bilddatensätze geben. Im Rahmen des Workshops konnten die Teilnehmer\*innen selbst einen virtuellen Blick in das Innere des menschlichen Körpers werfen und dabei das Abdomen als auch Gehirn von zwei Patient\*innen näher betrachten.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

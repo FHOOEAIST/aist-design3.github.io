@@ -15,7 +15,6 @@ Neben den Arbeitsmeetings blieb auch etwas Zeit für Sightseeing, sodass unsere 
 
 Wir sind gespannt auf die zukünftigen Möglichkeiten und freuen uns darauf, weitere Neuigkeiten zu teilen, sobald diese Gespräche in konkrete Projekte übergehen. Bleiben Sie dran für mehr Informationen über unsere gemeinsamen Anstrengungen!
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

@@ -19,7 +19,6 @@ Wie auch schon letztes Jahr hatten 6 Studenten unserer FH die Chance, am Student
 
 Wir freuen uns auf die Teilnahme an den [FHIR DevDays 2017](http://www.fhirdevdays.com/).
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

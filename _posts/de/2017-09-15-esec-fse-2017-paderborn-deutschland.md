@@ -11,7 +11,6 @@ Vom 04. bis 08. September 2017 fand in Paderborn, Deutschland, die ESEC/FSE 2017
 
 Andreas Schuler präsentierte das Paper „[Application of search-based software engineering methodologies for test suite optimization and evolution in mission critical mobile application development](https://dl.acm.org/citation.cfm?id=3119876)“. In diesem Paper fasst er die wesentlichen Fragestellungen seiner Dissertation zusammen. Die Teilnahme sowie die Präsentation seiner Dissertation im Rahmen des Doctoral Symposiums, verhalfen zu regen Diskussion und wertvollem Feedback.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

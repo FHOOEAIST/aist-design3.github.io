@@ -11,7 +11,6 @@ Also this year the annual AIST Christmas party took place in Hagenberg. This tim
 
 We would like to take this opportunity to thank all project partners and colleagues for the past year and wish them a happy holiday season and a happy new year 2023.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

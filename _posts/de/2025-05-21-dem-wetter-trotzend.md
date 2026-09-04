@@ -15,7 +15,6 @@ Doch wir wären nicht wir, wenn uns ein bisschen – oder ein bisschen mehr – 
 
 Am Ende des Tages waren wir durchgeweicht, aber dafür auch umso stolzer auf uns und unser Team. Was bleibt, sind nicht nur jede Menge lustige Erinnerungen, sondern auch die Erkenntnis: Wir lassen uns vom Wetter ganz sicher nicht unterkriegen.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

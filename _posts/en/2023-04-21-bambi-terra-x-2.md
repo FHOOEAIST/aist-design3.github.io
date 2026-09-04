@@ -13,7 +13,6 @@ For this, our colleagues Christoph Praschl and Leopold Böss from the Media Inte
 
 The BAMBI team would like to thank all those involved, especially David Enge and his team for the excellent footage. The broadcast of the program is scheduled for December 2023, and the team is looking forward to presenting their work to a wide audience.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

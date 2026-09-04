@@ -35,7 +35,6 @@ The WGM in Sydney was probably the last one happening in person for some time. N
 
 Jason Steen and the whole of HL7 Australia did a lot to make the WGM successful. I would absolutely work together with them again, and look forward to any events they are doing!
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

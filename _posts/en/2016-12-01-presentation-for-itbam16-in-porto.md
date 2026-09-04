@@ -11,7 +11,6 @@ The first results of our ongoing interoperable Tumor Board project [KIMBO](http:
 
 The Slides for the presentation can be downloaded [here](http://ehealth.fh-hagenberg.at/wp-content/uploads/2016/09/multidisciplinary-team-meetings1.pdf), with the original publication [here](http://link.springer.com/chapter/10.1007/978-3-319-43949-5_8). In it a literature review shows the starte of the art in tumor boards and discusses details of TB in different workflows. In the future we hope to support workflows by using HL7 FHIR.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

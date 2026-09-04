@@ -13,7 +13,6 @@ Am Connectathon nahmen Reinhard und Oliver am  [Attachments](http://wiki.hl7.org
 
 Wir freuen uns auf den nächsten Connectathon und Workgroup Meeting in Madrid – Spanien.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

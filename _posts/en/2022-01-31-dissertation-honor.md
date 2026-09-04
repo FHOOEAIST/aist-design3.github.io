@@ -11,7 +11,6 @@ To honor the completed dissertations, several colleagues were invited to the hea
 
 We would also like to congratulate all our colleagues on completing their dissertations and wish them all the best for their future careers.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

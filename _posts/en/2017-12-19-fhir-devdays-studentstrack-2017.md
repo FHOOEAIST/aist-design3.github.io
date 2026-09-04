@@ -15,7 +15,6 @@ This year 5 of our students had the opportunity to be part of the StudentsTrack.
 
 We are looking forward to be part of the[ FHIR DevDays 2018](http://www.fhirdevdays.com/).
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

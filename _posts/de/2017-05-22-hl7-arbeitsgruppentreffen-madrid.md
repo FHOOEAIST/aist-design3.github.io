@@ -13,7 +13,6 @@ Erstmalig war auch der neue [Workflow track](http://wiki.hl7.org/index.php?title
 
 We freuen uns schon auf das nächste Workgroup Meeting in San Diego.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

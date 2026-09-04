@@ -17,7 +17,6 @@ Congratulations also to Elisabeth Mayrhuber, who successfully passed her Master 
 
 Finally, we would like to congratulate our colleague Mert Dalkilic on his Bachelor of Science in “Software Engineering” at Campus Hagenberg.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

@@ -13,7 +13,6 @@ Am nächsten Tag haben unsere Kollegen [Andreas Schuler und Oliver Krauss](https
 
 Die Folien zum Workshop finden Sie [ hier ](https://aist.fh-hagenberg.at/wp-content/uploads/2017/03/FHIR_Workshop_HL7Austria_16032017_v1.2.pdf) zum Download. Sie sind unter Creative Commons lizensiert und können gerne weiterverwendet werden. Wir Freuen uns über Fragen und Anregungen zum Workshop.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

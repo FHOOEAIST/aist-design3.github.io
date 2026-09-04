@@ -11,7 +11,7 @@ projects:
     laufzeitEnd: 29.02.2020
     partner: rudy games GmbH
     foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
-category: unknown
+category: cv
 ---
 
 ## i2f – Interface2Face Mixreality Game

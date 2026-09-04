@@ -17,7 +17,6 @@ Die Aufgabe für die DevDays war sich ein medizinisches Gerät auszusuchen und v
 
 Wir freuen uns schon auf die DevDays 2016 und können eine [Teilnahme](http://www.fhirdevdays.com/registration/) nur empfehlen.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

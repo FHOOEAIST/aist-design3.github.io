@@ -13,7 +13,6 @@ Der Tag führte die Beteiligten durch verschiedenste Exponate aus den Bereichen 
 
 Danke vielmals Anna für die Einladung.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

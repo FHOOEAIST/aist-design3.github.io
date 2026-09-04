@@ -13,7 +13,6 @@ Gerald Zwettler war von Juli 2019 bis Februar 2020 als externer Wissenschafter i
 
 [Mehr zu dem IEEE Talk gibt es hier](https://events.vtools.ieee.org/m/217912).
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

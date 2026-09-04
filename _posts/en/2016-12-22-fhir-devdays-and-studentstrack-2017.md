@@ -19,7 +19,6 @@ As well as last year 6 of our students had the opportunity to be part of the Stu
 
 We are looking forward to be part of the[ FHIR DevDays 2017](http://www.fhirdevdays.com/).
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

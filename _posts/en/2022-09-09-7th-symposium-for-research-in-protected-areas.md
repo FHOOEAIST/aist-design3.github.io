@@ -11,7 +11,6 @@ Christoph was able to visit the [7th Symposium for Research in Protected Areas](
 
 Thank you very much for the content exchange and the many interesting presentations.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

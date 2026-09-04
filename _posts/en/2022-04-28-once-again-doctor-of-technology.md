@@ -15,7 +15,6 @@ We congratulate him on this special success and wish him all the best for the fu
 
 P.S. In old Finnish tradition we were allowed to present a sword to Emmanuel Helm for his successful graduation.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

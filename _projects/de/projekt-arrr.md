@@ -11,7 +11,7 @@ projects:
     laufzeitEnd: 30.09.2020
     partner: Realsim
     foerdergeber: easy2research
-category: unknown
+category: cv
 ---
 
 ## Projekt ARRR

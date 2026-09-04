@@ -11,7 +11,7 @@ projects:
     laufzeitEnd: 30.04.2025
     partner: ""
     foerdergeber: FH Basisfördermittelfinaziertes Projekt
-category: unknown
+category: ml
 ---
 
 ## Autonomous Innovation

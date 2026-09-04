@@ -42,7 +42,6 @@ css: projects
           {% else %}
           <span class="badge">{% if en %}Completed{% else %}Abgeschlossen{% endif %}</span>
           {% endif %}
-          {% if cat_label != "" %}<span class="badge badge-{{ page.category }}">{{ cat_label }}</span>{% endif %}
           {% if page.projects.size > 1 %}<span class="badge">{{ page.projects.size }} {% if en %}phases{% else %}Phasen{% endif %}</span>{% endif %}
         </div>
       </div>

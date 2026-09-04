@@ -13,7 +13,6 @@ An dieser Stelle möchten wir uns herzlich bei all unseren Projektpartnerinnen u
 
 Herzliche Grüße und Frohe Weihnachten!
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

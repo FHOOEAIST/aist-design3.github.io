@@ -2,6 +2,10 @@
 Publications grouped by year, newest first. Expects:
   include.lang — "de" or "en"
 
+Title and reference (authors, venue) are always visible. Only the details —
+DOI, external link, abstract — collapse, and an entry without any of them
+renders as a plain card without a toggle.
+
 Each entry exposes its `categories:` list as a space-separated `data-categories`
 attribute for the filter in _includes/publication-filter.html, and repeats them
 as badges that double as a shortcut into that category.
@@ -12,8 +16,10 @@ as badges that double as a shortcut into that category.
 
 {% if include.lang == "de" %}
     {% assign t_filter_by = "Nach Kategorie filtern" %}
+    {% assign t_details = "Details" %}
 {% else %}
     {% assign t_filter_by = "Filter by category" %}
+    {% assign t_details = "Details" %}
 {% endif %}
 
 <div class="listing-items">
@@ -24,23 +30,34 @@ as badges that double as a shortcut into that category.
     <h2 class="mt-3 year-heading" data-year="{{ pub_year }}">{{ pub_year }}</h2>
     {% assign year = pub_year %}
     {% endif %}
+    {% assign anchor = pub.permalink | slugify %}
+    {% assign has_details = false %}
+    {% if pub.doi or pub.external_url %}{% assign has_details = true %}{% endif %}
+    {% if pub.content and pub.content != "" %}{% assign has_details = true %}{% endif %}
     <div
-        class="listing-item publication-entry collapsible"
+        class="listing-item publication-entry{% if has_details %} collapsible{% endif %}"
         data-categories="{{ pub.categories | join: ' ' }}"
     >
-        {% assign anchor = pub.permalink | slugify %}
         <h3 class="listing-title" id="{{ anchor }}">
+            {% if has_details %}
             <button
                 type="button"
                 class="listing-toggle"
                 aria-controls="{{ anchor }}-content"
+                title="{{ t_details }}"
             >
                 <span class="listing-toggle-text">{{ pub.title }}</span>
                 <span class="listing-toggle-icon" aria-hidden="true">
                     <i class="fa-solid fa-chevron-down"></i>
                 </span>
             </button>
+            {% else %}
+            <span class="listing-toggle-text">{{ pub.title }}</span>
+            {% endif %}
         </h3>
+        {% if pub.reference %}
+        <p class="publication-meta">{{ pub.reference }}</p>
+        {% endif %}
         {% if pub.categories.size > 0 %}
         <p class="publication-categories">
             {%- for id in pub.categories -%}
@@ -62,10 +79,9 @@ as badges that double as a shortcut into that category.
             {%- endfor -%}
         </p>
         {% endif %}
+        {% if has_details %}
         <div class="listing-content" id="{{ anchor }}-content">
-            {% if pub.reference %}
-            <p class="publication-meta">{{ pub.reference }}</p>
-            {% endif %} {% if pub.doi %}
+            {% if pub.doi %}
             <p class="publication-links">
                 <strong>DOI:</strong>
                 <a
@@ -87,6 +103,7 @@ as badges that double as a shortcut into that category.
             <div class="publication-abstract">{{ pub.content }}</div>
             {% endif %}
         </div>
+        {% endif %}
     </div>
     {% endfor %}
 </div>

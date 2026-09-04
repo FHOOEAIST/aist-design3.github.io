@@ -17,7 +17,6 @@ Herzlichen Glückwunsch auch an Elisabeth Mayrhuber, die ihren Master of Science
 
 Abschließend möchten wir unseren Kollegen Mert Dalkilic zu seinem Bachelor of Science in „Software Engineering“ am Campus Hagenberg gratulieren.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

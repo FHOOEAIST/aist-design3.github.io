@@ -11,7 +11,6 @@ From September 23rd to 27th, 2024, the University of Applied Sciences Upper Aust
 
 The first workshop provided a comprehensive project overview, with all members reviewing progress across various work packages. A key session on process mining and conformance checking focused on identifying bottlenecks in processes using the HL7 FHIR standard and exploring collaborations for medical guideline development. Another highlight was the medical data analysis workshop, where prediction models for heart disease were discussed, with the potential to apply similar approaches to North Macedonian datasets on COVID-19, tuberculosis, and influenza. Additionally, a workshop on orthoses modeling explored the integration of sensors into 3D-printed orthoses, opening opportunities for future international collaborations. A planned collaboration with HL7 Austria was postponed to November.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

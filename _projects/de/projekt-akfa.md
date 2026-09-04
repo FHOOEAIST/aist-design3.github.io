@@ -11,7 +11,7 @@ projects:
     laufzeitEnd: 30.11.2021
     partner: STEINBAUER Performance Austria GmbH
     foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
-category: unknown
+category: ml
 ---
 
 ## Projekt AKFA

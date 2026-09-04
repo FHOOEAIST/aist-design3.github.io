@@ -15,7 +15,6 @@ Einer unserer internationalen Praktikanten, Anthony, sorgte für die musikalisch
 
 Unser Team freut sich über die neue Bereicherung der Hagenberger Landschaft und ist gespannt, welche Projekte sich daraus ergeben werden.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

@@ -15,7 +15,6 @@ Amidst the productive meetings, there was also some time for sightseeing, allowi
 
 We’re excited about the future possibilities and look forward to sharing more updates as these discussions develop into concrete projects. Stay tuned for more news on our collaborative efforts!
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

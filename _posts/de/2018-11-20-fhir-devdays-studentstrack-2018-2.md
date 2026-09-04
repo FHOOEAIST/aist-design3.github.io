@@ -15,7 +15,6 @@ Neben den interessanten Vorträgen die von firely organisiert wurden durfte, Oli
 
 Dieses Jahr durften vier Studenten des Bachelorstudiengangs Medizin und Bioinformatik (MBI) an den DevDays teilnehmen. Dort konnten sie sich mit anderen Studenten aus verschiedenen Ländern austauschen und die Interoperabilität ihrer Implementierung in einem kleinen Connectathon unter Beweis stellen. Am Ende wurden die großartigen Ergebnisse vor einer hochkarätigen Jury präsentiert. Wir dürfen Nina Stromberger und Valentin Rothensteiner zum ersten Platz im Wettbewerb gratulieren. Die beiden konnten die Jury mit ihrem Thema – Legacy Laborgeräte über Serielle Schnittstellen mit Raspberry Pi zu verbinden und diese in FHIR Resourcen zu übersetzen – überzeugen. Die präsentierte Lösung ist fehlertolerant, und erlaubt es Anwendern Nachrichten die nicht übermittelt werden konnten nachzubearbeiten (z.B. den richtigen Patienten zu einer Messung zuzuweisen). Dies greift einen nützlichen Anwendungsfall auf, der älteren aber noch funktionstüchtigen Geräten den Einsatz in digitalisierten Prozessen ermöglicht.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

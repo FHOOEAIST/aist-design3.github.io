@@ -13,7 +13,6 @@ The day started with departure from Hagenberg at 6:00 am and led the participant
 
 Thanks Thomas for the wonderful trip.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

@@ -11,7 +11,7 @@ projects:
     laufzeitEnd: 30.07.2024
     partner: text-it GmbH
     foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Innovationsscheck
-category: unknown
+category: ml
 ---
 
 ## text-it

@@ -11,7 +11,6 @@ Vom 23. bis 27. September 2024 war die Fachhochschule Oberösterreich in Hagenbe
 
 Der erste Workshop bot einen umfassenden Projektüberblick, bei dem alle Mitglieder die Fortschritte der verschiedenen Arbeitspakete besprachen. Eine wichtige Sitzung zum Thema Process Mining und Konformitätsprüfung konzentrierte sich auf die Identifizierung von Engpässen in Prozessen, die den HL7 FHIR-Standard verwenden, und auf die Erkundung von Kooperationen zur Entwicklung medizinischer Leitlinien. Ein weiterer Höhepunkt war der Workshop zur Analyse medizinischer Daten, in dem Vorhersagemodelle für Herzkrankheiten erörtert wurden, wobei die Möglichkeit bestand, ähnliche Ansätze auf nordmazedonische Datensätze zu COVID-19, Tuberkulose und Influenza anzuwenden. Darüber hinaus wurde in einem Workshop über die Modellierung von Orthesen die Integration von Sensoren in 3D-gedruckte Orthesen untersucht, was Möglichkeiten für künftige internationale Kooperationen eröffnet. Eine geplante Zusammenarbeit mit HL7 Austria wurde auf November verschoben.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

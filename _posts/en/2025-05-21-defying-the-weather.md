@@ -15,7 +15,6 @@ But we wouldn’t be us if a little – or a little more – water threw us off 
 
 At the end of the day, we were soaked through, but all the more proud of ourselves and our team. What remains are not only lots of fun memories, but also the realization that we will definitely not let the weather get us down.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

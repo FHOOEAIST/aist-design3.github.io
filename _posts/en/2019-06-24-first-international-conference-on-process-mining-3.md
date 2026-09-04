@@ -12,7 +12,6 @@ Pruner: A Tool for Sequence-Based EventLog Preprocessing beside the other demos.
 
 You can read the publication [here](http://ceur-ws.org/Vol-2374/paper1.pdf) and the full program [here](https://icpmconference.org/2019/program/)
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

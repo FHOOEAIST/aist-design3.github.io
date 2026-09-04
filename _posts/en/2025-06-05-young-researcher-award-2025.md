@@ -15,7 +15,6 @@ We also congratulate our two colleagues Sarah Heupl and Julia Maurer on receivin
 
 Photo Credit: B. Plank – imBILDE.at
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

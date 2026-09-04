@@ -15,7 +15,7 @@ projects:
   - title: Realsimulator
     partner: Formelracing
     foerdergeber: Austrian Research Promotion Agency (FFG) – Innovation Voucher
-category: unknown
+category: cv
 ---
 
 ## Drive for Knowledge

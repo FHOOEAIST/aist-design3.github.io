@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Jekyll source for the AIST (Advanced Information Systems and Technology) research group website (FH Upper Austria, Campus Hagenberg), deployed to GitHub Pages.
+Jekyll source for the AIST (Advanced Information Systems and Technology) research group website (University of Applied Sciences Upper Austria, Campus Hagenberg), deployed to GitHub Pages.
 
 **⚠️ Pushing to `main` triggers a live deployment via GitHub Actions — there is no staging.** Test non-trivial changes locally first.
 
@@ -65,7 +65,7 @@ Defined in `_config.yml` with default layouts. Front-matter shapes for each are 
 - `_layouts/default.html` renders the sticky header (`.site-header`, hamburger below 960px), then `<main data-pagefind-body>{{ content }}</main>` with **no inner wrapper** — every page adds its own `<div class="container">` (or `container-narrow`) so hero bands and tinted sections can run full-bleed.
 - `_includes/page-header.html` (`title`, `eyebrow`, `lead`, `meta`) is the title band used by all listing pages; `_layouts/prose.html` wraps a Markdown page (history) in that band plus a reading-width `article-body`, with `heading:` / `eyebrow:` front matter overriding the band text.
 - `_includes/news-card.html` (expects `post`) is shared by the news listing and the home-page teaser. `_includes/project-card.html` (expects `project`, `is_active`) emits a full card for running projects and a compact logo tile for completed ones; both carry `data-category` for the client-side area filter on the projects pages.
-- Category labels for projects are looked up in `_data/publication_categories.yml` (ids `ehealth`/`ml`/`cv` match); a project whose `category` is not in that file (currently `unknown` on a third of them) simply gets no badge and is hidden by the area filter.
+- Category labels for projects are looked up in `_data/publication_categories.yml` (ids `ehealth`/`ml`/`cv` match); a project whose `category` is not in that file (`unknown` on the handful of pure software-engineering projects) is hidden while an area filter is active.
 - Design tokens (colors, fonts, radii, shadows) live at the top of `assets/css/main.css`; page-specific sheets (`home`, `projects`, `team`, `contact`, `history`, `impressum`) only add their own components. Site JS (header, collapsible listings, galleries/lightbox, project filter) is in `assets/js/main.js`; the home-page carousel script stays inline in `index*.html`.
 - Both logos are white-on-transparent, so header and footer stay dark navy. The AIST PNG has large transparent margins and is cropped via a fixed 2:1 box with `object-fit: cover` (`.brand-logo`, `.footer-brand-logo`).
 

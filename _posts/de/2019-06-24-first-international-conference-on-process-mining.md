@@ -10,7 +10,6 @@ Im Juni fand in Aachen die erste internationale Konferenz zum Thema Process Mini
 
 Die Publikationen können [hier gefunden werden](http://ceur-ws.org/Vol-2374/paper1.pdf), ebenso wie das vollständige Programm [hier](https://icpmconference.org/2019/program/).
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

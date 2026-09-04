@@ -11,7 +11,7 @@ projects:
     laufzeitEnd: 30.11.2019
     partner: Aicher IT-Consulting GmbH
     foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
-category: unknown
+category: cv
 ---
 
 ## PASS – Plan Analysis using Self-learning Solutions

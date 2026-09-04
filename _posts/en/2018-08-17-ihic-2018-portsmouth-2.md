@@ -13,7 +13,6 @@ The conference started with tutorials about HL7 FHIR and security topics. It off
 
 You can download the presentation slides  [here](http://ihic.info/wp-content/uploads/2018/07/Lackerbauer.pdf). The paper was written related to a master’s thesis about consent for medical treatment and research studies. The full version of this master’s thesis can be downloaded [here](https://www.researchgate.net/publication/326804526_Digitalising_Consent_in_Healthcare_Development_of_an_eConsent_Backend).
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

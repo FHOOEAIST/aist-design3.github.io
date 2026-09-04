@@ -9,7 +9,6 @@ title_image: /assets/images/news/Hoch_hinaus_title.jpg
 
 Nicht nur beruflich, sondern auch im privaten Umfeld, abseits der wissenschaftlichen Arbeit in der Forschungsgruppe AIST, geht es hoch hinaus. Einige Kolleg\*innen haben gemeinsam am vergangenen Sonntag den Großen Schoberstein am Attersee erklommen. Nach der mehrstündigen Wanderung ging es dann noch zum gemeinsamen Mittagessen und anschließend folgte noch ein Sprung in das kühle Nass des Attersees.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

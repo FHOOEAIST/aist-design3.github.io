@@ -13,7 +13,6 @@ Mit dieser Veranstaltung wollten wir auch all unseren Mitarbeitern und derzeitig
 
 Vielen Dank an euch alle, dass ihr ein so wichtiger Teil des AIST-Teams seid!
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

@@ -2271,3 +2271,21 @@ html:not(.js) .listing-toggle-icon {
     margin-bottom: 0.5rem;
   }
 }
+
+/* the area filter hides cards via the hidden attribute; the card display rules must not override it */
+.project-card[hidden] {
+  display: none !important;
+}
+
+/* publications: reference stays visible under the title, details collapse below the badges */
+.publication-entry .publication-meta {
+  margin: 0.15rem 0 0;
+}
+
+.publication-entry .publication-categories {
+  margin-top: 0.5rem;
+}
+
+.publication-entry:not(.collapsible) .listing-title {
+  padding: 0.25rem 0;
+}

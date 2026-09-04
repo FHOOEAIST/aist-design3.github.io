@@ -17,7 +17,6 @@ Des Weiteren gratulieren wir unserem ehemaligen Projekpartner Rewellio (ehemals 
 
 Weitere Fotos können Sie auf [cityfoto.at](https://www.cityfoto.at/content/de/fotogalerie/15308?img=1877190) finden.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

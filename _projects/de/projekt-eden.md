@@ -11,7 +11,7 @@ projects:
     laufzeitEnd: 31.03.2020
     partner: VIEW Promotion GmbH
     foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
-category: unknown
+category: cv
 ---
 
 ## EDEN – Emergency Detection for Elevator Networks

@@ -12,7 +12,6 @@ Andreas Schuler nahm im Rahmen der Konferenz an der Summer School teil und präs
 
 Vielen Dank an die Organisatoren sowie die Teilnehmer für die angeregten Diskussionen und das wertvolle Feedback – bis 2019 in Bejing!
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

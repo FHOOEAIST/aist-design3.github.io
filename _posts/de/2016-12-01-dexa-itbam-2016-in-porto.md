@@ -11,7 +11,6 @@ Die ersten Resultate, unseres anlaufenden interoperablen Tumor Board Projekts [K
 
 Die Folien der Präsentation können [hier](http://ehealth.fh-hagenberg.at/wp-content/uploads/2016/09/multidisciplinary-team-meetings1.pdf) heruntergeladen werden. Die originale Publikation finden Sie [here](http://link.springer.com/chapter/10.1007/978-3-319-43949-5_8). Darin finden Sie neueste Technologien von Tumor Boards und eine Diskussion zu Tumor Boards in verschiedenen Workflows.  Wir hoffen die Workflows in Zukunft mit HL7 FHIR unterstützen zu können.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

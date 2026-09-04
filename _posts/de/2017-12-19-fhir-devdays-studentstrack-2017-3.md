@@ -15,7 +15,6 @@ Dieses Jahr hatten fünf unserer Studenten aus dem Medizin und Bioinformatik Zwe
 
 Wir freuen uns auf die Teilnahme an den [FHIR DevDays 2018](http://www.fhirdevdays.com/).
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

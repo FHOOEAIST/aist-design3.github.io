@@ -13,7 +13,7 @@ projects:
     foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG –
       Innovationsscheck (Fokus Sentimentanalyse)easy2research (Fokus Prompt
       Engineering)
-category: unknown
+category: ml
 ---
 
 ## Replient

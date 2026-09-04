@@ -11,7 +11,6 @@ Die Mitarbeiter David Baumgartner, Emmanuel Helm, Andreas Pointner, Christoph Pr
 
 Vielen Dank für die Einladung an RedBull insbesondere an Markus Buchmann, Christian Stoxreiter, Antonio Rosato und Michael Haslauer für die tollen Vorträge.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

@@ -9,7 +9,6 @@ title_image: /assets/images/news/Besuch_der_Medizinischen_Fakultät_der_Johannes
 
 Heute gab es hohen Besuch von der Medizinischen Fakultät der Johannes Kepler Universität am Campus Hagenberg. Unsere Kollegen Emmanuel Helm und Christoph Praschl durften innerhalb dieses fachlichen Austausches die Themen „Process-Oriented Data Science for Healthcare: Einsatz von Process Mining Technologie im Gesundheitsbereich“ und „Identifizierung und Klassifizierung von Lebewesen in Wäldern“ präsentieren.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

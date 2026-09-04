@@ -11,7 +11,7 @@ projects:
     laufzeitEnd: 31.10.2026
     partner: Airmate
     foerdergeber: Land Oberösterreich – easy2research
-category: unknown
+category: ml
 ---
 
 ## Airmate Motorentests

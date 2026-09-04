@@ -11,7 +11,6 @@ Von 13.03.2023 bis 16.03.2023 fand heuer wieder die HL7 & DICOM Jahrestagung in 
 
 Zudem dürfen wir mit Freude festhalten, dass Clara den HL7 Austria Student Award in der Kategorie Bachelorarbeiten für ihre Diplomarbeit „Digitale Dokumentation von Pflegedienstleistungen: Analyse der Handlungsfelder und Terminologiesysteme“ erhalten hat.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

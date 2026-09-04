@@ -13,7 +13,6 @@ Many thanks for the invitation to RedBull especially to Markus Buchmann, Christi
 
 Translated with www.DeepL.com/Translator (free version)
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

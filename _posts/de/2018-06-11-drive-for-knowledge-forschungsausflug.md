@@ -13,7 +13,6 @@ Der Tag begann mit der Abreise von Hagenberg um 6:00 und führte alle Beteiligte
 
 Danke Thomas für den wundervollen Ausflug.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

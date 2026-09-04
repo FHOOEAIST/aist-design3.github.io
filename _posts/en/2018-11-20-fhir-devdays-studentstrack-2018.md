@@ -15,7 +15,6 @@ In addition to attending diverse instructive presentations and talks, Oliver als
 
 This year four of our students had the opportunity to be part of the StudentsTrack. There they could network with other students from different countries and test the interoperability of their implementation (according to the given topic of medical devices) in a small Connectathon. In the end the great results were presented to a jury consisting of FHIR experts. A big congratulations to Nina Stromberger and Valentin Rothensteiner for reaching first place in the competition! The two students from the Medical and Bioinformatics (MBI) bachelors degree convinced the jury with their topic. They connected legacy laboratory devices over serial port to a Raspberry Pi which translates the (often proprietary) messages into FHIR Resources and uploads them to FHIR server. The system includes fault handling, and modifying messages before upload, ex. to add the patient to the observation. This tackles a real world issue, where older, functional devices can be brought back into modern digital workflows.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

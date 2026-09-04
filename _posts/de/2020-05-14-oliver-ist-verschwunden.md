@@ -35,7 +35,6 @@ Das WGM in Sydnes war vermutlich das letzte in-personen Treffen für die nächst
 
 Jason Steen und HL7 Australien haben viel Arbeit in das WGM gesteckt und es höchst erfolgreich veranstaltet. Ich würde jederzeit wieder mit ihnen zusammenarbeiten oder Events von ihnen besuchen!
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

@@ -13,7 +13,6 @@ Dafür waren unsere Kollegen Christoph Praschl und Leopold Böss aus dem Media I
 
 Das BAMBI-Team bedankt sich bei allen Beteiligten, insbesondere bei David Enge und seinem Team für die hervorragenden Aufnahmen. Die Ausstrahlung der Sendung ist für Dezember 2023 geplant, und das Team freut sich darauf, ihre Arbeit einem breiten Publikum präsentieren zu können.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

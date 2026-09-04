@@ -11,7 +11,6 @@ Im Mai wurde in Montreal das neueste HL7 Workgroup Meeting durchgeführt. Andrea
 
 FHIR wird mittlerweile stabiler, und die Arbeit geht in Richtung Normierung der Ressourcen.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

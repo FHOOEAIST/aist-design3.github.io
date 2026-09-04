@@ -3,7 +3,7 @@ description: >-
   AIST – Advanced Information Systems and Technology. Research group at the University of Applied Sciences Upper Austria, Campus Hagenberg. Focused on eHealth, Machine Learning, and Computer Vision.
 baseurl: "/aist.github.io"
 url: "https://github.aist.science"
-author: "AIST Research Group – FH Upper Austria"
+author: "AIST Research Group – University of Applied Sciences Upper Austria"
 twitter_handle: "@FHOOEAIST"
 og_image: "/assets/images/footer/aist-logo.png"
 theme_color: "#ffffff"
@@ -21,7 +21,7 @@ sass:
 
 pagination:
   enabled: true
-  per_page: 10
+  per_page: 12
   permalink: "/page/:num/"
   title: ":title - Seite :num"
   sort_field: "date"

@@ -11,7 +11,6 @@ Zur Ehrung der abgeschlossenen Dissertationen wurden mehrere Kolleg**·**innen i
 
 Auch wir gratulieren ganz herzlich allen Kolleg**·**innen zur abgeschlossenen Dissertation und wünschen alles Gute für die weitere Laufbahn.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

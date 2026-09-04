@@ -13,7 +13,6 @@ The day took the participants through various exhibits from the fields of art an
 
 Thank you very much Anna for the invitation.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

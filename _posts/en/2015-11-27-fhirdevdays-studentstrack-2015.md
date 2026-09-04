@@ -17,7 +17,6 @@ The Assignment for the DevDays was to select a medical device, get data from it 
 
 We are already looking forward to the DevDays 2016 and suggest you [show up](http://www.fhirdevdays.com/registration/) as well!
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

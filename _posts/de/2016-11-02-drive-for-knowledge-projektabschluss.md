@@ -14,7 +14,6 @@ Nachdem alle vom Rennen ausgepowert waren gab es noch eine 2 stündige, sehr int
 
 Danke Thomas für den wunderbaren Tag. Es war ein gelungener Abschluss.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

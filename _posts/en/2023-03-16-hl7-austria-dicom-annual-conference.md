@@ -11,7 +11,6 @@ From 13.03.2023 to 16.03.2023 the HL7 & DICOM annual conference took place in Vi
 
 In addition, we are pleased to note that Clara won the HL7 Austria Student Award in the Bachelor Thesis category for her thesis “Digital Documentation of Nursing Services: Analysis of fields of action and terminology systems” (Original: „Digitale Dokumentation von Pflegedienstleistungen: Analyse der Handlungsfelder und Terminologiesysteme“).
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

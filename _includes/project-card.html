@@ -13,9 +13,6 @@ carry data-category so the area filter (assets/js/main.js) can hide them.
 {% if is_active %}
 <li class="project-card" data-category="{{ project.category }}"{% if project.background %} style="background-image: url('{{ project.background | relative_url }}');"{% endif %}>
   <div class="card-overlay"></div>
-  {% if card_cat_label != "" %}
-  <div class="card-badges"><span class="badge badge-{{ project.category }}">{{ card_cat_label }}</span></div>
-  {% endif %}
   <div class="card-content">
     <div class="card-logo">
       {% if project.logo %}<img src="{{ project.logo | relative_url }}" alt="" loading="lazy">{% endif %}

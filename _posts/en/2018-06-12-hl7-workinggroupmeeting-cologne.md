@@ -11,7 +11,6 @@ In may 2018 HL7 Germany hosted a WGM in Cologne. Emmauel Helm, Andreas Schuler u
 
 The teammembers participtaed at the connectathon tracks for GDPR (General Data Protection Regulation and its relevance for medical research), [FHIRCast](https://github.com/fhircast). [FHIRCast](http://fhircast.org/) is a relatively new project that deals with the live synchronisation between software components in medical systems.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

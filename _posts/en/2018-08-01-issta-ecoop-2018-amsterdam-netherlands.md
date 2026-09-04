@@ -12,7 +12,6 @@ Andreas Schuler attended the Summer School und presented the paper „[Towards a
 
 Big thanks to all the attendees for the valuable feedback and the discussion during the conference – see you in 2019 in Bejing.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

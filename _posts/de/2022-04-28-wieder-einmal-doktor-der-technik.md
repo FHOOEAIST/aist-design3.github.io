@@ -15,7 +15,6 @@ Wir gratulieren ganz herzlich zu diesem besonderen Erfolg und wünschen das alle
 
 P.S. In alter finnischer Tradition durften wir ebenso wie bei Emmanuel Helm zum erfolgreichen Abschluss ein Schwert überreichen.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

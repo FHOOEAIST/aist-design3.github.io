@@ -13,7 +13,6 @@ Die Konferenz startete mit Tutorials zu HL7 FHIR und Security-Themen und bot ein
 
 Die Präsentationsfolien stehen [hier](http://ihic.info/wp-content/uploads/2018/07/Lackerbauer.pdf) zum Download bereit. Das Paper wurde im Zuge einer Masterarbeit bezüglich Consent (Einwilligungserklärung) für medizinische Behandlungen und Forschungsstudien erstellt. Der Volltext dieser Masterarbeit kann [hier](https://www.researchgate.net/publication/326804526_Digitalising_Consent_in_Healthcare_Development_of_an_eConsent_Backend) heruntergeladen werden.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

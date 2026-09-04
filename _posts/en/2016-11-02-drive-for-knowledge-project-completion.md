@@ -14,7 +14,6 @@ After all were exhausted from the race, there was a 2-hour tour throw the Red Bu
 
 Thank you, Thomas, for the wonderful day. It was an great project compoetion.
 
-## Gallery
 
 <div class="gallery" markdown="1">
 

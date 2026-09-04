@@ -11,7 +11,7 @@ projects:
     laufzeitEnd: 31.10.2028
     partner: Monto Tech GmbH
     foerdergeber: Land Oberösterreich – easy2research
-category: unknown
+category: ml
 ---
 
 ## BuildPilot

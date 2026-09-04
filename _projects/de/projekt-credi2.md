@@ -11,7 +11,7 @@ projects:
     laufzeitEnd: 31.08.2016
     partner: Credi2 GmbH
     foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Basisprogramm
-category: unknown
+category: cv
 ---
 
 ## Projekt Credi2
