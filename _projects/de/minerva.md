@@ -9,7 +9,8 @@ projects:
   - title: MINERVA
     laufzeitStart: 01.01.2027
     laufzeitEnd: 31.05.2029
-    foerdergeber: Dissertationsprogramm der Fachhochschule OÖ – Ausschreibung 2026
+    dissertant: Sebastian Pritz
+    foerdergeber: Österreichische Forschungsförderungsgesellschaft FFG – Dissertationsprogramm der Fachhochschule OÖ
 category: ml
 ---
 
