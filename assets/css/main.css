@@ -2087,6 +2087,10 @@ html:not(.js) .listing-toggle-icon {
     box-shadow: 0 20px 40px rgba(8, 24, 39, 0.4);
     opacity: 0;
     visibility: hidden;
+    /* Closed, the panel is transparent but still in the layout; without this
+       a tap on the empty-looking area below the header would land on its
+       links. */
+    pointer-events: none;
     transform: translateY(-8px);
     transition: opacity 0.2s var(--ease), transform 0.2s var(--ease), visibility 0.2s;
   }
@@ -2094,6 +2098,7 @@ html:not(.js) .listing-toggle-icon {
   .site-header.nav-open .site-nav {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
   }
 
@@ -2120,8 +2125,12 @@ html:not(.js) .listing-toggle-icon {
     display: none;
   }
 
-  /* submenus are always expanded on small screens */
-  .nav-dropdown-menu {
+  /* submenus are always expanded on small screens; they inherit the
+     panel's visibility rather than forcing their own, so they disappear
+     (and stop taking clicks) together with the closed panel */
+  .nav-dropdown-menu,
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu {
     position: static;
     min-width: 0;
     margin: 0 0 0.35rem 0.75rem;
@@ -2132,7 +2141,7 @@ html:not(.js) .listing-toggle-icon {
     border-radius: 0;
     box-shadow: none;
     opacity: 1;
-    visibility: visible;
+    visibility: inherit;
     transform: none;
   }
 
