@@ -9,9 +9,9 @@ renders as a plain card without a toggle.
 Each entry exposes its `categories:` list as a space-separated `data-categories`
 attribute (plus data-year) for the filter in _includes/listing-filter.html, and repeats them
 as badges that double as a shortcut into that category. The entries of a year
-sit in a `.year-section` whose heading folds them (initYearSections in
-assets/js/main.js): the newest year with visible entries is open, the rest
-start folded.
+sit in a `.year-section` (initYearSections in assets/js/main.js): the newest
+year with visible entries is complete, every other year shows two entries and
+a "show more" button.
 {% endcomment %}
 
 {% assign cats = site.data.publication_categories %}
@@ -26,14 +26,15 @@ start folded.
 {% endif %}
 
 {% comment %} One section per year (group_by_exp keeps the newest-first
-order); the heading folds the section, see _includes/year-heading.html. {% endcomment %}
+order); older years show two entries and a "show more" button, see
+_includes/year-more.html. {% endcomment %}
 {% assign by_year = pubs | group_by_exp: "item", "item.date | date: '%Y'" %}
 <div class="listing-items">
     {% for group in by_year %}
     {% assign pub_year = group.name %}
     <section class="year-section" data-year="{{ pub_year }}">
-    {% include year-heading.html year=pub_year count=group.size %}
-    <div class="year-items" id="year-{{ pub_year }}-items">
+    <h2 class="year-heading">{{ pub_year }}</h2>
+    <div class="year-items">
     {% for pub in group.items %}
     {% assign anchor = pub.permalink | slugify %}
     {% assign has_details = false %}
@@ -113,6 +114,8 @@ order); the heading folds the section, see _includes/year-heading.html. {% endco
     </div>
     {% endfor %}
     </div>
+    {% assign extra = group.size | minus: 2 %}
+    {% include year-more.html lang=include.lang extra=extra %}
     </section>
     {% endfor %}
 </div>

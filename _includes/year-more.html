@@ -1,0 +1,22 @@
+{% comment %}
+"Show more" button under the two teaser entries of a year in the
+publications / theses listings (initYearSections in assets/js/main.js).
+Expects `lang` and `extra` (entries beyond the two shown, for the label
+before the script takes over). The script hides the bar for the newest year
+with visible entries, which is always complete, and for years with two
+entries or fewer; without JS every entry is shown and the bar stays hidden.
+{% endcomment %}
+{% assign placeholder = "{n}" %}
+{% if include.lang == "de" %}
+    {% assign t_more = "{n} weitere anzeigen" %}
+    {% assign t_less = "Weniger anzeigen" %}
+{% else %}
+    {% assign t_more = "Show {n} more" %}
+    {% assign t_less = "Show fewer" %}
+{% endif %}
+<div class="year-more-bar" hidden>
+    <button type="button" class="year-more" aria-expanded="false" data-label-more="{{ t_more }}" data-label-less="{{ t_less }}">
+        <span class="year-more-text">{{ t_more | replace: placeholder, include.extra }}</span>
+        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+    </button>
+</div>

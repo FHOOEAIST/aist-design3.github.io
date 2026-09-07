@@ -15,14 +15,15 @@ page_id: theses-index
   {% assign t_filter_by = "Filter by category" %}
   <div class="listing-items">
     {% assign en_theses = site.theses | where: "lang", "en" | sort: "date" | reverse %}
-    {% comment %} One section per year, newest first; the heading folds it
-    (_includes/year-heading.html, initYearSections in main.js). {% endcomment %}
+    {% comment %} One section per year, newest first; older years show two
+    entries and a "show more" button (_includes/year-more.html,
+    initYearSections in main.js). {% endcomment %}
     {% assign by_year = en_theses | group_by_exp: "item", "item.date | date: '%Y'" %}
     {% for group in by_year %}
       {% assign thesis_year = group.name %}
       <section class="year-section" data-year="{{ thesis_year }}">
-      {% include year-heading.html year=thesis_year count=group.size %}
-      <div class="year-items" id="year-{{ thesis_year }}-items">
+      <h2 class="year-heading">{{ thesis_year }}</h2>
+      <div class="year-items">
       {% for thesis in group.items %}
       <div class="listing-item thesis-entry collapsible" data-year="{{ thesis_year }}" data-type="{{ thesis.thesis_type }}" data-categories="{{ thesis.categories | join: ' ' }}">
         {% assign anchor = thesis.permalink | slugify %}
@@ -50,6 +51,8 @@ page_id: theses-index
       </div>
       {% endfor %}
       </div>
+      {% assign extra = group.size | minus: 2 %}
+      {% include year-more.html lang="en" extra=extra %}
       </section>
     {% endfor %}
   </div>

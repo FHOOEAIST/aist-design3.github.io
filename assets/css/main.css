@@ -899,10 +899,10 @@ article {
   font-size: 0.85rem;
 }
 
-/* Year sections: the heading is a button that folds the year's entries
-   (initYearSections in main.js); all but the newest year with visible
-   entries start folded. Without JS everything is open and the chevron
-   stays hidden. */
+/* Year sections (publications, theses): the newest year is complete, older
+   years show two entries and a right-aligned "show N more" button
+   (initYearSections in main.js). Without JS every entry is shown and the
+   button stays hidden. */
 .year-heading {
   display: flex;
   align-items: center;
@@ -923,74 +923,52 @@ article {
   margin-top: 0;
 }
 
-.year-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin: 0;
-  padding: 0;
-  background: none;
-  border: none;
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
-}
-
-.year-toggle:hover,
-.year-toggle:focus-visible {
-  outline: none;
-  color: var(--color-primary);
-}
-
-.year-count {
-  padding: 0.1rem 0.6rem;
-  border-radius: var(--radius-pill);
-  background: var(--color-bg-muted);
-  color: var(--color-text-light);
-  font-size: 0.8rem;
-  font-weight: 500;
-  line-height: 1.5;
-  font-variant-numeric: tabular-nums;
-}
-
-.year-toggle-icon {
-  flex: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  background: var(--color-bg-light);
-  border: 1px solid var(--color-line);
-  border-radius: 50%;
-  font-size: 0.65rem;
-  color: var(--color-primary);
-}
-
-.year-toggle:hover .year-toggle-icon,
-.year-toggle:focus-visible .year-toggle-icon {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
-  color: var(--color-white);
-}
-
-.year-toggle[aria-expanded="true"] .year-toggle-icon {
-  transform: rotate(180deg);
-}
-
-.year-section.is-collapsed .year-items {
+.listing-item.is-beyond {
   display: none;
 }
 
-html:not(.js) .year-toggle {
-  cursor: default;
+.year-more-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.25rem;
 }
 
-html:not(.js) .year-toggle:hover {
-  color: inherit;
+.year-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-pill);
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-html:not(.js) .year-toggle-icon {
+.year-more:hover,
+.year-more:focus-visible {
+  outline: none;
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.year-more:focus-visible {
+  box-shadow: 0 0 0 3px rgba(30, 78, 121, 0.25);
+}
+
+.year-more i {
+  font-size: 0.7rem;
+}
+
+.year-more[aria-expanded="true"] i {
+  transform: rotate(180deg);
+}
+
+html:not(.js) .year-more-bar {
   display: none;
 }
 
@@ -1105,13 +1083,13 @@ html:not(.js) .listing-toggle-icon {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .year-toggle {
-    transition: color 0.15s var(--ease);
+  .year-more {
+    transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease),
+      color 0.2s var(--ease);
   }
 
-  .year-toggle-icon {
-    transition: transform 0.25s var(--ease), background-color 0.2s var(--ease),
-      border-color 0.2s var(--ease), color 0.2s var(--ease);
+  .year-more i {
+    transition: transform 0.25s var(--ease);
   }
 
   .listing-toggle {
@@ -2345,11 +2323,11 @@ html:not(.js) .listing-toggle-icon {
     display: none !important;
   }
 
-  .year-section.is-collapsed .year-items {
+  .listing-item.is-beyond {
     display: block;
   }
 
-  .year-toggle-icon {
+  .year-more-bar {
     display: none;
   }
 
