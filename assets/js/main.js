@@ -262,6 +262,9 @@
         var empty = group.querySelector("[data-empty]");
         if (empty) empty.hidden = visible > 0;
       });
+
+      // the collapsed completed-projects grid has to re-measure its rows
+      document.dispatchEvent(new CustomEvent("projects:filtered"));
     }
 
     buttons.forEach(function (b) {
@@ -280,6 +283,88 @@
       ? match[1]
       : "all";
     apply(initial);
+  }
+
+  /* --------------------------------------------------- project collapse */
+  // Projects page: the grid of completed projects starts folded to its first
+  // two rows, the third fading out; the chevron button below unfolds it.
+  // Row breaks are measured (the grid is auto-fill, so the row count depends
+  // on the viewport and on the area filter) and re-measured on resize and
+  // after filtering. Two rows or fewer: nothing to fold, no button.
+  function initProjectCollapse() {
+    var wrap = document.querySelector("[data-project-collapse]");
+    var bar = document.querySelector("[data-project-collapse-bar]");
+    if (!wrap || !bar) return;
+    var toggle = bar.querySelector(".project-collapse-toggle");
+    var grid = wrap.querySelector(".project-grid");
+    if (!toggle || !grid) return;
+
+    var ROWS_SHOWN = 2;
+    var expanded = false;
+    var fullHeight = 0;
+    var collapsedHeight = 0;
+
+    function measure() {
+      var cards = Array.prototype.slice.call(grid.querySelectorAll(".project-card:not([hidden])"));
+      var rows = [];
+      cards.forEach(function (card) {
+        var top = card.offsetTop;
+        var row = rows[rows.length - 1];
+        if (!row || row.top !== top) {
+          rows.push({ top: top, height: card.offsetHeight });
+        } else if (card.offsetHeight > row.height) {
+          row.height = card.offsetHeight;
+        }
+      });
+
+      fullHeight = grid.offsetHeight;
+      if (rows.length <= ROWS_SHOWN) {
+        collapsedHeight = 0;
+        bar.hidden = true;
+        wrap.classList.remove("is-collapsed");
+        wrap.style.maxHeight = "";
+        return;
+      }
+      var fade = rows[ROWS_SHOWN];
+      collapsedHeight = fade.top + fade.height;
+      wrap.style.setProperty("--collapsed-height", collapsedHeight + "px");
+      wrap.style.setProperty("--fade-height", fade.height + "px");
+      bar.hidden = false;
+      render();
+    }
+
+    function render() {
+      wrap.classList.toggle("is-collapsed", !expanded);
+      // an explicit max-height on both ends so the transition has something
+      // to run between; the inline value wins over the collapsed variable
+      wrap.style.maxHeight = (expanded ? fullHeight : collapsedHeight) + "px";
+      toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+      var label = toggle.getAttribute(expanded ? "data-label-less" : "data-label-more");
+      if (label) {
+        toggle.setAttribute("aria-label", label);
+        toggle.setAttribute("title", label);
+      }
+    }
+
+    toggle.addEventListener("click", function () {
+      expanded = !expanded;
+      render();
+      if (!expanded) {
+        // folding a long grid can leave the visitor far below it
+        var group = wrap.closest("[data-project-group]") || wrap;
+        if (group.getBoundingClientRect().top < 0) group.scrollIntoView();
+      }
+    });
+
+    var resizeTimer = null;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(measure, 120);
+    });
+    document.addEventListener("projects:filtered", measure);
+    window.addEventListener("load", measure); // logos may change the row height
+
+    measure();
   }
 
   /* ------------------------------------------------------------ listbox */
@@ -742,6 +827,7 @@
     initCollapsibles();
     initGalleries();
     initProjectFilter();
+    initProjectCollapse();
     initListingFilter();
     initHeroWaves();
     initMosaic();

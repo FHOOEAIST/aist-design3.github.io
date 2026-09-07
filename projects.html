@@ -69,12 +69,21 @@ first phase's end date. {% endcomment %}
         <p>{{ done_projects.size }} abgeschlossene Projekte (seit 2015)</p>
       </div>
     </div>
-    <ul class="project-grid complete">
-    {% for project in done_projects %}
-      {% assign is_active = false %}
-      {% include project-card.html %}
-    {% endfor %}
-    </ul>
+    {% comment %} Collapsed to two rows by initProjectCollapse in main.js; the
+    third row fades out and the button below unfolds the whole grid. {% endcomment %}
+    <div class="project-collapse" data-project-collapse>
+      <ul class="project-grid complete">
+      {% for project in done_projects %}
+        {% assign is_active = false %}
+        {% include project-card.html %}
+      {% endfor %}
+      </ul>
+    </div>
+    <div class="project-collapse-bar" data-project-collapse-bar hidden>
+      <button type="button" class="project-collapse-toggle" aria-expanded="false" data-label-more="Alle abgeschlossenen Projekte anzeigen" data-label-less="Weniger abgeschlossene Projekte anzeigen" aria-label="Alle abgeschlossenen Projekte anzeigen" title="Alle abgeschlossenen Projekte anzeigen">
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+      </button>
+    </div>
     <p class="project-group-empty" data-empty hidden>Keine abgeschlossenen Projekte in diesem Bereich.</p>
   </section>
 </div>

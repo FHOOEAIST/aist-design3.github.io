@@ -75,6 +75,104 @@
   margin-bottom: 1.5rem;
 }
 
+/* Completed projects: collapsed to two rows (initProjectCollapse in
+   assets/js/main.js measures the rows and sets --collapsed-height and
+   --fade-height). The third row fades out under a gradient in the page
+   colour; the round chevron button on the hairline below unfolds the grid.
+   Without JS the grid is simply complete and the button stays hidden. */
+.project-collapse {
+  position: relative;
+  overflow: hidden; /* also while the height is animating */
+}
+
+.project-collapse.is-collapsed {
+  max-height: var(--collapsed-height, none);
+}
+
+.project-collapse::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--fade-height, 0px);
+  background: linear-gradient(to bottom, transparent, var(--color-bg));
+  opacity: 0;
+  pointer-events: none;
+}
+
+.project-collapse.is-collapsed::after {
+  opacity: 1;
+}
+
+.project-collapse-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.project-collapse-bar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid var(--color-line);
+}
+
+.project-collapse-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-pill);
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.project-collapse-toggle:hover,
+.project-collapse-toggle:focus-visible {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-white);
+  outline: none;
+}
+
+.project-collapse-toggle:focus-visible {
+  box-shadow: 0 0 0 3px rgba(30, 78, 121, 0.25);
+}
+
+.project-collapse-toggle i {
+  transition: transform 0.25s var(--ease);
+}
+
+.project-collapse-toggle[aria-expanded="true"] i {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-collapse {
+    transition: max-height 0.45s var(--ease);
+  }
+
+  .project-collapse::after {
+    transition: opacity 0.3s var(--ease);
+  }
+
+  .project-collapse-toggle {
+    transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease),
+      color 0.2s var(--ease);
+  }
+}
+
 .project-group-empty {
   padding: 2rem;
   border: 1px dashed var(--color-line-strong);
