@@ -1,0 +1,14 @@
+{% comment %}
+Heading of one year group in the publications / theses listings: a button
+that folds the group's entries (initYearSections in assets/js/main.js).
+Expects `year` and `count` (entries in that year; the filter keeps the badge
+at the number currently shown). Rendered expanded; the script then folds every
+year but the newest one that has visible entries.
+{% endcomment %}
+<h2 class="year-heading" data-year="{{ include.year }}">
+    <button type="button" class="year-toggle" aria-expanded="true" aria-controls="year-{{ include.year }}-items">
+        <span class="year-toggle-text">{{ include.year }}</span>
+        <span class="year-count">{{ include.count }}</span>
+        <span class="year-toggle-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+    </button>
+</h2>

@@ -42,6 +42,45 @@
     if (toggle) toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
   }
 
+  /* ------------------------------------------------------- year sections */
+  // Publications / theses: the entries of a year sit in a .year-section that
+  // its heading folds. All but the newest year with visible entries start
+  // folded (the filter re-applies that rule, see initListingFilter); a year
+  // the visitor folded or unfolded by hand keeps that state.
+  function setYearExpanded(section, expanded) {
+    section.classList.toggle("is-collapsed", !expanded);
+    var toggle = section.querySelector(".year-toggle");
+    if (toggle) toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+  }
+
+  function initYearSections() {
+    var sections = Array.prototype.slice.call(document.querySelectorAll(".year-section"));
+    sections.forEach(function (section) {
+      var toggle = section.querySelector(".year-toggle");
+      if (!toggle) return;
+      toggle.addEventListener("click", function () {
+        section.setAttribute("data-user-toggled", "1");
+        setYearExpanded(section, section.classList.contains("is-collapsed"));
+      });
+    });
+    applyYearDefaults();
+  }
+
+  // Newest visible year open; every other year folded unless the visitor
+  // chose otherwise.
+  function applyYearDefaults() {
+    var first = true;
+    Array.prototype.slice.call(document.querySelectorAll(".year-section")).forEach(function (section) {
+      if (section.style.display === "none") return;
+      if (first) {
+        setYearExpanded(section, true);
+        first = false;
+      } else if (!section.hasAttribute("data-user-toggled")) {
+        setYearExpanded(section, false);
+      }
+    });
+  }
+
   // Auto-expand listing items when navigated via hash anchor
   function handleHashTarget() {
     var hash = window.location.hash;
@@ -56,6 +95,16 @@
     }
     if (!target) return;
     var item = target.closest(".listing-item") || target;
+    // a deep link into a folded year unfolds it (and keeps it that way)
+    var section = item.closest(".year-section");
+    if (section && section.classList.contains("is-collapsed")) {
+      section.setAttribute("data-user-toggled", "1");
+      setYearExpanded(section, true);
+      // the browser scrolled while the target was hidden
+      target.scrollIntoView();
+    } else if (section) {
+      section.setAttribute("data-user-toggled", "1");
+    }
     if (item.classList.contains("collapsible")) {
       setListingExpanded(item, true);
     }
@@ -476,7 +525,7 @@
 
     var resultsEl = root.querySelector(".cat-filter-results");
     var items = Array.prototype.slice.call(document.querySelectorAll(".listing-item[data-year]"));
-    var yearHeadings = Array.prototype.slice.call(document.querySelectorAll(".year-heading"));
+    var sections = Array.prototype.slice.call(document.querySelectorAll(".year-section"));
     var boxes = {};
 
     items.forEach(function (item) {
@@ -502,15 +551,19 @@
         if (ok) shown++;
       });
 
-      yearHeadings.forEach(function (heading) {
-        var next = heading.nextElementSibling;
-        var any = false;
-        while (next && !next.classList.contains("year-heading")) {
-          if (next.classList.contains("listing-item") && next.style.display !== "none") any = true;
-          next = next.nextElementSibling;
-        }
-        heading.style.display = any ? "" : "none";
+      // a year without visible entries disappears; the badge in the heading
+      // shows how many entries the year has under the current filter
+      sections.forEach(function (section) {
+        var visible = section.querySelectorAll(".listing-item").length
+          ? Array.prototype.filter.call(section.querySelectorAll(".listing-item"), function (item) {
+              return item.style.display !== "none";
+            }).length
+          : 0;
+        section.style.display = visible ? "" : "none";
+        var count = section.querySelector(".year-count");
+        if (count) count.textContent = visible;
       });
+      applyYearDefaults();
 
       var tpl = root.getAttribute("data-results-template") || "";
       if (resultsEl) {
@@ -824,6 +877,7 @@
   /* --------------------------------------------------------------- boot */
   function boot() {
     initHeader();
+    initYearSections(); // before initCollapsibles: a hash target unfolds its year
     initCollapsibles();
     initGalleries();
     initProjectFilter();

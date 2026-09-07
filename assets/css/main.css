@@ -899,8 +899,11 @@ article {
   font-size: 0.85rem;
 }
 
-.year-heading,
-.listing-items > h2.mt-3 {
+/* Year sections: the heading is a button that folds the year's entries
+   (initYearSections in main.js); all but the newest year with visible
+   entries start folded. Without JS everything is open and the chevron
+   stays hidden. */
+.year-heading {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -909,17 +912,86 @@ article {
   color: var(--color-heading);
 }
 
-.year-heading::after,
-.listing-items > h2.mt-3::after {
+.year-heading::after {
   content: "";
   flex: 1;
   height: 1px;
   background: var(--color-line);
 }
 
-.year-heading:first-child,
-.listing-items > h2.mt-3:first-child {
+.year-section:first-child .year-heading {
   margin-top: 0;
+}
+
+.year-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.year-toggle:hover,
+.year-toggle:focus-visible {
+  outline: none;
+  color: var(--color-primary);
+}
+
+.year-count {
+  padding: 0.1rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-muted);
+  color: var(--color-text-light);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+
+.year-toggle-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  font-size: 0.65rem;
+  color: var(--color-primary);
+}
+
+.year-toggle:hover .year-toggle-icon,
+.year-toggle:focus-visible .year-toggle-icon {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.year-toggle[aria-expanded="true"] .year-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.year-section.is-collapsed .year-items {
+  display: none;
+}
+
+html:not(.js) .year-toggle {
+  cursor: default;
+}
+
+html:not(.js) .year-toggle:hover {
+  color: inherit;
+}
+
+html:not(.js) .year-toggle-icon {
+  display: none;
 }
 
 .publication-entry,
@@ -1033,6 +1105,15 @@ html:not(.js) .listing-toggle-icon {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .year-toggle {
+    transition: color 0.15s var(--ease);
+  }
+
+  .year-toggle-icon {
+    transition: transform 0.25s var(--ease), background-color 0.2s var(--ease),
+      border-color 0.2s var(--ease), color 0.2s var(--ease);
+  }
+
   .listing-toggle {
     transition: color 0.15s var(--ease);
   }
@@ -2262,6 +2343,14 @@ html:not(.js) .listing-toggle-icon {
   .cat-filter,
   .gallery-lightbox {
     display: none !important;
+  }
+
+  .year-section.is-collapsed .year-items {
+    display: block;
+  }
+
+  .year-toggle-icon {
+    display: none;
   }
 
   body {
