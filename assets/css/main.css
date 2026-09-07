@@ -899,8 +899,8 @@ article {
   font-size: 0.85rem;
 }
 
-/* Year sections (publications, theses): the newest year is complete, older
-   years show two entries and a right-aligned "show N more" button
+/* Year sections (publications, theses): every year shows two entries and a
+   right-aligned "show N more" button
    (initYearSections in main.js). Without JS every entry is shown and the
    button stays hidden. */
 .year-heading {

@@ -43,12 +43,12 @@
   }
 
   /* ------------------------------------------------------- year sections */
-  // Publications / theses: the entries of a year sit in a .year-section. The
-  // newest year with visible entries is complete; every other year shows its
-  // first YEAR_TEASER entries and a "show N more" button that unfolds the
-  // rest (and folds it again). The filter re-applies that rule to the
-  // entries it leaves visible (initListingFilter); a year the visitor
-  // unfolded stays unfolded, and a deep link unfolds the year it points into.
+  // Publications / theses: the entries of a year sit in a .year-section.
+  // Every year shows its first YEAR_TEASER entries and a "show N more" button
+  // that unfolds the rest (and folds it again). The filter re-applies that
+  // rule to the entries it leaves visible (initListingFilter); a year the
+  // visitor unfolded stays unfolded, and a deep link unfolds the year it
+  // points into.
   var YEAR_TEASER = 2;
 
   function yearVisibleItems(section) {
@@ -57,9 +57,9 @@
     });
   }
 
-  function renderYearSection(section, newest) {
+  function renderYearSection(section) {
     var items = yearVisibleItems(section);
-    var expanded = newest || section.getAttribute("data-expanded") === "true";
+    var expanded = section.getAttribute("data-expanded") === "true";
     var extra = items.length - YEAR_TEASER;
     items.forEach(function (item, i) {
       item.classList.toggle("is-beyond", !expanded && i >= YEAR_TEASER);
@@ -67,21 +67,18 @@
     var bar = section.querySelector(".year-more-bar");
     var button = section.querySelector(".year-more");
     if (!bar || !button) return;
-    bar.hidden = newest || extra <= 0;
+    bar.hidden = extra <= 0;
     button.setAttribute("aria-expanded", expanded ? "true" : "false");
     var text = button.querySelector(".year-more-text");
     var label = button.getAttribute(expanded ? "data-label-less" : "data-label-more") || "";
     if (text) text.textContent = label.replace("{n}", extra);
   }
 
-  // Newest visible year complete, every other year teased (unless unfolded
-  // by the visitor). Called at start and after every filter change.
+  // Every visible year teased (unless unfolded by the visitor). Called at
+  // start and after every filter change.
   function applyYearDefaults() {
-    var first = true;
     Array.prototype.slice.call(document.querySelectorAll(".year-section")).forEach(function (section) {
-      if (section.style.display === "none") return;
-      renderYearSection(section, first);
-      first = false;
+      if (section.style.display !== "none") renderYearSection(section);
     });
   }
 
@@ -92,7 +89,7 @@
       button.addEventListener("click", function () {
         var expand = section.getAttribute("data-expanded") !== "true";
         section.setAttribute("data-expanded", expand ? "true" : "false");
-        renderYearSection(section, false);
+        renderYearSection(section);
         // folding a long year can leave the visitor far below its heading
         if (!expand && section.getBoundingClientRect().top < 0) section.scrollIntoView();
       });
@@ -118,7 +115,7 @@
     var section = item.closest(".year-section");
     if (section && item.classList.contains("is-beyond")) {
       section.setAttribute("data-expanded", "true");
-      renderYearSection(section, false);
+      renderYearSection(section);
       // the browser scrolled while the target was hidden
       target.scrollIntoView();
     } else if (section) {

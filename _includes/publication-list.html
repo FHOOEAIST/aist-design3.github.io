@@ -9,9 +9,8 @@ renders as a plain card without a toggle.
 Each entry exposes its `categories:` list as a space-separated `data-categories`
 attribute (plus data-year) for the filter in _includes/listing-filter.html, and repeats them
 as badges that double as a shortcut into that category. The entries of a year
-sit in a `.year-section` (initYearSections in assets/js/main.js): the newest
-year with visible entries is complete, every other year shows two entries and
-a "show more" button.
+sit in a `.year-section` (initYearSections in assets/js/main.js): every year
+shows two entries and a "show more" button.
 {% endcomment %}
 
 {% assign cats = site.data.publication_categories %}
@@ -26,7 +25,7 @@ a "show more" button.
 {% endif %}
 
 {% comment %} One section per year (group_by_exp keeps the newest-first
-order); older years show two entries and a "show more" button, see
+order); every year shows two entries and a "show more" button, see
 _includes/year-more.html. {% endcomment %}
 {% assign by_year = pubs | group_by_exp: "item", "item.date | date: '%Y'" %}
 <div class="listing-items">

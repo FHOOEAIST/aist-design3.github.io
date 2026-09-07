@@ -15,9 +15,9 @@ page_id: theses-index
   {% assign t_filter_by = "Nach Kategorie filtern" %}
   <div class="listing-items">
     {% assign de_theses = site.theses | where: "lang", "de" | sort: "date" | reverse %}
-    {% comment %} One section per year, newest first; older years show two
-    entries and a "show more" button (_includes/year-more.html,
-    initYearSections in main.js). {% endcomment %}
+    {% comment %} One section per year, newest first; each shows two entries
+    and a "show more" button (_includes/year-more.html, initYearSections in
+    main.js). {% endcomment %}
     {% assign by_year = de_theses | group_by_exp: "item", "item.date | date: '%Y'" %}
     {% for group in by_year %}
       {% assign thesis_year = group.name %}
