@@ -8,7 +8,7 @@ background: /assets/images/projects/Metabolomics_Lunge_background.jpg
 projects:
   - title: Metabolomics Lunge
     laufzeitStart: 01.04.2022
-    laufzeitEnd: 01.06.2024
+    laufzeitEnd: 30.06.2027
     partner: Medizinische Universität Graz
     foerdergeber: Auftragsprojekt
 category: ml
