@@ -1,7 +1,7 @@
 {% comment %}
 Home page, "tiles" design (site_design: tiles in _config.yml): light layout in
-the style of fh-ooe.at with a mosaic of square tiles in the hero (photo
-pool: _data/home_mosaic.yml, cycling: initMosaic in assets/js/main.js). German
+the style of fh-ooe.at with a mosaic of square tiles in the hero (photos:
+_data/home_mosaic.yml). German
 version; tiles-en.html is the English twin. Styles: assets/css/home-tiles.css.
 {% endcomment %}
 {% assign projects_page = site.pages | where: "page_id", "projects-index" | where: "lang", "de" | first %}
@@ -16,24 +16,6 @@ version; tiles-en.html is the English twin. Styles: assets/css/home-tiles.css.
 {% assign n_pubs = site.publications | where: "lang", "de" | size %}
 {% assign n_theses = site.theses | where: "lang", "de" | size %}
 {% assign n_team = site.data.team.members | size %}
-
-{% comment %}
-Photo pool for the mosaic from _data/home_mosaic.yml: the first two entries
-are rendered, the whole pool goes into data-mosaic for the cycling in main.js.
-{% endcomment %}
-{% assign mosaic_pool = "" | split: "" %}
-{% for entry in site.data.home_mosaic %}
-  {% assign mpost = site.posts | where: "page_id", entry.page_id | where: "lang", "de" | first %}
-  {% assign mimage = entry.image | default: mpost.title_image %}
-  {% if mimage %}
-    {% assign mtitle = mpost.title | default: "" %}
-    {% assign murl = mpost.url | default: "" %}
-    {% assign mposition = entry.position | default: "" %}
-    {% capture mitem %}{{ mimage | relative_url }}|{{ murl | relative_url }}|{{ mposition }}|{{ mtitle }}{% endcapture %}
-    {% assign mosaic_pool = mosaic_pool | push: mitem %}
-  {% endif %}
-{% endfor %}
-{% capture mosaic_json %}[{% for mitem in mosaic_pool %}{% assign mparts = mitem | split: "|" %}{% unless forloop.first %},{% endunless %}{"image":{{ mparts[0] | jsonify }},"url":{{ mparts[1] | jsonify }},"position":{{ mparts[2] | jsonify }},"title":{{ mparts[3] | jsonify }}}{% endfor %}]{% endcapture %}
 
 <section class="tiles-hero">
   <div class="container">
@@ -50,31 +32,22 @@ are rendered, the whole pool goes into data-mosaic for the cycling in main.js.
         </div>
       </div>
 
-      <div class="tile-mosaic" aria-label="Gruppenbilder aus der Forschungsgruppe" data-mosaic="{{ mosaic_json | escape }}" data-pagefind-ignore>
+      {% comment %} Two static photos from _data/home_mosaic.yml (top right:
+      square, bottom left: 3 : 2), small squares in flat colour around them;
+      placement in assets/css/home-tiles.css. {% endcomment %}
+      {% assign photo1 = site.data.home_mosaic[0] %}
+      {% assign photo2 = site.data.home_mosaic[1] %}
+      <div class="tile-mosaic" role="group" aria-label="Gruppenbilder aus der Forschungsgruppe" data-pagefind-ignore>
         <span class="tile tile-solid tile-light" style="--i: 1" aria-hidden="true"></span>
-        {% assign mparts = mosaic_pool[0] | split: "|" %}
-        {% if mparts[0] %}
-        <a class="tile tile-photo" style="--i: 2" data-index="0" href="{{ mparts[1] }}" aria-label="{{ mparts[3] | escape }}" title="{{ mparts[3] | escape }}">
-          <img class="is-front" src="{{ mparts[0] }}" alt=""{% if mparts[2] != "" %} style="object-position: {{ mparts[2] }}"{% endif %} loading="eager">
-          <img alt="" aria-hidden="true">
-        </a>
-        {% else %}
-        <span class="tile tile-solid tile-blue" style="--i: 2" aria-hidden="true"></span>
-        {% endif %}
+        <span class="tile tile-photo" style="--i: 2">
+          <img src="{{ photo1.image | relative_url }}" alt="{{ photo1.alt_de | escape }}"{% if photo1.position %} style="object-position: {{ photo1.position }}"{% endif %} loading="eager">
+        </span>
         <span class="tile tile-solid tile-blue" style="--i: 3" aria-hidden="true"></span>
         <span class="tile tile-solid tile-sky" style="--i: 4" aria-hidden="true"></span>
-        {% assign mparts = mosaic_pool[1] | split: "|" %}
-        {% if mparts[0] %}
-        <a class="tile tile-photo" style="--i: 5" data-index="1" href="{{ mparts[1] }}" aria-label="{{ mparts[3] | escape }}" title="{{ mparts[3] | escape }}">
-          <img class="is-front" src="{{ mparts[0] }}" alt=""{% if mparts[2] != "" %} style="object-position: {{ mparts[2] }}"{% endif %} loading="eager">
-          <img alt="" aria-hidden="true">
-        </a>
-        {% else %}
-        <span class="tile tile-solid tile-blue" style="--i: 5" aria-hidden="true"></span>
-        {% endif %}
+        <span class="tile tile-photo" style="--i: 5">
+          <img src="{{ photo2.image | relative_url }}" alt="{{ photo2.alt_de | escape }}"{% if photo2.position %} style="object-position: {{ photo2.position }}"{% endif %} loading="eager">
+        </span>
         <span class="tile tile-solid tile-mid" style="--i: 6" aria-hidden="true"></span>
-        <span class="tile tile-solid tile-sky" style="--i: 7" aria-hidden="true"></span>
-        <span class="tile tile-solid tile-blue" style="--i: 8" aria-hidden="true"></span>
       </div>
     </div>
   </div>

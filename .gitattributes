@@ -7,3 +7,7 @@
 
 # Shell scripts run inside the Linux container and must stay LF even on Windows checkouts
 *.sh text eol=lf
+
+# Committed as a plain file: the environment that added it could not reach
+# the LFS upload host. Drop this line and re-add the file to move it into LFS.
+assets/images/index/aist-team.jpg -filter -diff -merge
